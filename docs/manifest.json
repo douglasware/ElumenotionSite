@@ -100,66 +100,6 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "Images/FromDallE/workroombanner.png",
-      "output": {
-        "resource": {
-          "relative_path": "Images/FromDallE/workroombanner.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Images/WritingByTalking/image1.png",
-      "output": {
-        "resource": {
-          "relative_path": "Images/WritingByTalking/image1.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Images/WritingByTalking/image2.png",
-      "output": {
-        "resource": {
-          "relative_path": "Images/WritingByTalking/image2.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Images/WritingByTalking/image3.png",
-      "output": {
-        "resource": {
-          "relative_path": "Images/WritingByTalking/image3.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Images/WritingByTalking/image4.png",
-      "output": {
-        "resource": {
-          "relative_path": "Images/WritingByTalking/image4.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Images/WritingByTalking/image5.png",
-      "output": {
-        "resource": {
-          "relative_path": "Images/WritingByTalking/image5.png"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "Journal/April14To162023.md",
       "output": {
@@ -175,16 +115,6 @@
       "output": {
         ".html": {
           "relative_path": "Journal/SpeechDictation2.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Journal/WritingByTalking.md",
-      "output": {
-        ".html": {
-          "relative_path": "Journal/WritingByTalking.html"
         }
       },
       "version": ""
