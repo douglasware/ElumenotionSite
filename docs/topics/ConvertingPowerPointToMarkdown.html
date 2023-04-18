@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Converting PowerPoint to Markdown </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Converting PowerPoint to Markdown ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="converting-powerpoint-to-markdown">Converting PowerPoint to Markdown</h1>
+
+<h1 id="about-the-docbuilder-powershell-module">About the DocBuilder PowerShell Module</h1>
+<p>First, ensure you have followed the steps in <strong><a href="index.html">Getting Started</a></strong> to load the module<br>
+The Convert-PowerPointToMarkdown cmdlet performs a quick and dirty conversion to markdown with the assumption that a human writer will modify the resulting markdown with additional content and formatting. For this reason, most of the formatting is not preserved in the markdown.<br>
+This includes:</p>
+<ul>
+<li>Text formatting</li>
+<li>Hyperlinks other than fully normal link text, i.e. <a href="http://www.bing.com">http://www.bing.com</a> will translate to a hyperlink but Bing will not even though it is a clickable link in the PowerPoint used to create this content</li>
+<li>Slide layouts</li>
+</ul>
+<p>The following items are converted</p>
+<ul>
+<li>Slide titles as headings</li>
+<li>Paragraphs</li>
+<li>Bulleted lists under level 1 headings</li>
+<li>Images</li>
+<li>Tables</li>
+</ul>
+<p>You can use any valid markdown. The <strong>Getting Started</strong> link above uses markdown format</p>
+<p>When a slide has the same title as the previous slide, its contents are included under the same heading</p>
+<h2 id="you-can-make-additional-headings-using-markdown">You can make additional headings using markdown!</h2>
+<p>The above line is a level 2 heading because it starts with ##</p>
+<h3 id="this-is-a-level-three-heading">This is a level three heading</h3>
+<h2 id="other-markdown-formats">Other markdown formats</h2>
+<p>This is <strong>bold text</strong><br>
+This a code block</p>
+<pre><code>{  
+  &quot;firstName&quot;: &quot;John&quot;,  
+  &quot;lastName&quot;: &quot;Smith&quot;,  
+  &quot;age&quot;: 25  
+}  
+</code></pre>
+<h1 id="notes-on-markdown-formatting">Notes on Markdown Formatting</h1>
+<p>One purpose of this tool and workflow is to enable conversion of real presentations to web content. Using markdown format indicators in such presentations limits their usability because the formatting is visible as text as it is not understood by PowerPoint. In those cases, either make multiple versions or adjust your workflow accordingly and edit the resulting markdown before using DocFx to make the static site.<br>
+Use the <a href="https://www.markdownguide.org/cheat-sheet/">Markdown Cheat Sheet</a> for more formatting options</p>
+<h1 id="notes-on-images">Notes on Images</h1>
+<p>Behavior when pasting images into PowerPoint is inconsistent and the resulting image format depends on the source application. Web safe image types (jpeg, png, gif) export with fidelity, but WMF/EMF (Windows Metafile) formats generally don’t because they contain a mix of bitmaps, vector graphics, and fonts. For example:</p>
+<p><img src="../images/ConvertingPowerPointToMarkdown/image8emf.png" alt=""></p>
+<p>The converter does the best it can, but the best solution is to simply use a tool like snagit or mspaint to create an image from the original. This is the same image, but captured as a screen shot</p>
+<p><img src="../images/ConvertingPowerPointToMarkdown/image9.png" alt=""></p>
+<h1 id="using-convert-powerpointtomarkdown">Using Convert-PowerPointToMarkdown</h1>
+<p>Convert-PowerPointToMarkdown Arguments</p>
+<ul>
+<li>PptFilePath – the full path to the file to be converted</li>
+<li>MarkdownFolder – The full path to the folder to contain the outputted markdown file</li>
+<li>ImageFolder - The full path to the folder to contain extracted images</li>
+<li>MarkdownFileName – Optional, the name of the markdown file. Defaults to the name of the PowerPoint document with the extension “.md”</li>
+</ul>
+<p>Notes</p>
+<ul>
+<li>Links to images in the markdown file are created based on the relative path of the images folder as it relates to the markdown folder</li>
+<li>Images for a given presentation are stored as ImageFolder\MarkdownFileName\imagefile.png to avoid collisions between converted documents</li>
+<li>The tested version of the Visual Studio Code markdown tools fail to display valid images with relative URLs. Use Visual Studio with the Markdown extension</li>
+</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

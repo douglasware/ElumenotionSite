@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Generating a Static Website </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Generating a Static Website ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="generating-a-static-website">Generating a Static Website</h1>
+
+<h1 id="first-steps">First Steps</h1>
+<p>First, ensure you have followed the steps in <strong><a href="index.html">Getting Started</a></strong> to install DocFx and the DocBuilder PowerShell Module. Building API documentation using these tools requires Visual Studio, but if that is a problem the option exists to generate such documents from DLLs. Please feel free to fork or modify this tool!</p>
+<h1 id="understanding-the-project-structure">Understanding the Project Structure</h1>
+<p>Use this project as a sample to build your own documentation sites. Start by copying the <strong>Documentation</strong> folder<br>
+The <strong>Documentation</strong> folder contains:</p>
+<ul>
+<li><strong>BuildDocs.ps1</strong> – a PowerShell script that uses the DocBuilder module to create the site. This script converts PowerPoint to markdown and builds the resulting site as a single job. In situations where you want to modify the resulting markdown for formatting and content, you will use two scripts so as not to overwrite edits when generating the static site</li>
+<li><strong>PowerPoint</strong> - contains the original PowerPoint documents</li>
+<li><strong>StaticContent</strong> - contains the converted markdown, images, table of contents files, and scaffolding for API documentation</li>
+<li><strong>BuildOutput</strong> – contains the generated output</li>
+</ul>
+<h1 id="builddocsps1">BuildDocs.ps1</h1>
+<h2 id="initialization">Initialization</h2>
+<pre><code>$scriptdir = $PSScriptRoot  
+$baseReposFolder = Convert-Path -Path $scriptdir\..\..\..  
+$script = &quot;$baseReposFolder\daas-documentation-tools\DocBuilder\PowerShellModule\PowerShellModule\LoadModule.ps1&quot;  
+.$script    
+</code></pre>
+<p>$baseReposFolder will be the parent folder of the cloned project such that the script will work regardless of the location used when cloning the repo</p>
+<h2 id="converting-ppt-to-markdown">Converting PPT to Markdown</h2>
+<pre><code>$pptFilePath = &quot;$baseReposFolder\daas-documentation-tools\DocBuilder\Documentation\PowerPoint\&quot;  
+$markdownFolder = &quot;$baseReposFolder\daas-documentation-tools\DocBuilder\Documentation\StaticContent\topics&quot;  
+$imageFolder = &quot;$baseReposFolder\daas-documentation-tools\DocBuilder\Documentation\StaticContent\images&quot;  
+Convert-PowerPointToMarkdown   
+           -PptFilePath &quot;$pptFilePath\GettingStarted.pptx&quot;   
+           -MarkdownFolder $markdownFolder    
+           -ImageFolder $imageFolder   
+           -MarkdownFileName &quot;index.md“  
+</code></pre>
+<p>See <a href="ConvertingPowerPointToMarkdown.html">Converting PowerPoint To Markdown</a> for more information</p>
+<h2 id="configuring-docfx-api-document-generation">Configuring DocFx API document generation</h2>
+<pre><code>$projects =  @( &quot;daas-documentation-tools\DocBuilder\PowerShellModule\DocBuilder\DocBuilder.csproj&quot;,  
+                &quot;daas-documentation-tools\DocBuilder\PowerShellModule\PowerPointToMarkdown\PowerPointToMarkdown.csproj&quot; )  
+$contentFiles = &quot;api/**.yml&quot;,  
+                &quot;api/index.md&quot;,  
+                &quot;topics/**.yml&quot;,  
+                &quot;topics/*.md&quot;,  
+                &quot;toc.yml&quot;,  
+                &quot;*.md&quot;  
+$resourceFiles = @( &quot;images/**&quot; )  
+</code></pre>
+<p>Typically, the only thing to change here is the array of projects for inclusion</p>
+<h2 id="running-docfx">Running DocFx</h2>
+<pre><code>Invoke-DoxFxBuild -Projects $projects   
+     -ResourceFiles $resourceFiles   
+     -ContentFiles $contentFiles   
+     -StaticContentFolder   
+         &quot;$baseReposFolder\daas-documentation-tools\DocBuilder\Documentation\StaticContent\&quot;   
+     -OutputFolder   
+          &quot;$baseReposFolder\daas-documentation-tools\DocBuilder\Documentation\BuildOutput\&quot;   
+     -EnableGitFeatures   
+</code></pre>
+<h1 id="powerpoint-folder">PowerPoint Folder</h1>
+<p>Each PowerPoint presentation represents a single topic article<br>
+When adding or removing docs, you must edit <strong>BuildDocs.ps1</strong> and the table of contents file, StaticContent\topics\toc.yml</p>
+<h1 id="staticcontent-folder">StaticContent Folder</h1>
+<p>The StaticContent folder contains the converted markdown, images, table of contents files, and scaffolding for API documentation<br>
+StaticContent\Topics contains converted markdown as well as manually created markdown<br>
+StaticContent\Images contains images referenced by topic articles</p>
+<h2 id="tocyml">TOC.YML</h2>
+<p>The <strong>StaticContent</strong> folder contains two files named TOC.YML</p>
+<ul>
+<li>StaticContent\toc.yml</li>
+<li>StaticContent\topics\toc.yml</li>
+</ul>
+<p>Each specifies a portion of the site’s navigation<br>
+See <a href="https://dotnet.github.io/docfx/tutorial/intro_toc.html">Table-Of-Content (TOC) Files</a> for details on their general function and structure</p>
+<h3 id="staticcontenttocyml">StaticContent\toc.yml</h3>
+<p>Controls the top nav</p>
+<p><img src="../images/GeneratingAStaticWebsite/image8.png" alt=""></p>
+<h3 id="staticcontenttopicstocyml">StaticContent\topics\toc.yml</h3>
+<p>Controls the left nav for topics</p>
+<p><img src="../images/GeneratingAStaticWebsite/image9.png" alt=""></p>
+<h3 id="adding-topics">Adding Topics</h3>
+<p>When you add new topic articles, or wish to change the order of the topic list, you must edit <strong>StaticContent\topics\toc.yml</strong> manually</p>
+<p><img src="../images/GeneratingAStaticWebsite/image10.png" alt=""></p>
+<h1 id="buildoutput-folder">BuildOutput Folder</h1>
+<p>Contains the generated output of the build – a static web site you can host anywhere<br>
+See <a href="TestingLocally.html">Testing Locally</a> and <a href="HostinginGitHubPages.html">Hosting in GitHub Pages</a> for ways to use the build output</p>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

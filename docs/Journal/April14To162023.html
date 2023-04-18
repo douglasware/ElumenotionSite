@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>A Smooth Ride in Game Development with AI Assistance </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="A Smooth Ride in Game Development with AI Assistance ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="a-smooth-ride-in-game-development-with-ai-assistance">A Smooth Ride in Game Development with AI Assistance</h1>
+
+<p>I'm currently working on a game inspired by tabletop adventure games, filled with twists, turns, and surprises. Random events play a key role in the gameplay, making weighted random numbers crucial for game mechanics. The algorithm needs to handle various scenarios for different game objects, such as controlling the probability of encountering monsters or items based on a character's level or location.</p>
+<p>I started by using Bing to develop an algorithm that would generate weighted random numbers based on the position of items within a list. Surprisingly, Bing came up with a decent implementation on the first try. However, as with any code, it's essential to validate it, so I asked Bing to write some unit tests.</p>
+<p>The unit tests revealed some issues in the algorithm, and through a series of iterations with Bing, we managed to resolve these problems. But as the code structure became more complex, Bing's ability to reason about it began to degrade. Interestingly, Bing repeatedly forgot to write comments throughout the code, even when asked multiple times, making it resemble a real-life software developer!</p>
+<p>I then turned to ChatGPT using the GPT-4 model and found it slightly better than Bing at understanding the complex algorithm. However, both AI assistants still struggled to provide deep insights as the code structure grew more intricate.</p>
+<p>Despite these challenges, I managed to produce a solid weighted random number routine, which I've made available as a NuGet package.</p>
+<p><img src="../Images/April14To162023/image1.png" alt=""></p>
+<h1 id="docfx-struggles-a-stark-contrast-to-game-development">DocFX Struggles: A Stark Contrast to Game Development</h1>
+<p>While AI was helpful in game development, it wasn't as effective when working with DocFX, a tool I've been using for years to build static websites for my open-source projects.</p>
+<p>One persistent issue in DocFX has been the homepage displaying the same content in both the top and left navigation. Although this problem has come up numerous times on StackOverflow and the DocFX repo, neither ChatGPT nor Bing could offer any help.</p>
+<p>Surprisingly, I spent far more time dealing with this small DocFX behavior than building the complex algorithm with unit tests for my game. Ultimately, it was my human ability to debug software and understand large, complicated systems that allowed me to resolve the issue. This experience taught me that if AI assistants don't have a clear understanding of the problem or domain, their help may be limited.</p>
+<p><img src="../Images/April14To162023/image2.png" alt=""></p>
+<h1 id="is-it-still-a-good-idea-to-share-work-publicly">Is it Still a Good Idea to Share Work Publicly?</h1>
+<p>Considering the power of AI assistants in parsing publicly available information, there may be concerns that their presence will have a chilling effect on discourse, especially for specialized domains. I thinks it is completely sensible to wonder, “will my code and thought leadership be used against me by a robot and put me out of a job?”</p>
+<p>While AI assistants can be incredibly helpful in boosting productivity, they struggled with the proprietary knowledge around DocFx which is very well documented with lots of samples. That work might have been faster if I had just rolled up my sleaves and thoroughly examined all the options myself!</p>
+<p>The next post will cover an experiment I did with the OpenXml SDK – a nasty bit of software indeed with a huge amount of material online going back over a decade.</p>
+<p><img src="../Images/April14To162023/image3.png" alt=""></p>
+<h1 id="final-thoughts">Final Thoughts</h1>
+<p>AI assistants, like ChatGPT and Bing, can be fantastic tools for boosting productivity and guiding developers through complex tasks. However, they still have limitations, especially when it comes to specific domains or understanding intricate code structures. Developers need to have a strong foundation in their domain and problem-solving abilities to effectively utilize AI assistance. AI may not replace your job anytime soon, but it can certainly enhance your productivity if used correctly. The stark contrast between the ease of developing a complex algorithm for my game and the struggle with a minor issue in DocFX serves as a prime example of AI's potential and limitations. As AI technology continues to evolve, it's crucial for developers to understand how to effectively leverage these tools in their work while recognizing their constraints.</p>
+<p>The next day I gave it a much harder challenge…</p>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

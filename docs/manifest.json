@@ -1,0 +1,385 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/dougl/AppData/Local/Temp/working",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "FeaturedContent/AboutMe.md",
+      "output": {
+        ".html": {
+          "relative_path": "FeaturedContent/AboutMe.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "FeaturedContent/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "FeaturedContent/toc.html"
+        },
+        ".json": {
+          "relative_path": "FeaturedContent/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/AboutMe/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/AboutMe/image1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/AboutMe/image2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/AboutMe/image2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/April14To162023/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/April14To162023/image1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/April14To162023/image2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/April14To162023/image2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/April14To162023/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/April14To162023/image3.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/FromDallE/ribboncutting.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/FromDallE/ribboncutting.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/FromDallE/voicedictation.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/FromDallE/voicedictation.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Journal/April14To162023.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/April14To162023.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Journal/SpeechDictation2.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/SpeechDictation2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "Journal/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/toc.html"
+        },
+        ".json": {
+          "relative_path": "Journal/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Projects/SpeechDictation2.md",
+      "output": {
+        ".html": {
+          "relative_path": "Projects/SpeechDictation2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "Projects/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Projects/toc.html"
+        },
+        ".json": {
+          "relative_path": "Projects/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Tools/SpeechDictation.md",
+      "output": {
+        ".html": {
+          "relative_path": "Tools/SpeechDictation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "Tools/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Tools/toc.html"
+        },
+        ".json": {
+          "relative_path": "Tools/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DocFxHelper.BuildConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DocFxHelper.BuildConfig.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DocFxHelper.BuildContent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DocFxHelper.BuildContent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DocFxHelper.DocFxConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DocFxHelper.DocFxConfig.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DocFxHelper.MetadataConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DocFxHelper.MetadataConfig.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DocFxHelper.MetadataSrc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DocFxHelper.MetadataSrc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DocFxHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DocFxHelper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "index.html",
+      "output": {
+        "resource": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "topics/ConvertingPowerPointToMarkdown.md",
+      "output": {
+        ".html": {
+          "relative_path": "topics/ConvertingPowerPointToMarkdown.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "topics/ConvertingPowerShellToMarkdown.md",
+      "output": {
+        ".html": {
+          "relative_path": "topics/ConvertingPowerShellToMarkdown.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "topics/GeneratingAStaticWebsite.md",
+      "output": {
+        ".html": {
+          "relative_path": "topics/GeneratingAStaticWebsite.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "topics/TestingLocally.md",
+      "output": {
+        ".html": {
+          "relative_path": "topics/TestingLocally.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "topics/UsingGitHubPages.md",
+      "output": {
+        ".html": {
+          "relative_path": "topics/UsingGitHubPages.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "topics/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "topics/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "topics/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "topics/toc.html"
+        },
+        ".json": {
+          "relative_path": "topics/toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
