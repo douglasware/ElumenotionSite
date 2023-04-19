@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weights", "Weights\Weights.csproj", "{8716B1CC-8FC6-407C-BBEE-97768848508E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MakeCsvFilesForPlots", "Weights\MakeCsvFilesForPlots.csproj", "{8716B1CC-8FC6-407C-BBEE-97768848508E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{E34932EA-AEDD-4E8D-B789-E23EA91B6E52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{E34932EA-AEDD-4E8D-B789-E23EA91B6E52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeightedRandoms", "WeightedRandoms\WeightedRandoms.csproj", "{48280A6B-EEF5-4B13-97B7-6D2FC627564E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeightedRandoms", "WeightedRandoms\WeightedRandoms.csproj", "{48280A6B-EEF5-4B13-97B7-6D2FC627564E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

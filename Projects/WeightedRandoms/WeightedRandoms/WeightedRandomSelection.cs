@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 /// <summary>
 /// The WeightedRandomSelection class provides a method for selecting an item from a list based on a weighted random selection algorithm.
-/// The weights are calculated based on a bell curve with the peak at a specified percentage position in the range and with a specified height for the center that adjusts the shape of the curve.
-/// The width of the bell curve can also be adjusted using a specified scaling factor.
+/// The weights are calculated based on a normal distribution with the peak at a specified percentage position in the range and with a specified height for the center that adjusts the shape of the curve.
+/// The width of the normal distribution can also be adjusted using a specified scaling factor.
 /// </summary>
 public class WeightedRandomSelection
 {
@@ -15,18 +15,15 @@ public class WeightedRandomSelection
     static Random random = new Random(DateTime.Now.Millisecond);
 
     /// <summary>
-    /// Selects an item from a list based on a weighted random selection algorithm.
+    /// Selects an item from a list based on a weighted random selection algorithm using a normal distribution.
     /// </summary>
     /// <typeparam name="T">The type of the items in the list.</typeparam>
     /// <param name="items">The list of items to select from.</param>
-    /// <param name="centerPercentage">The position of the peak of the bell curve as a percentage of the range. Must be between 0 and 1.</param>
-    /// <param name="centerHeight">The height of the center of the bell curve. Must be between 0 and 0.9999.</param>
-    /// <param name="scaleFactor">The scaling factor adjusts the standard deviation. Values less than one increase the value making items further from the center more probable.
+    /// <param name="centerPercentage">The position of the peak of the normal distribution as a percentage of the range. Must be between 0 and 1.</param>
+    /// <param name="centerHeight">The height of the center of the normal distribution. Must be between 0 and 0.95.</param>
+    /// <param name="scaleFactor">The scaling factor adjusts the standard deviation of the normal distribution. Values less than 1 increase the value making items further from the center more probable.
     /// Values greater than 1 make items less likely to be selected the farther they are from the center.
-    /// Use this parameter to adjust the selectable width of the bell curve.
-    /// For example, if the center is 0 indicating the first item in the list is the most likely to be selected, a scale factor of 10 would 
-    /// have the effect of making the items at the end of the list unlikely to be selected under any circumstances given any centerHeight value.
-    /// >0-10 is the permitted range.</param>
+    /// Use this parameter to adjust the selectable width of the normal distribution.
     /// </param>
     /// <remarks>As the behavior of this method is based on a random number generator and lists of arbitrary length, the results will vary from run to run.
     /// For a uniform and fast selection of an item from a list, use Random directly. But if you need to effect the curve based on ligic and
@@ -57,14 +54,14 @@ public class WeightedRandomSelection
         }
         if (centerHeight < 0 || centerHeight > 0.95)
         {
-            throw new ArgumentOutOfRangeException(nameof(centerHeight), centerHeight, "The center height must be 0..0.95.");
+            throw new ArgumentOutOfRangeException(nameof(centerHeight), centerHeight, "The center height must be between 0 and 0.95.");
         }
         if (scaleFactor <= 0 || scaleFactor > 10)
         {
-            throw new ArgumentOutOfRangeException(nameof(scaleFactor), scaleFactor, "The scale factor must be 0..10");
+            throw new ArgumentOutOfRangeException(nameof(scaleFactor), scaleFactor, "The scale factor must be between 0 and 10.");
         }
 
-        // Create a list of weights
+        // Create a list of weights based on a normal distribution
         List<double> weights = new List<double>();
 
         // Calculate the mean for the normal distribution
@@ -73,7 +70,7 @@ public class WeightedRandomSelection
         // Calculate the standard deviation for the normal distribution based on the center height and scaling factor
         double stdDev = (1 - centerHeight) * items.Count / scaleFactor;
 
-        // Create a list of weights based on the normal distribution
+        // Create    // a list of weights based on the normal distribution
         for (int i = 0; i < items.Count; i++)
         {
             double x = (i - mean) / stdDev;
@@ -85,18 +82,19 @@ public class WeightedRandomSelection
         double totalWeight = weights.Sum();
 
         // Generate a random number between 0 and the total weight
-        var rand = random.NextDouble() * totalWeight;
+        double randomNumber = random.NextDouble() * totalWeight;
 
         // Select an item based on its weight
         for (int i = 0; i < items.Count; i++)
         {
-            rand -= weights[i];
-            if (rand <= 0)
+            randomNumber -= weights[i];
+            if (randomNumber <= 0)
             {
                 return items[i];
             }
         }
 
-        return default(T);
+        // If we get here, there was an error selecting an item
+        throw new InvalidOperationException("Could not select an item from the list.");
     }
 }
