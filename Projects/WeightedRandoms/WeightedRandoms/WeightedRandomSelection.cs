@@ -70,7 +70,7 @@ public class WeightedRandomSelection
         // Calculate the standard deviation for the normal distribution based on the center height and scaling factor
         double stdDev = (1 - centerHeight) * items.Count / scaleFactor;
 
-        // Create    // a list of weights based on the normal distribution
+        // Create a list of weights based on the normal distribution
         for (int i = 0; i < items.Count; i++)
         {
             double x = (i - mean) / stdDev;
