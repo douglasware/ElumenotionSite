@@ -81,6 +81,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "Images/CurrentOpinions/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/CurrentOpinions/image1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "Images/FromDallE/ribboncutting.png",
       "output": {
         "resource": {
@@ -165,6 +175,16 @@
       "output": {
         ".html": {
           "relative_path": "Journal/April14To162023.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Journal/CurrentOpinions.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/CurrentOpinions.html"
         }
       },
       "version": ""

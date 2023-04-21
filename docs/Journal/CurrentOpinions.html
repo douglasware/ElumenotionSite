@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Current Opinions </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Current Opinions ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="current-opinions">Current Opinions</h1>
+
+<p>I made this site to share what I am learning but I am doing the work to help myself understand the brave new world by experiencing the tools first-hand and experimenting. What I think about it all keeps changing. So, I am putting today’s opinions down on paper to see how well they hold up over time. These are my current opinions, in no particular order:</p>
+<ul>
+<li><p>You can’t use generative AI to make systems in domains you don’t understand without being or having access to human subject matter experts or becoming a subject matter expert. If you try to use it to build anything but the most trivial software but don’t already know how to build software, you are going to have a bad time.</p>
+</li>
+<li><p>Systems based on generative AI should be subject to much more stringent liability standards compared to traditional software. This would be a sensible policy change that would let the markets control how fast it changes society by disincentivizing aggressive rollouts by CEOs (who publicly admit that their products might be dangerous).</p>
+</li>
+<li><p>Based on my observations so far, the biggest opportunities to improve software development using LLMs/Chat AI (better/faster/cheaper) are in the front (product design and specification) and back (operations) of the process, not in the actual construction (coding). In other words, they are great for knowledge management of all kinds. The tools make it easy to capture, transform, and analyze information. The transformation ability is especially valuable for ensuring quality because different views help identify misunderstandings and errors.</p>
+</li>
+</ul>
+<p><img src="../Images/CurrentOpinions/image1.png" alt=""></p>
+<ul>
+<li><p>I believe Sam Altman (CEO of OpenAI) is right when he says that major increases in parameter counts won’t make as big a difference going forward. I think major advances going forward will come from distributed models (a mix of traditional application services, LLMs, and specialized ML) acting in concert.</p>
+</li>
+<li><p>The emerging computer vision AI models and the ability to create three-dimensional objects and scenes easily will have as big or bigger impact on society as chat AI.</p>
+</li>
+<li><p>The professionals most easily replaced by these tools are people in support roles who are not subject matter experts. Business Analysts in Agile shops who go to meetings, take notes, and make user stories have essentially no purpose, and the AI can already do a better job. Those who connect the dots and are good at extracting information from people and who actively add to the conversation can’t be replaced by today’s AI.</p>
+</li>
+<li><p>The most useful and most accessible chat AI tool at the moment is Bing. At $20 a month, the GPT Plus subscription is a good value. At $10 a month, GitHub Copilot is not too expensive, but I don't recommend it if price is no object. Tools such as Jetbrains Resharper do a much better job, and I spend more time using Bing or ChatGPT than I do directly interacting with the Copilot tools.</p>
+</li>
+<li><p>Chat assistants are very good for:</p>
+<ul>
+<li>Extracting information from meetings and conversations</li>
+<li>Reformatting content. For example, I often use the AI to create JSON, which is a format easily read by programs, from Markdown, which is a format easily read by people.</li>
+<li>Creating and validating user stories in Gherkin format</li>
+<li>Explaining code and writing documentation</li>
+<li>Writing unit tests</li>
+<li>Validating that code and unit tests are in accordance with user stories</li>
+<li>Comparing alternative implementations</li>
+<li>Writing small routines such as Python scripts for cells in Jupyter notebooks and algorithms that do not require complex APIs. Other examples include data model objects in C# and other languages.</li>
+</ul>
+</li>
+<li><p>Chat assistants are not very good for:</p>
+<ul>
+<li>Refactoring and restructuring code. It can’t take a moderately complicated top-to-bottom routine and break it into smaller pieces reliably, and although it does a good job explaining how the code could be improved and decomposed, attempts at applying these suggestions using the chat bot were frustrating.</li>
+<li>Building complete systems by themselves beyond the most trivial scenarios.</li>
+</ul>
+</li>
+</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
