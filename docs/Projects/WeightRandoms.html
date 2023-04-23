@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Weight Randoms </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Weight Randoms ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="weight-randoms">Weight Randoms</h1>
+
+<p><img src="../Images/WeightRandoms/image1.png" alt=""></p>
+<h1 id="background-and-summary">Background and Summary</h1>
+<h2 id="building-a-solution-using-ai-tools">Building a Solution Using AI Tools</h2>
+<p>The purpose of this site and my own experiments is to give myself and any others who honor me by reading this a conceptual basis for using AI in software development. My first experimental scenario is for a random number algorithm I will be using in a game I am developing.</p>
+<p>I chose this scenario because it is conceptually simple, and it uses concepts from basic statistics. The algorithm and the tests can be implemented in any language using the prompts in the <a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/WeightedRandoms/PromptsAndResults">github repo</a>. The prompts themselves are a useful baseline for comparing different AI agents. I think it’s too early to call them benchmarks but I can’t be the only one doing this. So, perhaps the thinking will feed into something more formal.</p>
+<h2 id="about-this-article">About this Article</h2>
+<p>This article is to introduce the project and its elements. I am resisting the temptation to start commenting on the details of the process or my conclusions because this is a chapter, not the book. This is the first of several articles about the Weighted Randoms project. I hope you enjoy the series.</p>
+<h2 id="project-elements">Project Elements</h2>
+<p>I made everything in this project with AI assistance. The assistants were:</p>
+<ul>
+<li>Bing AI</li>
+<li>ChatGPT (3.5 and 4)</li>
+<li>Github Copilot in Visual Studio Code and Visual Studio 2022</li>
+</ul>
+<p>It demonstrates:</p>
+<ul>
+<li>Conceptual prototyping</li>
+<li>Generating user stories using AI</li>
+<li>Generating unit tests</li>
+<li>Improving the code quality with comments, exception handling, input validation and logging</li>
+<li>Visualizing output using Jupyter notebooks and Python</li>
+<li>Refactoring the results into a larger solution</li>
+</ul>
+<p>My current plan is to write individual articles on each of these topics.</p>
+<h2 id="weighted-random-selection-for-games">Weighted Random Selection for Games</h2>
+<p>The WeightedRandomSelection class provides a powerful method for selecting an item from a list based on a weighted random selection algorithm. It utilizes a normal distribution to assign weights to each item, which can be customized by adjusting the peak position, center height, and standard deviation scaling factor of the curve.<br>
+This algorithm is particularly useful in the context of game engines, where it can be used to select opponents, power-ups, or other game elements based on their difficulty or rarity. The user can adjust the parameters to create a more challenging or exciting gameplay experience, while the input validation ensures that the algorithm functions correctly.<br>
+In addition, the algorithm includes an efficient weight calculation method to handle lists of any type, as well as a random number generator for item selection. The user can also adjust the parameters to create a &quot;sliding&quot; list, skewing the curve to select items based on their position within the list.</p>
+<h1 id="understanding-the-algorithm">Understanding the Algorithm</h1>
+<h2 id="visual-examples">Visual Examples</h2>
+<p>The following picture illustrates the basic capability of the algorithm. I made it by plotting test results in a Jupyter notebook with Python and I wrote the code with the assistance of ChatGPT.</p>
+<p>One way to use the algorithm is to change the peak of the curve. The first series (red) shows a curve where all items have similar weights and are equally likely. The last series (yellow) shows a curve where items in the center are much more likely to be selected.</p>
+<p><img src="../Images/WeightRandoms/image2.png" alt=""></p>
+<p>Another way to use the algorithm is to change the standard deviation by applying a scale factor. The first series (red) shows a curve where the scale is very small, 0.1. This has the effect of flattening the curve even when the height is set to the maximum. The last series (yellow) shows a curve where items in the center are the only items with any chance of being selected.</p>
+<p><img src="../Images/WeightRandoms/image3.png" alt=""></p>
+<p>A third way to use the algorithm is to change the center of the curve. In this example, items at the beginning of the list are most likely to be selected.</p>
+<p><img src="../Images/WeightRandoms/image4.png" alt=""></p>
+<p>Finally, you can combine these options to tune the effects. This example shows how you might make a list where only the first couple items are ever selected, and you could slide the selection window by changing the center based on circumstances such as a player’s level.</p>
+<p><img src="../Images/WeightRandoms/image5.png" alt=""></p>
+<h1 id="project-inventory">Project Inventory</h1>
+<p><a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/WeightedRandoms/PromptsAndResults">Prompts and user stories</a><br>
+<a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/WeightedRandoms/WeightedRandoms">Main Solution</a><br>
+<a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/WeightedRandoms/Tests">Unit Tests</a><br>
+<a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/WeightedRandoms/Weights">CSV Export for Visualization</a><br>
+<a href="https://github.com/douglasware/ElumenotionSite/blob/master/Projects/WeightedRandoms/visualizer.ipynb">Jupyter Notebook</a></p>
+<h1 id="additional-notes">Additional Notes</h1>
+<p>You can use either Visual Studio Code or Visual Studio depending on your preferences<br>
+You will also need Python and the associated packages if you want to work with the notebook interactively. You can get started <a href="https://code.visualstudio.com/docs/datascience/jupyter-notebooks">here</a><br>
+The easiest way to follow changes to this project is via the ‘Watch’ feature in github</p>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

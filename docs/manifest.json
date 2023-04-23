@@ -121,6 +121,56 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "Images/WeightRandoms/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/WeightRandoms/image1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/WeightRandoms/image2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/WeightRandoms/image2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/WeightRandoms/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/WeightRandoms/image3.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/WeightRandoms/image4.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/WeightRandoms/image4.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/WeightRandoms/image5.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/WeightRandoms/image5.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "Images/WritingByTalking/image1.png",
       "output": {
         "resource": {
@@ -228,6 +278,16 @@
       "output": {
         ".html": {
           "relative_path": "Projects/SpeechDictation2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Projects/WeightRandoms.md",
+      "output": {
+        ".html": {
+          "relative_path": "Projects/WeightRandoms.html"
         }
       },
       "version": ""
