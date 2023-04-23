@@ -274,16 +274,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "Projects/SpeechDictation2.md",
-      "output": {
-        ".html": {
-          "relative_path": "Projects/SpeechDictation2.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "Projects/WeightRandoms.md",
       "output": {
         ".html": {
