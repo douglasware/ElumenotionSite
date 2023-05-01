@@ -81,6 +81,36 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "Images/BuildingDomainSpecificLLMBots/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/BuildingDomainSpecificLLMBots/image1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/BuildingDomainSpecificLLMBots/image2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/BuildingDomainSpecificLLMBots/image2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/BuildingDomainSpecificLLMBots/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/BuildingDomainSpecificLLMBots/image3.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "Images/CurrentOpinions/image1.png",
       "output": {
         "resource": {
@@ -225,6 +255,16 @@
       "output": {
         ".html": {
           "relative_path": "Journal/April14To162023.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Journal/BuildingDomainSpecificLLMBots.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/BuildingDomainSpecificLLMBots.html"
         }
       },
       "version": ""
