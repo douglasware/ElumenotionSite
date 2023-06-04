@@ -360,60 +360,200 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/DocFxHelper.BuildConfig.yml",
+      "source_relative_path": "api/DougWare.StringExtensionMethods.StringExtensionMethods.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DocFxHelper.BuildConfig.html"
+          "relative_path": "api/DougWare.StringExtensionMethods.StringExtensionMethods.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/DocFxHelper.BuildContent.yml",
+      "source_relative_path": "api/DougWare.StringExtensionMethods.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DocFxHelper.BuildContent.html"
+          "relative_path": "api/DougWare.StringExtensionMethods.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/DocFxHelper.DocFxConfig.yml",
+      "source_relative_path": "api/OobaboogaAPIHelper.ApiHelper.GenerateRequestBody.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DocFxHelper.DocFxConfig.html"
+          "relative_path": "api/OobaboogaAPIHelper.ApiHelper.GenerateRequestBody.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/DocFxHelper.MetadataConfig.yml",
+      "source_relative_path": "api/OobaboogaAPIHelper.ApiHelper.TokenCountResult.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DocFxHelper.MetadataConfig.html"
+          "relative_path": "api/OobaboogaAPIHelper.ApiHelper.TokenCountResult.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/DocFxHelper.MetadataSrc.yml",
+      "source_relative_path": "api/OobaboogaAPIHelper.ApiHelper.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DocFxHelper.MetadataSrc.html"
+          "relative_path": "api/OobaboogaAPIHelper.ApiHelper.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/DocFxHelper.yml",
+      "source_relative_path": "api/OobaboogaAPIHelper.Config.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DocFxHelper.html"
+          "relative_path": "api/OobaboogaAPIHelper.Config.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OobaboogaAPIHelper.Conversation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OobaboogaAPIHelper.Conversation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OobaboogaAPIHelper.Dolly_v2PromptTemplate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OobaboogaAPIHelper.Dolly_v2PromptTemplate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OobaboogaAPIHelper.ModelParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OobaboogaAPIHelper.ModelParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OobaboogaAPIHelper.Presets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OobaboogaAPIHelper.Presets.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OobaboogaAPIHelper.PromptTemplate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OobaboogaAPIHelper.PromptTemplate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OobaboogaAPIHelper.Turn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OobaboogaAPIHelper.Turn.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OobaboogaAPIHelper.Vicuna_v0PromptTemplate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OobaboogaAPIHelper.Vicuna_v0PromptTemplate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OobaboogaAPIHelper.Vicuna_v1PromptTemplate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OobaboogaAPIHelper.Vicuna_v1PromptTemplate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OobaboogaAPIHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OobaboogaAPIHelper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utilty.EmbeddedResourceUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utilty.EmbeddedResourceUtility.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utilty.JsonExtractor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utilty.JsonExtractor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utilty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utilty.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WeightedRandoms.WeightedRandomSelection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WeightedRandoms.WeightedRandomSelection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WeightedRandoms.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WeightedRandoms.html"
         }
       },
       "version": ""
@@ -452,6 +592,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {

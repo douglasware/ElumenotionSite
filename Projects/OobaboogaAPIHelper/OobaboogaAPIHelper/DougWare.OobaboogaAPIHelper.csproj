@@ -1,0 +1,105 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>OobaboogaAPIHelper</Title>
+    <Authors>Doug Ware</Authors>
+    <Company>Elumenotion, LLC</Company>
+    <Description>This class library makes it easy to consume the oobabooga text-generation-webui API extension. Key features include: prompt templates for Vicuna 1,0, 1.1, Dolly v2, and basic LLama with a base class that is easy to extend, converstaion helpers to easily convert saved converstaions created with one model and/or prompt template for use with other models, model parameters and presets, and token counting to make it easy to fit your model's context size limits.</Description>
+    <PackageProjectUrl>https://github.com/douglasware/ElumenotionSite</PackageProjectUrl>
+    <PackageIcon>logo.png</PackageIcon>
+    <RepositoryUrl>https://github.com/douglasware/ElumenotionSite</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Presets\ContrastiveSearch.txt" />
+    <None Remove="Presets\Debug-deterministic.txt" />
+    <None Remove="Presets\Default.txt" />
+    <None Remove="Presets\Kobold-Godlike.txt" />
+    <None Remove="Presets\Kobold-Liminal Drift.txt" />
+    <None Remove="Presets\LLaMA-Precise.txt" />
+    <None Remove="Presets\Naive.txt" />
+    <None Remove="Presets\NovelAI-Best Guess.txt" />
+    <None Remove="Presets\NovelAI-Decadence.txt" />
+    <None Remove="Presets\NovelAI-Genesis.txt" />
+    <None Remove="Presets\NovelAI-Lycaenidae.txt" />
+    <None Remove="Presets\NovelAI-Ouroboros.txt" />
+    <None Remove="Presets\NovelAI-Pleasing Results.txt" />
+    <None Remove="Presets\NovelAI-Sphinx Moth.txt" />
+    <None Remove="Presets\NovelAI-Storywriter.txt" />
+    <None Remove="Presets\Verbose %28Beam Search%29.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Presets\ContrastiveSearch.txt">
+      <LogicalName>ContrastiveSearch</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presets\Debug-deterministic.txt" >
+      <LogicalName>DebugDeterministic</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presets\Default.txt" >
+      <LogicalName>Default</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presets\Kobold-Godlike.txt" >
+      <LogicalName>KoboldGodlike</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presets\Kobold-Liminal Drift.txt" >
+      <LogicalName>KoboldLiminalDrift</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presets\LLaMA-Precise.txt" >
+      <LogicalName>LLaMAPrecise</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presets\Naive.txt" >
+      <LogicalName>Naive</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presets\NovelAI-Best Guess.txt" >
+      <LogicalName>NovelAIBestGuess</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presets\NovelAI-Decadence.txt" >
+      <LogicalName>NovelAIDecadence</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presets\NovelAI-Genesis.txt" >
+      <LogicalName>NovelAIGenesis</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presets\NovelAI-Lycaenidae.txt" >
+      <LogicalName>NovelAILycaenidae</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presets\NovelAI-Ouroboros.txt" >
+      <LogicalName>NovelAIOuroboros</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presets\NovelAI-Pleasing Results.txt" >
+      <LogicalName>NovelAIPleasingResults</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presets\NovelAI-Sphinx Moth.txt" >
+      <LogicalName>NovelAISphinxMoth</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presets\NovelAI-Storywriter.txt" >
+      <LogicalName>NovelAIStorywriter</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presets\Verbose (Beam Search).txt" >
+      <LogicalName>VerboseBeamSearch</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DougWare.StringExtensionMethods" Version="1.0.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Text.Json" Version="6.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="settings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\docs\logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

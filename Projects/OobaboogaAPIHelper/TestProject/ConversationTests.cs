@@ -1,0 +1,81 @@
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OobaboogaAPIHelper;
+
+namespace Tests
+{
+    [TestClass]
+    public class ConversationTests
+    {
+        [TestMethod]
+        public async Task TestParseConversationAsync_Vicuna_v1()
+        {
+            var vicuna_v1 = "A chat between a user and an assistant.\n\nUSER: What is the airspeed of an unladen swallow?\nASSISTANT: The answer to this joke depends on whether you are asking about the bird or the vehicle! In reality, it\\'s impossible for either one to have an \"airspeed\" as they are both inanimate objects that cannot fly. However, if we were to use the phrase in jest, here are some possible answers based on different interpretations:\n\n* For the bird: An unladen swallow refers to a young bird that has not yet learned how to carry any food or other items while flying. Therefore, its airspeed would be zero since it wouldn\\'t be carrying anything weighty enough to affect its flight path.\n* For the car: On the other hand, an \"unladen Swallow\" could refer to a British sports car made by Triumph from 1968-70. This model was known for having a lightweight body design with minimal equipment, so its airspeed might also be zero unless someone decided to add extra weight</s>\nUSER: Really? I had no idea!\nASSISTANT: Yes, that\\'s correct! While most people associate the phrase \"unladen swallow\" with the African Weaver Bird, which builds nests using sticks and feathers, there is actually another meaning associated with cars. It originated from a tongue twister used in Britain during the 20th century, where saying \"Unladen Swallow\" quickly became popular among drivers who enjoyed driving their vehicles without excessive luggage or cargo.\n\nSo, when asked what the airspeed of an unladen swallow is, you can reply with whatever interpretation makes sense given your context or audience. Just remember that neither birds nor cars can really have an airspeed, but the phrase itself has evolved into something fun and memorable over time!</s>\nUSER: My friend was once bitten by an angry bird.\nASSISTANT:";
+            var vicuna_v1PromptTemplate = new Vicuna_v1PromptTemplate();
+
+            // Parsing a conversation string to a Conversation object
+            var conversation = await Conversation.ParseConversationAsync(vicuna_v1, vicuna_v1PromptTemplate, false);
+
+            // Ensure conversation object is not null and has the correct number of turns
+            Assert.IsNotNull(conversation);
+            Assert.AreEqual(5, conversation.Turns.Count);
+        }
+
+        [TestMethod]
+        public async Task TestParseConversationAndCompareWithGetPrompt_Vicuna_v1()
+        {
+            var vicuna_v1 = "A chat between a user and an assistant.\n\nUSER: What is the airspeed of an unladen swallow?\nASSISTANT: The answer to this joke depends on whether you are asking about the bird or the vehicle! In reality, it\\'s impossible for either one to have an \"airspeed\" as they are both inanimate objects that cannot fly. However, if we were to use the phrase in jest, here are some possible answers based on different interpretations:\n\n* For the bird: An unladen swallow refers to a young bird that has not yet learned how to carry any food or other items while flying. Therefore, its airspeed would be zero since it wouldn\\'t be carrying anything weighty enough to affect its flight path.\n* For the car: On the other hand, an \"unladen Swallow\" could refer to a British sports car made by Triumph from 1968-70. This model was known for having a lightweight body design with minimal equipment, so its airspeed might also be zero unless someone decided to add extra weight</s>\nUSER: Really? I had no idea!\nASSISTANT: Yes, that\\'s correct! While most people associate the phrase \"unladen swallow\" with the African Weaver Bird, which builds nests using sticks and feathers, there is actually another meaning associated with cars. It originated from a tongue twister used in Britain during the 20th century, where saying \"Unladen Swallow\" quickly became popular among drivers who enjoyed driving their vehicles without excessive luggage or cargo.\n\nSo, when asked what the airspeed of an unladen swallow is, you can reply with whatever interpretation makes sense given your context or audience. Just remember that neither birds nor cars can really have an airspeed, but the phrase itself has evolved into something fun and memorable over time!</s>\nUSER: My friend was once bitten by an angry bird.\nASSISTANT:";
+            var vicuna_v1PromptTemplate = new Vicuna_v1PromptTemplate();
+            var conversation = await Conversation.ParseConversationAsync(vicuna_v1, vicuna_v1PromptTemplate, false);
+
+            // Compare the original conversation string with the Conversation object's GetPrompt method output
+            var prompt = Conversation.GetPrompt(conversation, vicuna_v1PromptTemplate);
+
+            Assert.AreEqual(vicuna_v1, prompt);
+        }
+
+        [TestMethod]
+        public async Task TestAddTurnAndCompareWithGetPrompt_Vicuna_v0()
+        {
+            var vicuna_v0 = "A chat between a human and an assistant.\n\n### Human: We are building a set of questions and answers from technical documentation. I will give you some text. You will consider the content of the text and then give me one question and its answer derived from the text. The text follows:\n\n\"The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams and Microsoft Viva. With the SharePoint Framework, you can use modern web technologies and tools in your preferred development environment to build productive experiences and apps that are responsive and mobile-ready.\n\nThe SPFx is the recommended SharePoint customization and extensibility model for developers. Due to tight integration between SharePoint Online, Microsoft Teams, and Microsoft Viva Connections, developers can also use SPFx to customize and extend all of these products. In fact, the SPFx is the only extensibility and customization option for Viva Connections.\n\nIn addition to SharePoint Online, the SPFx is supported and can be used to customize SharePoint on-premises deployments going back to SharePoint Server 2016.\"\n### Assistant: What is the SharePoint Framework?\n\nAnswer: The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams and Microsoft Viva. It allows developers to use modern web technologies and tools in their preferred development environment to build productive experiences and apps that are responsive and mobile-ready. The SPFx is the recommended customization and extensibility model for developers and is supported on both SharePoint Online and SharePoint on-premises deployments.\n### Human: Very good! Create two more question and answer pairs from the text please.\n### Assistant: Sure, here are two more question and answer pairs based on the text:\n\n1. What is the purpose of the SharePoint Framework?\n\nAnswer: The purpose of the SharePoint Framework (SPFx) is to provide full support for client-side SharePoint development, easy integration with SharePad and OneDrive for Business, and extending Microsoft Teams and Microsoft Viva. It allows developers to use modern web technologies and tools in their preferred development environment to build engaging and responsive experiences and apps.\n\n2. Can the SharePoint Framework be used to customize SharePoint on-premises deployments?\n\nAnswer: Yes, the SharePoint Framework (SPFx) can be used to customize SharePoint on-premises deployments going back to SharePoint Server 2016. In addition to SharePoint Online, the SPFx is supported and can be used to customize SharePoint on-premises deployments.\n### Human: Convert the three question and answers to json as an array of objects. Do not reply with any text other than the json. For example, do not start your reply with 'Here's the JSON representation of the three question and answer pairs:'. Show only the json.\n### Assistant:";
+            var vicuna_v0PromptTemplate = new Vicuna_v0PromptTemplate();
+
+            var originalConversation = await Conversation.ParseConversationAsync(vicuna_v0, vicuna_v0PromptTemplate, false);
+
+            var newConversation = new Conversation(vicuna_v0PromptTemplate);
+
+            // Add turns to new Conversation
+            foreach (var turn in originalConversation.Turns)
+            {
+                await newConversation.AddTurn(turn.Content, false);
+            }
+
+            // Compare the generated prompt to the original conversation string
+            var prompt = Conversation.GetPrompt(newConversation, vicuna_v0PromptTemplate);
+
+            Assert.AreEqual(vicuna_v0, prompt);
+        }
+
+        [TestMethod]
+        public async Task TestParseAndConvertFrom_Vicuna_v0_to_Vicuna_v1()
+        {
+            var vicuna_v0 = "A chat between a human and an assistant.\n\n### Human: We are building a set of questions and answers from technical documentation. I will give you some text. You will consider the content of the text and then give me one question and its answer derived from the text. The text follows:\n\n\"The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams and Microsoft Viva. With the SharePoint Framework, you can use modern web technologies and tools in your preferred development environment to build productive experiences and apps that are responsive and mobile-ready.\n\nThe SPFx is the recommended SharePoint customization and extensibility model for developers. Due to tight integration between SharePoint Online, Microsoft Teams, and Microsoft Viva Connections, developers can also use SPFx to customize and extend all of these products. In fact, the SPFx is the only extensibility and customization option for Viva Connections.\n\nIn addition to SharePoint Online, the SPFx is supported and can be used to customize SharePoint on-premises deployments going back to SharePoint Server 2016.\"\n### Assistant: What is the SharePoint Framework?\n\nAnswer: The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams and Microsoft Viva. It allows developers to use modern web technologies and tools in their preferred development environment to build productive experiences and apps that are responsive and mobile-ready. The SPFx is the recommended customization and extensibility model for developers and is supported on both SharePoint Online and SharePoint on-premises deployments.\n### Human: Very good! Create two more question and answer pairs from the text please.\n### Assistant: Sure, here are two more question and answer pairs based on the text:\n\n1. What is the purpose of the SharePoint Framework?\n\nAnswer: The purpose of the SharePoint Framework (SPFx) is to provide full support for client-side SharePoint development, easy integration with SharePad and OneDrive for Business, and extending Microsoft Teams and Microsoft Viva. It allows developers to use modern web technologies and tools in their preferred development environment to build engaging and responsive experiences and apps.\n\n2. Can the SharePoint Framework be used to customize SharePoint on-premises deployments?\n\nAnswer: Yes, the SharePoint Framework (SPFx) can be used to customize SharePoint on-premises deployments going back to SharePoint Server 2016. In addition to SharePoint Online, the SPFx is supported and can be used to customize SharePoint on-premises deployments.\n### Human: Convert the three question and answers to json as an array of objects. Do not reply with any text other than the json. For example, do not start your reply with 'Here's the JSON representation of the three question and answer pairs:'. Show only the json.\n### Assistant:";
+            var vicuna_v1 = "A chat between a human and an assistant.\n\nUSER: We are building a set of questions and answers from technical documentation. I will give you some text. You will consider the content of the text and then give me one question and its answer derived from the text. The text follows:\n\n\"The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams and Microsoft Viva. With the SharePoint Framework, you can use modern web technologies and tools in your preferred development environment to build productive experiences and apps that are responsive and mobile-ready.\n\nThe SPFx is the recommended SharePoint customization and extensibility model for developers. Due to tight integration between SharePoint Online, Microsoft Teams, and Microsoft Viva Connections, developers can also use SPFx to customize and extend all of these products. In fact, the SPFx is the only extensibility and customization option for Viva Connections.\n\nIn addition to SharePoint Online, the SPFx is supported and can be used to customize SharePoint on-premises deployments going back to SharePoint Server 2016.\"\nASSISTANT: What is the SharePoint Framework?\n\nAnswer: The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams and Microsoft Viva. It allows developers to use modern web technologies and tools in their preferred development environment to build productive experiences and apps that are responsive and mobile-ready. The SPFx is the recommended customization and extensibility model for developers and is supported on both SharePoint Online and SharePoint on-premises deployments.</s>\nUSER: Very good! Create two more question and answer pairs from the text please.\nASSISTANT: Sure, here are two more question and answer pairs based on the text:\n\n1. What is the purpose of the SharePoint Framework?\n\nAnswer: The purpose of the SharePoint Framework (SPFx) is to provide full support for client-side SharePoint development, easy integration with SharePad and OneDrive for Business, and extending Microsoft Teams and Microsoft Viva. It allows developers to use modern web technologies and tools in their preferred development environment to build engaging and responsive experiences and apps.\n\n2. Can the SharePoint Framework be used to customize SharePoint on-premises deployments?\n\nAnswer: Yes, the SharePoint Framework (SPFx) can be used to customize SharePoint on-premises deployments going back to SharePoint Server 2016. In addition to SharePoint Online, the SPFx is supported and can be used to customize SharePoint on-premises deployments.</s>\nUSER: Convert the three question and answers to json as an array of objects. Do not reply with any text other than the json. For example, do not start your reply with 'Here's the JSON representation of the three question and answer pairs:'. Show only the json.\nASSISTANT:";
+            var vicuna_v0PromptTemplate = new Vicuna_v0PromptTemplate();
+
+            var originalConversation = await Conversation.ParseConversationAsync(vicuna_v0, vicuna_v0PromptTemplate, false);
+
+            var newConversation = new Conversation(vicuna_v0PromptTemplate);
+
+            // Add turns to new Conversation
+            foreach (var turn in originalConversation.Turns)
+            {
+                await newConversation.AddTurn(turn.Content, false);
+            }
+
+            // Compare the generated prompt to the original conversation string
+            var prompt = Conversation.GetPrompt(newConversation, new Vicuna_v1PromptTemplate());
+
+            Assert.AreEqual(vicuna_v1, prompt);
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+  "ChatPromptSize": 2048,
+  "MaxLength": 1536,
+  "SystemPrompt": "A chat between a human and an assistant.",
+  "ApiHostUrl": "http://localhost:5000"
+}
