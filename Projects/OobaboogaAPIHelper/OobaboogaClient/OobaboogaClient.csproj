@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OobaboogaAPIHelper\DougWare.OobaboogaAPIHelper.csproj" />
+    <PackageReference Include="DougWare.OobaboogaAPIHelper" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

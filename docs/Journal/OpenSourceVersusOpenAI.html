@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Motes and Leaping LLaMas </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Motes and Leaping LLaMas ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="motes-and-leaping-llamas">Motes and Leaping LLaMas</h1>
+
+<p>Things are changing fast in AI land. You may not realize it, but a war is on between a few giants and everyone else to see who gets to win the future of humanity.</p>
+<p><img src="../Images/OpenSourceVersusOpenAI/image1.png" alt=""></p>
+<p>About a month ago, a memo allegedly leaked from Google was posted here – <a href="https://www.semianalysis.com/p/google-we-have-no-moat-and-neither">Google &quot;We Have No Moat, And Neither Does OpenAI&quot;</a>. If you follow the AI space, you might have seen it. If not, you should have a look. I won’t regurgitate it here, but here is a screenshot of its opening statements.</p>
+<p><img src="../Images/OpenSourceVersusOpenAI/image2.png" alt=""></p>
+<p>I (along with lots of other people) began to suspect that what the leaked memo says a few weeks before it was published when, seemingly suddenly overnight, it became possible to run impressively decent LLMs for yourself locally with a good GPU and (comparatively) inexpensive cloud compute.</p>
+<p>The Google Trends chart is interesting. For a brief time “ChatGPT” was practically synonymous with “AI” but recently a gap began opening as the events the anonymous author notes began piling up quickly.</p>
+<p><img src="../Images/OpenSourceVersusOpenAI/image3.png" alt=""></p>
+<p>People in the US are more interested in AI than Taylor Swift (on Monday through Friday), which is to say, they are very interested.</p>
+<p><img src="../Images/OpenSourceVersusOpenAI/image4.png" alt=""></p>
+<h1 id="the-open-source-ai-community-is-on-fire">The Open Source AI Community is on Fire</h1>
+<p>Today it is impossible for me to keep up with the rapid developments coming from the open source AI communities on GitHub and <a href="https://huggingface.co/about">Hugging Face</a>.</p>
+<h2 id="hugging-face">Hugging Face</h2>
+<p>Hugging Face is a privately owned company that is not nearly as well known as OpenAI, but in spite of the silly name, might be the more interesting of the two. Hugging Face Transformers are a foundational element that makes using any of the 200,000+ machine learning models on they store easy to use.</p>
+<p><a href="https://huggingface.co/docs/transformers/index">Transformers</a></p>
+<p><img src="../Images/OpenSourceVersusOpenAI/image5.png" alt=""></p>
+<h2 id="oobabooga-text-generation-web-ui"><a href="https://github.com/oobabooga/text-generation-webui">Oobabooga Text Generation Web UI</a></h2>
+<p><img src="../Images/OpenSourceVersusOpenAI/image6.png" alt=""></p>
+<p>Text Generation Web UI is an outstanding project available that makes it easy to use models from Hugging Face. It comes with a simple batch file setup that worked perfectly for me. There are a variety of extensions, including an API extension. The API extension makes it easy to use various models as backends to processes from any language that can talk to a web service. For my own benefit, I made a C# library to make using the API extension easy. You can find it here: <a href="https://www.nuget.org/packages/DougWare.OobaboogaAPIHelper/">DougWare.OobaboogaAPIHelper 1.0.0</a>. I will write more about this future another posts.</p>
+<p>In the meantime, the source code is here: <a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/OobaboogaAPIHelper">ElumenotionSite/Projects/OobaboogaAPIHelper GitHub</a>, and there is a console app that demos its use.</p>
+<p><img src="../Images/OpenSourceVersusOpenAI/image7.png" alt=""></p>
+<h2 id="run-locally-or-in-the-cloud">Run Locally or in the Cloud</h2>
+<p>It makes my office warm as the NVIDIA RTX 4090 does its work, but I am getting very useful results right here at home. My friend pointed out that I don’t have to heat my house. There are many cloud VM hosting options that will give you the power you need for a month of dedicated time for less than the price of my desktop and power bill. A cloud VM with an NVIDIA A100 card is roughly twice as powerful as my desktop.<br>
+My next several posts will be all about this subject. There is no question that ChatGPT 3.5 and 4 are more powerful, but does that matter even now?</p>
+<h2 id="reddit-and-discord-communities">Reddit and Discord Communities</h2>
+<p>There are many and one I especially enjoy at the moment is <a href="https://www.reddit.com/r/LocalLLaMA/">/r/LocalLLaMA</a>. They aren’t all convinced open source has the upper hand. I however finding myself in agreement with /u/StriveForMediocrity.</p>
+<p><img src="../Images/OpenSourceVersusOpenAI/image8.png" alt=""></p>
+<p>Having tested several models over the last few weeks I think it is at least plausible that open source AI is a better choice for many applications than the ironically named, but closed source, OpenAI.</p>
+<h1 id="on-the-other-hand">On the Other Hand…</h1>
+<p>It simply cannot be denied that the current best large language model at the moment is ChatGPT4. It is also one thing for me to use an entire GPU exclusively for myself and a completely different thing to build a system that can respond to a large user population at scale. <br><br>
+It’s an exciting time!</p>
+<h1 id="section"></h1>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

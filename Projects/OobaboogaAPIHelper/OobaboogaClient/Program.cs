@@ -1,4 +1,5 @@
-﻿using static OobaboogaAPIHelper.ApiHelper;
+﻿using DougWare.OobaboogaAPIHelper;
+using static OobaboogaAPIHelper.ApiHelper;
 
 namespace OobaboogaAPIHelper
 {

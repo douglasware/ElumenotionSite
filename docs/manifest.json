@@ -151,6 +151,86 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "Images/OpenSourceVersusOpenAI/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/OpenSourceVersusOpenAI/image1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/OpenSourceVersusOpenAI/image2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/OpenSourceVersusOpenAI/image2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/OpenSourceVersusOpenAI/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/OpenSourceVersusOpenAI/image3.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/OpenSourceVersusOpenAI/image4.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/OpenSourceVersusOpenAI/image4.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/OpenSourceVersusOpenAI/image5.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/OpenSourceVersusOpenAI/image5.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/OpenSourceVersusOpenAI/image6.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/OpenSourceVersusOpenAI/image6.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/OpenSourceVersusOpenAI/image7.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/OpenSourceVersusOpenAI/image7.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/OpenSourceVersusOpenAI/image8.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/OpenSourceVersusOpenAI/image8.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "Images/WeightRandoms/image1.png",
       "output": {
         "resource": {
@@ -275,6 +355,16 @@
       "output": {
         ".html": {
           "relative_path": "Journal/CurrentOpinions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Journal/OpenSourceVersusOpenAI.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/OpenSourceVersusOpenAI.html"
         }
       },
       "version": ""
