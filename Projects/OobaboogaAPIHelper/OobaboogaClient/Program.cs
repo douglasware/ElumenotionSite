@@ -7,7 +7,6 @@ namespace OobaboogaAPIHelper
     {
         public static async Task Main(string[] args)
         {
-            Config.Load();
             GenerateRequestBody requestBody = Presets.Default;
             requestBody.max_new_tokens = 220;
             

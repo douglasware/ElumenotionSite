@@ -11,7 +11,7 @@ namespace OobaboogaAPIHelper
     public class Turn
     {
         /// <summary>
-        /// Gets or sets the type of the turn ("Human" or "Assistant").
+        /// Gets or sets the type of the turn ("{@HumanName}" or "{@BotName}").
         /// </summary>
         public string TurnType { get; set; }
 

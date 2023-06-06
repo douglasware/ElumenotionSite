@@ -151,6 +151,36 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "Images/OobaboogaAPIHelper/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/OobaboogaAPIHelper/image1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/OobaboogaAPIHelper/image2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/OobaboogaAPIHelper/image2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/OobaboogaAPIHelper/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/OobaboogaAPIHelper/image3.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "Images/OpenSourceVersusOpenAI/image1.png",
       "output": {
         "resource": {
@@ -404,6 +434,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Projects/OobaboogaAPIHelper.md",
+      "output": {
+        ".html": {
+          "relative_path": "Projects/OobaboogaAPIHelper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Projects/WeightRandoms.md",
       "output": {
         ".html": {
@@ -494,16 +534,6 @@
       "output": {
         ".html": {
           "relative_path": "api/OobaboogaAPIHelper.ApiHelper.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/OobaboogaAPIHelper.Config.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/OobaboogaAPIHelper.Config.html"
         }
       },
       "version": ""
