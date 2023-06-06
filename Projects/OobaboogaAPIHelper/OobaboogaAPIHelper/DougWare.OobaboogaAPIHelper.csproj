@@ -11,6 +11,8 @@
     <PackageIcon>logo.png</PackageIcon>
     <RepositoryUrl>https://github.com/douglasware/ElumenotionSite</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <Version>1.0.1</Version>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -36,49 +38,49 @@
     <EmbeddedResource Include="Presets\ContrastiveSearch.txt">
       <LogicalName>ContrastiveSearch</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presets\Debug-deterministic.txt" >
+    <EmbeddedResource Include="Presets\Debug-deterministic.txt">
       <LogicalName>DebugDeterministic</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presets\Default.txt" >
+    <EmbeddedResource Include="Presets\Default.txt">
       <LogicalName>Default</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presets\Kobold-Godlike.txt" >
+    <EmbeddedResource Include="Presets\Kobold-Godlike.txt">
       <LogicalName>KoboldGodlike</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presets\Kobold-Liminal Drift.txt" >
+    <EmbeddedResource Include="Presets\Kobold-Liminal Drift.txt">
       <LogicalName>KoboldLiminalDrift</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presets\LLaMA-Precise.txt" >
+    <EmbeddedResource Include="Presets\LLaMA-Precise.txt">
       <LogicalName>LLaMAPrecise</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presets\Naive.txt" >
+    <EmbeddedResource Include="Presets\Naive.txt">
       <LogicalName>Naive</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presets\NovelAI-Best Guess.txt" >
+    <EmbeddedResource Include="Presets\NovelAI-Best Guess.txt">
       <LogicalName>NovelAIBestGuess</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presets\NovelAI-Decadence.txt" >
+    <EmbeddedResource Include="Presets\NovelAI-Decadence.txt">
       <LogicalName>NovelAIDecadence</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presets\NovelAI-Genesis.txt" >
+    <EmbeddedResource Include="Presets\NovelAI-Genesis.txt">
       <LogicalName>NovelAIGenesis</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presets\NovelAI-Lycaenidae.txt" >
+    <EmbeddedResource Include="Presets\NovelAI-Lycaenidae.txt">
       <LogicalName>NovelAILycaenidae</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presets\NovelAI-Ouroboros.txt" >
+    <EmbeddedResource Include="Presets\NovelAI-Ouroboros.txt">
       <LogicalName>NovelAIOuroboros</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presets\NovelAI-Pleasing Results.txt" >
+    <EmbeddedResource Include="Presets\NovelAI-Pleasing Results.txt">
       <LogicalName>NovelAIPleasingResults</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presets\NovelAI-Sphinx Moth.txt" >
+    <EmbeddedResource Include="Presets\NovelAI-Sphinx Moth.txt">
       <LogicalName>NovelAISphinxMoth</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presets\NovelAI-Storywriter.txt" >
+    <EmbeddedResource Include="Presets\NovelAI-Storywriter.txt">
       <LogicalName>NovelAIStorywriter</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presets\Verbose (Beam Search).txt" >
+    <EmbeddedResource Include="Presets\Verbose (Beam Search).txt">
       <LogicalName>VerboseBeamSearch</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
@@ -90,6 +92,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Update="settings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

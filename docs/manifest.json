@@ -540,6 +540,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/OobaboogaAPIHelper.Config.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OobaboogaAPIHelper.Config.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/OobaboogaAPIHelper.Conversation.yml",
       "output": {
         ".html": {

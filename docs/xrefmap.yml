@@ -171,6 +171,38 @@ references:
   isSpec: "True"
   fullName: OobaboogaAPIHelper.ApiHelper.TokenCountResult.tokens
   nameWithType: ApiHelper.TokenCountResult.tokens
+- uid: OobaboogaAPIHelper.Config
+  name: Config
+  href: api/OobaboogaAPIHelper.Config.html
+  commentId: T:OobaboogaAPIHelper.Config
+  fullName: OobaboogaAPIHelper.Config
+  nameWithType: Config
+- uid: OobaboogaAPIHelper.Config.ApiHostUrl
+  name: ApiHostUrl
+  href: api/OobaboogaAPIHelper.Config.html#OobaboogaAPIHelper_Config_ApiHostUrl
+  commentId: P:OobaboogaAPIHelper.Config.ApiHostUrl
+  fullName: OobaboogaAPIHelper.Config.ApiHostUrl
+  nameWithType: Config.ApiHostUrl
+- uid: OobaboogaAPIHelper.Config.ApiHostUrl*
+  name: ApiHostUrl
+  href: api/OobaboogaAPIHelper.Config.html#OobaboogaAPIHelper_Config_ApiHostUrl_
+  commentId: Overload:OobaboogaAPIHelper.Config.ApiHostUrl
+  isSpec: "True"
+  fullName: OobaboogaAPIHelper.Config.ApiHostUrl
+  nameWithType: Config.ApiHostUrl
+- uid: OobaboogaAPIHelper.Config.Load
+  name: Load()
+  href: api/OobaboogaAPIHelper.Config.html#OobaboogaAPIHelper_Config_Load
+  commentId: M:OobaboogaAPIHelper.Config.Load
+  fullName: OobaboogaAPIHelper.Config.Load()
+  nameWithType: Config.Load()
+- uid: OobaboogaAPIHelper.Config.Load*
+  name: Load
+  href: api/OobaboogaAPIHelper.Config.html#OobaboogaAPIHelper_Config_Load_
+  commentId: Overload:OobaboogaAPIHelper.Config.Load
+  isSpec: "True"
+  fullName: OobaboogaAPIHelper.Config.Load
+  nameWithType: Config.Load
 - uid: OobaboogaAPIHelper.Conversation
   name: Conversation
   href: api/OobaboogaAPIHelper.Conversation.html
