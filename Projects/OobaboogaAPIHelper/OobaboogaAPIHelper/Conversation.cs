@@ -11,14 +11,14 @@ namespace OobaboogaAPIHelper
     public class Turn
     {
         /// <summary>
-        /// Gets or sets the type of the turn ("{@HumanName}" or "{@BotName}").
+        /// Gets or sets the type of the turn ("Human" or "Assistant").
         /// </summary>
         public string TurnType { get; set; }
 
         /// <summary>
         /// Gets or sets the text of the turn.
         /// </summary>
-        public string Content { get; set; }
+        public string Content { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets or sets the number of tokens in the turn.
@@ -31,9 +31,11 @@ namespace OobaboogaAPIHelper
     /// </summary>
     public class Conversation
     {
-        public static Conversation FromJsonFile(string jsonFile)
+        public static Conversation FromJsonFile(string jsonFile, PromptTemplate promptTemplate = null)
         {
-            return System.Text.Json.JsonSerializer.Deserialize<Conversation>(System.IO.File.ReadAllText(jsonFile));
+            var converation = System.Text.Json.JsonSerializer.Deserialize<Conversation>(System.IO.File.ReadAllText(jsonFile));
+            converation._promptTemplate = converation._promptTemplate ?? promptTemplate;
+            return converation;
         }
 
         public static void ToJsonFile(Conversation conversation, string jsonFile)
@@ -44,7 +46,7 @@ namespace OobaboogaAPIHelper
         /// <summary>
         /// Gets or sets the initial system prompt.
         /// </summary>
-        public string SystemPrompt { get; set; } = "A chat between a human and an assistant.";
+        public string SystemPrompt { get { return _promptTemplate.SystemPrompt; } set { _promptTemplate.SystemPrompt = value; } }
 
         /// <summary>
         /// Gets or sets the number of tokens in the system prompt.
@@ -57,7 +59,7 @@ namespace OobaboogaAPIHelper
         /// </summary>
         public List<Turn> Turns { get; set; } = new List<Turn>();
 
-        private readonly PromptTemplate _promptTemplate = new PromptTemplate();
+        private PromptTemplate _promptTemplate = new PromptTemplate();
 
         public Conversation() { }
 
@@ -68,7 +70,6 @@ namespace OobaboogaAPIHelper
         public Conversation(PromptTemplate promptTemplate)
         {
             _promptTemplate = promptTemplate;
-            SystemPrompt = promptTemplate.SystemPrompt;
         }
 
         /// <summary>

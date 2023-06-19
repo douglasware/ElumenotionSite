@@ -11,8 +11,9 @@
     <PackageIcon>logo.png</PackageIcon>
     <RepositoryUrl>https://github.com/douglasware/ElumenotionSite</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>Bug fix to apply correct system prompt when loading a saved conversation created using a different prompt template</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
