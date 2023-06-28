@@ -262,15 +262,15 @@ references:
   isSpec: "True"
   fullName: OobaboogaAPIHelper.Conversation.AddTurn
   nameWithType: Conversation.AddTurn
-- uid: OobaboogaAPIHelper.Conversation.FromJsonFile(System.String)
-  name: FromJsonFile(string)
-  href: api/OobaboogaAPIHelper.Conversation.html#OobaboogaAPIHelper_Conversation_FromJsonFile_System_String_
-  commentId: M:OobaboogaAPIHelper.Conversation.FromJsonFile(System.String)
-  name.vb: FromJsonFile(String)
-  fullName: OobaboogaAPIHelper.Conversation.FromJsonFile(string)
-  fullName.vb: OobaboogaAPIHelper.Conversation.FromJsonFile(String)
-  nameWithType: Conversation.FromJsonFile(string)
-  nameWithType.vb: Conversation.FromJsonFile(String)
+- uid: OobaboogaAPIHelper.Conversation.FromJsonFile(System.String,OobaboogaAPIHelper.PromptTemplate)
+  name: FromJsonFile(string, PromptTemplate)
+  href: api/OobaboogaAPIHelper.Conversation.html#OobaboogaAPIHelper_Conversation_FromJsonFile_System_String_OobaboogaAPIHelper_PromptTemplate_
+  commentId: M:OobaboogaAPIHelper.Conversation.FromJsonFile(System.String,OobaboogaAPIHelper.PromptTemplate)
+  name.vb: FromJsonFile(String, PromptTemplate)
+  fullName: OobaboogaAPIHelper.Conversation.FromJsonFile(string, OobaboogaAPIHelper.PromptTemplate)
+  fullName.vb: OobaboogaAPIHelper.Conversation.FromJsonFile(String, OobaboogaAPIHelper.PromptTemplate)
+  nameWithType: Conversation.FromJsonFile(string, PromptTemplate)
+  nameWithType.vb: Conversation.FromJsonFile(String, PromptTemplate)
 - uid: OobaboogaAPIHelper.Conversation.FromJsonFile*
   name: FromJsonFile
   href: api/OobaboogaAPIHelper.Conversation.html#OobaboogaAPIHelper_Conversation_FromJsonFile_

@@ -121,6 +121,96 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "Images/DetectingAIGeneratedContent/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/DetectingAIGeneratedContent/image1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/DetectingAIGeneratedContent/image2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/DetectingAIGeneratedContent/image2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/DetectingAIGeneratedContent/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/DetectingAIGeneratedContent/image3.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/DetectingAIGeneratedContent/image4.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/DetectingAIGeneratedContent/image4.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/DetectingAIGeneratedContent/image5.jpeg",
+      "output": {
+        "resource": {
+          "relative_path": "Images/DetectingAIGeneratedContent/image5.jpeg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/DetectingAIGeneratedContent/image5.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/DetectingAIGeneratedContent/image5.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/DetectingAIGeneratedContent/image6.jpeg",
+      "output": {
+        "resource": {
+          "relative_path": "Images/DetectingAIGeneratedContent/image6.jpeg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/DetectingAIGeneratedContent/image6.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/DetectingAIGeneratedContent/image6.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/DetectingAIGeneratedContent/image7.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/DetectingAIGeneratedContent/image7.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "Images/FromDallE/ribboncutting.png",
       "output": {
         "resource": {
@@ -385,6 +475,16 @@
       "output": {
         ".html": {
           "relative_path": "Journal/CurrentOpinions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Journal/DetectingAIGeneratedContent.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/DetectingAIGeneratedContent.html"
         }
       },
       "version": ""
