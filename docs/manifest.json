@@ -351,6 +351,36 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "Images/ProjectedUserExperiencesWithAI/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ProjectedUserExperiencesWithAI/image1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ProjectedUserExperiencesWithAI/image2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ProjectedUserExperiencesWithAI/image2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ProjectedUserExperiencesWithAI/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ProjectedUserExperiencesWithAI/image3.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "Images/WeightRandoms/image1.png",
       "output": {
         "resource": {
@@ -495,6 +525,16 @@
       "output": {
         ".html": {
           "relative_path": "Journal/OpenSourceVersusOpenAI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Journal/ProjectedUserExperiencesWithAI.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/ProjectedUserExperiencesWithAI.html"
         }
       },
       "version": ""
