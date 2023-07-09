@@ -111,6 +111,56 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "Images/ChatGPTCodeInterpreter/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ChatGPTCodeInterpreter/image1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ChatGPTCodeInterpreter/image2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ChatGPTCodeInterpreter/image2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ChatGPTCodeInterpreter/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ChatGPTCodeInterpreter/image3.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ChatGPTCodeInterpreter/image4.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ChatGPTCodeInterpreter/image4.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ChatGPTCodeInterpreter/image5.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ChatGPTCodeInterpreter/image5.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "Images/CurrentOpinions/image1.png",
       "output": {
         "resource": {
@@ -495,6 +545,16 @@
       "output": {
         ".html": {
           "relative_path": "Journal/BuildingDomainSpecificLLMBots.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Journal/ChatGPTCodeInterpreter.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/ChatGPTCodeInterpreter.html"
         }
       },
       "version": ""

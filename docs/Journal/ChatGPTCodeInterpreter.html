@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Understanding OpenAI Code Interpreter </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Understanding OpenAI Code Interpreter ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="understanding-openai-code-interpreter">Understanding OpenAI Code Interpreter</h1>
+
+<p><img src="../Images/ChatGPTCodeInterpreter/image1.png" alt=""></p>
+<div style="font-size: x-small;color: #333;font-weight:bolder;padding-bottom:12px;margin-top: -16px;">Image: Divination Magic – Stable Diffusion, multiple steps<br>Divination is the attempt to gain insight into a question or situation by way of an occultic, standardized process or ritual. Used in various forms throughout history, diviners ascertain their interpretations of how a querent should proceed by reading signs, events, or omens, or through alleged contact or interaction with a supernatural agency. <a href="https://en.wikipedia.org/wiki/Divination">Wikipedia</a></div>  
+<br>  
+<p>A couple days ago OpenAI <a href="https://openai.com/blog/gpt-4-api-general-availability?utm_content=buffer31609&amp;utm_medium=social&amp;utm_source=linkedin.com&amp;utm_campaign=buffer">opened access to the GPT-4 API</a> for all paying OpenAI API customers and <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">began rolling out</a> the <a href="https://openai.com/blog/chatgpt-plugins#code-interpreter">Code Interpreter plug-in</a>, saying: <br></p>
+<blockquote>
+<p><em>“We provide our models with a working Python interpreter in a sandboxed, firewalled execution environment, along with some ephemeral disk space. Code run by our interpreter plugin is evaluated in a persistent session that is alive for the duration of a chat conversation (with an upper-bound timeout) and subsequent calls can build on top of each other. We support uploading files to the current conversation workspace and downloading the results of your work.”</em></p>
+</blockquote>
+<h2 id="simply-put-with-a-demo">Simply Put with a Demo</h2>
+<p>You can now share a file by uploading it and ask the chat bot to answer questions about the file’s contents and manipulate it using python code. This feature is not free and requires a ChatGPT Plus subscription.<br></p>
+<h3 id="upload-the-file-with-some-instructions">Upload the file with some instructions</h3>
+<p>This isn’t a detailed tutorial and there are some steps required to turn everything on which I’m leaving out of this post because I assume it will all change as the service gets more polished.</p>
+<ul>
+<li>Step One – Make sure you have selected GPT-4 and enable the Code Interpreter plugin</li>
+<li>Step Two – Upload a file along with instructions</li>
+</ul>
+<p><img src="../Images/ChatGPTCodeInterpreter/image2.png" alt=""></p>
+<p>In this example, I gave the chat bot very little to go on, and so it analyzed the file to understand its contents and then asked me if it understood my desired result. The file comes from the <a href="https://www.elumenotion.com/Projects/WeightRandoms.html">Weighted Randoms sample project</a> and the chat bot’s suggestion was exactly right! <br><br>
+The chat bot used the popular <a href="https://pandas.pydata.org/">pandas library</a> and you can see the code it ran as well as the result by clicking the <strong>Show work</strong> button.</p>
+<p><img src="../Images/ChatGPTCodeInterpreter/image3.png" alt=""></p>
+<h3 id="analyze-the-data">Analyze the data</h3>
+<p>My <a href="https://www.elumenotion.com/Projects/WeightRandoms.html">Weighted Randoms sample project</a> contains a <a href="https://github.com/douglasware/ElumenotionSite/blob/master/Projects/WeightedRandoms/visualizer.ipynb">Jupyter notebook</a> for visualization of the data in the various csv files. Code Interpreter can do the same.</p>
+<ul>
+<li>Step 3: Ask it to do more with the file such as “create a line graph”</li>
+</ul>
+<p><img src="../Images/ChatGPTCodeInterpreter/image4.png" alt=""></p>
+<p>In my Jupyter notebook, I used matplotlib. As you can see, so did Code Interpreter.</p>
+<p><img src="../Images/ChatGPTCodeInterpreter/image5.png" alt=""></p>
+<h2 id="thoughts-and-observations">Thoughts and Observations</h2>
+<p>First off, once again I am astounded by how useful this is. It wasn’t 24 hours when I saw this breathless headline: <a href="https://www.msn.com/en-us/money/careersandeducation/code-interpreter-might-be-most-useful-application-of-ai-so-far-says-wharton-professor/ar-AA1dBePi">Code Interpreter might be most useful application of A.I. so far, says Wharton professor</a>. <br><br>
+<strong>He might be right, but this pattern, which I will be writing about often, is easily extended. So, we ain’t seen nothing yet!</strong> <br><br>
+On the other hand, it is important to understand the limitations. This example was trivial, but it did require me to ask questions and direct the assistant. So, the first limitation is that it isn’t autonomous, it does make mistakes, and you have to know enough to be able to direct it. The second is the size of the context window. This second limitation is very subtle and can lead to all sorts of problems because **exceeding it causes hallucinations and it isn’t at all obvious when you cross the line! <br><br>
+In fact, this context window size is always a challenge, but here I speculate it will be extra challenging because the python sandbox can hold way more information in its memory as compared to the number of tokens which the chat bot can keep track of. The potential for hilarious mistakes is real so keep your data scientists close by and don’t think this tool can safely replace them. <br><br>
+I think of this tool as a fantastic supplement to the idea of citizen data scientists in the same way traditional productivity tools have enabled people who are not developers to create basic solutions for themselves, and as always, there is a line, above which, deeper expertise is still required.</p>
+<p>It seems like every week I post something along the lines of <strong>”this is an important thing you should know about!”</strong> but that is where we are my friends.<br>
+-- Doug Ware. July 9, 2023</p>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
