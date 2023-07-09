@@ -79,7 +79,10 @@
 <p><em>“We provide our models with a working Python interpreter in a sandboxed, firewalled execution environment, along with some ephemeral disk space. Code run by our interpreter plugin is evaluated in a persistent session that is alive for the duration of a chat conversation (with an upper-bound timeout) and subsequent calls can build on top of each other. We support uploading files to the current conversation workspace and downloading the results of your work.”</em></p>
 </blockquote>
 <h2 id="simply-put-with-a-demo">Simply Put with a Demo</h2>
-<p>You can now share a file by uploading it and ask the chat bot to answer questions about the file’s contents and manipulate it using python code. This feature is not free and requires a ChatGPT Plus subscription.<br></p>
+<p>You can now share a file by uploading it and ask the chat bot to answer questions about the file’s contents and manipulate it using <strong>python code the chat bot writes for you and the plug-in runs to to follow your instructions</strong>. You can see the python code if you want as well as copy it. On the other hand, if you understand the task and can engineer prompts effectively, <strong>you don’t have to think about or interact with the python code at all</strong>. <br></p>
+<hr>  
+This feature is not free and requires a ChatGPT Plus subscription.   
+<hr>   
 <h3 id="upload-the-file-with-some-instructions">Upload the file with some instructions</h3>
 <p>This isn’t a detailed tutorial and there are some steps required to turn everything on which I’m leaving out of this post because I assume it will all change as the service gets more polished.</p>
 <ul>
@@ -90,7 +93,7 @@
 <p>In this example, I gave the chat bot very little to go on, and so it analyzed the file to understand its contents and then asked me if it understood my desired result. The file comes from the <a href="https://www.elumenotion.com/Projects/WeightRandoms.html">Weighted Randoms sample project</a> and the chat bot’s suggestion was exactly right! <br><br>
 The chat bot used the popular <a href="https://pandas.pydata.org/">pandas library</a> and you can see the code it ran as well as the result by clicking the <strong>Show work</strong> button.</p>
 <p><img src="../Images/ChatGPTCodeInterpreter/image3.png" alt=""></p>
-<h3 id="analyze-the-data">Analyze the data</h3>
+<h3 id="ask-questions-and-do-work-using-the-file">Ask questions and do work using the file</h3>
 <p>My <a href="https://www.elumenotion.com/Projects/WeightRandoms.html">Weighted Randoms sample project</a> contains a <a href="https://github.com/douglasware/ElumenotionSite/blob/master/Projects/WeightedRandoms/visualizer.ipynb">Jupyter notebook</a> for visualization of the data in the various csv files. Code Interpreter can do the same.</p>
 <ul>
 <li>Step 3: Ask it to do more with the file such as “create a line graph”</li>
