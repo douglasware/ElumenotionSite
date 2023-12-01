@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="-"></h1>
+
+<p><img src="../Images/CopilotStudioThoughts/image1.png" alt="">  </p>
+<h1 id="building-good-chatbots">Building Good Chatbots</h1>
+<hr>
+<h2 id="introduction">Introduction</h2>
+<p>November 2023 was a big month for changes in the generative AI space with new products from OpenAI and Microsoft that make it easier than ever for regular people to make useful AI solutions without traditional software development. Among these is <strong><a href="https://www.microsoft.com/en-us/copilot/microsoft-copilot-studio">Microsoft Copilot Studio</a></strong> which (unlike many of their other branded Copilot products only available to large accounts until sometime in 2024) is <strong>now available for most M365 subscribers</strong>.  I’ve had clients and associates use it already and this post began as tips on using Copilot Studio most effectively, pitfalls, and how to deal with them. <br><br>I expect Microsoft Copilot Studio to open the floodgates for AI in companies that use M365 even if they never buy the $30/month licenses. I also think that many will choose Copilot Studio as a <strong>component of larger enterprise systems</strong> that marry the best of no-code with traditional software systems both legacy and new. A key word here is <em>component</em> because, in my opinion, <strong>you can’t build a great chatbot with it all by itself</strong> just yet. If you use it by itself, you will find you get a ‘sort of good but not really’ result most of the time. This article will clearly demonstrate why this is so and things you can do to get the best possible quality today.<br><br>Today is December 1, 2023. I fully expect Microsoft to improve on the current state. This is not intended to be an enduring opinion piece about Copilot Studio and it isn’t any kind tutorial. There are no step-by-step instructions because, as I finished making examples for the first draft, I realized that what I was really doing was explaining how to make a good chatbot that works with your documents generally using a no-code approach with Copilot Studio, but I was also using traditional code and services to illustrate the details the Copilot Studio hides from you by default. And so, <strong>this post is a mélange of general advice that applies equally to cloud-based systems using the biggest and most expensive models to private systems using models you can run yourself such as Llama-2 in user interfaces far from Microsoft land.</strong><br><br>Accordingly, the final version wound up covering the subject of chatbots generally starting with important background information and terminology about <em>models</em>, <em>chatbots</em>, <em>prompts</em>, <em>hallucinations</em>, <em>fine-tuning</em>, <em>retrieval augmented generation</em> and <em>context windows</em> before jumping into Copilot Studio. From there it explains what you can do in Copilot Studio, where and why it falls short in its current state with some tips for getting the best results, and some alternative options available in Azure and elsewhere which (at the moment) I generally recommend instead. Along the way you will learn about a some of the options Copilot Studio offers for retrieval, different types of search including <em>keyword queries</em>, <em>sematic search</em>, and <em>vector search</em>. As you go you will be exposed to some complementary and alternative technologies including <em>embeddings</em>, <em>Azure AI Search</em>, <em>Qdrant vector database</em>, <em>Semantic Kernel</em>, and <em>Kernel Memory</em>.<br><br>This one is intended for a general audience but has some juicy details. I am doing my best to keep it from being too technical, but there is some technical content interspersed throughout. If you find it confusing, don’t worry about it, please just skip it and keep reading!  </p>
+<hr>
+<h2 id="part-one---important-concepts">Part One - Important concepts</h2>
+<p>If you already understand retrieval augmented generation (RAG), this section won’t be that interesting and you can skip it. Otherwise, keep reading!  </p>
+<h3 id="models-versus-copilots-and-chatbots">Models versus copilots and chatbots</h3>
+<p>The terms model and chat bot are sometimes used interchangeably, but they aren’t the same thing. A chat bot is a system that usually includes on or models to do its work. Aside from models, a typical chat bot system contains a user interface, services and databases. Considering this, Copilot Studio is a wonderful way for people who aren’t developers or data scientists to unlock the power of large language models for useful applications.  In the rest of this article <em>copilot</em> and <em>chatbot</em> are synonymous but <em>model</em> specifically and only means model.<br><br>Examples of chatbots include:  </p>
+<ul>
+<li>ChatGPT</li>
+<li>Microsoft Copilot</li>
+<li>Things you make with Microsoft Copilot Studio</li>
+</ul>
+<p>Examples of models include:  </p>
+<ul>
+<li>GPT-35-Turbo</li>
+<li>GPT-4</li>
+<li>Meta Llama 2</li>
+</ul>
+<p>This is an important distinction which will become clearer as we go.  </p>
+<h3 id="chatting-with-your-data">Chatting with your data</h3>
+<p>You may recall that people were very impressed when OpenAI released ChatGPT on November 30, 2023. Collectively we spent the next several months trying to understand its use, dangers, and limitations. One of these limitations is the tendency to tell convincing falsehoods or what we call <em>hallucinations</em>. <br><br>A hallucination is when a chatbots generates incorrect, irrelevant, or nonsensical responses. This phenomenon can be attributed to various factors:  </p>
+<ul>
+<li>Training Data Limitations: Language models are trained on large datasets, but these datasets might not cover all possible scenarios or questions. When faced with unfamiliar topics, the chatbot may generate irrelevant or incorrect responses.</li>
+<li>Model Constraints: The design and complexity of the underlying model also play a role. Some models might not be sophisticated enough to handle complex or nuanced queries effectively.</li>
+<li>Contextual Misinterpretation: Chatbots might misunderstand or lose track of the conversation context, leading to responses that don&#39;t align with the current discussion.</li>
+<li>Overgeneralization: AI models can sometimes make broad generalizations based on their training, leading to responses that are technically correct but contextually inappropriate.</li>
+<li>Bias in Training Data: If the training data contains biases, the chatbot might replicate these biases in its responses, leading to inaccurate or inappropriate content.</li>
+</ul>
+<p><strong>Note that some of these causes are related to the model which is trained on a dataset and others are blamed on the chatbot which keeps track of the conversation</strong>  </p>
+<p>Simply put <strong>a model hallucinates when it doesn’t know the answer</strong>. We can improve things by including instructions in the prompt such as: “If you don’t know the answer to my question, say I don’t know instead of inventing an answer.”   </p>
+<h3 id="solving-hallucinations-with-fine-tuning">Solving hallucinations with fine-tuning</h3>
+<p><em>Fine-tuning</em> is a process where you take an existing model and train it on new data to make a new model. There is a large ecosystem around fine-tuning, especially for private AI applications using models like Meta Llama 2. People fine-tune models to add specialized knowledge or skills, but also to change a model’s personality and style. For some, the ultimate goal is to make models that are ever smaller and more capable to enable good AI on commodity and even local hardware. To get an idea of the scale of these efforts <a href="https://huggingface.co/TheBloke">check out the space of Tom Jobbins, TheBloke, on Hugging Face</a>. He provides a great service to the community by shrinking, <em>quantizing</em>, models to work on less expensive hardware.<br>Fine-tuning is a powerful approach to many problems, but it isn’t necessarily a good way to approach “chat with your data” problems insofar as it is time consuming, expensive, and the result is a static model. If the facts or data change, you must repeat the process. An alternative and more common approach to solving hallucinations is with <em>prompt engineering</em> and <em>retrieval augmented generation</em>.  </p>
+<h3 id="prompt-engineering">Prompt engineering</h3>
+<p>A <strong>prompt</strong> is a message sent to the model to generate a response which completes the prompt. Models are static, unchanging and have no memory of previous questions, answers or conversations. If you’ve heard the term <em>prompt engineering</em> in context of ChatGPT it refers to writing a good prompt in the ChatGPT UI, but in context of chatbot systems it refers to all the things the chatbot system is doing to build the <strong>real</strong> prompt sent to the model. When you enter your message and hit send, the chatbot system makes a new prompt that consists of your message, instructions to the system, the previous messages in the conversation, and <strong>whatever other facts or instructions the creator of the chatbot thinks is necessary to get a good response</strong>. In fact, the chatbot might even use the model to completely rewrite your question. Generally, all this work is hidden from you and all you see is the answer… which might be a hallucination. <br><br>In this context, prompt engineering also involves managing the size of the prompts to fit the model’s <em>context window</em>.  </p>
+<h3 id="solving-hallucinations-with-retrieval-augmented-generation-rag">Solving hallucinations with Retrieval augmented generation (RAG)</h3>
+<p>A RAG system is a type of chatbot that combines search, prompt engineering, and a model to <em>ground</em> the response in a set of facts provided on the fly. Simply put <strong>RAG works by putting the facts required to answer the question into the prompt along with the question</strong>. Here is an example prompt from the <a href="https://learn.microsoft.com/en-us/semantic-kernel/overview/">most excellent Semantic Kernel project</a>!  </p>
+<pre><code>Answer questions only when you know the facts or the information is provided.  
+When you don&#39;t have sufficient information you reply with a list of commands to find the information needed.  
+When answering multiple questions, use a bullet point list.  
+Note: make sure single and double quotes are escaped using a backslash char.  
+[COMMANDS AVAILABLE]  
+- bing.search  
+[INFORMATION PROVIDED]  
+{{ $externalInformation }}  
+[EXAMPLE 1]  
+Question: what&#39;s the biggest lake in Italy?  
+Answer: Lake Garda, also known as Lago di Garda.  
+[EXAMPLE 2]  
+Question: what&#39;s the biggest lake in Italy? What&#39;s the smallest positive number?  
+Answer:  
+* Lake Garda, also known as Lago di Garda.  
+* The smallest positive number is 1.  
+[EXAMPLE 3]  
+Question: what&#39;s Ferrari stock price? Who is the current number one female tennis player in the world?  
+Answer:  
+{{ &#39;{{&#39; }} bing.search &quot;&quot;what\\&#39;s Ferrari stock price?&quot;&quot; {{ &#39;}}&#39; }}.  
+{{ &#39;{{&#39; }} bing.search &quot;&quot;Who is the current number one female tennis player in the world?&quot;&quot; {{ &#39;}}&#39; }}.  
+[END OF EXAMPLES]  
+[TASK]  
+Question: {{ $input }}.  
+Answer:   
+</code></pre><p>The prompt has several placeholders which the chatbot replaces with appropriate content to try to answer the question. This one…  </p>
+<pre><code>{{ $externalInformation }}  
+</code></pre><p>…is replaced with whatever <strong>content</strong> is <strong>retrieved</strong> from search to <strong>augment</strong> the <strong>generation</strong> of the answer. <br><br>This part…  </p>
+<pre><code>Answer questions only when you know the facts or the information is provided.  
+When you don&#39;t have sufficient information you reply with a list of commands to find the information needed.  
+</code></pre><p>…ensures that the answer is <strong>grounded</strong> in the things the chatbot knows and the information provided and (hopefully) prevents hallucinations.   </p>
+<p>Grounding the answer in the retrieved data can almost completely remove some kinds of hallucinations from a chatbot because you can easily respond with “I don’t know” or “Information not found” if the retrieval doesn’t find any matches for the request when it does the search. This is an equally effective way to censor the chatbot because, as the chatbot creator, you can use this to prevent the chatbot from talking about any subject that isn’t in the search index.<br>On the other hand, even with RAG hallucinations can still occur due various reasons including:  </p>
+<ul>
+<li>Incorrect Retrieval: Retrieving incorrect or irrelevant information from external sources.</li>
+<li>Context Mismatch: Retrieved information may not align well with the specific query context.</li>
+<li>Integration Challenges: Difficulties in seamlessly combining retrieved information with the generative model&#39;s output.</li>
+<li>Outdated or Limited Knowledge Sources: Using external sources that are not current or comprehensive.</li>
+<li>Model Limitations: Similar limitations as standard generative models in understanding and context management.</li>
+<li>Biases in Data Sources: External sources might contain biases, which can influence the responses.</li>
+</ul>
+<p>Simply put <strong>a chatbot using RAG hallucinates when it doesn’t know the answer</strong>. The difference here is that the reason the <strong>model doesn’t know the answer</strong> is because of the <strong>quality of the information provided by the chatbot</strong> instead of the information on which the model was trained. <br><br>Congratulations for reading this far! We are almost ready to talk about Copilot Studio, but first a note on <em>context management</em> and the <em>context window</em>.  </p>
+<h3 id="context-window">Context window</h3>
+<p>The <em>context window</em> is the length of text a model can process, i.e. the prompt, and respond to in a single request, i.e. the response measured in <em>tokens</em>. When the limit is exceeded, you get errors. The context window size is perhaps the single most important constraint we face when building generative AI systems and is a key differentiator between models driving both capability and cost. Consider the following from <a href="https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/">Microsoft</a>  </p>
+<table>
+<thead>
+<tr>
+<th>Models</th>
+<th>Context</th>
+<th>Prompt (Per 1,000 tokens)</th>
+<th>Completion (Per 1,000 tokens)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPT-3.5-Turbo</td>
+<td>4K</td>
+<td>$0.0015</td>
+<td>$0.002</td>
+</tr>
+<tr>
+<td>GPT-3.5-Turbo</td>
+<td>16K</td>
+<td>$0.003</td>
+<td>$0.004</td>
+</tr>
+<tr>
+<td>GPT-4</td>
+<td>8K</td>
+<td>$0.03</td>
+<td>$0.06</td>
+</tr>
+<tr>
+<td>GPT-4</td>
+<td>32K</td>
+<td>$0.06</td>
+<td>$0.12</td>
+</tr>
+</tbody>
+</table>
+<p>For comparison purposes, the base GPT-3.5-Turbo model has a 4k context window which can hold around six pages of text. GPT-4 offers a version with a 32k context window which can hold around forty-eight pages of text. Sounds great except that the <strong>32k context size costs forty times as much</strong>. What’s more, if one requires capacity to run that model at scale, you must commit to spending five-figures per month – <strong>it is possible to spend over $1 per query with GPT-4 32k!</strong><br><br>At the opposite end of the spectrum are small models you can run yourself. There has been great progress in expanding the context window in this area, but there are many models with 2k context windows! Often, to get acceptable results from these small models, people will use a combination of fine-tuning and RAG.  </p>
+<h3 id="copilot-studio-models">Copilot Studio models</h3>
+<p>One way Copilot Studio provides value is by providing a model that it uses internally by default at no extra charge to end-users. What is the specific model, how big is its context window, and what are its limits? <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-ai-features#ai-models-in-microsoft-copilot-studio---background">The answer appears to be that it’s a secret!</a> <br><br>As we get into the meat of this post, I am going to start with this mystery model before connecting it to a GPT-35-Turbo-16k deployment so that I can show apples-to-apples comparisons between Copilot-style chatbots and alternatives.  </p>
+<hr>
+<h2 id="part-two--examples-house-of-straw-house-of-sticks-house-of-bricks-castle-on-a-hill">Part Two – Examples: House of straw, House of sticks, House of bricks, Castle on a hill</h2>
+<p><img src="../Images/CopilotStudioThoughts/image2.png" alt="">  </p>
+<h3 id="wise-king-solomon">Wise King Solomon</h3>
+<p>The example I will use throughout the remainder of the article is a chatbot grounded in <a href="https://en.wikipedia.org/wiki/Book_of_Proverbs">The Book of Proverbs</a>, the text of which I got from <a href="https://biblehub.com/proverbs/">BibleHub.com</a>. I like using this as an example for several reasons:  </p>
+<ol>
+<li>The text is long. At around fifteen-thousand words and over seventeen-thousand tokens, it is too long to fit into most context windows.   </li>
+<li>The language is stylized and formal, just like many business and technical documents.  </li>
+<li>Unlike many business and technical documents, it is widely recognizable which makes it easier for many people to evaluate the quality of the responses.  </li>
+<li>Many models were trained on data sets that contain the text which makes certain demonstrations of grounding posisible  </li>
+</ol>
+<h3 id="the-tests">The tests</h3>
+<p>Remember that the purpose of the Solomon chatbot is to give advice grounded in Proverbs, not to answer questions specifically about the text of the book. You will notice that some of the questions do mention Proverbs or Solomon. They should be easier for a chatbot using keyword queries to answer.  </p>
+<ol>
+<li>How do I become wise?  </li>
+<li>I am going to have a meeting with my boss. I want to tell him about the amazing work I have done. Did Solomon have any advice?  </li>
+<li>I think the mayor of our town is a liar and a fool. I told my friend and she said it isn&#39;t a good idea to say things like that. Which of us is right? What does proverbs say?  </li>
+<li>I have a lot of money and I am very proud of that. In fact, I am sure I am better than most people. What do you think about that?  </li>
+<li>How do I do the right things and avoid doing the wrong things?  </li>
+</ol>
+<h3 id="house-of-straw-the-system-prompt">House of straw: the system prompt</h3>
+<p>Recall from Part One that we can provide guidance to the model via the prompt to encourage behavior and reduce hallucinations. Also recall that we don’t know what model chatbots made in Copilot Studio use by default. I don’t know if what I am about to show you is a bug, but the result I got from trying to set the system prompt in Copilot Studio were very unsatisfactory. <br><br>Step one is to create a new Copilot with no additional configuration as a baseline and ask it a question.  </p>
+<p><img src="../Images/CopilotStudioThoughts/image3.png" alt="">  </p>
+<p>Unsurprisingly, I get no answer. The generative AI capabilities in Copilot Studio are new and a bolt-on to the earlier Power Virtual Agents system that required you to define all of the topics and things the bot could say and do. Generative AI makes using the tool much easier, but you must turn it on.  </p>
+<p><img src="../Images/CopilotStudioThoughts/image4.png" alt="">  </p>
+<p>I also set the content moderation to ‘Low’ in hopes of getting an answer. Finally, I set the <strong>Custom instructions</strong> according to the <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-generative-answers-prompt-modification">documentation</a>.  </p>
+<p><img src="../Images/CopilotStudioThoughts/image5.png" alt="">  </p>
+<p>I was very surprised when it failed to answer the first test question. As this is all a black-box, it is possible this behavior (which as you will recall is a type of hallucination) is a failure of the model or the chatbot.  </p>
+<p><img src="../Images/CopilotStudioThoughts/image6.png" alt="">  </p>
+<p>As you can see below, I could build a chatbot using <strong>Azure Open AI Studio</strong> instead and get acceptable results.   </p>
+<p><img src="../Images/CopilotStudioThoughts/image7.png" alt="">  </p>
+<p><strong>-1 for Copilot Studio</strong><br><br>On the other hand, this will make the ‘House of sticks’ section much easier to understand as we introduce retrieval augmented generation into the mix.   </p>
+<h3 id="house-of-sticks-keyword-queries-against-documents-and-websites">House of sticks: keyword queries against documents and websites</h3>
+<p>Once Generative AI is enabled in the Copilot, you can connect it to data for retrieval within limits for no additional charge and without needing to set anything else up. Two options are websites and document upload.  </p>
+<p><img src="../Images/CopilotStudioThoughts/image8.png" alt="">  </p>
+<p>Let’s start with <strong>Upload a document</strong>. For this and most of the other scenarios I created a text file with the text.   </p>
+<p><img src="../Images/CopilotStudioThoughts/image9.png" alt="">  </p>
+<h4 id="test-1--how-do-i-become-wise">Test 1 – How do I become wise?</h4>
+<p><img src="../Images/CopilotStudioThoughts/image10.png" alt="">  </p>
+<p>You might be surprised that it didn’t have an answer for this considering the open lines of the book. The third line includes the word <em>wisdom</em> but the keyword query created for this expression doesn’t have enough words that match the text and <em>wisdom</em> is not the same word as <em>wise</em>. And so, it fails to answer correctly given the grounding. <br>  </p>
+<h4 id="test-2--i-am-going-to-have-a-meeting-with-my-boss-i-want-to-tell-him-about-the-amazing-work-i-have-done-did-solomon-have-any-advice">Test 2 – I am going to have a meeting with my boss. I want to tell him about the amazing work I have done. Did Solomon have any advice?</h4>
+<p><img src="../Images/CopilotStudioThoughts/image11.png" alt="">  </p>
+<p>This time it gives an answer, and a pretty good one at that! If we have a look at the citation text, we can see that it contains the literal text <strong>Solomon</strong> which satisfies the keyword query.  </p>
+<p><img src="../Images/CopilotStudioThoughts/image12.png" alt="">  </p>
+<p>Notice that the citation consists of a snippet of text and that it is only a few hundred words long. The chatbot chose a snippet from the file to add to the prompt. As I told you before, the text is too long to fit into the context window so it can only use a <strong>chunk</strong> of the document. <br><br>The text file contains the word, <em>Solomon</em> in several places. Was this the best chunk? Maybe, maybe not. The keyword query is only matching on the text and it may have chosen this particular chunk simply because the word is repeated and appears twice.  </p>
+<h4 id="test-3--i-think-the-mayor-of-our-town-is-a-liar-and-a-fool-i-told-my-friend-and-she-said-it-isnt-a-good-idea-to-say-things-like-that-which-of-us-is-right-what-does-proverbs-say">Test 3 – I think the mayor of our town is a liar and a fool. I told my friend and she said it isn&#39;t a good idea to say things like that. Which of us is right? What does proverbs say?</h4>
+<p><img src="../Images/CopilotStudioThoughts/image13.png" alt="">  </p>
+<p>Again we get a good answer! Maybe this Solomon bot isn’t too bad!  </p>
+<h4 id="test-4--i-have-a-lot-of-money-and-i-am-very-proud-of-that-in-fact-i-am-sure-i-am-better-than-most-people-what-do-you-think-about-that">Test 4 – I have a lot of money and I am very proud of that. In fact, I am sure I am better than most people. What do you think about that?</h4>
+<p><img src="../Images/CopilotStudioThoughts/image14.png" alt="">  </p>
+<p>Ok! We’re on a roll now. This Solomon Copilot is looking good! Drumroll please!  </p>
+<h4 id="test-5--how-do-i-do-the-right-things-and-avoid-doing-the-wrong-things">Test 5 – How do I do the right things and avoid doing the wrong things?</h4>
+<p><img src="../Images/CopilotStudioThoughts/image15.png" alt="">  </p>
+<p>…sad trombone. Maybe it isn’t ready to share!<br>The final tally is three answers and two hallucinations. You might be surprised by the two that failed because they should have been the easiest ones to provide some answer for given the document. You shouldn’t be because this is a simple demonstration of the weaknesses of RAG based on keyword query searches. It only works well when the users of the chatbot use the right vocabulary and the right words.<br><br>It could be that this is acceptable. In a workgroup where everyone speaks the same language or in a domain that is formal, the chatbot will usually be able to find some information if the questions are phrased properly. On the other hand, if the words are common in the documents and phrases often repeat, the more documents you add, the less likely it is to pick sections which are relevant.  </p>
+<h4 id="documents-versus-websites-sharepoint-and-others">Documents versus websites, SharePoint and others</h4>
+<p>Each of the no-additional-cost options uses keyword search. The size of the snippet or chunk retrieved varies. I have not done serious testing, but it appears that the web search has the smallest snippet size and provides one snippet for each page found. This can directly lead to another cause of hallucinations in your grounding which happens when a low quality or short result is passed to the model which then makes up an answer.<br><br>I reconfigured the connection to use the Bible Hub website. This gives the chatbot access to much more than the single book I uploaded previously, including summaries. However, the snippets returned by the Bing Search API are very short at a few hundred characters (as opposed to words) long. Consider the result:  </p>
+<p><img src="../Images/CopilotStudioThoughts/image16.png" alt="">  </p>
+<p>That isn’t necessarily bad advice, but it isn’t grounded in the source content and almost none of it is supported by the specific citation. It’s a hallucination in context of the attempt to ground the chatbot in specific content.<br><br>You should be aware of this behavior with the Bing Web API. It hallucinates badly because of this when used for complex questions that can’t be answered from a short snippet of text from a long web page! Understanding this, the flaw becomes easy to demonstrate. In fact, I’d argue that if you get a long answer from it about a complicated question, you should assume the answer is wrong and read the pages which contain the alleged ‘information’.  </p>
+<h3 id="house-of-bricks-semantic-search-with-azure-open-ai">House of bricks: semantic search with Azure Open AI</h3>
+<p>At the moment point, Copilot Studio can’t do any better than what you’ve seen in ‘House of sticks’ without adding in some other services which are not free. In this next scenario I am using Azure Open AI and Azure AI Search using <strong>Azure AI Studio</strong>.  You can connect your Copilot to it as a data source instead of using the free model. <br><br>Azure Open AI Studio is also a no-code tool, but instead of being surfaced through M365, it is surfaced through Azure. I assume that far more people have access to Copilot Studio and Azure Open AI studio, but if you have both and need the capabilities demonstrated in this section, it gets harder to see Copilot Studio as a good value unless you have additional requirements that justify it independently of the need for a good chatbot experience.  </p>
+<p>Once you have your chatbot working in Azure AI Studio you can deploy it to (and pay for as an additional charge) either a new web app in Azure which is based on Python and React or as a Copilot (previously known as a Power Virtual Agent bot).  </p>
+<p><img src="../Images/CopilotStudioThoughts/image17.png" alt="">  </p>
+<p>This was not the option I would have recommended in many case prior to all of their announcements made on November 15, 2023 at the Ignite conference. The same day they revealed Copilot Studio they also significantly lower the cost of the semantic search features in Azure Cognitive Search, renaming it to <a href="https://azure.microsoft.com/en-us/products/ai-services/ai-search">Azure AI Search</a>. Things change fast in the AI space, and this is a now good option for many scenarios. <br><br><a href="https://en.wikipedia.org/wiki/Semantic_search">Semantic search</a> denotes search with meaning, as distinguished from lexical search where the search engine looks for literal matches of the query words or variants of them, without understanding the overall meaning of the query. If you made it this far, you should immediately grasp why this is a better approach for RAG than keyword query searches. <br><br>This time I am using the system prompt from the ‘house of straw test’ along with the same content, but with semantic search instead of keyword search using GPT-3.5-turbo-16k. Let’s see the results!  </p>
+<h4 id="test-1--how-do-i-become-wise-1">Test 1 – How do I become wise?</h4>
+<p><img src="../Images/CopilotStudioThoughts/image18.png" alt="">  </p>
+<h4 id="test-2--i-am-going-to-have-a-meeting-with-my-boss-i-want-to-tell-him-about-the-amazing-work-i-have-done-did-solomon-have-any-advice-1">Test 2 – I am going to have a meeting with my boss. I want to tell him about the amazing work I have done. Did Solomon have any advice?</h4>
+<p><img src="../Images/CopilotStudioThoughts/image19.png" alt="">  </p>
+<h4 id="test-3--i-think-the-mayor-of-our-town-is-a-liar-and-a-fool-i-told-my-friend-and-she-said-it-isnt-a-good-idea-to-say-things-like-that-which-of-us-is-right-what-does-proverbs-say-1">Test 3 – I think the mayor of our town is a liar and a fool. I told my friend and she said it isn&#39;t a good idea to say things like that. Which of us is right? What does proverbs say?</h4>
+<p><img src="../Images/CopilotStudioThoughts/image20.png" alt="">  </p>
+<h4 id="test-4--i-have-a-lot-of-money-and-i-am-very-proud-of-that-in-fact-i-am-sure-i-am-better-than-most-people-what-do-you-think-about-that-1">Test 4 – I have a lot of money and I am very proud of that. In fact, I am sure I am better than most people. What do you think about that?</h4>
+<p><img src="../Images/CopilotStudioThoughts/image21.png" alt="">  </p>
+<h4 id="test-5--how-do-i-do-the-right-things-and-avoid-doing-the-wrong-things-1">Test 5 – How do I do the right things and avoid doing the wrong things?</h4>
+<p><img src="../Images/CopilotStudioThoughts/image22.png" alt="">  </p>
+<h4 id="results">Results!</h4>
+<p>The bot based on GPT-3.5-turbo-16k is the clear winner. It gave a good answer for each of the questions. If you are looking for a no-code solution and you have access to Azure, Azure AI Studio with Azure AI Search is clearly superior to Microsoft Copilot Studio in terms of ease of use and the quality of the result. But remember, you can start in Azure AI Studio, publish to Copilot Studio and extend from there which opens the door to a wide range of options with Power Platform. Alternatively, or in addition to deploying to Power Platform, you can deploy to an app service in Azure and extend from there.<br><br>Because of the many recent changes, not the least of which is the aggressive new pricing in Azure AI Search, I expect the advice I give clients in December to be very different from the advice I gave in early November. <br><br>Shameless pitch: you need an adviser in this insanely fast changing space!  </p>
+<h3 id="castle-on-a-hill">Castle on a hill</h3>
+<p>The next (final?) part will take us into much deeper territory technically and will go into  solutions using embeddings, vector databases, and the Semantic Kernel and Kernel Memory libraries before bringing us back to Copilot Studio with AI Plugins that work with ChatGPT, Microsoft Copilot, and more. I had no idea when I started to write this article that I was writing a book chapter!<br><br>Stay tuned for more next week! <br><br>P.S. If you need help with AI, give me a shout!<br>--Doug Ware<br>December 1, 2023<br><a href="mailto:dougware@elumenotion.ai">DougWare@Elumenotion.AI</a>  </p>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
