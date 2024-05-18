@@ -1,0 +1,18 @@
+To reset the template to its default state (decline inbound synchronization), use the
+multiT enantOrganizationIdentityS yncPolicyT emplate: resetT oDefaultSettings  API.
+Request
+HTTP
+Configure cross-tenant synchronizationPATCH 
+https://graph.microsoft.com/beta/policies/crossTenantAccessPolicy/templates/
+multiTenantOrganizationIdentitySynchronization
+{
+    "userSyncInbound" : {
+        "isSyncAllowed" : true
+    },
+    "templateApplicationLevel" : ""
+}
+Reset the template
+POST 
+https://graph.microsoft.com/beta/policies/crossTenantAccessPolicy/templates/
+multiTenantOrganizationIdentitySynchronization/resetToDefaultSettings
+Next steps

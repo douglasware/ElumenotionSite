@@ -1,0 +1,14 @@
+To configure this setting using Microsoft Graph, see the Update
+crossT enantIdentityS yncPolicyP artner  API. For more information, see Configure cross-
+tenant synchronization .
+The automatic redemption setting is an inbound and outbound organizational trust
+setting to automatically redeem invitations so users don't have to accept the consent
+prompt the first time they access the resource/target tenant. This setting is a check box
+with the following name:
+Automatically r edeem invitations with the t enant  <tenant>
+The automatic redemption setting applies to cross-tenant synchronization, B2B
+collaboration, and B2B direct connect in the following situations:
+
+Automatic redemption setting
+
+Compare setting for different scenarios

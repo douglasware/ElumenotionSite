@@ -1,0 +1,24 @@
+Description:  Splits a string into a multi-valued array, using the specified delimiter
+character.
+Paramet ers:
+Name Requir ed/
+RepeatingType Notes
+source Required String source value to update.
+delimit erRequired String Specifies the character that will be used to split the
+string (example: ",")
+Example: Y ou need to take a comma-delimited list of strings, and split them into an
+array that can be plugged into a multi-value attribute like Salesforce's P ermissionSets
+attribute. In this example, a list of permission sets has been populated in
+extensionAttribute5 in Microsoft Entra ID.
+Expression:  Split([extensionAttribute5], ",")
+Sample input/output:
+INPUT  (extensionAttribute5): "P ermissionSetOne, P ermissionSetT wo"
+OUTPUT : ["PermissionSetOne", "P ermissionSetT wo"]
+Function:  StripSpaces(source)
+Description:  Removes all space (" ") characters from the source string.
+Paramet ers:
+Name Requir ed/ R epeating Type Notes
+source Required String source value to update.ﾉExpand table
+Split a string into a multi-valued array
+StripSpaces
+ﾉExpand table

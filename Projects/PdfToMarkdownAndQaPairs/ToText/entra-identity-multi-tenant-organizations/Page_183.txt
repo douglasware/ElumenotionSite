@@ -1,0 +1,49 @@
+OpenPunctuation  and ClosePunctuation  characters that occur in pairs like
+parenthesis, curly bracket, angle bracket, etc.
+InitialQuot ePunctuation  and FinalQuot ePunctuation  characters like single
+quotes, double quotes and angular quotes.
+OtherPunctuation  characters like exclamation mark, number sign, percent sign,
+ampersand, asterisk, comma, full stop, colon, semi-colon, etc.
+MathS ymbol  characters like plus sign, less-than and greater-than sign, vertical
+line, tilde, equals sign, etc.
+CurrencyS ymbol  characters like dollar sign, cent sign, pound sign, euro sign, etc.
+Modi fierSymbol  characters like macron, accents, arrow heads, etc.
+OtherS ymbol  characters like copyright sign, degree sign, registered sign, etc.
+If the wordSep arators parameter is specified, then PCase only uses the characters
+specified as word separators.
+Example:
+Let's say you're sourcing the attributes firstName  and lastName  from SAP
+SuccessF actors and in HR both these attributes are in upper-case. Using the PCase
+function, you can convert the name to proper case as shown below.
+Expr ession Input Output Notes
+PCase([firstName]) firstName  =
+"PABLO
+GONSAL VES
+(SECOND)""Pablo
+Gonsalves
+(Second)"As the wordSep arators parameter
+isn't specified, the PCas e function
+uses the default word separators
+character set.
+PCase([lastName]," '-
+")lastName  =
+"PINT O-
+DE'SIL VA""Pinto-
+De'Silva"The PCas e function uses characters
+in the wordSep arators parameter to
+identify words and transform them
+to proper case.
+PCase(Join(" ",
+[firstName],
+[lastName]))firstName  =
+GREGOR Y,
+lastName  =
+"JAMES""Gregory
+James"You can nest the Join function within
+PCase. As the wordSep arators
+parameter isn't specified, the PCas e
+function uses the default word
+separators character set.
+Function:  RandomS tring(Length, MinimumNumbers, MinimumSpecialCharacters,
+MinimumCapital, MinimumLowerCase, CharactersT oAvoid)ﾉExpand table
+RandomString

@@ -1,0 +1,33 @@
+oldValue:  "<username>"
+templat e: "<username>@contoso.com"
+Expression output:  "jsmith@contoso.com"
+Example 3:  Using regexP attern and replacementV alue to extract a portion of the source
+string and replace it with an empty string or a custom value built using regex patterns or
+regex group names.
+Let's say you have a source attribute telephoneNumber that has components country
+code and phone number separated by a space character. For example, +91 9998887777
+Then in this case, you can use the following expression in your attribute mapping to
+extract the 10 digit phone number.
+Replace([telephoneNumber], , "\\+(?<isdCode>\\d* )(?<phoneNumber>\\d{10})", ,
+"${phoneNumber}", , )
+source: [telephoneNumber] = "+91 9998887777"
+regexP attern: "\\+(?<isdCode>\\d* )(?<phoneNumber>\\d{10})"
+replacementV alue:  "${phoneNumber}"
+Expression output:  9998887777
+You can also use this pattern to remove characters and collapse a string. For example,
+the expression below removes parenthesis, dashes and space characters in the mobile
+number string and returns only digits.
+Replace([mobile], , "[()\\s-]+", , "", , )
+source: [mobile] = "+1 (999) 888-7777"
+regexP attern: "[()\\s-]+"
+replacementV alue:  "" (empty string)
+Expression output:  19998887777
+Example 4:  Using regexP attern, regexGr oupName  and replacementV alue to extract a
+portion of the source string and replace it with another literal value or empty string.
+Let's say your source system has an attribute AddressLineData with two components
+street number and street name. As part of a recent move, let's say the street number of
+the address changed, and you want to update only the street number portion of the
+address line. Then in this case, you can use the following expression in your attribute
+mapping to extract the street number.
+Replace([AddressLineData], ,"(?<streetNumber>^\\d*)","streetNumber", "888", , )
+source: [AddressLineData] = "545 T remont S treet"

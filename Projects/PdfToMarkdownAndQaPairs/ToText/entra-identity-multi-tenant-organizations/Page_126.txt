@@ -1,0 +1,30 @@
+Output
+Sour ce tenant
+Now that you have a configuration, you can test on-demand provisioning with one of
+your users.
+1. In the source tenant, use the Get-
+MgServicePrincipalS ynchronizationJobSchema  command to get the schema
+rule ID.
+PowerShell
+OutputNew-MgServicePrincipalAppRoleAssignedTo  -ServicePrincipalId  
+$ServicePrincipalId  -BodyParameter  $Params | Format-List
+AppRoleId            : <AppRoleId>
+CreatedDateTime      : 7/31/2023 10:27:12 PM
+DeletedDateTime      :
+Id                   : <Id>
+PrincipalDisplayName : User1
+PrincipalId          : <PrincipalId>
+PrincipalType        : User
+ResourceDisplayName  : Fabrikam
+ResourceId           : <ServicePrincipalId>
+AdditionalProperties : {[@odata.context,  
+https://graph.microsoft.com/v1.0/$metadata#appRoleAssignments/$enti
+ty]}
+Step 11: Test provision on demand
+PowerShell
+$SynchronizationSchema  = Get-
+MgServicePrincipalSynchronizationJobSchema  -ServicePrincipalId  
+$ServicePrincipalId  -SynchronizationJobId  $JobId
+$SynchronizationSchema .SynchronizationRules | Format-List
+ContainerFilter      :  
+Microsoft.Graph.PowerShell.Models.MicrosoftGraphContainerFilter

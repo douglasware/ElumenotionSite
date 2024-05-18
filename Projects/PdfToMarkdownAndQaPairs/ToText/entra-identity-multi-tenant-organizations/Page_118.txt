@@ -1,0 +1,21 @@
+Target t enant
+1. In the target tenant, use the Update-MgP olicyCrossT enantAccessP olicyP artner
+command to automatically redeem invitations and suppress consent prompts
+for inbound access.
+PowerShell
+Sour ce tenant
+1. Start an instance of P owerShell.
+2. Get the tenant ID of the source and target tenants and initialize variables.IsSyncAllowed
+-------------
+True
+Step 3: Automatically redeem invitations in the
+target tenant
+PowerShell
+$AutomaticUserConsentSettings  = @{
+    "InboundAllowed" ="True"
+}
+Update-MgPolicyCrossTenantAccessPolicyPartner  -
+CrossTenantAccessPolicyConfigurationPartnerTenantId  $SourceTenantId  
+-AutomaticUserConsentSettings  $AutomaticUserConsentSettings
+Step 4: Sign in to the source tenant
+PowerShell

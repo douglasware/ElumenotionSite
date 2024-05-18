@@ -1,0 +1,11 @@
+Cause
+This error indicates the policy to automatically redeem invitations in both the source and
+target tenants wasn't set up.
+Solution
+Follow the steps in Step 3: Automatically redeem invitations in the target tenant  and
+Step 4: Automatically redeem invitations in the source tenant .
+When configuring cross-tenant synchronization, the Automatic r edemption  check box
+is disabled.Error code: AzureDirectoryB2BManagementPolicyCheckFailure
+Details: Policy permitting auto-redemption of invitations not configured.
+
+Symptom - Automatic redemption check box is disabled

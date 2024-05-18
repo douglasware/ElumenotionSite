@@ -1,0 +1,15 @@
+7. Set the Mapping type  to Expression .
+8. In the Expression  box, enter the transformation expression. For example with the
+display name, you can do the following:
+Flip the first name and last name and add a comma in between.
+Add the domain name in parentheses at the end of the display name.
+For examples, see Reference for writing expressions for attribute mappings in
+Microsoft Entra ID .
+Sour ce tenant
+
+ Tip
+You can map directory extensions by updating the schema of the cross-tenant
+synchronization. For more information, see Map dir ectory ext ensions in cr oss-
+tenant synchr onization .
+Step 10: Specify additional provisioning
+setting s

@@ -1,0 +1,28 @@
+Function:
+DateAdd(interval, value, dateTime)
+Description:
+Returns a date/time string representing a date to which a specified time interval has
+been added. The returned date is in the format: M/d/yyyy h:mm:ss tt .
+Paramet ers:
+Name Requir ed/
+RepeatingType Notes
+interval Required String Interval of time you want to add. See accepted values
+below this table.
+value Required Number The number of units you want to add. It can be positive
+(to get dates in the future) or negative (to get dates in
+the past).
+dateTime Required DateTime DateTime representing date to which the interval is
+added.
+When passing a date string as input, use CDate  function to wrap the datetime string. T o
+get system time in UT C, use the Now  function.
+The interval string must have one of the following values:
+yyyy Y ear
+m Month
+d Day
+ww W eek
+h Hour
+n Minute
+s Second
+Example 1: Generat e a dat e value b ased on incoming S tatusHir eDat e from W orkday
+DateAdd("d", 7, CDate([StatusHireDate]))ﾉExpand table
+ﾉExpand table

@@ -1,0 +1,30 @@
+minutes between when an object is assigned to an application and when that
+assignment is honored in on-demand provisioning. Y ou may need to wait a few
+minutes and try again.
+Do y ou need t o turn pr ovisioning o ff to use on-demand pr ovisioning?  For
+applications that use a long-lived bearer token or a user name and password for
+authorization, no more steps are required. Applications that use O Auth for
+authorization currently require the provisioning job to be stopped before using
+on-demand provisioning. Applications such as G Suite, Box, W orkplace by
+Facebook, and Slack fall into this category. W ork is in progress to support on-
+demand provisioning for all applications without having to stop provisioning jobs.
+How long does on-demand pr ovisioning tak e? On-demand provisioning typically
+takes less than 30 seconds.
+There are currently a few known limitations to on-demand provisioning. P ost your
+suggestions and feedback  so we can better determine what improvements to make
+next.
+On-demand provisioning of groups supports updating up to five members at a
+time. Connectors for cross-tenant synchronization, W orkday, etc. do not support
+group provisioning and as a result do not support on-demand provisioning of
+groups.
+On-demand provisioning supports provisioning one user at a time through the
+Microsoft Entra admin center.
+Restoring a previously soft-deleted user in the target tenant with on-demand
+provisioning isn't supported. If you try to soft-delete a user with on-demand
+provisioning and then restore the user, it can result in duplicate users.
+On-demand provisioning of roles isn't supported.Frequently asked questions
+Known limitations
+７ Note
+The following limitations are specific to the on-demand provisioning capability. For
+information about whether an application supports provisioning groups, deletions,
+or other capabilities, check the tutorial for that application.

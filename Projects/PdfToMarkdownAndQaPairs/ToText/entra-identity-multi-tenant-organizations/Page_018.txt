@@ -1,0 +1,27 @@
+Create your multitenant organization using Microsoft 365 admin center , Microsoft
+Graph P owerShell , or Microsoft Graph API :
+First tenant, soon-to-be owner tenant, creates a multitenant organization.
+Owner tenant adds one or more joiner tenants.
+Join a multitenant organization using Microsoft 365 admin center  or Microsoft Graph
+PowerShell , or Microsoft Graph API :
+Joiner tenants submit a join request to join the multitenant organization of owner
+tenant.
+To allow for asynchronous processing, wait up to 2 hour s.
+Your multitenant organization is formed.
+Depending on your use case, you may want to synchronize users using one of the
+following methods:
+Synchronize users in multitenant organizations in Microsoft 365
+Configure cross-tenant synchronization
+Configure cross-tenant synchronization using P owerShell or Microsoft Graph API
+Your alternative bulk provisioning engine
+The multitenant organization capability requires Microsoft Entra ID P1 licenses. Only one
+Microsoft Entra ID P1 license is required per employee per multitenant organization.
+Also, you must have at least one Microsoft Entra ID P1 license per tenant. T o find the
+right license for your requirements, see Compare generally available features of
+Microsoft Entra ID .
+Plan for multitenant organizations in Microsoft 365
+What is cross-tenant synchronization?Step 2: Create your multitenant organization
+Step 3: Join a multitenant organization
+Step 4: Synchronize users
+License requirements
+Next steps

@@ -1,0 +1,9 @@
+5. Under Inbound access  of the added organization, select Inherit ed fr om default .
+6. Select the Cross-t enant sync  tab.
+7. Check the Allow user s sync int o this t enant  check box.
+8. Select Save.
+9. If you see an Enable cr oss-t enant sync and aut o-redemption  dialog box asking if
+you want to enable auto-redemption, select Yes.
+Selecting Yes will automatically redeem invitations in the target tenant.
+
+

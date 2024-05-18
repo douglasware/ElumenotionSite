@@ -1,0 +1,11 @@
+Import the object.
+Match the object between source and target.
+Determine if the object is in scope.
+Evaluate the object before synchronization.
+Provision the object (create, update, delete, or disable).
+Troubleshooting & R ecommendations : If there was an error, this tab provides the
+error code and reason.
+Modified Pr oper ties: If there were changes, this tab shows the old value and the
+new value.
+Summar y: Provides an overview of what happened and identifiers for the object in
+the source and target systems.

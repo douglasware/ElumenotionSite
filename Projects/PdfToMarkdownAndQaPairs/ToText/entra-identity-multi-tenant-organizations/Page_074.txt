@@ -1,0 +1,30 @@
+Owner t enant
+1. In the owner tenant, use the New-
+MgBetaT enantR elationshipMultiT enantOrganizationT enant  command to add
+tenants to your multitenant organization.
+PowerShell
+PowerShell
+2. Use the Get-MgBetaT enantR elationshipMultiT enantOrganizationT enant
+command to verify that the operation has completed before proceeding.
+PowerShell
+OutputStep 3: Add tenants
+PowerShell
+New-MgBetaTenantRelationshipMultiTenantOrganizationTenant  -TenantID  
+$MemberTenantIdB  -DisplayName  "Berlin"  | Format-List
+New-MgBetaTenantRelationshipMultiTenantOrganizationTenant  -TenantID  
+$MemberTenantIdA  -DisplayName  "Athens"  | Format-List
+Get-MgBetaTenantRelationshipMultiTenantOrganizationTenant  | Format-
+List
+AddedByTenantId      : <OwnerTenantId>
+AddedDateTime        : 1/8/2024 7:47:45 PM
+DeletedDateTime      :
+DisplayName          : Cairo
+Id                   : <MtoIdC>
+JoinedDateTime       :
+Role                 : owner
+State                : active
+TenantId             : <OwnerTenantId>
+TransitionDetails    :  
+Microsoft.Graph.Beta.PowerShell.Models.MicrosoftGraphMultiTenantOrg
+anizationMemberTransitionDetails
+AdditionalProperties : {[multiTenantOrgLabelType, none]}

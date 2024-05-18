@@ -1,0 +1,28 @@
+OUTPUT : "3/16/2020 7:00:00 AM" <-- Note the UT C equiv alent o f the abo ve
+DateTime is r eturned
+Example 2:
+CDate("2021-06-30+08:00")
+Sample input/output:
+INPUT : "2021-06-30+08:00"
+OUTPUT : "6/29/2021 4:00:00 PM" <-- Note the UT C equiv alent o f the abo ve
+DateTime is r eturned
+Example 3:
+CDate("2009-06-15T01:45:30-07:00")
+Sample input/output:
+INPUT : "2009-06-15T01:45:30-07:00"
+OUTPUT : "6/15/2009 8:45:30 AM" <-- Note the UT C equiv alent o f the abo ve
+DateTime is r eturned
+Function:  Coalesce(source1, source2, ..., defaultV alue)
+Description:  Returns the first source value that isn't NULL. If all arguments are NULL and
+defaultV alue is present, the defaultV alue is returned. If all arguments are NULL and
+defaultV alue isn't present, Coalesce returns NULL.
+Paramet ers:
+Name Requir ed/
+RepeatingType Notes
+source1 …
+sourceNRequired String Required, variable-number of times. Usually name
+of the attribute from the source object.
+defaultV alue Optional String Default value to be used when all source values are
+NULL. Can be empty string ("").Coalesce
+ﾉExpand table
+Flow mail value if not NULL, otherwise flow userPrincipalName

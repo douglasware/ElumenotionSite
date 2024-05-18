@@ -1,0 +1,32 @@
+Name Requir ed/
+RepeatingType Notes
+source Required String Usually name of the attribute.
+start Required Integer Index in the source string where substring should start. First
+character in the string has an index of 1, second character
+has an index 2, and so on.
+length Required Integer Length of the substring. If length ends outside the source
+string, function returns substring from start index until end
+of source string.
+Function:  NormalizeDiacritics(source)
+Description:  Requires one string argument. R eturns the string, but with any diacritical
+characters replaced with equivalent nondiacritical characters. T ypically used to convert
+first names and last names containing diacritical characters (accent marks) into legal
+values that can be used in various user identifiers such as user principal names, SAM
+account names, and email addresses.
+Paramet ers:
+Name Requir ed/ R epeating Type Notes
+source Required String Usually a first name or last name attribute.
+Charact er with Diacr itic Normalized
+charact erCharact er with Diacr itic Normalized
+charact er
+ä, à, â, ã, å, á, ą, ă, ā, ā ́, ā̀,
+ā̂, ā̃, ǟ, ā̈, ǡ, a̱, å̄a Ä, À, Â, Ã, Å, Á, Ą, Ă, Ā, Ā́, Ā̀,
+Ā̂, Ā̃, Ǟ, Ā̈, Ǡ, A̱, Å̄A
+æ, ǣ ae Æ, Ǣ AE
+ç, č, ć, c ̄, c̱ c Ç, Č, Ć, C ̄, C̱ C
+ď, d̄, ḏ d Ď, D̄, Ḏ D
+ë, è, é, ê, ę, ě, ė, ē, ḗ, ḕ, ē ̂,
+ē̃, ê̄, e̱, ë̄, e̊̄e Ë, È, É, Ê, Ę, Ě, Ė, Ē, Ḗ, Ḕ, Ē̂, Ē̃, Ê̄,
+E̱, Ë̄, E̊̄ENormalizeDiacritics
+ﾉExpand table
+ﾉExpand table

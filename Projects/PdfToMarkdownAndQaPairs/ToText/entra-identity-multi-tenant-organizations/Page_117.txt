@@ -1,0 +1,39 @@
+2. Use the Invoke-MgGraphR equest  command to enable user synchronization in
+the target tenant.
+If you get an Request_MultipleObjectsWithSameKeyValue error, you might
+already have an existing policy. For more information, see Symptom -
+Request_MultipleObjectsWithSameK eyValue error .
+PowerShell
+3. Use the Get-MgP olicyCrossT enantAccessP olicyP artnerIdentityS ynchronization
+command to verify IsSyncAllowed is set to T rue.
+PowerShell
+OutputSyncPolicyPartner
+InboundTrust                 :  
+Microsoft.Graph.PowerShell.Models.MicrosoftGraphCrossTenantAccessPo
+licyInboundTrust
+IsServiceProvider            :
+TenantId                     : <SourceTenantId>
+TenantRestrictions           :  
+Microsoft.Graph.PowerShell.Models.MicrosoftGraphCrossTenantAccessPo
+licyTenantRestrictions
+AdditionalProperties         : {[@odata.context,  
+https://graph.microsoft.com/v1.0/$metadata#policies/crossTenantAcce
+ssPolicy/partners/$entity],
+                               [crossCloudMeetingConfiguration,
+                               
+System.Collections.Generic.Dictionary`2[System.String,System.Object
+]], [protectedContentSharing,
+                               
+System.Collections.Generic.Dictionary`2[System.String,System.Object
+]]}
+$Params = @{
+    userSyncInbound = @{
+        isSyncAllowed = $true
+    }
+}
+Invoke-MgGraphRequest  -Method  PUT -Uri 
+"https://graph.microsoft.com/v1.0/policies/crossTenantAccessPolicy/
+partners/ $SourceTenantId /identitySynchronization"  -Body $Params
+(Get-MgPolicyCrossTenantAccessPolicyPartnerIdentitySynchronization  
+-CrossTenantAccessPolicyConfigurationPartnerTenantId  
+$SourceTenantId ).UserSyncInbound

@@ -1,0 +1,28 @@
+Charact er with Diacr itic Normalized
+charact erCharact er with Diacr itic Normalized
+charact er
+ğ, ḡ, g ̱ g Ğ, Ḡ, G ̱ G
+ï, î, ì, í, ı, ī, ī ́, ī̀, ī̂, ī̃, i̱ i Ï, Î, Ì, Í, İ, Ī, Ī́, Ī̀, Ī̂, Ī̃, I̱ I
+ľ, ł, l̄, ḹ, ḻ l Ł, Ľ, L ̄, Ḹ, Ḻ L
+ñ, ń, ň, n ̄, ṉ n Ñ, Ń, Ň, N ̄, Ṉ N
+ö, ò, ő, õ, ô, ó, ō, ṓ, ṑ, ō ̂,
+ō̃, ȫ, ō̈, ǭ, ȭ, ȱ, o ̱o Ö, Ò, Ő, Õ, Ô, Ó, Ō, Ṓ, Ṑ, Ō̂,
+Ō̃, Ȫ, Ō̈, Ǭ, Ȭ, Ȱ, O ̱O
+ø, ø̄, œ̄ oe Ø, Ø̄, Œ̄ OE
+ř, r̄, ṟ, ṝ r Ř, R̄, Ṟ, Ṝ R
+ß ss
+š, ś, ș, ş, s ̄, s̱ s Š, Ś, Ș, Ş, S ̄, S̱ S
+ť, ț, t̄, ṯ t Ť, Ț, T ̄, Ṯ T
+ü, ù, û, ú, ů, ű, ū, ū ́, ū̀, ū̂,
+ū̃, u̇̄, ǖ, ṻ, ṳ ̄, u̱u Ü, Ù, Û, Ú, Ů, Ű, Ū, Ū́, Ū̀, Ū̂, Ū̃,
+U̇̄, Ǖ, Ṻ, Ṳ ̄, U̱U
+ÿ, ý, ȳ, ȳ ́, ȳ̀, ȳ̃, y̱ y Ÿ, Ý, Ȳ, Ȳ́, Ȳ̀, Ȳ̃, Y̱ Y
+ź, ž, ż, z ̄, ẕ z Ź, Ž, Ż, Z ̄, Ẕ Z
+Example: R eplace characters containing accent marks with equivalent characters that
+don't contain accent marks.
+Expression:  NormalizeDiacritics([givenName])
+Sample input/output:
+INPUT  (givenName): "Zoë"
+OUTPUT : "Zoe"
+Function:  Not(source)Remove diacritics from a string
+Not

@@ -1,0 +1,19 @@
+Microsoft 365 admin center facilitates orchestration of such a collaborating user set
+across multitenant organization tenants. For more information, see Synchronize users in
+multitenant organizations in Microsoft 365 .
+Alternatively, pair-wise configuration of inbound and outbound cross-tenant
+synchronization can be used to orchestrate such collating user set across multitenant
+organization tenants. For more information, see What is a cross-tenant synchronization .
+To ensure a seamless collaboration experience across the multitenant organization in
+new Microsoft T eams, B2B identities are provisioned as B2B users of Member userT ype.
+User synchr onization method Default userT ype pr oper ty
+Synchronize users in multitenant organizations in
+Microsoft 365Member
+Remains Guest, if the B2B identity already
+existed as Guest
+Cross-tenant synchronization in Microsoft Entra ID Member
+Remains Guest, if the B2B identity already
+existed as Guest
+
+B2B member users
+ﾉExpand table

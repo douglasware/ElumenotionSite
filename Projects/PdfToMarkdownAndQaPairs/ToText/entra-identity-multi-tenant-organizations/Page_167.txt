@@ -1,0 +1,24 @@
+Example:  ConvertToUTF8Hex("Hello world!")
+Returns 48656C6C6F20776F726C6421
+Function:  Count(attribute)
+Description:  The Count function returns the number of elements in a multi-valued
+attribute
+Paramet ers:
+Name Requir ed/
+RepeatingType Notes
+attribut eRequired attribute Multi-valued attribute that will have elements
+counted
+Function:  CStr(value)
+Description:  The CS tr function converts a value to a string data type.
+Paramet ers:
+Name Requir ed/
+RepeatingType Notes
+value Required numeric, reference, or
+booleanCan be a numeric value, reference
+attribute, or Boolean.
+Example:  CStr([dn])
+Returns "cn=Joe,dc=contoso,dc=com"Count
+ﾉExpand table
+CStr
+ﾉExpand table
+DateAdd

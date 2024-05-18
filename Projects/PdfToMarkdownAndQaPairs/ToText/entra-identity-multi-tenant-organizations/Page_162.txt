@@ -1,0 +1,26 @@
+Append       AppR oleAssignmentsComplex       BitAnd       CBool       CDate       Coalesce      
+ConvertT oBase64       ConvertT oUTF8Hex       Count       CStr      DateAdd       DateDiff      
+DateFromNum   FormatDateTime       Guid       IgnoreFlowIfNullOrEmpty      IIF     InStr     
+IsNull       IsNullOrEmpty       IsPresent       IsString       Item      Join      Left      Mid     
+NormalizeDiacritics        Not      Now       NumFromDate       PCase       RandomS tring      
+Redact       RemoveDuplicates       Replace       SelectUniqueV alue    
+SingleAppR oleAssignment      Split    StripSpaces       Switch      ToLower      ToUpper     
+Word
+Function:  Append(source, suffix)
+Description:  Takes a source string value and appends the suffix to the end of it.
+Paramet ers:
+Name Requir ed/
+RepeatingType Notes
+source Required String Usually name of the attribute from the source object.
+suffix Required String The string that you want to append to the end of the
+source value.
+Example: If you're using a Salesforce Sandbox, you might need to append another suffix
+to all your user names before synchronizing them.
+Expression:  Append([userPrincipalName], ".test")
+Sample input/output:
+INPUT : (userPrincipalName): "John.Doe@contoso.com"
+OUTPUT : "John.Doe@contoso.com.test"
+Function:  AppR oleAssignmentsComplex([appR oleAssignments])Append
+ﾉExpand table
+Append constant suffix to user name
+AppRoleAssignmentsComplex

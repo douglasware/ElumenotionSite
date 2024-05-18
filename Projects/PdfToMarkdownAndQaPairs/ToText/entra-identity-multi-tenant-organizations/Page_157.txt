@@ -1,0 +1,16 @@
+https://entra.microsoft.com/?
+Microsoft_AAD_Connect_Provisioning_forceSchemaEditorEnabled=true
+2. Browse to Identity  > External Identities  > Cross-t enant synchr onization .
+3. Select Configurations  and then select your configuration.
+4. Select Provisioning  and expand the Mappings  section.
+5. Select Provision Micr osoft Entra ID User s to open the Attribut e Mapping  page.
+6. Scroll to the bottom and select the Show adv anced settings  check box.
+7. If you created a directory extension in the source tenant, select the Edit attribut e
+list for Micr osoft Entra ID  link.
+8. If you created an extension in the target tenant, select the Edit attribut e list for
+Azur e Activ e Dir ectory (tar get t enant)  link.
+9. Add the directory extension and select the appropriate options.
+
+ Tip
+If you don't see the Edit attribut e list  links, be sure that you are signed in to
+the Microsoft Entra admin center using the link in S tep 1.

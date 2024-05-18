@@ -1,0 +1,26 @@
+Description:  Flips the boolean value of the source. If source value is T rue, returns F alse.
+Otherwise, returns T rue.
+Paramet ers:
+Name Requir ed/ R epeating Type Notes
+source Required Boolean S tring Expected source values are "T rue" or "F alse".
+Function:  Now()
+Description:
+The Now function returns a string representing the current UT C DateTime in the format
+M/d/yyyy h:mm:ss tt .
+Example:  Now()
+Example value returned 7/2/2021 3:33:38 PM
+Function:  NumFromDate(value)
+Description:  The NumFromDate function converts a DateTime value to Active Directory
+format that is required to set attributes like accountExpires . Use this function to convert
+DateTime values received from cloud HR apps like W orkday and SuccessF actors to their
+equivalent AD representation.
+Paramet ers:
+Name Requir ed/
+RepeatingType Notes
+value Required String Date time string in ISO 8601  format. If the date variable is in
+a different format, use FormatDateTime  function to convert the
+date to ISO 8601 format.
+Example:ﾉExpand table
+Now
+NumFromDate
+ﾉExpand table

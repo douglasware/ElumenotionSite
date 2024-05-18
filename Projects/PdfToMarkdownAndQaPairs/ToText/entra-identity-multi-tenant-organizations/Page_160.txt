@@ -1,0 +1,5 @@
+11. Refresh the browser.
+12. Browse to the Attribut e mappings  page and try to map the directory extension as
+described earlier in this article.
+Syncing extension attributes for Microsoft Entra Application Provisioning
+Configure cross-tenant synchronizationNext steps

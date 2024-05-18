@@ -1,0 +1,6 @@
+2. Select Provision Micr osoft Entra ID User s to open the Attribut e Mapping  page.
+3. Under Sour ce Object Scope , select All records.
+4. On the Sour ce Object Scope  page, select Add scoping filt er.
+5. Add any scoping filters to define which users are in scope for provisioning.
+
+

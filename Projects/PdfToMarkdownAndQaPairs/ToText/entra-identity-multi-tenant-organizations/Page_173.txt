@@ -1,0 +1,30 @@
+Paramet ers:
+Name Requir ed/ R epeating Type Notes
+Expression Required Expression Expression to be evaluated
+Example 1: Don 't flow an attribut e if it is null
+IgnoreFlowIfNullOrEmpty([department])
+The above expression will drop the department attribute from the provisioning flow if it
+is null or empty.
+Example 2: Don 't flow an attribut e if the expr ession mapping ev aluat es to empty
+string or null
+Let's say the SuccessF actors attribute prefix is mapped to the on-premises Active
+Directory attribute personalTitle  using the following expression mapping:
+IgnoreFlowIfNullOrEmpty(Switch([prefix], "", "3443", "Dr.", "3444", "Prof.",
+"3445", "Prof. Dr."))
+The above expression first evaluates the Switch  function. If the prefix attribute doesn't
+have any of the values listed within the Switch function, then Switch will return an empty
+string and the attribute personalTitle  will not be included in the provisioning flow to on-
+premises Active Directory.
+Function:  IIF(condition,valueIfT rue,valueIfF alse)
+Description:  The IIF function returns one of a set of possible values based on a specified
+condition.
+Paramet ers:
+Name Requir ed/
+RepeatingType Notes
+condition Required Variable or
+ExpressionAny value or expression that can be
+evaluated to true or false.
+valueIfT rue Required Variable or S tring If the condition evaluates to true, the
+returned value.ﾉExpand table
+IIF
+ﾉExpand table

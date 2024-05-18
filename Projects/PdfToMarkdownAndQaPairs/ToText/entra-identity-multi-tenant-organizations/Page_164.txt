@@ -1,0 +1,27 @@
+Description:  CBool returns a boolean based on the evaluated expression. If the
+expression evaluates to a non-zero value, then CBool returns True, else it returns False.
+Paramet ers:
+Name Requir ed/ R epeating Type Notes
+Expression Required expression Any valid expression
+Example:  CBool([attribute1] = [attribute2])
+Returns T rue if both attributes have the same value.
+Function:
+CDate(expression)
+Description:
+The CDate function returns a UT C DateTime from a string. DateTime isn't a native
+attribute type but it can be used within date functions such as FormatDateTime  and
+DateAdd .
+Paramet ers:
+Name Requir ed/
+RepeatingType Notes
+Expression Required Expression Any valid string that represents a date/time. For
+supported formats, refer to .NET custom date and
+time format strings .
+Remarks:
+The returned string is always in UT C and follows the format M/d/yyyy h:mm:ss tt .
+Example 1:
+CDate([StatusHireDate])
+Sample input/output:
+INPUT  (StatusHireDate): "2020-03-16-07:00"ﾉExpand table
+CDate
+ﾉExpand table

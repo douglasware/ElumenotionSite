@@ -1,0 +1,26 @@
+Function:  DateFromNum(value)
+Description:  The DateFromNum function converts a value in AD's date format to a
+DateTime type.
+Paramet ers:
+Name Requir ed/ R epeating Type Notes
+value Required Date AD Date to be converted to DateTime type
+Example:  DateFromNum([lastLogonTimestamp])
+DateFromNum(129699324000000000)
+Returns a DateTime representing January 1, 2012 at 11:00PM.
+Function:  FormatDateTime(source, dateTimeS tyles, inputFormat, outputFormat)
+Description:  Takes a date string from one format and converts it into a different format.
+Paramet ers:
+Name Requir ed/
+RepeatingType Notes
+source Required String Usually name of the attribute from the source object.
+dateTimeS tyles Optional String Use this parameter to specify the formatting options that
+customize string parsing for some date and time parsing
+methods. For supported values, see DateTimeS tyles doc .
+If left empty, the default value used isSwitch([Active], , 
+  "1", IIF(DateDiff("d", Now(), CDate([StatusHireDate])) > 5, "False",  
+"True"), 
+  "0", "False")
+DateFromNum
+ﾉExpand table
+FormatDateTime
+ﾉExpand table

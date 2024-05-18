@@ -1,0 +1,21 @@
+The first attribute, alternativeSecurityIdentifier, is an internal attribute used to
+uniquely identify the user across tenants, match users in the source tenant with
+existing users in the target tenant, and ensure that each user only has one account.
+The matching attribute cannot be changed. Attempting to change the matching
+attribute or adding additional matching attributes will result in a schemaInvalid
+error.
+4. Select the Member (userT ype) attribute to open the Edit A ttribut e page.
+5. Review the Constant V alue setting for the userT ype attribute.
+This setting defines the type of user that will be created in the target tenant and
+can be one of the values in the following table. By default, users will be created as
+external member (B2B collaboration users). For more information, see Properties of
+a Microsoft Entra B2B collaboration user .
+Constant
+ValueDescr iption
+Member Default. Users will be created as external member (B2B collaboration users) in
+the target tenant. Users will be able to function as any internal member of
+the target tenant.
+Guest Users will be created as external guests (B2B collaboration users) in the
+target tenant.
+
+ﾉExpand table

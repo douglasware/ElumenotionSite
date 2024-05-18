@@ -1,0 +1,31 @@
+2. Use the Get-MgP olicyCrossT enantAccessP olicyP artner  command to list the
+existing object.
+3. If you have an existing object, you might need to make an update using
+Update-MgP olicyCrossT enantAccessP olicyP artner
+When you try to enable user synchronization, you receive an error message similar
+to the following:
+Cause
+You are likely trying to create a policy that already exists, possibly from a previous
+configuration.
+Solution
+1. Verify your syntax and that you are using the correct tenant ID.
+2. Use the Get-MgP olicyCrossT enantAccessP olicyP artnerIdentityS ynchronization
+command to list the IsSyncAllowed setting.
+PowerShell
+3. If you have an existing policy, you might need to make an update using Set-
+MgPolicyCrossT enantAccessP olicyP artnerIdentityS ynchronization  command to
+enable user synchronization.Symptom - Request_MultipleObjectsWithSameKeyValue error
+Invoke-MgGraphRequest: PUT  
+https://graph.microsoft.com/v1.0/policies/crossTenantAccessPolicy/partne
+rs/<SourceTenantId>/identitySynchronization
+HTTP/1.1 409 Conflict
+...
+{"error":{"code":"Request_MultipleObjectsWithSameKeyValue","message":"A  
+conflicting object with one or more of the specified property values is  
+present in the directory.","details":
+[{"code":"ConflictingObjects","message":"A conflicting object with one  
+or more of the specified property values is present in the directory.",  
+... }}}
+(Get-MgPolicyCrossTenantAccessPolicyPartnerIdentitySynchronization  
+-CrossTenantAccessPolicyConfigurationPartnerTenantId  
+$SourceTenantId ).UserSyncInbound

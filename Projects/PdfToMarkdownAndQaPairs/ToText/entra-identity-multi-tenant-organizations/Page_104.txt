@@ -1,0 +1,6 @@
+If the user isn't in scope, you'll see a page with information about why test user
+was skipped.
+On the Provision on demand  page, you can view details about the provision and
+have the option to retry.
+
+

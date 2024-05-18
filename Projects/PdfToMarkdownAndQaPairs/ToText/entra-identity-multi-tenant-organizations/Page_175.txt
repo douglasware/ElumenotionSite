@@ -1,0 +1,23 @@
+Function:  InStr(value1, value2, start, compareT ype)
+Description:  The InS tr function finds the first occurrence of a substring in a string
+Paramet ers:
+Name Requir ed/ R epeating Type Notes
+value1 Required String String to be searched
+value2 Required String String to be found
+start Optional Integer Starting position to find the substring
+comp areType Optional Enum Can be vbT extCompare or vbBinaryCompare
+Example:  InStr("The quick brown fox","quick")
+Evaluates to 5
+InStr("repEated","e",3,vbBinaryCompare)
+Evaluates to 7
+Function:  IsNull(Expression)
+Description:  If the expression evaluates to Null, then the IsNull function returns true. For
+an attribute, a Null is expressed by the absence of the attribute.
+Paramet ers:
+Name Requir ed/ R epeating Type Notes
+Expression Required Expression Expression to be evaluated
+Example:  IsNull([displayName])
+Returns T rue if the attribute isn't present.ﾉExpand table
+IsNull
+ﾉExpand table
+IsNullorEmpty

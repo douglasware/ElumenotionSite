@@ -1,0 +1,30 @@
+1. In the source tenant, use the Invoke-MgGraphR equest  command to save your
+credentials.
+PowerShell
+Sour ce tenant
+For cross-tenant synchronization to work, at least one internal user must be assigned to
+the configuration.
+1. In the source tenant, use the New-MgServicePrincipalAppR oleAssignedT o
+command to assign an internal user to the configuration.
+PowerShell$Params = @{
+    "value" = @(
+        @{
+            "key" = "AuthenticationType"
+            "value" = "SyncPolicy"
+        }
+        @{
+            "key" = "CompanyId"
+            "value" = $TargetTenantId
+        }
+    )
+}
+Invoke-MgGraphRequest  -Method  PUT -Uri 
+"https://graph.microsoft.com/v1.0/servicePrincipals/ $ServicePrincip
+alId/synchronization/secrets"  -Body $Params
+Step 10: Assign a user to the configuration
+PowerShell
+$Params = @{
+    PrincipalId = "<PrincipalId>"
+    ResourceId = $ServicePrincipalId
+    AppRoleId = $AppRoleId
+}

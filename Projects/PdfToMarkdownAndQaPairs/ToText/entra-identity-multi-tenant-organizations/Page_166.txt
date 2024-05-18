@@ -1,0 +1,23 @@
+Example: Y ou wish to flow the mail attribute if it is present. If it isn't, you wish to flow the
+value of userPrincipalName instead.
+Expression:  Coalesce([mail],[userPrincipalName])
+Sample input/output:
+INPUT  (mail): NULL
+INPUT  (userPrincipalName): "John.Doe@contoso.com"
+OUTPUT : "John.Doe@contoso.com"
+Function:  ConvertT oBase64(source)
+Description:  The ConvertT oBase64 function converts a string to a Unicode base64 string.
+Paramet ers:
+Name Requir ed/ R epeating Type Notes
+source Required String String to be converted to base 64
+Example:  ConvertToBase64("Hello world!")
+Returns "SABlA GwAbABvA CAAdwBvAHIAbABkA CEA"
+Function:  ConvertT oUTF8Hex(source)
+Description:  The ConvertT oUTF8Hex function converts a string to a UTF8 Hex encoded
+value.
+Paramet ers:
+Name Requir ed/ R epeating Type Notes
+source Required String String to be converted to UTF8 HexConvertToBase64
+ﾉExpand table
+ConvertToUTF8Hex
+ﾉExpand table

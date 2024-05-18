@@ -1,0 +1,22 @@
+Tell us about y our PDF experience.
+Multit enant or ganizations
+documentation
+A multitenant organization is an organization that has more than one instance of
+Microsoft Entra ID. Describes ways that users can have a seamless experience accessing
+resources and collaborating across multiple tenants.
+About multit enant or ganizations
+ｅOVERVIE W
+Multitenant organization capabilities
+Compare multitenant capabilities
+Configur e a multit enant or ganization
+ｅOVERVIE W
+What is a multitenant organization?
+ｃHOW-T O GUIDE
+Microsoft 365 admin center
+PowerShell or Microsoft Graph API
+Configur e cross-t enant synchr onization
+ｅOVERVIE W
+What is cross-tenant synchronization?
+ｃHOW-T O GUIDE
+Microsoft Entra admin center
+PowerShell or Microsoft Graph API

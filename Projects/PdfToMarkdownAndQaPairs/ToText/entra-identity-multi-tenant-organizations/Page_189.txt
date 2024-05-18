@@ -1,0 +1,31 @@
+regexP attern: "(?<streetNumber>^\\d*)"
+regexGr oupName:  "streetNumber"
+replacementV alue:  "888"
+Expression output:  888 T remont S treet
+Here is another example where the domain suffix from a UPN is replaced with an empty
+string to generate login ID without domain suffix.
+Replace([userPrincipalName], , "(?<Suffix>@(.)*)", "Suffix", "", , )
+source: [userPrincipalName] = "jsmith@contoso.com"
+regexP attern: "(?<Suffix>@(.)*)"
+regexGr oupName:  "Suffix"
+replacementV alue:  "" (empty string)
+Expression output:  jsmith
+Example 5:  Using regexP attern, regexGr oupName  and replacementA ttribut eName  to
+handle scenarios when the source attribute is empty or doesn't have a value.
+Let's say your source system has an attribute telephoneNumber. If telephoneNumber is
+empty, you want to extract the 10 digits of the mobile number attribute. Then in this
+case, you can use the following expression in your attribute mapping.
+Replace([telephoneNumber], , "\\+(?<isdCode>\\d* )(?<phoneNumber>\\d{10})",
+"phoneNumber" , , [mobile], )
+source: [telephoneNumber] = "" (empty string)
+regexP attern: "\\+(?<isdCode>\\d* )(?<phoneNumber>\\d{10})"
+regexGr oupName:  "phoneNumber"
+replacementA ttribut eName:  [mobile] = "+91 8887779999"
+Expression output:  8887779999
+Example 6:  You need to find characters that match a regular expression value and
+remove them.
+Replace([mailNickname], , "[a-zA-Z_]*", , "", , )
+source [mailNickname]
+oldValue: "john_doe72"
+replaceV alue: ""
+Expression output : 72

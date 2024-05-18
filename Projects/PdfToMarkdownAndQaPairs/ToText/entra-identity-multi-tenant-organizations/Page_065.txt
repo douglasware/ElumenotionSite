@@ -1,0 +1,26 @@
+Known issues for provisioning in
+Microsoft Entra ID
+Article •02/14/2024
+This article discusses known issues to be aware of when you work with app provisioning
+or cross-tenant synchronization. T o provide feedback about the application provisioning
+service on UserV oice, see Microsoft Entra application provision UserV oice . We watch
+UserV oice closely so that we can improve the service.
+After you've configured provisioning for the first time, you'll notice that the provisioning
+mode has switched from manual to automatic. Y ou can't change it back to manual. But
+you can turn off provisioning through the UI. Turning off provisioning in the UI
+effectively does the same as setting the dropdown to manual.
+The attributes SamAccountName  and userT ype aren't available as a source attribute by
+default. Extend your schema to add the attributes. Y ou can add the attributes to the list
+of available source attributes by extending your schema. T o learn more, see Missing
+source attribute .
+Extensions to your schema can sometimes be missing from the source attribute
+dropdown in the UI. Go into the advanced settings of your attribute mappings and
+７ Note
+This article isn't a comprehensive list of known issues. If you know of an issue that
+isn't listed, provide feedback at the bottom of the page.
+Auth orization
+Unable to change provisioning mode back to manual
+Attribute mappings
+Attribute SamAccountName or userType not available as a source
+attribute
+Source attribute dropdown missing for schema extension

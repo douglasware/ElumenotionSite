@@ -1,0 +1,16 @@
+8. Select Save.
+Sour ce tenant
+1. In the source tenant, browse to Identity  > External Identities  > Cross-t enant
+synchr onization .
+2. Select Configurations .
+3. At the top of the page, select New configuration .
+4. Provide a name for the configuration and select Create.
+It can take up to 15 seconds for the configuration that you just created to appear
+in the list.
+Sour ce tenant
+1. In the source tenant, you should see your new configuration. If not, in the
+configuration list, select your configuration.
+
+Step 5: Create a configuration in the source
+tenant
+Step 6: Test the connection to the target tenant

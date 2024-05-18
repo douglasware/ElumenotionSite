@@ -1,0 +1,15 @@
+Owner t enant
+You delete a multitenant organization by removing all tenants. The process for removing
+the final owner tenant is the same as the process for removing all other member
+tenants.
+In the final owner tenant, use the Remove-
+MgBetaT enantR elationshipMultiT enantOrganizationT enant  command to
+remove the tenant. This operation takes a few minutes.
+PowerShell
+Set up a multitenant org in Microsoft 365
+Synchronize users in multitenant organizations in Microsoft 365
+The new Microsoft T eams desktop client
+Configure multitenant organization templates using the Microsoft Graph APIPowerShell
+Remove-MgBetaTenantRelationshipMultiTenantOrganizationTenant  -
+MultiTenantOrganizationMemberId  $OwnerTenantId
+Next steps

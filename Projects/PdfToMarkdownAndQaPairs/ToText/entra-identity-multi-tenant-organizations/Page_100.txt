@@ -1,0 +1,17 @@
+The user type you choose has the following limitations for apps or services (but
+aren't limited to):
+App or
+serviceLimitations
+Power BI - Support for UserT ype Member in P ower BI is currently in preview. For
+more information, see Distribute P ower BI content to external guest users
+with Microsoft Entra B2B .
+Azure Virtual
+Desktop- External member and external guest aren't supported in Azure Virtual
+Desktop.
+6. If you want to define any transformations, on the Attribut e Mapping  page, select
+the attribute you want to transform, such as displayName .７ Note
+If the B2B user already exists in the target tenant then Member (userT ype) will
+not changed to Member , unless the Apply this mapping  setting is set to
+Always .
+ﾉExpand table
+

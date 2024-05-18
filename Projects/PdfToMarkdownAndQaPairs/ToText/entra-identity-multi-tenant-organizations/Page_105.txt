@@ -1,0 +1,6 @@
+6. In the target tenant, verify that the test user was provisioned.
+7. If all is working as expected, assign additional users to the configuration.
+For more information, see On-demand provisioning in Microsoft Entra ID .
+
+
+Step 12: Start the provisioning job

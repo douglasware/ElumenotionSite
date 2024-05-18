@@ -1,0 +1,7 @@
+5. Select Provision Micr osoft Entra ID User s to open the Attribut e Mapping  page.
+6. Scroll to the bottom of the page and select Add new mapping .
+7. In the Sour ce attribut e drop-down list, select a source attribute.
+If you created a directory extension in the source tenant, select the directory
+extension.
+
+

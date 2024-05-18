@@ -1,0 +1,6 @@
+2. Select Get star ted.
+3. Set the Provisioning Mode  to Automatic .
+4. Under the Admin Cr edentials  section, change the Authentication Method  to
+Cross T enant S ynchr onization P olicy .
+
+
