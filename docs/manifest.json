@@ -29,11 +29,11 @@
       "output": {
         ".html": {
           "relative_path": "FeaturedContent/toc.html",
-          "hash": "BbDuY0WMGEZURKFKpZtWBKmFfc+Xlt2nf4ieDBkfVXU="
+          "hash": "Xe7SIU8/ECgtyDKKY0IumApzM6EKPTjmbdFhuqA1DUc="
         },
         ".json": {
           "relative_path": "FeaturedContent/toc.json",
-          "hash": "nDV0ZitleY10rxsEJBVkVREGsvSS9vLQ32sAsZcQilg="
+          "hash": "ZjTq3SYaXbEp6EaPYI84R1lboZh9Efay7lsWXliH2f4="
         }
       },
       "is_incremental": false,
@@ -569,6 +569,237 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image10.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image10.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image11.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image11.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image12.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image12.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image13.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image13.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image14.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image14.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image15.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image15.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image16.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image16.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image17.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image17.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image18.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image18.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image19.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image19.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image20.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image20.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image21.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image21.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image4.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image5.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image6.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image6.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image7.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image8.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image8.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/IngestingPdfContent/image9.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/IngestingPdfContent/image9.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "Images/OobaboogaAPIHelper/image1.png",
       "output": {
         "resource": {
@@ -873,7 +1104,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/CopilotStudioThoughts.html",
-          "hash": "m9ISyRiBHxB+X6CU6wx8OX6+ArUwI4dXAN2ywO61CeM="
+          "hash": "osydb9PuQ8IiHOMcI+eMYcht9Vs9YB2z3NhIJXJyN+M="
         }
       },
       "is_incremental": false,
@@ -898,6 +1129,18 @@
         ".html": {
           "relative_path": "Journal/DetectingAIGeneratedContent.html",
           "hash": "EAFcd6fE0YTwjrkSoX5QOYH//VSW5vdl4xrnpeWM5zE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Journal/IngestingPdfContent.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/IngestingPdfContent.html",
+          "hash": "ZicvaiwOdv0cuYrC55Usk1Zf8qDFolFP6THncjmWrlE="
         }
       },
       "is_incremental": false,
@@ -957,11 +1200,11 @@
       "output": {
         ".html": {
           "relative_path": "Journal/toc.html",
-          "hash": "k4d0rPhMAV1DVockGCixLkKRLHSEmgJ+wFro6xag188="
+          "hash": "4tTv4xWN2+aNq7KYKIJuP6on+RpjxBWj5osNux4iGDo="
         },
         ".json": {
           "relative_path": "Journal/toc.json",
-          "hash": "JT+FHP0/MrQ/F8JSFLuahcDqEA6tcxjSb16RkGGhAQw="
+          "hash": "/gnKxuVNcicazksn7QbYhE2fWFWhgMxe392yowDScH4="
         }
       },
       "is_incremental": false,
@@ -1067,11 +1310,11 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "/lqR+5sDrawD6wUNOxBeH/Wppl3IlZDUVFknlRX6/FA="
+          "hash": "xMKLjojUUekL+tgCodUw3Bs10Rr+oaR6jERNDc+60fc="
         },
         ".json": {
           "relative_path": "toc.json",
-          "hash": "JQs5Qan+xaPXRmofgyM7kbMNrFIksj2OxSjWKs7LUYk="
+          "hash": "pMicEUaCBKamoK8EDmaBP1nk/iN0MTnURQ/eJwMVdBk="
         }
       },
       "is_incremental": false,
@@ -1198,7 +1441,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 21,
+          "total_file_count": 22,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

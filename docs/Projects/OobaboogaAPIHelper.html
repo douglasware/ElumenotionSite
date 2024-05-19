@@ -71,9 +71,9 @@
         <article data-uid="">
 <h1 id="oobaboogaapihelper">OobaboogaAPIHelper</h1>
 
-<p>OobaboogaAPIHelper is a .NET library available on <a href="https://www.nuget.org/packages/DougWare.OobaboogaAPIHelper">nuget.org</a>. This class library makes it easy to consume the <a href="https://github.com/oobabooga/text-generation-webui">Oobabooga Text Generation Web UI’s</a> <a href="https://github.com/oobabooga/text-generation-webui/tree/60bfd0b7223ea5c150fec075464e2a689d6b29c6/extensions/api">API extension</a>. Key features include: prompt templates for Vicuna 1,0, 1.1, Dolly v2, and basic LLama with a base class that is easy to extend, converstaion helpers to easily convert saved converstaions created with one model and/or prompt template for use with other models, model parameters and presets, and token counting to make it easy to fit your model's context size limits.</p>
+<p>OobaboogaAPIHelper is a .NET library available on <a href="https://www.nuget.org/packages/DougWare.OobaboogaAPIHelper">nuget.org</a>. This class library makes it easy to consume the <a href="https://github.com/oobabooga/text-generation-webui">Oobabooga Text Generation Web UI’s</a> <a href="https://github.com/oobabooga/text-generation-webui/tree/60bfd0b7223ea5c150fec075464e2a689d6b29c6/extensions/api">API extension</a>. Key features include: prompt templates for Vicuna 1,0, 1.1, Dolly v2, and basic LLama with a base class that is easy to extend, converstaion helpers to easily convert saved converstaions created with one model and/or prompt template for use with other models, model parameters and presets, and token counting to make it easy to fit your model&#39;s context size limits.  </p>
 <h1 id="why">Why?</h1>
-<p>Converting the python in Oobabooga Text Generation Web UI to C# was a good way for me to learn what happens in the Web UI Gradio app under the covers. The library contains:</p>
+<p>Converting the python in Oobabooga Text Generation Web UI to C# was a good way for me to learn what happens in the Web UI Gradio app under the covers. The library contains:   </p>
 <ul>
 <li>Each of the Web UI presets (at the time of this writing)</li>
 <li>Models for generating requests with documentation of each property</li>
@@ -81,16 +81,14 @@
 <li>Prompt templates for Vicuna, Dolly, and Llama models and a base class that is easy to use and extend for your own prompt templates</li>
 <li>Conversation helpers that make it easy to save and reuse conversations including token counts with different prompt templates</li>
 </ul>
-<p>Source, sample console app and unit tests are in <a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/OobaboogaAPIHelper">github</a><br>
-Classes and methods are <a href="https://www.elumenotion.com/api/OobaboogaAPIHelper.html">documented here</a></p>
+<p>Source, sample console app and unit tests are in <a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/OobaboogaAPIHelper">github</a><br>Classes and methods are <a href="https://www.elumenotion.com/api/OobaboogaAPIHelper.html">documented here</a>  </p>
 <h1 id="console-sample">Console Sample</h1>
-<p>First start Text Generation Web UI and enable the <strong>api</strong> extension.</p>
-<p><img src="../Images/OobaboogaAPIHelper/image1.png" alt=""></p>
-<p>Make sure you can chat in the browser and that the api extension is loaded. The console sample will work with minimal effort.</p>
-<p><img src="../Images/OobaboogaAPIHelper/image2.png" alt=""></p>
-<br>  
-But, you do need to make sure you **set the promptTemplate to match the model you have loaded in Web UI**!  
-<p><img src="../Images/OobaboogaAPIHelper/image3.png" alt=""></p>
+<p>First start Text Generation Web UI and enable the <strong>api</strong> extension.  </p>
+<p><img src="../Images/OobaboogaAPIHelper/image1.png" alt="">  </p>
+<p>Make sure you can chat in the browser and that the api extension is loaded. The console sample will work with minimal effort.  </p>
+<p><img src="../Images/OobaboogaAPIHelper/image2.png" alt="">  </p>
+<p><br><br>But, you do need to make sure you <strong>set the promptTemplate to match the model you have loaded in Web UI</strong>!  </p>
+<p><img src="../Images/OobaboogaAPIHelper/image3.png" alt="">  </p>
 </article>
 
         <div class="contribution d-print-none">

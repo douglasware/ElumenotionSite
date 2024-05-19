@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>GPT-4o versus Azure Document Intelligence and Azure Computer Vision OCR </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="GPT-4o versus Azure Document Intelligence and Azure Computer Vision OCR ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="gpt-4o-versus-azure-document-intelligence-and-azure-computer-vision-ocr">GPT-4o versus Azure Document Intelligence and Azure Computer Vision OCR</h1>
+
+<p><img src="../Images/IngestingPdfContent/image1.png" alt="">  </p>
+<hr>
+<h2 id="introduction">Introduction</h2>
+<p>It’s been about sixth months since my last post, <strong><a href="https://www.elumenotion.com/CopilotStudioThoughts.html">Building Good Chatbots Part One, No-Code with Microsoft Copilot Studio and Azure AI Studio</a></strong>. At the end of that very long article, which I split in two for LinkedIn, I said I’d write another part called “Castle on a hill” and immediately got insanely busy with client work. This is not that article, but it is closely related as it is about techniques for processing PDF content to make it easier to use with generative AI systems. <br><br>PDF files can be a challenge: the format itself is old and very permissive, processing tables is hard, and they often contain images with important information. They also require a lot of space compared to text-based file formats which means they take longer to move around and read and can trigger file size limits in some ‘chat about your documents’ systems. For these and other reasons it is usually best to either extract the text or convert the file itself to a text-based format such as <strong>markdown</strong>.<br><br>If you are not familiar with markdown, it is a popular text-based format for documents and it looks like this:     </p>
+<p><img src="../Images/IngestingPdfContent/image2.png" alt="">  </p>
+<p>On the left is the text, and on the right is the formatted output.<br><br>This post compares several generative AI options you can use to convert PDF’s to markdown:  </p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/concept-layout?view=doc-intel-4.0.0">Azure Document Intelligence Layout Model</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision">GPT-4 Turbo with Vision (turbo-2024-04-09)</a></li>
+<li><a href="https://openai.com/index/hello-gpt-4o/">GPT-4o</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision?tabs=rest%2Csystem-assigned%2Cresource#use-vision-enhancement-with-images">GPT-4 Turbo with Vision (vision-preview) with Azure Computer Vision OCR</a></li>
+<li><a href="https://openai.com/index/hello-gpt-4o/">GPT-4o and Azure Document Intelligence Layout Model</a></li>
+</ul>
+<p>Note: as of the time of this writing (May 18, 2024), turbo-2024-04-09 is not compatible with the Azure Computer Vision OCR extensions and GPT-4o is not available in Azure. To fully use the notebooks referenced in this post, you will need both Azure and Open AI subscriptions.     </p>
+<p>In the end you will understand how to combine Azure Document Intelligence OCR with GPT4o to transform binary PDF content like this:     </p>
+<p><img src="../Images/IngestingPdfContent/image3.png" alt="">  </p>
+<p>Into pure text in markdown format which displays like this:      </p>
+<p><img src="../Images/IngestingPdfContent/image4.png" alt="">  </p>
+<p>Without losing the information displayed in tables and images, for around 3 cents ($0.03) per page.<br>  </p>
+<h2 id="why-this-matters">Why this matters</h2>
+<p>In my previous post, I explained a little about <a href="https://www.elumenotion.com/Journal/CopilotStudioThoughts.html#solving-hallucinations-with-retrieval-augmented-generation-rag">solving hallucinations with retrieval augmented generation</a>. To summarize, the easiest way to prevent hallucinations is to provide the information required to answer the user’s question to the LLM in a prompt that contains the question and instructions to answer the question based on the provided information. <br><br>This ‘one simple trick’ requires you to have the information somewhere, such as a search index, and to be able to find the right information for the question when the user asks. <br><br>PDFs and other document formats that contain images such as figures are challenging because simple text extraction loses all the visual information and because the document formatting itself conveys information about the relationships between whatever is on the page. Tables are an example of this. Correctly extracting tables from PDFs is a notoriously difficult task. <br><br>I will say flatly that, if you have complex PDF content and you upload it to any off-the-shelf chat-on-your-data product today, you are very likely to be disappointed by the resulting solution – especially if it is ready to answer questions within a few seconds. If it is fast, you can be sure it didn’t do more than extract the text.  </p>
+<h2 id="baseline-azure-ai-studio-and-search-with-hybrid-vectorkeyword-search">Baseline: Azure AI Studio and Search with Hybrid Vector/Keyword search</h2>
+<p>As a baseline I am using a <a href="https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fentra%2Fidentity%2Fmulti-tenant-organizations%2Ftoc.json">pdf of the entra identity multi-tenant-organizations documentation from Microsoft Learn</a>. I selected it because I have been reading it all recently and am familiar with its contents and because it contains challenging tables, diagrams, and other content.<br>  </p>
+<h3 id="azure-ai-studio-and-azure-ai-search">Azure AI Studio and Azure AI Search</h3>
+<p>I will not cover the details of setting it up here, but I <a href="https://learn.microsoft.com/en-us/azure/ai-studio/how-to/index-add#create-an-index-from-the-playground">created a new index in Azure AI Search by uploading entra-identity-multi-tenant-organizations.pdf in the Azure AI Studio Chat Playground with the vector hybrid options and embeddings</a>.   </p>
+<h3 id="the-test-index">The test index</h3>
+<p>When you create an index this way, AI Studio creates a job using a docker image which ingests the content and builds the index. The longest running step is typically “Crack, Chuck, and Embed” which cracks open the document, chunks it into pieces of text, and creates embeddings for the vector search index from each chunk.   </p>
+<p><img src="../Images/IngestingPdfContent/image5.png" alt="">  </p>
+<p>When the job completes, you can test the index in Azure AI Search. The ** Search explorer ** tab [DTW] shows that 198 documents are in the index because the job created a chunk from each page of the original PDF file. This page is of interest it contains several elements: text, a table, and images.  </p>
+<p><img src="../Images/IngestingPdfContent/image6.png" alt="">  </p>
+<h3 id="lost-information">Lost Information</h3>
+<p> The original page of the PDF looks like this:  </p>
+<p><img src="../Images/IngestingPdfContent/image7.png" alt="">  </p>
+<p>And the result of the search looks like this:  </p>
+<p><img src="../Images/IngestingPdfContent/image8.png" alt="">  </p>
+<p>As you can see, the text itself has odd spaces and the meaning conveyed by the table is completely lost. Assuming we can somehow infer the positioning of the check marks in the columns from the white space is wrong as there is not enough whitespace on the first row. An LLM is likely to make this mistake and give incorrect answers as a result.<br><br>There are additional challenges, but the final example I will give here is shown in the next image:  </p>
+<p><img src="../Images/IngestingPdfContent/image9.png" alt="">  </p>
+<p>This content has a page break and an image. I already explained that the information in the image is lost, but even if it wasn’t the position of the page break ensures that the section will be split across chunks. It is unlikely that a search that finds the first chunk will naturally include the second page which might be very important. Were this a markdown document, the headings could be used to keep related text in the same chunk except for cases where the text under a heading is longer than the chunk size.<br><br>For completeness, a notebook, <strong>PdfToTextPages.ipynb</strong>, which chunks the test pdf to pages of text is located in <a href="https://github.com/douglasware/ElumenotionSite/blob/master/Projects/PdfToMarkdownAndQaPairs/PdfToTextPages.ipynb?short_path=08da8e8">this repo.</a>  </p>
+<h2 id="pdf-to-markdown-options">PDF to Markdown Options</h2>
+<h3 id="option-one-azure-document-intelligence-layout-model">Option One: Azure Document Intelligence Layout Model</h3>
+<p>First up is <a href="https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/concept-layout?view=doc-intel-4.0.0">Azure Document Intelligence with the Layout Model</a>. Of the notebooks related to this article, it is the only based on C# and .NET. The rest are python. <a href="https://github.com/douglasware/ElumenotionSite/blob/master/Projects/PdfToMarkdownAndQaPairs/docIntelligencePipeline.ipynb?short_path=f806d7f">My version</a> is based on this <a href="https://github.com/jamesmcroft/azure-document-intelligence-markdown-to-openai-data-extraction-sample">sample by  James Croft</a>. <br><br>This service is part of the approach that I recommend today based on the work that is the subject of this article, but the first version is notable for the following reasons:  </p>
+<ul>
+<li>It can produce a single markdown file from a PDF with little more than a line of code</li>
+<li>It is very fast, processing a 198 page PFD in less than a minute</li>
+<li>It provided accurate results for table contents and long numbers</li>
+<li>It is the least expensive single option at one cent per page</li>
+</ul>
+<p>However, by itself it has several weaknesses:  </p>
+<ul>
+<li>The markdown formatting is inconsistent</li>
+<li>It is OCR only and does not extract meaning from images and diagrams </li>
+</ul>
+<p>The page with the table from the baseline looks like this:  </p>
+<p><img src="../Images/IngestingPdfContent/image10.png" alt="">  </p>
+<p>The table content is correct, and the formatting is present, but not the formatting is not very good.<br><br>  </p>
+<h3 id="pdf-to-images">PDF to Images</h3>
+<p>Each of the remaining options starts by turning the PDF into a series of image files for processing. A notebook to perform this task, <strong>PdfToPageImages.ipynb</strong>, is <a href="https://github.com/douglasware/ElumenotionSite/blob/master/Projects/PdfToMarkdownAndQaPairs/PdfToPageImages.ipynb?short_path=36363ef">in this repository</a>, but the repository also contains the images used by the notebooks.  </p>
+<h3 id="option-two-gpt-4-turbo-2024-04-09-gpt-4-turbo-with-vision-or--gpt-4o-omni--br">Option Two: gpt-4-turbo-2024-04-09 (GPT 4 Turbo with Vision) –OR – GPT-4o (Omni)  <br></h3>
+<p>GPT-4-Turbo,  <a href="https://github.com/douglasware/ElumenotionSite/blob/master/Projects/PdfToMarkdownAndQaPairs/turbo-2024-04-09.ipynb?short_path=65fda5f">notebook</a>, and GPT-4o <a href="https://github.com/douglasware/ElumenotionSite/blob/master/Projects/PdfToMarkdownAndQaPairs/v4omni.ipynb?short_path=b5de81a">notebook</a> are multimodal models which can reason against images. We can send the image directly to the LLM with a prompt to create a page of markdown.   </p>
+<h4 id="sample-prompt">Sample Prompt</h4>
+<p><div style="border: 2px solid black; padding: 10px;">Give me the markdown text output from this page in a PDF using formatting to match the structure of the page as close as you can get. Only output the markdown and nothing else. Do not explain the output, just return it. Do not use a single # for a heading. All headings will start with ## or ###. Convert tables to markdown tables. Take great care to ensure the precision and accuracy of numbers especially longer series of digits - do not transcribe or reorder the digits! Describe charts and images as best you can and, when possible use mermaidjs format. DO NOT return in a codeblock. Just return the raw text in markdown format. Remove any irrelevant text from the markdown, returning the cleaned up version of the content. Examples include any images or &#39;click here&#39; or &#39;Listen to this article&#39; or page numbers or logos.</div></p>  
+
+<p>As I progressed through the options I refined this prompt and there is a better version at the end, but this was my first version. <br><br>This key part: <strong>Describe charts and images as best you can and, when possible use mermaidjs format</strong>, adds an ability that Doc Intelligence alone lacks, which is the ability to describe images. There is no reason why the description must only be text, and so I asked the LLM to create diagrams.<br><br>Now this image (the original):  </p>
+<p><img src="../Images/IngestingPdfContent/image11.png" alt="">  </p>
+<p>Became this markdown which includes descriptions of the visual content including some mermaid diagrams:  </p>
+<p><img src="../Images/IngestingPdfContent/image12.png" alt="">  </p>
+<p>Unfortunately, it changed a few things in the process and the output is consistently untrustworthy. For example:   </p>
+<p><img src="../Images/IngestingPdfContent/image13.png" alt="">  </p>
+<p>The table looks good, BUT it is factually incorrect and an example of a hallucination.  In fact, every version of GPT-4, including the newest Omni, failed consistently to produce this table correctly.<br><br>A much more serious issue present in each of the GPT-4 models I tried was transcription of digits. Consider this source content:  </p>
+<p><img src="../Images/IngestingPdfContent/image14.png" alt="">  </p>
+<p><br><br>The “VRS code:” is <strong>886249</strong>. The hallucination is easy to observe. On one run, GPT-4o turned it into it to 286492<br>  </p>
+<p><img src="../Images/IngestingPdfContent/image15.png" alt="">  </p>
+<p><br><br>On another run, GPT-4-Turbo-2024-04-09 transcribed it to 882469 <br>  </p>
+<p><img src="../Images/IngestingPdfContent/image16.png" alt="">  </p>
+<p>I honestly don’t think I observed a single success on this test without using some form of real OCR such as Azure Document Intelligence or Azure Computer Vision. <br>  </p>
+<h4 id="differences-between-gpt-4-turbo-2024-and-gpt-4o">Differences between GPT-4-Turbo-2024 and GPT-4o</h4>
+<p>I personally found GPT-4-Turbo-2024 to be a little better with my small sample with markdown and image descriptions. But each made serious mistakes with the OCR that would create false answers were the result used for grounding. That said, GPT-4o was consistently around 30% faster and costs 50% less. <br>  </p>
+<h4 id="conclusion-on-option-two">Conclusion on Option Two</h4>
+<p>If precise and accurate results are crucial, solutions using only GPT-4-Turbo-2024 and GPT-4o without OCR are problematic.  </p>
+<h3 id="option-three-gpt-4-vision-preview-with-azure-computer-vision-ocr">Option Three: gpt-4-vision-preview with Azure Computer Vision OCR</h3>
+<p>From <a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision?tabs=rest%2Csystem-assigned%2Cresource#use-vision-enhancement-with-images">How to use the GPT-4 Turbo with Vision model - Azure OpenAI Service | Microsoft Learn</a>:  </p>
+<p><img src="../Images/IngestingPdfContent/image17.png" alt="">  </p>
+<p>The notebooks for this option are <a href="https://github.com/douglasware/ElumenotionSite/blob/master/Projects/PdfToMarkdownAndQaPairs/visionWithOcr.ipynb?short_path=715cda1">notebook with OCR</a> and <a href="https://github.com/douglasware/ElumenotionSite/blob/master/Projects/PdfToMarkdownAndQaPairs/visionWithOcrAndGrounding.ipynb?short_path=ade8da9">notebook with OCR and grounding</a>. <br>  </p>
+<h4 id="good-results-but-not-recommended">Good results, but not recommended</h4>
+<p>This combination yields the best results of the tested options (so far) but there are three issues:  </p>
+<ul>
+<li><ol>
+<li>They are the most expensive at approximately $0.05-$0.07 per page</li>
+</ol>
+</li>
+<li><ol>
+<li>The combination is the slowest at approximately 40-50 per seconds per page</li>
+</ol>
+</li>
+<li><ol>
+<li>The reliance on proprietary Microsoft extensions</li>
+</ol>
+</li>
+</ul>
+<p>The extensions are detailed in the MS doc linked above. My objection is not so much that they are proprietary as that using them is a risk, and Microsoft has not done a good job keeping them up to date. At an API level, I can’t imagine why one can only use GPT-4-Vision-Preview and not the better, faster, and cheaper GPT-4-Turbo-2024 other than that MS hasn’t gotten around to changing the config, or perhaps that they don’t foresee this feature ever exiting preview and becoming generally available.  </p>
+<h3 id="option-four-winner-azure-document-intelligence-ocr-and-gpt-4o">Option Four (WINNER!!!): Azure Document Intelligence OCR and GPT-4o</h3>
+<p>Fortunately, you don’t need to take any chances with a proprietary extension when you can easily do the same thing while exercising full control. The <a href="https://github.com/douglasware/ElumenotionSite/blob/master/Projects/PdfToMarkdownAndQaPairs/v4omni-image-plus-docIntelOcr.ipynb?short_path=78bb846">final notebook, v4omni-image-plus-docIntelOcr.ipynb,] </a> sends the text of OCR’d markdown of a single page created from an image and the following prompt to GPT-4o. <br>  </p>
+<h4 id="sample-prompt-1">Sample Prompt</h4>
+<div style="border: 2px solid black; padding: 10px;font-size:small;"><p>The provided image is a page of a document.</p><p>The following markdown formatted text is a true and accurate but incomplete conversion of the provided image. Information contained in figures and other illustrations is missing.</p><p><strong>MARKDOWN START</strong></p>MARKDOWN TEXT HERE<p><strong>MARKDOWN END</strong></p><p>Create new markdown that contains the EXACT original text and EXACT original tables WITHOUT alteration, while ADDING full text descriptions in place of each figure or illustration.</p><p>Following each text description, consider if it is possible to further describe the figure or illustration using valid mermaidjs syntax and do so taking care to avoid syntax errors.</p> <p>Following these guidelines ensures valid and correctly rendered MermaidJS diagrams.</p><ol>        <li><strong>Node IDs</strong>: Use only alphanumeric characters and underscores (_). Avoid spaces and other special characters.</li><li><strong>Labels with Special Characters</strong>: Avoid special characters in labels. Enclose labels with spaces or special characters in double quotes within brackets.</li></ol><h3>Example</h3>graph TD;<br>    OwnerTenantC[&quot;Owner tenant (C)&quot;] --&gt; MemberTenantA[&quot;Member tenant (A)&quot;] <br> OwnerTenantC[&quot;Owner tenant (C)&quot;] --&gt; MemberTenantB[&quot;Member tenant (B)&quot;] <br>MemberTenantA[&quot;Member tenant (A)&quot;] --&gt; MemberTenantB[&quot;Member tenant (B)&quot;] <br><h3>Correct Usage</h3><ul><li><strong>Node ID</strong>: OwnerTenantC</li>      <li><strong>Label</strong>: &quot;Owner tenant (C)&quot;</li></ul>    <h3>Avoid</h3>    <ul>        <li>Opening or closing params and other special characters in labels</li>        <li>Node IDs with spaces or special characters: Owner tenant (C)</li>        <li>Labels without quotes: [Owner tenant (C)]</li>    </ul></div>  
+
+<p>Note that to use the notebook, you must first use the PdfToPageImages notebook to create images and then use the DocIntelligencePipeline notebook to convert the single page images from the PDFs into individual markdown files.<br><br>This prompt grounds the text from the high-quality OCR from Document Intelligence with the generative capabilities of GPT-4o to insert image descriptions and well formatted mermaid diagrams. <br><br>The process costs around 3 cents ($0.03) per page and took less than 10 seconds per page on average.  </p>
+<h2 id="sample-output">Sample Output</h2>
+<p><img src="../Images/IngestingPdfContent/image18.png" alt="">  </p>
+<p>Interestingly, in some cases GPT-4o elected to add diagrams where previously there were none. This sequence diagram is correct and does not appear in the source image! Unfortunately, it is a hallucination. In fact, although most of the mermaid diagrams are correct, they often have errors. I’m very interested in this behavior and plan to spend much more time on it. The model might do a much better job with mermaid alternatives such as PlantUml.  </p>
+<p><img src="../Images/IngestingPdfContent/image19.png" alt="">  </p>
+<h2 id="the-index">The Index</h2>
+<p>Earlier, I showed the Search Explorer in Azure AI Search using an index based on the PDF. Here is the index for the markdown file.<br>  </p>
+<p><img src="../Images/IngestingPdfContent/image20.png" alt="">  </p>
+<p>The index has fewer chunks and takes up less space while containing much of the information lost in the original translation. This is the content for the same page in the new index.  </p>
+<p><img src="../Images/IngestingPdfContent/image21.png" alt="">  </p>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>Over a year ago now, the amazing <a href="https://en.wikipedia.org/wiki/Ted_Chiang">Ted Chiang</a> wrote <a href="https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web">ChatGPT Is a Blurry JPEG of the Web</a>. The multimodal capabilities of models like GPT-4o show that his interesting and thoughtful perspective is quite incorrect. These tools give us the ability to refine information and project it in new and interesting ways by combining text, sound, and vision to extract meaning. We did not have this ability before, and it is as fundamental to our future as the printing press was to our ancestors.    </p>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
