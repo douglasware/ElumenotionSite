@@ -1135,12 +1135,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "Journal/IngestingPdfContent.md",
       "output": {
         ".html": {
           "relative_path": "Journal/IngestingPdfContent.html",
-          "hash": "BirFGOSxTTkHmCW/fetfhXY0Aj0Q9DLdfCkLHiTLMC8="
+          "hash": "o27XkTsi9CivlxN+BlvzyQ3xJa+ZcKkONnlx9KBrI9Q="
         }
       },
       "is_incremental": false,
@@ -1153,6 +1156,111 @@
         ".html": {
           "relative_path": "Journal/OpenSourceVersusOpenAI.html",
           "hash": "fZ+8GGKCq87VJuCY/zNg93BptT3WXmm6mSrIA2s9CY4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Journal/PDFMarkdown/mtoExtractedText.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/PDFMarkdown/mtoExtractedText.html",
+          "hash": "CG3QTC5KzdF+1EuBAUxY9aqe9gcvs7hsc3ntn3ex7kc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Journal/PDFMarkdown/mtoFromDocIntelOnly.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/PDFMarkdown/mtoFromDocIntelOnly.html",
+          "hash": "NBmfB1brp8xgYkhnfg0EnqJ1qQuJaygB0rMs2ecJAWI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader",
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Journal/PDFMarkdown/mtoGPT4Omni.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/PDFMarkdown/mtoGPT4Omni.html",
+          "hash": "jllFozSepEIHxupbaayWEwNWMYkmBGtnXtsbhmXFd+c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Journal/PDFMarkdown/mtoGPT4OmniWithDocIntelOCR.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/PDFMarkdown/mtoGPT4OmniWithDocIntelOCR.html",
+          "hash": "KVWhqmgOKchHVJ/CQVXf4rG6ZeBm8KEfARwvuUrYm+4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader",
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Journal/PDFMarkdown/mtoGPT4Turbo.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/PDFMarkdown/mtoGPT4Turbo.html",
+          "hash": "3J5G+v3oNHTVv6QmDtIYRMXbtm+v+SrYSbEu+TZYQks="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Journal/PDFMarkdown/mtoGPT4TurboWithDocIntelOCR.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/PDFMarkdown/mtoGPT4TurboWithDocIntelOCR.html",
+          "hash": "NsvpmCSi8XMvV6fsVScyM56Z2PIK6DmCsBIEkGHx63w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader",
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Journal/PDFMarkdown/mtoGPT4VisionPreviewAndAzureComputerVisionOCR.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/PDFMarkdown/mtoGPT4VisionPreviewAndAzureComputerVisionOCR.html",
+          "hash": "XK/Z57UmcXUvIzxHyBxAWb3v7jP96CtVBB7/zgL9+SY="
         }
       },
       "is_incremental": false,
@@ -1441,7 +1549,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 22,
+          "total_file_count": 29,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
