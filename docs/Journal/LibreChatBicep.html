@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Setup LibreChat in Azure Container Apps with Bicep </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Setup LibreChat in Azure Container Apps with Bicep ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="setup-librechat-in-azure-container-apps-with-bicep">Setup LibreChat in Azure Container Apps with Bicep</h1>
+
+<p><img src="../Images/LibreChatBicep/image1.png" alt="">  </p>
+<h2 id="introduction">Introduction</h2>
+<p>This post is by our summer intern, <a href="https://www.linkedin.com/in/louis-de-fromont/">Louis de Fromont</a>, who is helping out tailoring the excellent <a href="https://www.librechat.ai/">LibreChat</a> open source AI chat platform to use in projects specifically hosted in Azure. This bicep template can have you up and running in short order!<br><br>Take it away Louis!<br><hr>  </p>
+<h2 id="using-the-script">Using the script</h2>
+<p>This Bicep script is the first small project that I’ve been working on at Elumention and is used to deploy a fully functional LibreChat instance to Azure. If you’ve been looking for an example to model your own script, hopefully, this blog post should help by highlighting some of the specifics when working with LibreChat. If you’re just interested in getting the deployment up and running, <a href="https://github.com/douglasware/ElumenotionSite/blob/master/Projects/LibreChatBicep/README.md">you can take a look at the deployment instructions</a>.  </p>
+<p><img src="../Images/LibreChatBicep/image2.png" alt="">  </p>
+<p>At a high level, this script creates a managed environment for containers hosting LibreChat, a MongoDB instance, and a Mongo Express web interface, with support for optional Azure Active Directory authentication. Additionally, it sets up a Cognitive Services account for OpenAI, creates storage accounts and file shares for configurations, and automates uploading the <code>librechat.yaml</code> file for configuration.<br>At the heart of the deployment are the three different container apps:  </p>
+<ol>
+<li><strong>LibreChat container app</strong>:    <ul>
+<li>Image: <a href="https://hub.docker.com/r/librechat/librechat">librechat/librechat:v0.7.3-rc</a>  </li>
+</ul>
+</li>
+<li><strong>MongoDB container app</strong>:    <ul>
+<li>Image: <a href="https://hub.docker.com/r/bitnami/mongodb">bitnami/mongodb:7.0.7</a>  </li>
+</ul>
+</li>
+<li><strong>Mongo-Express container app</strong>:    <ul>
+<li>Image: <a href="https://hub.docker.com/_/mongo-express">mongo-express</a>    </li>
+<li>Provides an admin web UI to MongoDB.<br>All three container apps use public images from Docker Hub.<br>Additionally, two file shares are deployed:  </li>
+</ul>
+</li>
+<li><strong>MongoDB file share</strong>:    <ul>
+<li>Mounted for the MongoDB container app to persist its database contents.  </li>
+</ul>
+</li>
+<li><strong>LibreChat file share</strong>:    <ul>
+<li>Used to mount the <code>librechat.yaml</code> file for LibreChat.  </li>
+</ul>
+</li>
+</ol>
+<p>As part of the deployment script, the <code>librechat.yaml</code> file is processed and uploaded to the deployed file share for use by the LibreChat container app. The processing is done by first loading the contents of the file in Bicep using <code>loadTextContent(&#39;../librechat.yaml&#39;)</code> then a series of <code>replace()</code> functions are called on the loaded text to replace the API key and instance name of the OpenAI group. The key and instance name are loaded dynamically from the OpenAI service created as part of this script. After replacing the loaded YAML file, the contents are uploaded to the LibreChat file share via a deployment script. I based the code to write this deployment script based on <a href="https://github.com/mattias-fjellstrom/azure-bicep-upload-data-to-storage/blob/main/modules/file.bicep">a Bicep file by Mattias Fjellström</a>.  </p>
+<h3 id="openai-service-creation-and-model-deployment">OpenAI Service Creation and Model Deployment:</h3>
+<p>To create the OpenAI service, a cognitive service account is first provisioned to manage the AI model deployments. Then, models are deployed based on the configuration defined in the <code>models.json</code> file. The <code>deploymentName</code> property for each model in the <code>models.json</code> file should match the corresponding <code>deploymentName</code> property in the <code>librechat.yaml</code> file. This external configuration is accomplished in the Bicep script using the <code>loadJsonContent(&#39;./models.json&#39;)</code> function and an iterative loop over every model. One note about this loop is I had to include the <code>@batchSize()</code> decorator above the loop to limit the deployments of the models to one at a time. This is to avoid an error I commonly got in Azure when deploying models in parallel stating that “another operation is being performed on the parent resource” (the parent resource being the OpenAI service).  </p>
+<p><img src="../Images/LibreChatBicep/image3.png" alt="">  </p>
+<p>A separate parameter in the script is available for configuring the location of the OpenAI service and its deployments. This is because not all regions have the same mode deployments available which is why you might want to deploy the OpenAI service in a separate region than the rest of the resource group. To ensure compatibility and availability of OpenAI models in your selected region, consult the <a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#model-summary-table-and-region-availability">Model Summary Table and Region Availability guide</a>. This provides detailed information on which AI models are available in specific OpenAI service regions.  </p>
+<h3 id="configuring-optional-authentication-for-mongo-express">Configuring Optional Authentication for Mongo-Express:</h3>
+<p>To limit access to the Mongo-Express container app, an optional parameter called <code>createMonogexpressAuthConfig</code> is available. When set to true, an Azure AD app registration and authentication configuration is created, adding Azure AD as an identity provider for Mongo-Express. This is accomplished natively in the Bicep script using the <code>Microsoft.Graph/applications@v1.0</code> resource type. However, as of the time of writing, it is still an experimental feature and has just recently entered a public preview. Instructions to configure Bicep to work with Microsoft graph resources can be found <a href="https://learn.microsoft.com/en-us/graph/templates/quickstart-create-bicep-interactive-mode">here</a>.  </p>
+<p>Because this is an experimental feature, not all features are fully supported, for example, attempting to re-run the Bicep script after setting up the Azure AD app registration can result in an error from the Azure CLI because the app registration resource already exists and modifications to an active app registration can’t be made. This is another reason I chose to make this part of the script be enabled with the <code>createMonogexpressAuthConfig</code> parameter, with the idea being you set the parameter to true on the initial deployment, then keep it false on subsequent deployments to avoid having this part of the script cause the rest of the deployment to fail.<br><hr><br>Louis de Fromont<br>June 3, 2024  </p>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

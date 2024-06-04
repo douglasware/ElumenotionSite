@@ -29,11 +29,11 @@
       "output": {
         ".html": {
           "relative_path": "FeaturedContent/toc.html",
-          "hash": "Xe7SIU8/ECgtyDKKY0IumApzM6EKPTjmbdFhuqA1DUc="
+          "hash": "za03N4JVpGlxG+kRVr6Vnixzgm7JTaij0lKaPOupMVA="
         },
         ".json": {
           "relative_path": "FeaturedContent/toc.json",
-          "hash": "ZjTq3SYaXbEp6EaPYI84R1lboZh9Efay7lsWXliH2f4="
+          "hash": "KjHFaAGO7o3LQvUNV0fwEPnv6OzJ7vIUfVUVeqvmPUk="
         }
       },
       "is_incremental": false,
@@ -800,6 +800,39 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "Images/LibreChatBicep/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/LibreChatBicep/image1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/LibreChatBicep/image2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/LibreChatBicep/image2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/LibreChatBicep/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/LibreChatBicep/image3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "Images/OobaboogaAPIHelper/image1.png",
       "output": {
         "resource": {
@@ -1151,6 +1184,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Journal/LibreChatBicep.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/LibreChatBicep.html",
+          "hash": "c5reKkCbpIb7VTwthbyipke9+yXkZGTPErwmEF8P+YU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Journal/OpenSourceVersusOpenAI.md",
       "output": {
         ".html": {
@@ -1308,11 +1353,11 @@
       "output": {
         ".html": {
           "relative_path": "Journal/toc.html",
-          "hash": "4tTv4xWN2+aNq7KYKIJuP6on+RpjxBWj5osNux4iGDo="
+          "hash": "NwqVqz71/HRFadpSb2VNj9g37KFK4UnfK2siUimn574="
         },
         ".json": {
           "relative_path": "Journal/toc.json",
-          "hash": "/gnKxuVNcicazksn7QbYhE2fWFWhgMxe392yowDScH4="
+          "hash": "RwQhUgSqJnaJGMaOVeRbozp9m8tGTVaVayPPOk9cJak="
         }
       },
       "is_incremental": false,
@@ -1410,19 +1455,16 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "xMKLjojUUekL+tgCodUw3Bs10Rr+oaR6jERNDc+60fc="
+          "hash": "NdppSERjbvZNtRciOi6WXL6FiSSULZwKcCPY+ahl5/g="
         },
         ".json": {
           "relative_path": "toc.json",
-          "hash": "pMicEUaCBKamoK8EDmaBP1nk/iN0MTnURQ/eJwMVdBk="
+          "hash": "kgH/EjXqxZVCfUJJrT0ntvBOhRVQVaIfM3BSvrkxdac="
         }
       },
       "is_incremental": false,
@@ -1549,7 +1591,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 29,
+          "total_file_count": 30,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
