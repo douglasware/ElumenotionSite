@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Source Files are located in the repo containing this site </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Source Files are located in the repo containing this site ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="source-files-are-located-in-the-repo-containing-this-sitehttpsgithubcomdouglaswareelumenotionsitetreemasterprojectslibrechatbicep">Source Files are located in the <a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/LibreChatBicep">repo containing this site</a></h1>
+
+<h2 id="tools-and-configuration-setup">Tools and Configuration Setup</h2>
+<p>Make sure you have <a href="https://learn.microsoft.com/en-us/cli/azure/install-azure-cli">installed Azure CLI</a> and <a href="https://learn.microsoft.com/en-us/cli/azure/authenticate-azure-cli">are signed in to your Azure account</a>. If you already have Azure CLI installed, run the <code>az bicep upgrade</code> command to ensure you&#39;re on the latest version of Bicep.</p>
+<h3 id="librechatyaml">librechat.yaml</h3>
+<p>The <code>librechat.yaml</code> file should be located in the parent directory of the <code>main.bicep</code> script. To properly configure the <code>librechat.yaml</code> as part of the Bicep deployment, create an OpenAI group named <code>&quot;openai&quot;</code>, and set the <code>apiKey</code> to <code>&quot;openai-key&quot;</code> and the <code>instanceName</code> to <code>&quot;openai-instance-name&quot;</code>.</p>
+<pre><code class="lang-yaml">endpoints:
+  azureOpenAI:
+    (...)
+    groups:
+    - group: &quot;openai&quot;
+      apiKey: &quot;openai-key&quot;
+      instanceName: &quot;openai-instance-name&quot;
+      forcePrompt: false
+      assistants: true
+      models:
+        gpt-4-turbo:
+          deploymentName: gpt-4-turbo
+          version: &quot;2024-02-15-preview&quot;
+        gpt-3.5-turbo-16k:
+          deploymentName: gpt-35-turbo-16k
+          version: &quot;2024-02-15-preview&quot;
+</code></pre><h3 id="modelsjson">models.json</h3>
+<p>The <code>models.json</code> file should be located in the same directory of the <code>main.bicep</code> script. Configure the <code>modelName</code>, <code>version</code>, and <code>capacity</code> for each model based on the desired <a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models">models available in Azure OpenAI Service</a>. Ensure the <code>deploymentName</code> for each model matches the <code>deploymentName</code> parameter in your <code>librechat.yaml</code> file.</p>
+<pre><code class="lang-json">{
+  &quot;models&quot;: [
+    {
+      &quot;deploymentName&quot;: &quot;gpt-4-turbo&quot;,
+      &quot;modelName&quot;: &quot;gpt-4&quot;,
+      &quot;version&quot;: &quot;turbo-2024-04-09&quot;,
+      &quot;capacity&quot;: 75
+    },
+    {
+      &quot;deploymentName&quot;: &quot;gpt-35-turbo-16k&quot;,
+      &quot;modelName&quot;: &quot;gpt-35-turbo-16k&quot;,
+      &quot;version&quot;: &quot;0613&quot;,
+      &quot;capacity&quot;: 150
+    }
+  ]
+}
+</code></pre><h2 id="deployment-instructions">Deployment Instructions</h2>
+<p>To get a list of available location names for deployment, use the <code>az account list-locations</code> command and use the given <code>name</code> property when referencing that location.</p>
+<p>To ensure compatibility and availability of OpenAI models in your selected region, consult the <a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#model-summary-table-and-region-availability">Model Summary Table and Region Availability guide</a>. This provides detailed information on which AI models are available in specific OpenAI service regions.</p>
+<h3 id="provisioning-a-new-resource-group">Provisioning a New Resource Group</h3>
+<p>To provision a new resource group and deploy resources to it, use the following command. Replace <code>your_region</code> with your preferred Azure location, <code>resource_group_name</code> with your desired resource group name, and <code>openai_service_region</code> with the OpenAI service region that supports the models you need.</p>
+<pre><code class="lang-bash">az deployment sub create --name librechat --location your_region --template-file .\rg.bicep --parameters resourcegroup=resource_group_name location=your_region openAiService_location=openai_service_region
+</code></pre><p>If you accidentally deploy to the wrong region or want to deploy this script across multiple regions, you might get the following error:</p>
+<pre><code>{&quot;code&quot;: &quot;InvalidDeploymentLocation&quot;, &quot;message&quot;: &quot;Invalid deployment location &#39;westeurope&#39;. The deployment &#39;librechat&#39; already exists in location &#39;eastus&#39;.&quot;}
+</code></pre><p>To fix this, change the <code>--name</code> parameter in the command from <code>librechat</code> to something else, eg. <code>librechat2</code>.</p>
+<h3 id="deploying-to-an-existing-resource-group">Deploying to an Existing Resource Group</h3>
+<p>For deploying resources to an existing resource group, execute the command below. Replace <code>resource_group_name</code> with the name of your existing resource group and <code>openai_service_region</code> with the appropriate OpenAI service region.</p>
+<pre><code class="lang-bash">az deployment group create --resource-group resource_group_name --template-file .\main.bicep --parameters openAiService_location=openai_service_region createMonogexpressAuthConfig=true
+</code></pre><p>The <code>createMonogexpressAuthConfig</code> parameter will automatically setup a Microsoft identity provider for mongo-express. Remove this parameter or set it to false if you don&#39;t want this.</p>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

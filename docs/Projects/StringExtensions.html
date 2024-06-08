@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>DougWare.StringExtensionMethods </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="DougWare.StringExtensionMethods ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="dougwarestringextensionmethods">DougWare.StringExtensionMethods</h1>
+
+<p><strong><a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/StringExtensionMethods">Source on Github</a></strong></p>
+<p>DougWare.StringExtensionMethods is a set of C# extension methods for the <code>string</code> class, providing functionality to extract substrings and lists of substrings between specified delimiters. These methods are particularly useful for text parsing tasks such as extracting content from HTML fragments or other structured text.</p>
+<h2 id="installation">Installation</h2>
+<p>Install the NuGet package using the following command:</p>
+<pre><code class="lang-sh">dotnet add package DougWare.StringExtensionMethods
+</code></pre><h2 id="usage">Usage</h2>
+<h3 id="methods">Methods</h3>
+<h4 id="getinnertext"><code>GetInnerText</code></h4>
+<p>Retrieves the first substring between a specified preamble and postscript.</p>
+<p><strong>Signature:</strong></p>
+<pre><code class="lang-csharp">public static string GetInnerText(this string input, string preamble, string postscript)
+</code></pre><p><strong>Parameters:</strong></p>
+<ul>
+<li><code>input</code> (string): The input string.</li>
+<li><code>preamble</code> (string): The start substring.</li>
+<li><code>postscript</code> (string): The end substring.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>(string): The substring between the preamble and postscript, or an empty string if they are not found.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-csharp">string input = &quot;preambleHello, World!postscript&quot;;
+string result = input.GetInnerText(&quot;preamble&quot;, &quot;postscript&quot;);
+// result: &quot;Hello, World!&quot;
+</code></pre><h4 id="getinnertext-with-case-sensitivity"><code>GetInnerText</code> with Case Sensitivity</h4>
+<p>Retrieves the first substring between a specified preamble and postscript with an option for case sensitivity.</p>
+<p><strong>Signature:</strong></p>
+<pre><code class="lang-csharp">public static string GetInnerText(this string input, string preamble, string postscript, bool ignoreCase)
+</code></pre><p><strong>Parameters:</strong></p>
+<ul>
+<li><code>input</code> (string): The input string.</li>
+<li><code>preamble</code> (string): The start substring.</li>
+<li><code>postscript</code> (string): The end substring.</li>
+<li><code>ignoreCase</code> (bool): Boolean flag to indicate if the search should be case insensitive.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>(string): The substring between the preamble and postscript, or an empty string if they are not found.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-csharp">string input = &quot;PREAMBLEHello, World!POSTSCRIPT&quot;;
+string result = input.GetInnerText(&quot;preamble&quot;, &quot;postscript&quot;, true);
+// result: &quot;Hello, World!&quot;
+</code></pre><h4 id="tobytearrayutf8"><code>ToByteArrayUtf8</code></h4>
+<p>Converts a string into a byte array using UTF-8 encoding.</p>
+<p><strong>Signature:</strong></p>
+<pre><code class="lang-csharp">public static byte[] ToByteArrayUtf8(this string input)
+</code></pre><p><strong>Parameters:</strong></p>
+<ul>
+<li><code>input</code> (string): The input string.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>(byte[]): The byte array representation of the input string.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-csharp">string input = &quot;Hello, World!&quot;;
+byte[] result = input.ToByteArrayUtf8();
+// result: [byte array of the string]
+</code></pre><h4 id="getinnertextlist"><code>GetInnerTextList</code></h4>
+<p>Retrieves a list of substrings between specified preambles and postscripts.</p>
+<p><strong>Signature:</strong></p>
+<pre><code class="lang-csharp">public static List&lt;string&gt; GetInnerTextList(this string input, string preamble, string postscript)
+</code></pre><p><strong>Parameters:</strong></p>
+<ul>
+<li><code>input</code> (string): The input string.</li>
+<li><code>preamble</code> (string): The start substring.</li>
+<li><code>postscript</code> (string): The end substring.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>(List<string>): A list of substrings between the preamble and postscript.</string></li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-csharp">string input = &quot;preambleHello, World!postscript preambleHello Again!postscript&quot;;
+List&lt;string&gt; result = input.GetInnerTextList(&quot;preamble&quot;, &quot;postscript&quot;);
+// result: [&quot;Hello, World!&quot;, &quot;Hello Again!&quot;]
+</code></pre><h4 id="getinnertextlist-with-case-sensitivity"><code>GetInnerTextList</code> with Case Sensitivity</h4>
+<p>Retrieves a list of substrings between specified preambles and postscripts with an option for case sensitivity.</p>
+<p><strong>Signature:</strong></p>
+<pre><code class="lang-csharp">public static List&lt;string&gt; GetInnerTextList(this string input, string preamble, string postscript, bool ignoreCase)
+</code></pre><p><strong>Parameters:</strong></p>
+<ul>
+<li><code>input</code> (string): The input string.</li>
+<li><code>preamble</code> (string): The start substring.</li>
+<li><code>postscript</code> (string): The end substring.</li>
+<li><code>ignoreCase</code> (bool): Boolean flag to indicate if the search should be case insensitive.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>(List<string>): A list of substrings between the preamble and postscript.</string></li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-csharp">string input = &quot;PREAMBLEHello, World!POSTSCRIPT PREAMBLEHello Again!POSTSCRIPT&quot;;
+List&lt;string&gt; result = input.GetInnerTextList(&quot;preamble&quot;, &quot;postscript&quot;, true);
+// result: [&quot;Hello, World!&quot;, &quot;Hello Again!&quot;]
+</code></pre><h2 id="unit-tests">Unit Tests</h2>
+<h3 id="getinnertext-1">GetInnerText</h3>
+<pre><code class="lang-csharp">[TestMethod]
+public void GetInnerText_ReturnsCorrectInnerText()
+{
+    var input = &quot;preambleHello, World!postscript&quot;;
+    var result = input.GetInnerText(&quot;preamble&quot;, &quot;postscript&quot;);
+    Assert.AreEqual(&quot;Hello, World!&quot;, result);
+}
+</code></pre><h3 id="getinnertextlist-1">GetInnerTextList</h3>
+<pre><code class="lang-csharp">[TestMethod]
+public void GetInnerTextList_ReturnsCorrectList()
+{
+    var input = &quot;preambleHello, World!postscript preambleHello Again!postscript&quot;;
+    var result = input.GetInnerTextList(&quot;preamble&quot;, &quot;postscript&quot;);
+    var expected = new List&lt;string&gt; { &quot;Hello, World!&quot;, &quot;Hello Again!&quot; };
+    CollectionAssert.AreEqual(expected, result);
+}
+</code></pre><h3 id="tobytearrayutf8-1">ToByteArrayUtf8</h3>
+<pre><code class="lang-csharp">[TestMethod]
+public void ToByteArrayUtf8_ReturnsCorrectByteArray()
+{
+    var input = &quot;Hello, World!&quot;;
+    var result = input.ToByteArrayUtf8();
+    var expected = Encoding.UTF8.GetBytes(input);
+    CollectionAssert.AreEqual(expected, result);
+}
+</code></pre><p>For more examples and detailed documentation, please refer to the source code and unit tests provided.</p>
+<h2 id="license">License</h2>
+<p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for more details.</p>
+<hr>
+<p>Feel free to contribute by submitting issues or pull requests to the GitHub repository. Happy coding!</p>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

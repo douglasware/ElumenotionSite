@@ -29,11 +29,11 @@
       "output": {
         ".html": {
           "relative_path": "FeaturedContent/toc.html",
-          "hash": "za03N4JVpGlxG+kRVr6Vnixzgm7JTaij0lKaPOupMVA="
+          "hash": "pJ9veJgxfsJThf5RAD50dfFzzJe5kkdP/MEnuOvafgo="
         },
         ".json": {
           "relative_path": "FeaturedContent/toc.json",
-          "hash": "KjHFaAGO7o3LQvUNV0fwEPnv6OzJ7vIUfVUVeqvmPUk="
+          "hash": "LQ/ezoKheSWNAfpnwjP1GaYmhfRy/L1WkRrgGzRSECA="
         }
       },
       "is_incremental": false,
@@ -177,6 +177,28 @@
       "output": {
         "resource": {
           "relative_path": "Images/ChatGPTCodeInterpreter/image5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ConvertingPowerPointToMarkdown/image8emf.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ConvertingPowerPointToMarkdown/image8emf.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ConvertingPowerPointToMarkdown/image9.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ConvertingPowerPointToMarkdown/image9.png"
         }
       },
       "is_incremental": false,
@@ -562,6 +584,61 @@
       "output": {
         "resource": {
           "relative_path": "Images/FromDallE/workroombanner.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/GeneratingAStaticWebsite/image10.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/GeneratingAStaticWebsite/image10.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/GeneratingAStaticWebsite/image8.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/GeneratingAStaticWebsite/image8.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/GeneratingAStaticWebsite/image9.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/GeneratingAStaticWebsite/image9.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/GettingStarted/image8.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/GettingStarted/image8.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/GettingStarted/image8emf.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/GettingStarted/image8emf.png"
         }
       },
       "is_incremental": false,
@@ -987,6 +1064,39 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "Images/TestingLocally/image8.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/TestingLocally/image8.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/UsingGitHubPages/image8.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/UsingGitHubPages/image8.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/UsingGitHubPages/image9.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/UsingGitHubPages/image9.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "Images/WeightRandoms/image1.png",
       "output": {
         "resource": {
@@ -1365,11 +1475,50 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Projects/DocBuilder.md",
+      "output": {
+        ".html": {
+          "relative_path": "Projects/DocBuilder.html",
+          "hash": "1T8r7ecL+PvcHQmWpHIXRXnRbWATju8jwB5cwWp5JI4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Projects/LibreChatBicep.md",
+      "output": {
+        ".html": {
+          "relative_path": "Projects/LibreChatBicep.html",
+          "hash": "fEh3co1qg5HlYHu9cuxOj9gVc+HvvN1CG5OILl68zHM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Projects/OobaboogaAPIHelper.md",
       "output": {
         ".html": {
           "relative_path": "Projects/OobaboogaAPIHelper.html",
           "hash": "fnQNlcYrS3AaLMokW4hPQiogtjXWCUMvsBhu3/+kmFw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Projects/StringExtensions.md",
+      "output": {
+        ".html": {
+          "relative_path": "Projects/StringExtensions.html",
+          "hash": "iN0Jycv77Ce4q5qKIxMQ78WqmsuUADMY6UeFR/6ULsk="
         }
       },
       "is_incremental": false,
@@ -1393,51 +1542,11 @@
       "output": {
         ".html": {
           "relative_path": "Projects/toc.html",
-          "hash": "o3gcVkstzbhHcxSbpK+vbL4FbOEn9vH0ZRdhJU3/rCo="
+          "hash": "bk4bzI389RqR65OyM9BPCOCZ18QdTY4XWR7R3TjGOJc="
         },
         ".json": {
           "relative_path": "Projects/toc.json",
-          "hash": "MMJk6aauuqfq84fDQk+2h1li5JDnim7+IAa2x4za0bQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Tools/SpeechDictation.md",
-      "output": {
-        ".html": {
-          "relative_path": "Tools/SpeechDictation.html",
-          "hash": "Ev/Ko9JOgIZcyoYkjuRth6Vgj5ImaE1PeIyw0nOpSZo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "Tools/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Tools/toc.html",
-          "hash": "b1kmJKcUQrrxcbtSI/SEi5oqOaER4fc2JunLdpebYVg="
-        },
-        ".json": {
-          "relative_path": "Tools/toc.json",
-          "hash": "x6g4qpqC6KmeOvWNM1kcm+h3nCUHCFtg+r5xl7yMx1I="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "api/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "api/index.html",
-          "hash": "UNCPJRN6t6WN/ebqw8QXCR7GhjFlDMxq34SUBBxZDtA="
+          "hash": "Ie/OtXazH3O5udV3uQOqTFzFnY5aJkfYQl5mZ9F9evI="
         }
       },
       "is_incremental": false,
@@ -1460,117 +1569,11 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "NdppSERjbvZNtRciOi6WXL6FiSSULZwKcCPY+ahl5/g="
+          "hash": "ZHsByvrlaDstVaUfMMFYUTgiDqlCCKQN3zDjQU59ofQ="
         },
         ".json": {
           "relative_path": "toc.json",
-          "hash": "kgH/EjXqxZVCfUJJrT0ntvBOhRVQVaIfM3BSvrkxdac="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "topics/ConvertingPowerPointToMarkdown.md",
-      "output": {
-        ".html": {
-          "relative_path": "topics/ConvertingPowerPointToMarkdown.html",
-          "hash": "rldULBevjafcA3ltAJJWcEthyiCmv9prAZqu8GJHV6M="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "topics/ConvertingPowerShellToMarkdown.md",
-      "output": {
-        ".html": {
-          "relative_path": "topics/ConvertingPowerShellToMarkdown.html",
-          "hash": "vnjLadhcCKXNvxOvDjg+Jl2L1WXejsVc4cFhusNN5zM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "topics/GeneratingAStaticWebsite.md",
-      "output": {
-        ".html": {
-          "relative_path": "topics/GeneratingAStaticWebsite.html",
-          "hash": "TKIOwA8oqvkxMJ4Z8Cd7FB7MnXV6tR+VYhkD0sEazTU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "topics/TestingLocally.md",
-      "output": {
-        ".html": {
-          "relative_path": "topics/TestingLocally.html",
-          "hash": "brAjmERaSNEFo6CMely6OmF0InOvmzIWMie8qmBAMd4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "topics/UsingGitHubPages.md",
-      "output": {
-        ".html": {
-          "relative_path": "topics/UsingGitHubPages.html",
-          "hash": "rlFD1MBfuV6Yx0TyMLbcyphQvh5THLTvk9jqAK5TdGw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "topics/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "topics/index.html",
-          "hash": "nimRP1sW/Ujm0Zzrz4CypOJou676LXtXUIkoXoFCdpE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "topics/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "topics/toc.html",
-          "hash": "NH+kYuh0pSXSQBcPnm+gPjFHvsu/3ItjxJn+nHuOtaA="
-        },
-        ".json": {
-          "relative_path": "topics/toc.json",
-          "hash": "nrjxA7OwYqaM+ERFVfjzKRehB8CKthSTxYoNXMCJNG4="
+          "hash": "lLx8a/4z95NkLI47ql3IZrRwNkaBp6eESLIXozYMMMw="
         }
       },
       "is_incremental": false,
@@ -1591,7 +1594,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 30,
+          "total_file_count": 25,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

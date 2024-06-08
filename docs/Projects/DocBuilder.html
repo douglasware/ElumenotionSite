@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Getting Started </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Getting Started ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="getting-started">Getting Started</h1>
+
+<h2 id="prerequisites">Prerequisites</h2>
+<h3 id="docfx">DocFx</h3>
+<ul>
+<li>See <a href="https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html">Getting Started with DocFX | DocFX website</a></li>
+<li>DocFX is an API documentation generator for .NET, which currently supports C#, VB, and F#. It generates API reference documentation from triple-slash comments in your source code. It also allows you to use Markdown files to create additional topics such as tutorials and how-tos, and to customize the generated reference documentation.</li>
+<li>Chocolatey: <code>choco install docfx -y</code></li>
+<li>Homebrew (owned by the community): <code>brew install docfx</code></li>
+<li>GitHub: Download and unzip docfx.zip from <a href="https://github.com/dotnet/docfx/releases">GitHub DocFX releases</a>, extract it to a local folder, and add it to PATH so you can run it anywhere.</li>
+<li>NuGet: <code>nuget install docfx.console</code>. <code>docfx.exe</code> is under folder <code>docfx.console/tools/</code></li>
+</ul>
+<h3 id="docbuilder-powershell-module">DocBuilder PowerShell module</h3>
+<ul>
+<li>Located in the same GitHub repo as this documentation, <a href="https://github.com/ey-org/daas-documentation-tools">ey-org/daas-documentation-tools</a></li>
+<li>Clone the repo</li>
+<li>Run <code>LoadModule.ps1</code> in your favorite (.NET Framework-based) PowerShell host to load the module</li>
+<li>Note: This module depends on GDI+, which does not exist in all host types, even on Windows</li>
+</ul>
+<p>The sample script used to build this site is here: <code>daas-documentation-tools\DocBuilder\Documentation\BuildDocs.ps1</code></p>
+<h2 id="building-the-static-web-site">Building the Static Web Site</h2>
+<h3 id="basic-process">Basic Process</h3>
+<p><img src="../Images/GettingStarted/image8.png" alt="Basic Process"></p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>You can use the BuildOutput folder in the same way this repo does as the source for GitHub pages</li>
+<li>You can split the basic processes into smaller steps if you want to edit the markdown generated from PPTX<ul>
+<li>Generate the markdown to a different location</li>
+<li>Edit as desired and copy into StaticContent using the best process for your project</li>
+<li>Generate the static website</li>
+</ul>
+</li>
+</ul>
+<h1 id="converting-powerpoint-to-markdown">Converting PowerPoint to Markdown</h1>
+<h2 id="about-the-docbuilder-powershell-module">About the DocBuilder PowerShell Module</h2>
+<p>First, ensure you have the module loaded, as described in the Getting Started section.</p>
+<h3 id="powerpoint-file-conversion">PowerPoint File Conversion</h3>
+<ul>
+<li>To convert PowerPoint files to Markdown, use the <code>Convert-PowerPointToMarkdown</code> cmdlet provided by the DocBuilder PowerShell module.</li>
+<li><p>Example usage:</p>
+<pre><code class="lang-powershell">Convert-PowerPointToMarkdown -InputFile &quot;path    o\your\presentation.pptx&quot; -OutputDirectory &quot;path    o\output&quot;
+</code></pre></li>
+</ul>
+<h1 id="converting-powershell-module-to-markdown">Converting PowerShell Module to Markdown</h1>
+<h2 id="preparing-your-module">Preparing Your Module</h2>
+<ul>
+<li>Ensure your PowerShell module is well-documented with appropriate comments.</li>
+<li>Use the <code>Export-ModuleMember</code> cmdlet to explicitly export functions and aliases that you want to include in the documentation.</li>
+</ul>
+<h2 id="generating-markdown">Generating Markdown</h2>
+<ul>
+<li>Use the <code>Convert-PowerShellToMarkdown</code> cmdlet from the DocBuilder PowerShell module.</li>
+<li><p>Example usage:</p>
+<pre><code class="lang-powershell">Convert-PowerShellToMarkdown -ModuleName &quot;YourModuleName&quot; -OutputDirectory &quot;path    o\output&quot;
+</code></pre></li>
+</ul>
+<h1 id="generating-a-static-website">Generating A Static Website</h1>
+<h2 id="setting-up-the-environment">Setting Up the Environment</h2>
+<ul>
+<li>Ensure you have all prerequisites installed, as mentioned in the Getting Started section.</li>
+</ul>
+<h2 id="building-the-website">Building the Website</h2>
+<ul>
+<li>Run the <code>BuildDocs.ps1</code> script to generate the static website.</li>
+<li><p>Example usage:</p>
+<pre><code class="lang-powershell">.\BuildDocs.ps1
+</code></pre></li>
+</ul>
+<h2 id="configuration">Configuration</h2>
+<ul>
+<li>Customize the <code>docfx.json</code> file to suit your project&#39;s needs.</li>
+<li><p>Example configuration settings:</p>
+<pre><code class="lang-json">{
+  &quot;metadata&quot;: [
+    {
+      &quot;src&quot;: [
+        {
+          &quot;files&quot;: [
+            &quot;src/**/*.csproj&quot;
+          ],
+          &quot;cwd&quot;: &quot;../&quot;
+        }
+      ],
+      &quot;dest&quot;: &quot;api&quot;
+    }
+  ],
+  &quot;build&quot;: {
+    &quot;content&quot;: [
+      {
+        &quot;files&quot;: [
+          &quot;articles/**.md&quot;,
+          &quot;toc.yml&quot;
+        ]
+      }
+    ],
+    &quot;resource&quot;: [
+      {
+        &quot;files&quot;: [
+          &quot;images/**&quot;
+        ]
+      }
+    ],
+    &quot;dest&quot;: &quot;dist&quot;
+  }
+}
+</code></pre></li>
+</ul>
+<h2 id="adding-topics">Adding Topics</h2>
+<ul>
+<li>When you add new topic articles or wish to change the order of the topic list, you must edit <code>StaticContent/topics/toc.yml</code> manually.</li>
+</ul>
+<p><img src="../Images/GeneratingAStaticWebsite/image10.png" alt="Editing toc.yml"></p>
+<h1 id="testing-locally">Testing Locally</h1>
+<h2 id="using-http-server">Using http-server</h2>
+<ul>
+<li>After executing <code>BuildDocs.ps1</code>, the <code>BuildOutput</code> folder will contain a complete static website.</li>
+<li>One recommended choice for serving content is <a href="https://www.npmjs.com/package/http-server">http-server</a> from NPM.</li>
+<li>Note that this option requires npm and its dependencies.</li>
+</ul>
+<p><img src="../Images/TestingLocally/image8.png" alt="http-server"></p>
+<h2 id="hot-reloading">Hot Reloading</h2>
+<ul>
+<li>You don’t have to stop the web server to run the build script.</li>
+<li>It is highly recommended to open developer tools and disable caching.</li>
+</ul>
+<h1 id="using-github-pages">Using GitHub Pages</h1>
+<h2 id="setup">Setup</h2>
+<p><img src="../Images/UsingGitHubPages/image8.png" alt="GitHub Pages Setup"></p>
+<h2 id="updating-the-site">Updating the Site</h2>
+<ul>
+<li>Copy the <strong>contents</strong> of the <code>BuildOutput</code> folder to <strong>/docs</strong> and update the master branch with a Pull Request.</li>
+<li>Wait a moment for the site to update.</li>
+</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
