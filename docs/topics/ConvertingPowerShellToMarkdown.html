@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Converting PowerShell to Markdown </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Converting PowerShell to Markdown ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="converting-powershell-to-markdown">Converting PowerShell to Markdown</h1>
+
+<h1 id="powershell-comment-based-help-to-markdown">PowerShell Comment-Based Help to Markdown</h1>
+<ul>
+<li>First, ensure you have followed the steps in <strong><a href="index.html">Getting Started</a></strong> to load the module  </li>
+<li>Load the PowerShell Module into the BuildDocs.ps1 that you want documentation for. The <code>New-PowerShellDocumentation</code> cmdlet performs a quick conversion of PowerShell Comment-Based Help to markdown with the assumption that a human writer will modify the PowerShell Comment-Based Help for scripts or functions.  </li>
+</ul>
+<h4 id="how-to-create-a-powershell-module-documentation">How to Create a PowerShell module Documentation?</h4>
+<p>To create a PowerShell Documentation, you can follow the following <a href="https://docs.microsoft.com/en-us/powershell/scripting/developer/help/writing-comment-based-help-topics?view=powershell-7.2">documentation</a> from Microsoft.  </p>
+<h4 id="example-of-comment-based-help-documentationhttpsdocsmicrosoftcomen-uspowershellscriptingdeveloperhelpexamples-of-comment-based-helpviewpowershell-72">Example of Comment-Based Help <a href="https://docs.microsoft.com/en-us/powershell/scripting/developer/help/examples-of-comment-based-help?view=powershell-7.2">Documentation</a></h4>
+<h4 id="placing-comments-based-help-in-a-powershell-functions-documentationhttpsdocsmicrosoftcomen-uspowershellscriptingdeveloperhelpplacing-comment-based-help-in-functionsviewpowershell-72">Placing Comments-Based Help in a PowerShell Functions <a href="https://docs.microsoft.com/en-us/powershell/scripting/developer/help/placing-comment-based-help-in-functions?view=powershell-7.2">Documentation</a></h4>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

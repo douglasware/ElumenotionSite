@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Prerequisites </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Prerequisites ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="prerequisites">Prerequisites</h1>
+
+<h2 id="docfx">DocFx</h2>
+<ul>
+<li>See Getting Started with DocFX | DocFX website (dotnet.github.io) <a href="https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html">https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html</a></li>
+<li>DocFX is an API documentation generator for .NET, which currently supports C#, VB and F#. It generates API reference documentation from triple-slash comments in your source code. It also allows you to use Markdown files to create additional topics such as tutorials and how-tos, and to customize the generated reference documentation.</li>
+<li>Chocolatey: choco install docfx -y.</li>
+<li>Homebrew (owned by community): brew install docfx.</li>
+<li>GitHub: download and unzip docfx.zip from <a href="https://github.com/dotnet/docfx/releases">https://github.com/dotnet/docfx/releases</a>, extract it to a local folder, and add it to PATH so you can run it anywhere.</li>
+<li>NuGet: nuget install docfx.console. docfx.exe is under folder docfx.console/tools/.</li>
+</ul>
+<h2 id="docbuilder-powershell-module">DocBuilder PowerShell module</h2>
+<ul>
+<li>Located in the same github repo as this documentation, ey-org/daas-documentation-tools (github.com)</li>
+<li>Clone the repo</li>
+<li>Run LoadModule.ps1 daas-documentation-tools/LoadModule.ps1 at master · ey-org/daas-documentation-tools (github.com) in your favorite (.NET Framework based) PowerShell host to load the module</li>
+<li>Note: This module depends on GDI+ which does not exist in all host types, even on Windows</li>
+</ul>
+<p>The sample script used to build this site is here daas-documentation-tools\DocBuilder\Documentation\BuildDocs.ps1  </p>
+<h1 id="building-the-static-web-site">Building the Static Web Site</h1>
+<p>Basic Process  </p>
+<p><img src="../Images/GettingStarted/image8.png" alt="">  </p>
+<h1 id="notes">Notes</h1>
+<p>You can use the BuildOutput folder in the same way this repo does as the source for GitHub pages<br>You can split the basic processes into smaller steps if you want to edit the markdown generated from PPTX  </p>
+<ul>
+<li>Generate the markdown to a different location</li>
+<li>Edit as desired and copy into StaticContent using the best process for your project</li>
+<li>Generate the static website</li>
+</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
