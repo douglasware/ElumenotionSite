@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p>This project contains the companion code for <a href="../Journal/IngestingPdfContent.html">GPT-4o versus Azure Document Intelligence and Azure Computer Vision OCR</a></p>
+<table>
+<thead>
+<tr>
+<th>Notebook Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/PdfToMarkdownAndQaPairs/PdfToTextPages.ipynb">PdfToTextPages.ipynb</a></td>
+<td>Baseline, makes a text file for each page using pypdf to extract the text</td>
+</tr>
+<tr>
+<td><a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/PdfToMarkdownAndQaPairs/PdfToPageImages.ipynb">PdfToPageImages.ipynb</a></td>
+<td>Given a folder of PDF files, converts each page of each PDF file into JPEG images using a resolution of 300 dpi, and saves them in a structured directory format.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/PdfToMarkdownAndQaPairs/DocIntelligencePipeline.ipynb">DocIntelligencePipeline.ipynb</a></td>
+<td>C# Polyglot notebook with functions to convert an entire PDF to markdown and another that creates an OCR markdown file from each image created using <a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/PdfToMarkdownAndQaPairs/PdfToPageImages.ipynb">PdfToPageImages.ipynb</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/PdfToMarkdownAndQaPairs/turbo-2024-04-09.ipynb">turbo-2024-04-09.ipynb</a></td>
+<td>Azure Open AI using GPT-4 with vision to create a markdown file for each image created using <a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/PdfToMarkdownAndQaPairs/PdfToPageImages.ipynb">PdfToPageImages.ipynb</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/PdfToMarkdownAndQaPairs/v4omni.ipynb">v4omni.ipynb</a></td>
+<td>OpenAI using GPT-4o to create a markdown file for each image created using <a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/PdfToMarkdownAndQaPairs/PdfToPageImages.ipynb">PdfToPageImages.ipynb</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/PdfToMarkdownAndQaPairs/v4omni-image-plus-docIntelOcr.ipynb">v4omni-image-plus-docIntelOcr.ipynb</a></td>
+<td>OpenAI using GPT-4o to create a markdown file for each image created using <a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/PdfToMarkdownAndQaPairs/PdfToPageImages.ipynb">PdfToPageImages.ipynb</a> grounded with OCR text created using <a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/PdfToMarkdownAndQaPairs/DocIntelligencePipeline.ipynb">DocIntelligencePipeline.ipynb</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/PdfToMarkdownAndQaPairs/visionWithOcr.ipynb">visionWithOcr.ipynb</a></td>
+<td>Azure Computer Vision GPT4-Vision OCR</td>
+</tr>
+<tr>
+<td><a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/PdfToMarkdownAndQaPairs/visionWithOcrAndGrounding.ipynb">visionWithOcrAndGrounding.ipynb</a></td>
+<td>Azure Computer Vision GPT4-Vision OCR and grounding</td>
+</tr>
+</tbody>
+</table>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

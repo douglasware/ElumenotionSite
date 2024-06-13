@@ -1520,6 +1520,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Projects/IngestingPdfContent.md",
+      "output": {
+        ".html": {
+          "relative_path": "Projects/IngestingPdfContent.html",
+          "hash": "cW76Qm0slEF6SXnSqqUX4AstNlIDK74iH0vqodUZlVA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "Projects/LibreChatBicep.md",
       "output": {
@@ -1576,7 +1591,7 @@
       "output": {
         ".html": {
           "relative_path": "Projects/index.html",
-          "hash": "imQV3/1d83YoHOLE3j4PZJw4tvbiAcpGkxi9hDRZb3U="
+          "hash": "Exxg6WcBdD6E3mjnmD74tKgmcUurlkAsNZx4s6dmrso="
         }
       },
       "is_incremental": false,
@@ -1588,11 +1603,11 @@
       "output": {
         ".html": {
           "relative_path": "Projects/toc.html",
-          "hash": "bk4bzI389RqR65OyM9BPCOCZ18QdTY4XWR7R3TjGOJc="
+          "hash": "n/hq7AyvMPFzE8bJZ5rIYiFp4yQviOiogmxknENA2v4="
         },
         ".json": {
           "relative_path": "Projects/toc.json",
-          "hash": "Ie/OtXazH3O5udV3uQOqTFzFnY5aJkfYQl5mZ9F9evI="
+          "hash": "rUVh4jxrInAYiru3ehpLMzMeMiN7IPs0o6mTUiaOXfg="
         }
       },
       "is_incremental": false,
@@ -1640,7 +1655,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 27,
+          "total_file_count": 28,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
