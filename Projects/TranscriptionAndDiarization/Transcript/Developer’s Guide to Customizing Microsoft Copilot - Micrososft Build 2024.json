@@ -1,0 +1,4342 @@
+[
+    {
+        "timestamp": [
+            0.0,
+            23.66
+        ],
+        "text": " All right, everybody. Welcome, welcome, welcome, welcome. First breakout of Build. I'm Barnum Bora, and I lead the developer advocacy team for Microsoft 365 and Copilot Platform."
+    },
+    {
+        "timestamp": [
+            23.66,
+            24.34
+        ],
+        "text": " advocacy team for Microsoft 365 and Copilot platform."
+    },
+    {
+        "timestamp": [
+            27.92,
+            28.12
+        ],
+        "text": " But without further ado, before I come back and do more things,"
+    },
+    {
+        "timestamp": [
+            31.98,
+            36.16
+        ],
+        "text": " I'm going to hand off to my good friend Jeremy Thake, and he's going to walk you through the first half of this session. Thanks, Barno. I appreciate it. And thank you for coming to Build."
+    },
+    {
+        "timestamp": [
+            37.96,
+            40.28
+        ],
+        "text": " So I'm Jeremy Thake. I'm a"
+    },
+    {
+        "timestamp": [
+            40.28,
+            44.1
+        ],
+        "text": " principal program manager in the Copilot developer experience team. And a slight"
+    },
+    {
+        "timestamp": [
+            44.1,
+            46.34
+        ],
+        "text": " plug, you may have heard my voice before."
+    },
+    {
+        "timestamp": [
+            46.34,
+            49.94
+        ],
+        "text": " I've run a developer podcast on Microsoft 365 for the last ten years."
+    },
+    {
+        "timestamp": [
+            49.94,
+            52.06
+        ],
+        "text": " And we've just rebooted the show this week."
+    },
+    {
+        "timestamp": [
+            52.06,
+            55.7
+        ],
+        "text": " So if you haven't checked it out, please go on our podcasting apps of choice and download"
+    },
+    {
+        "timestamp": [
+            55.7,
+            57.78
+        ],
+        "text": " the latest episode."
+    },
+    {
+        "timestamp": [
+            57.78,
+            60.52
+        ],
+        "text": " So you're going to see a lot about Copilot this week."
+    },
+    {
+        "timestamp": [
+            60.52,
+            67.94
+        ],
+        "text": " I believe there may be some drinking games going on on how many times we mention copilot in a particular session. So copilot, copilot, copilot, copilot. There we go. We"
+    },
+    {
+        "timestamp": [
+            67.94,
+            72.84
+        ],
+        "text": " get that out of the way. You would have seen this slide in the keynote."
+    },
+    {
+        "timestamp": [
+            72.84,
+            76.98
+        ],
+        "text": " And I think it's just worth just revisiting it with a different flavor to it. Essentially"
+    },
+    {
+        "timestamp": [
+            76.98,
+            88.1
+        ],
+        "text": " when we think about copilot for Microsoft 365, not only do you get access to all of the web information out there if you choose to turn the toggle on, but you also most importantly get access to all that graph data."
+    },
+    {
+        "timestamp": [
+            88.1,
+            91.68
+        ],
+        "text": " And I've worked with the Microsoft Graph for a long time and we have some of the founders"
+    },
+    {
+        "timestamp": [
+            91.68,
+            93.62
+        ],
+        "text": " of the Graph sitting at the front here."
+    },
+    {
+        "timestamp": [
+            93.62,
+            99.28
+        ],
+        "text": " And it really empowers how Copilot works from a product perspective for users."
+    },
+    {
+        "timestamp": [
+            99.28,
+            106.18
+        ],
+        "text": " Now the nice thing is that can be done and used within the application context of Teams, Office.com, Windows, Edge,"
+    },
+    {
+        "timestamp": [
+            106.18,
+            110.66
+        ],
+        "text": " and you can make those queries all in that case not only with the web search but with"
+    },
+    {
+        "timestamp": [
+            110.66,
+            117.18
+        ],
+        "text": " that M365 data, whether it's files, mail, calendar, contacts, wherever it's Teams conversations,"
+    },
+    {
+        "timestamp": [
+            117.18,
+            119.42
+        ],
+        "text": " and a lot more to come in the future."
+    },
+    {
+        "timestamp": [
+            119.42,
+            124.6
+        ],
+        "text": " And you as developers, whether you're makers or pro code developers, can extend both the"
+    },
+    {
+        "timestamp": [
+            124.6,
+            125.16
+        ],
+        "text": " Microsoft Graph and the application context to make that experience even better for your developers, whether you're makers or pro code developers, can extend both the Microsoft"
+    },
+    {
+        "timestamp": [
+            125.16,
+            129.18
+        ],
+        "text": " Graph and the application context to make that experience even better for your users"
+    },
+    {
+        "timestamp": [
+            129.18,
+            131.5
+        ],
+        "text": " inside of Microsoft 365."
+    },
+    {
+        "timestamp": [
+            131.5,
+            137.06
+        ],
+        "text": " Now, there are lots of opportunity inside of Microsoft 365."
+    },
+    {
+        "timestamp": [
+            137.06,
+            141.66
+        ],
+        "text": " And one thing I wanted to recall was essentially that we have lots of customers in common,"
+    },
+    {
+        "timestamp": [
+            141.66,
+            149.1
+        ],
+        "text": " whether you're a software vendor or a customer that are using our products because they trust it and they trust our partners with how we can extend our platforms."
+    },
+    {
+        "timestamp": [
+            150.24,
+            154.88
+        ],
+        "text": " And additionally to that, one of the things that's going to become very, very clear to"
+    },
+    {
+        "timestamp": [
+            154.88,
+            156.82
+        ],
+        "text": " you today is we're giving you a lot of choice."
+    },
+    {
+        "timestamp": [
+            157.38,
+            162.16
+        ],
+        "text": " You can either build on top of our AI platform or you can bring your own AI platform into"
+    },
+    {
+        "timestamp": [
+            162.16,
+            163.1
+        ],
+        "text": " ours and extend it."
+    },
+    {
+        "timestamp": [
+            163.66,
+            167.88
+        ],
+        "text": " Now, users are really used to accessing not only M365 data"
+    },
+    {
+        "timestamp": [
+            167.88,
+            171.22
+        ],
+        "text": " within our products, but also accessing your other systems,"
+    },
+    {
+        "timestamp": [
+            171.22,
+            173.6
+        ],
+        "text": " whether you're a software vendor with a SaaS company,"
+    },
+    {
+        "timestamp": [
+            173.6,
+            175.6
+        ],
+        "text": " or whether you've got your internal systems, maybe"
+    },
+    {
+        "timestamp": [
+            175.6,
+            177.56
+        ],
+        "text": " on-premises systems, that you want to bring up"
+    },
+    {
+        "timestamp": [
+            177.56,
+            180.48
+        ],
+        "text": " into that Microsoft 365 experience."
+    },
+    {
+        "timestamp": [
+            180.48,
+            182.28
+        ],
+        "text": " Now, we've mentioned numbers in the past,"
+    },
+    {
+        "timestamp": [
+            182.28,
+            184.32
+        ],
+        "text": " but there's a tremendous amount of reach"
+    },
+    {
+        "timestamp": [
+            184.32,
+            187.28
+        ],
+        "text": " with Microsoft Teams and other products that you're familiar with within our suite."
+    },
+    {
+        "timestamp": [
+            187.88,
+            199.58
+        ],
+        "text": " And the opportunity of having 320 million users of Teams every month is a real huge opportunity for you to build on top of and be part of this experience we have now, especially with lighting up artificial intelligence inside of it."
+    },
+    {
+        "timestamp": [
+            200.98,
+            205.24
+        ],
+        "text": " Not only can you summarize that information that comes through with M365 data with your"
+    },
+    {
+        "timestamp": [
+            205.24,
+            208.32
+        ],
+        "text": " system data, but now you can actually act on it."
+    },
+    {
+        "timestamp": [
+            208.32,
+            211.12
+        ],
+        "text": " And you would have seen some of that in the keynote this morning, and we'll show you some"
+    },
+    {
+        "timestamp": [
+            211.12,
+            215.22
+        ],
+        "text": " more demos today from some of our partners that are highlighting how you can act on data"
+    },
+    {
+        "timestamp": [
+            215.22,
+            217.74
+        ],
+        "text": " as well as summarize."
+    },
+    {
+        "timestamp": [
+            217.74,
+            221.3
+        ],
+        "text": " And obviously, as Jeff mentioned, we have a huge ecosystem there that you can be a part"
+    },
+    {
+        "timestamp": [
+            221.3,
+            229.32
+        ],
+        "text": " of where you can bring and expand your customer base as a software vendor and also from a private store have your own users within your organization"
+    },
+    {
+        "timestamp": [
+            229.32,
+            236.9
+        ],
+        "text": " be available and see what solutions they can use within their own Microsoft 365 hubs."
+    },
+    {
+        "timestamp": [
+            236.9,
+            241.18
+        ],
+        "text": " Now as I've mentioned before, whether you're a maker in Copilot Studio or whether you're"
+    },
+    {
+        "timestamp": [
+            241.18,
+            245.38
+        ],
+        "text": " a Pro Code developer in Visual Studio Code using Teams toolkit, we have choices"
+    },
+    {
+        "timestamp": [
+            245.38,
+            248.38
+        ],
+        "text": " for you today."
+    },
+    {
+        "timestamp": [
+            248.38,
+            253.54
+        ],
+        "text": " And I think what I wanted to do was basically ground what we mean by the AI platform with"
+    },
+    {
+        "timestamp": [
+            253.54,
+            258.64
+        ],
+        "text": " inside of Copilot for Microsoft 365."
+    },
+    {
+        "timestamp": [
+            258.64,
+            261.64
+        ],
+        "text": " Now you would be familiar with some terms that have been going on in the industry."
+    },
+    {
+        "timestamp": [
+            261.64,
+            269.98
+        ],
+        "text": " And I've been working in this space now for nearly two years, both in the internal builds before we announced at Build last year, and"
+    },
+    {
+        "timestamp": [
+            269.98,
+            273.02
+        ],
+        "text": " some of the terms I just wanted to recapture with you just so you understand how we're"
+    },
+    {
+        "timestamp": [
+            273.02,
+            276.96
+        ],
+        "text": " talking about them in terms of the different choices you have."
+    },
+    {
+        "timestamp": [
+            276.96,
+            283.26
+        ],
+        "text": " So as a first example here, when we talk about foundational models, that's kind of the base"
+    },
+    {
+        "timestamp": [
+            283.26,
+            287.94
+        ],
+        "text": " that Kevin Scott would have talked about in the keynote this morning of which large language models you are using"
+    },
+    {
+        "timestamp": [
+            287.94,
+            292.18
+        ],
+        "text": " or small language models you are using inside of your copilot."
+    },
+    {
+        "timestamp": [
+            292.18,
+            293.82
+        ],
+        "text": " And the orchestrator is really the brains."
+    },
+    {
+        "timestamp": [
+            293.82,
+            297.0
+        ],
+        "text": " That's the thing that takes all the data at the top of the stack and brings it to the"
+    },
+    {
+        "timestamp": [
+            297.0,
+            301.06
+        ],
+        "text": " large language model to then understand what it does with it and how it responds to the"
+    },
+    {
+        "timestamp": [
+            301.06,
+            309.72
+        ],
+        "text": " user, and then the orchestrator throws that back up to the user in our user experience. And the key thing is by default the orchestrator has access to this knowledge"
+    },
+    {
+        "timestamp": [
+            309.72,
+            317.0
+        ],
+        "text": " and that knowledge is the M365 data that's inside of that Microsoft Graph."
+    },
+    {
+        "timestamp": [
+            317.0,
+            321.44
+        ],
+        "text": " But what we're seeing with AI platforms is this notion of triggers. And triggers is that"
+    },
+    {
+        "timestamp": [
+            321.44,
+            328.22
+        ],
+        "text": " concept of being able to proactively reach out to your user through that copilot to do certain things based on events happening in other systems."
+    },
+    {
+        "timestamp": [
+            328.76,
+            334.12
+        ],
+        "text": " You'd see this traditionally in things like how we use webhooks or change notifications in the graph."
+    },
+    {
+        "timestamp": [
+            334.32,
+            340.4
+        ],
+        "text": " But now we're bringing that triggers concept in the concept of how we use Microsoft 365 copilot and other AI platforms."
+    },
+    {
+        "timestamp": [
+            342.08,
+            345.5
+        ],
+        "text": " And then alongside knowledge as a way to get access to information, we have"
+    },
+    {
+        "timestamp": [
+            345.5,
+            351.3
+        ],
+        "text": " this notion of actions. And actions is all about calling out to external systems outside"
+    },
+    {
+        "timestamp": [
+            351.3,
+            356.1
+        ],
+        "text": " of the knowledge that the orchestrator has access to to get information from other systems."
+    },
+    {
+        "timestamp": [
+            356.1,
+            359.88
+        ],
+        "text": " And these are federated API calls, whether I'm using the semantic kernel, whether I'm"
+    },
+    {
+        "timestamp": [
+            359.88,
+            366.68
+        ],
+        "text": " using Copart for Microsoft 365 or any other BYO AI platform stack you're bringing."
+    },
+    {
+        "timestamp": [
+            371.32,
+            372.46
+        ],
+        "text": " And what we've seen very, very early on with AI is that you like to tailor what that large language model can do."
+    },
+    {
+        "timestamp": [
+            373.18,
+            376.54
+        ],
+        "text": " And so some of the things we've announced today essentially allow you to bring your"
+    },
+    {
+        "timestamp": [
+            376.54,
+            381.1
+        ],
+        "text": " own instructions to tailor how a large language model and how the Copilot user experience"
+    },
+    {
+        "timestamp": [
+            381.1,
+            383.9
+        ],
+        "text": " works to customize it for the user scenarios you have."
+    },
+    {
+        "timestamp": [
+            383.94,
+            387.5
+        ],
+        "text": " And the demos will show, will bring this into account."
+    },
+    {
+        "timestamp": [
+            387.5,
+            392.22
+        ],
+        "text": " Now the reason I'm explaining this stack is for this next build, which is essentially"
+    },
+    {
+        "timestamp": [
+            392.22,
+            397.12
+        ],
+        "text": " that with those choices, there are a few ways, a few paths you can take."
+    },
+    {
+        "timestamp": [
+            397.12,
+            402.34
+        ],
+        "text": " Now naturally when we talk about M365 and we talk about copilot for Microsoft 365, we"
+    },
+    {
+        "timestamp": [
+            402.34,
+            412.64
+        ],
+        "text": " have the identity of the user that's logged into Teams or into the Microsoft 365 app or the Copilot.Microsoft.com web application. We're using our own foundational"
+    },
+    {
+        "timestamp": [
+            412.64,
+            416.62
+        ],
+        "text": " model in that instance and we have our own orchestrator which you've heard Kevin Stott"
+    },
+    {
+        "timestamp": [
+            416.62,
+            421.66
+        ],
+        "text": " talk about from a Sydney perspective. And the knowledge is Microsoft Graph knowledge,"
+    },
+    {
+        "timestamp": [
+            421.66,
+            430.5
+        ],
+        "text": " but you can bring your own data into it. And we provide this copilot across all the different Microsoft 365 hubs."
+    },
+    {
+        "timestamp": [
+            430.5,
+            435.16
+        ],
+        "text": " So our first choice that you can pick from is Graph Connectors."
+    },
+    {
+        "timestamp": [
+            435.16,
+            440.1
+        ],
+        "text": " And effectively what Graph Connectors do is bring additional semantic grounding directly"
+    },
+    {
+        "timestamp": [
+            440.1,
+            444.66
+        ],
+        "text": " into the Microsoft Graph that the orchestrator has access to."
+    },
+    {
+        "timestamp": [
+            444.66,
+            448.94
+        ],
+        "text": " And the important part with this is that you can put all of that knowledge directly in"
+    },
+    {
+        "timestamp": [
+            448.94,
+            451.12
+        ],
+        "text": " there for the orchestrator to query."
+    },
+    {
+        "timestamp": [
+            451.12,
+            454.9
+        ],
+        "text": " And that brings some scenarios that are very, very different from some of the other choices"
+    },
+    {
+        "timestamp": [
+            454.9,
+            457.82
+        ],
+        "text": " that we offer on the table."
+    },
+    {
+        "timestamp": [
+            457.82,
+            461.58
+        ],
+        "text": " As an example, when we talk about plug-ins, which is that second choice, again, both of"
+    },
+    {
+        "timestamp": [
+            461.58,
+            469.0
+        ],
+        "text": " these we announced at Build last year in public preview. Plug-ins are actually doing an action. They're calling out to a system via an API"
+    },
+    {
+        "timestamp": [
+            469.0,
+            474.64
+        ],
+        "text": " or a bot command. And so they're not part of the knowledge stack within the AI platform."
+    },
+    {
+        "timestamp": [
+            474.64,
+            479.28
+        ],
+        "text": " They're a little bit higher up. And that provides different alternatives and different pros"
+    },
+    {
+        "timestamp": [
+            479.28,
+            483.26
+        ],
+        "text": " and cons that we'll talk about as part of this session."
+    },
+    {
+        "timestamp": [
+            483.26,
+            490.86
+        ],
+        "text": " What we announced new today is what we call declarative coilots. And a declarative copilot allows you to provide those custom work instructions"
+    },
+    {
+        "timestamp": [
+            490.86,
+            496.4
+        ],
+        "text": " to really tailor how your large language model works. And the nice thing about a declarative"
+    },
+    {
+        "timestamp": [
+            496.4,
+            502.12
+        ],
+        "text": " copilot is you can bring both plug-ins and graph connectors and bundle those in a declarative"
+    },
+    {
+        "timestamp": [
+            502.12,
+            506.0
+        ],
+        "text": " copilot alongside those custom workflow instructions."
+    },
+    {
+        "timestamp": [
+            506.0,
+            510.7
+        ],
+        "text": " Now, all of these choices are on top of our stack."
+    },
+    {
+        "timestamp": [
+            510.7,
+            513.6
+        ],
+        "text": " They're on our AI platform."
+    },
+    {
+        "timestamp": [
+            513.6,
+            517.74
+        ],
+        "text": " But we know from talking to customers for the last two years on this stuff that you're"
+    },
+    {
+        "timestamp": [
+            517.74,
+            522.96
+        ],
+        "text": " also investigating your own AI platforms and you've asked for the ability to bring those"
+    },
+    {
+        "timestamp": [
+            522.96,
+            528.4
+        ],
+        "text": " AI platforms within our experiences alongside what we offer on top of their own stack."
+    },
+    {
+        "timestamp": [
+            528.4,
+            534.08
+        ],
+        "text": " And so in this case, with what we call custom engine co-pilots, you have the ability to"
+    },
+    {
+        "timestamp": [
+            534.08,
+            536.68
+        ],
+        "text": " essentially BYO."
+    },
+    {
+        "timestamp": [
+            536.68,
+            540.32
+        ],
+        "text": " And the benefit of this notion of bring your own is that not only can you be part of our"
+    },
+    {
+        "timestamp": [
+            540.32,
+            545.76
+        ],
+        "text": " user experience, you can also be part of your own user experience with the same"
+    },
+    {
+        "timestamp": [
+            545.76,
+            550.32
+        ],
+        "text": " I.I. platform. And so today we're going to walk through all of these different options"
+    },
+    {
+        "timestamp": [
+            550.32,
+            555.6
+        ],
+        "text": " and choices so that you understand not at a visual level that we saw in the keynote"
+    },
+    {
+        "timestamp": [
+            555.6,
+            559.24
+        ],
+        "text": " but in a decision process as a maker or developer right now on what you should be doing this"
+    },
+    {
+        "timestamp": [
+            559.24,
+            568.78
+        ],
+        "text": " week. So let's start with Graph Connectors. Graph Connectors, as I say, have been around for"
+    },
+    {
+        "timestamp": [
+            568.78,
+            573.14
+        ],
+        "text": " about four years in the platform. And obviously with Copilot, we realized we had a really"
+    },
+    {
+        "timestamp": [
+            573.14,
+            577.4
+        ],
+        "text": " good shoe-in ramp to take the existing Graph Connectors we have, the power of Microsoft"
+    },
+    {
+        "timestamp": [
+            577.4,
+            583.6
+        ],
+        "text": " Search, and take advantage of those as knowledge with the inside of Copilot for Microsoft 365."
+    },
+    {
+        "timestamp": [
+            583.6,
+            589.04
+        ],
+        "text": " Now you've just seen Rajesh on stage announce Copilot connectors as an overarching term."
+    },
+    {
+        "timestamp": [
+            589.04,
+            593.02
+        ],
+        "text": " Now one piece of clarity I want to bring to the table here is that the Microsoft Graph"
+    },
+    {
+        "timestamp": [
+            593.02,
+            599.24
+        ],
+        "text": " connectors are the only connectors that bring the information directly into the knowledge"
+    },
+    {
+        "timestamp": [
+            599.24,
+            601.4
+        ],
+        "text": " part of the stack."
+    },
+    {
+        "timestamp": [
+            601.4,
+            604.78
+        ],
+        "text": " All of the Copilot Studio connectors that you can see on the right-hand side of this"
+    },
+    {
+        "timestamp": [
+            604.78,
+            609.12
+        ],
+        "text": " slide are actually plug-ins. They're wrapped plug-ins from existing technology"
+    },
+    {
+        "timestamp": [
+            609.12,
+            614.48
+        ],
+        "text": " we have in the Power Platform stack, whether they're Power Platform connectors, flows,"
+    },
+    {
+        "timestamp": [
+            614.48,
+            619.62
+        ],
+        "text": " Dataverse connectors or Microsoft Fabric connectors. And so there's a little difference between"
+    },
+    {
+        "timestamp": [
+            619.62,
+            624.5
+        ],
+        "text": " when you're picking those copilot studio connectors versus this Graph connector which gets straight"
+    },
+    {
+        "timestamp": [
+            624.5,
+            629.3
+        ],
+        "text": " into that knowledge of the stack. Now, one of the main benefits that people"
+    },
+    {
+        "timestamp": [
+            629.3,
+            634.92
+        ],
+        "text": " pick Graph connectors as their choice is that effectively when you push that data into the"
+    },
+    {
+        "timestamp": [
+            634.92,
+            639.36
+        ],
+        "text": " Microsoft Graph, it's in the index of the Microsoft Graph, whenever the orchestrator"
+    },
+    {
+        "timestamp": [
+            639.36,
+            644.96
+        ],
+        "text": " uses a prompt like can you give me guidance on operational efficiency, the orchestrator"
+    },
+    {
+        "timestamp": [
+            644.96,
+            645.64
+        ],
+        "text": " is never having"
+    },
+    {
+        "timestamp": [
+            645.64,
+            650.72
+        ],
+        "text": " to call anything outside the Microsoft boundary because a graph connector is pushing that"
+    },
+    {
+        "timestamp": [
+            650.72,
+            655.24
+        ],
+        "text": " content into Microsoft Graph. Your system is pushing information into the Microsoft"
+    },
+    {
+        "timestamp": [
+            655.24,
+            660.04
+        ],
+        "text": " Graph and there's never any calls that come outside."
+    },
+    {
+        "timestamp": [
+            660.04,
+            668.78
+        ],
+        "text": " Now where do graph connectors make the most sense? Like most search indexes, unstructured data is really where it sings."
+    },
+    {
+        "timestamp": [
+            668.78,
+            673.46
+        ],
+        "text": " Anything you can take a bunch of information and flatten it into a JSON file or plain text"
+    },
+    {
+        "timestamp": [
+            673.46,
+            677.06
+        ],
+        "text": " file and throw that through the Microsoft Graph to get it in our index is really where"
+    },
+    {
+        "timestamp": [
+            677.06,
+            679.56
+        ],
+        "text": " it's going to make most sense."
+    },
+    {
+        "timestamp": [
+            679.56,
+            684.24
+        ],
+        "text": " And large language models do a really good job of taking that flattened content and using"
+    },
+    {
+        "timestamp": [
+            684.24,
+            685.24
+        ],
+        "text": " it in summarization."
+    },
+    {
+        "timestamp": [
+            685.24,
+            688.88
+        ],
+        "text": " You'll see that in some of the partner demos we'll show today."
+    },
+    {
+        "timestamp": [
+            688.88,
+            694.8
+        ],
+        "text": " Now the beauty of this, in my opinion, is that you don't have to plan much about what"
+    },
+    {
+        "timestamp": [
+            694.8,
+            697.8
+        ],
+        "text": " prompts you think your users are going to go do."
+    },
+    {
+        "timestamp": [
+            697.8,
+            702.76
+        ],
+        "text": " Because if you're indexing the entire page, much like a Copilot index is a public website,"
+    },
+    {
+        "timestamp": [
+            702.76,
+            705.42
+        ],
+        "text": " you can ask it questions in all different ways because"
+    },
+    {
+        "timestamp": [
+            705.42,
+            708.18
+        ],
+        "text": " it's indexing that into a vector database."
+    },
+    {
+        "timestamp": [
+            708.18,
+            711.16
+        ],
+        "text": " And so I can get quite random prompts that I can ask."
+    },
+    {
+        "timestamp": [
+            711.16,
+            715.44
+        ],
+        "text": " And as long as the answer is in the page, most likely the orchestrator and the copilot"
+    },
+    {
+        "timestamp": [
+            715.44,
+            719.22
+        ],
+        "text": " is going to work together to make sure that it can find that answer and respond to that"
+    },
+    {
+        "timestamp": [
+            719.22,
+            720.22
+        ],
+        "text": " user."
+    },
+    {
+        "timestamp": [
+            720.22,
+            724.72
+        ],
+        "text": " So the notion of unpredictable prompts on large sets of information that's unstructured"
+    },
+    {
+        "timestamp": [
+            724.72,
+            727.68
+        ],
+        "text": " is really, really valuable when it comes to graph connectors."
+    },
+    {
+        "timestamp": [
+            727.68,
+            732.32
+        ],
+        "text": " A thing to call out is obviously the fact that it's punching things into the index in"
+    },
+    {
+        "timestamp": [
+            732.32,
+            737.96
+        ],
+        "text": " the Microsoft graph means that from a scalability perspective and us defending our API and our"
+    },
+    {
+        "timestamp": [
+            737.96,
+            743.2
+        ],
+        "text": " service quality, we can't really have you indexing systems that are very high throughput,"
+    },
+    {
+        "timestamp": [
+            743.2,
+            745.24
+        ],
+        "text": " very high transactions."
+    },
+    {
+        "timestamp": [
+            745.24,
+            750.62
+        ],
+        "text": " And so we look for systems in this place that are more low activity updated items."
+    },
+    {
+        "timestamp": [
+            750.62,
+            754.7
+        ],
+        "text": " And so good candidates for that for the Graph Connectors are things like document repositories."
+    },
+    {
+        "timestamp": [
+            754.7,
+            758.44
+        ],
+        "text": " They could be other SaaS providers that you use within your organization or you could"
+    },
+    {
+        "timestamp": [
+            758.44,
+            761.76
+        ],
+        "text": " be the vendor that's running those document repositories."
+    },
+    {
+        "timestamp": [
+            761.76,
+            765.12
+        ],
+        "text": " It could be a knowledge base that's running in the cloud like a wiki."
+    },
+    {
+        "timestamp": [
+            765.12,
+            770.76
+        ],
+        "text": " You could be on a public website or an internal website. It could be also content management"
+    },
+    {
+        "timestamp": [
+            770.76,
+            774.38
+        ],
+        "text": " systems that you're running for your intranet that might not be SharePoint. You've chosen"
+    },
+    {
+        "timestamp": [
+            774.38,
+            778.48
+        ],
+        "text": " to use another product in the ecosystem. All of these things are really good candidates"
+    },
+    {
+        "timestamp": [
+            778.48,
+            782.56
+        ],
+        "text": " for being put through as an index for Graph Connectors."
+    },
+    {
+        "timestamp": [
+            782.56,
+            785.84
+        ],
+        "text": " Now this first demo is from a partner called Tiger Hall. And Tiger"
+    },
+    {
+        "timestamp": [
+            785.84,
+            790.9
+        ],
+        "text": " Hall has been working with us in private preview for a while. And this demo is a really good"
+    },
+    {
+        "timestamp": [
+            790.9,
+            796.18
+        ],
+        "text": " explanation of how things work in Copilot. They've indexed videos and they've indexed"
+    },
+    {
+        "timestamp": [
+            796.18,
+            799.9
+        ],
+        "text": " their articles that they store within their own product. And essentially what you'll see"
+    },
+    {
+        "timestamp": [
+            799.9,
+            805.34
+        ],
+        "text": " here is the user is asked about how he can be more strategic. And that video has actually"
+    },
+    {
+        "timestamp": [
+            805.34,
+            811.14
+        ],
+        "text": " been replayed, clicked on, launches in Teams. The user never leaves the flow of the work."
+    },
+    {
+        "timestamp": [
+            811.14,
+            816.7
+        ],
+        "text": " But as another example here with what is operational scalability, you'll notice that it's giving"
+    },
+    {
+        "timestamp": [
+            816.7,
+            822.28
+        ],
+        "text": " nice long form responses and I have the ability to launch the article directly inside of Tiger"
+    },
+    {
+        "timestamp": [
+            822.28,
+            830.52
+        ],
+        "text": " Hall. These are both really good examples of how you can get content into Graph Connectors, into the Microsoft Graph, and then just immediately"
+    },
+    {
+        "timestamp": [
+            830.52,
+            835.7
+        ],
+        "text": " start prompts without having to app mention plug-ins or launch your declarative copilots,"
+    },
+    {
+        "timestamp": [
+            835.7,
+            839.78
+        ],
+        "text": " which we'll see in a moment, and just have that knowledge available to that copilot in"
+    },
+    {
+        "timestamp": [
+            839.78,
+            845.88
+        ],
+        "text": " that way. This is a great way of connecting your business information directly into M365."
+    },
+    {
+        "timestamp": [
+            849.44,
+            855.88
+        ],
+        "text": " Now, if I go over to some code just to show you how you can get started as a developer here, I'm just going to switch over to my machine. You'll see I have some code on the"
+    },
+    {
+        "timestamp": [
+            855.88,
+            870.14
+        ],
+        "text": " screen. No, you don't. There we go. And this sample is available online. Essentially, if you have Teams Talk installed on your machine, there is a sample section"
+    },
+    {
+        "timestamp": [
+            870.14,
+            872.52
+        ],
+        "text": " where you can search for Graph Connectors."
+    },
+    {
+        "timestamp": [
+            872.52,
+            877.18
+        ],
+        "text": " And this one is called the ingest custom API data into Microsoft 365."
+    },
+    {
+        "timestamp": [
+            877.18,
+            881.24
+        ],
+        "text": " There's a great read me on how you get started with this inside of your own Microsoft 365"
+    },
+    {
+        "timestamp": [
+            881.24,
+            882.24
+        ],
+        "text": " tenant."
+    },
+    {
+        "timestamp": [
+            882.24,
+            885.16
+        ],
+        "text": " And the one thing I wanted to call out here is that if you've already used"
+    },
+    {
+        "timestamp": [
+            885.16,
+            890.34
+        ],
+        "text": " the Microsoft Graph APIs and you've used our SDKs, this is going to become smooth sailing for you."
+    },
+    {
+        "timestamp": [
+            891.3,
+            895.16
+        ],
+        "text": " Effectively, you're providing a schema of what your indexed item looks like."
+    },
+    {
+        "timestamp": [
+            895.66,
+            900.88
+        ],
+        "text": " You can have custom properties to really tie in and tune in what that search experience looks like."
+    },
+    {
+        "timestamp": [
+            901.86,
+            905.0
+        ],
+        "text": " And then you can provide the level of the content here. And in this example,"
+    },
+    {
+        "timestamp": [
+            905.0,
+            908.5
+        ],
+        "text": " we're very straightforward with the content is just the product name. But you can imagine"
+    },
+    {
+        "timestamp": [
+            908.5,
+            913.16
+        ],
+        "text": " that being the body of the entire article so that the knowledge is very deep inside"
+    },
+    {
+        "timestamp": [
+            913.16,
+            918.68
+        ],
+        "text": " of that experience. Now, what does that look like with inside of Microsoft 365? If you're"
+    },
+    {
+        "timestamp": [
+            918.68,
+            923.5
+        ],
+        "text": " a search admin or you're a global admin on a developer tenant like I am where you can"
+    },
+    {
+        "timestamp": [
+            923.5,
+            925.5
+        ],
+        "text": " do all sorts of trouble."
+    },
+    {
+        "timestamp": [
+            925.5,
+            928.5
+        ],
+        "text": " You'll see in the Search Intelligence Center that they list all of the different Graph"
+    },
+    {
+        "timestamp": [
+            928.5,
+            930.2
+        ],
+        "text": " Connectors that have been deployed."
+    },
+    {
+        "timestamp": [
+            930.2,
+            935.56
+        ],
+        "text": " And you'll be able to see here we've indexed 50 items inside of that connected content."
+    },
+    {
+        "timestamp": [
+            935.56,
+            942.64
+        ],
+        "text": " Now, the beauty of this is that that shows up in Microsoft Search."
+    },
+    {
+        "timestamp": [
+            942.64,
+            946.74
+        ],
+        "text": " And so we can search for under the Graph graph connector vertical there or even the all bucket."
+    },
+    {
+        "timestamp": [
+            947.26,
+            950.42
+        ],
+        "text": " And that will list all the different chocolate that we've indexed inside there."
+    },
+    {
+        "timestamp": [
+            950.5,
+            954.5
+        ],
+        "text": " And you can have adaptive cards to control exactly how that renders in Microsoft Search."
+    },
+    {
+        "timestamp": [
+            954.56,
+            957.6
+        ],
+        "text": " And that technology has been in our platform for a long time now, generally available."
+    },
+    {
+        "timestamp": [
+            958.72,
+            961.84
+        ],
+        "text": " But in addition to that, we can start making queries there."
+    },
+    {
+        "timestamp": [
+            961.84,
+            964.52
+        ],
+        "text": " Like what countries is dairy milk sold in?"
+    },
+    {
+        "timestamp": [
+            968.38,
+            968.9
+        ],
+        "text": " And you'll see that it's given a citation here of the World Open Food Facts."
+    },
+    {
+        "timestamp": [
+            974.66,
+            978.52
+        ],
+        "text": " And if I launch that there, what you'll see is that that's given me the information about dairy milk. And it's essentially not only have we injected the properties directly into the page,"
+    },
+    {
+        "timestamp": [
+            978.58,
+            982.14
+        ],
+        "text": " but it's using the whole scraped page of that as well to make those answers."
+    },
+    {
+        "timestamp": [
+            982.76,
+            991.32
+        ],
+        "text": " So just a quick example of how you can use a graph connector to pull information through. And, again, just use the Teams toolkit and"
+    },
+    {
+        "timestamp": [
+            991.32,
+            997.24
+        ],
+        "text": " that sample in there to get that going. So that was graph connectors."
+    },
+    {
+        "timestamp": [
+            997.24,
+            1006.34
+        ],
+        "text": " Now, with that, with plug-ins, essentially what we announced last year at Build was message extensions."
+    },
+    {
+        "timestamp": [
+            1006.34,
+            1011.76
+        ],
+        "text": " And again, much like Graph Connectors, we wanted to provide a ramp for existing people"
+    },
+    {
+        "timestamp": [
+            1011.76,
+            1015.0
+        ],
+        "text": " in our ecosystem that have been building extensions for Teams."
+    },
+    {
+        "timestamp": [
+            1015.0,
+            1016.6
+        ],
+        "text": " And so those are still supported."
+    },
+    {
+        "timestamp": [
+            1016.6,
+            1018.66
+        ],
+        "text": " They're still in public preview."
+    },
+    {
+        "timestamp": [
+            1018.66,
+            1023.48
+        ],
+        "text": " But we've announced today with API plug-ins that we wanted to give a little bit more direct"
+    },
+    {
+        "timestamp": [
+            1023.48,
+            1029.88
+        ],
+        "text": " control of how you can connect to APIs. Message extensions are great if you're in the Teams ecosystem world"
+    },
+    {
+        "timestamp": [
+            1029.88,
+            1034.24
+        ],
+        "text": " and you want to have things work in Teams chats and have those adaptive calls inject"
+    },
+    {
+        "timestamp": [
+            1034.24,
+            1039.86
+        ],
+        "text": " straight into concepts and Copilot can call those same bot framework commands. But we"
+    },
+    {
+        "timestamp": [
+            1039.86,
+            1043.5
+        ],
+        "text": " had a lot of feedback in the last year that we want developers wanted just to have that"
+    },
+    {
+        "timestamp": [
+            1043.5,
+            1049.72
+        ],
+        "text": " mapping of, look, I've got an open API document with a description of my API and I want our copilot"
+    },
+    {
+        "timestamp": [
+            1049.72,
+            1054.18
+        ],
+        "text": " to look with its orchestrator and see this plug-in matches, here are the functions that"
+    },
+    {
+        "timestamp": [
+            1054.18,
+            1058.58
+        ],
+        "text": " make sense for me to call to try and get the answer and let the large language model make"
+    },
+    {
+        "timestamp": [
+            1058.58,
+            1065.1
+        ],
+        "text": " a decision on whether it should use that particular response from this particular plugin."
+    },
+    {
+        "timestamp": [
+            1065.1,
+            1069.44
+        ],
+        "text": " And then the third option, which we announced in November at Ignite, was Copilot Studio"
+    },
+    {
+        "timestamp": [
+            1069.44,
+            1074.42
+        ],
+        "text": " plugins. Today I'm going to focus on API plugins, and there's some great sessions that will"
+    },
+    {
+        "timestamp": [
+            1074.42,
+            1078.38
+        ],
+        "text": " go into a lot more depth around the other ways you can do things."
+    },
+    {
+        "timestamp": [
+            1078.38,
+            1083.68
+        ],
+        "text": " So if we look at plugins, the difference here, if you notice on the screen, is that API plugins"
+    },
+    {
+        "timestamp": [
+            1083.68,
+            1088.58
+        ],
+        "text": " leave the Microsoft 365 boundary because it's calling an API that isn't hosted inside of Microsoft 365."
+    },
+    {
+        "timestamp": [
+            1089.26,
+            1093.42
+        ],
+        "text": " So that's a choice you have to make by using plugins in this platform."
+    },
+    {
+        "timestamp": [
+            1094.8,
+            1100.82
+        ],
+        "text": " Now, plugins are really good for real-time data, and especially so for highly relational data."
+    },
+    {
+        "timestamp": [
+            1101.1,
+            1104.16
+        ],
+        "text": " We mentioned with Graph Connectors, you have to flatten that data to put it in the index."
+    },
+    {
+        "timestamp": [
+            1103.64,
+            1108.6
+        ],
+        "text": " relational data. We mentioned with Graph Connectors you have to flatten that data to put it in the index. With high relational data, the API, you can build the shapes of your API,"
+    },
+    {
+        "timestamp": [
+            1108.74,
+            1113.08
+        ],
+        "text": " what parameters you need to be able to get at that highly relational data. With Graph"
+    },
+    {
+        "timestamp": [
+            1113.08,
+            1119.22
+        ],
+        "text": " Connectors we do have some limits on how much items you can index inside of Microsoft Graph."
+    },
+    {
+        "timestamp": [
+            1119.22,
+            1123.38
+        ],
+        "text": " And so if you're dealing with systems that are larger than those limits, then plug-ins"
+    },
+    {
+        "timestamp": [
+            1123.38,
+            1129.56
+        ],
+        "text": " are going to be the best place for you. Plug-ins really rely on you understanding the precision of the"
+    },
+    {
+        "timestamp": [
+            1129.56,
+            1134.12
+        ],
+        "text": " prompts your user is going to ask. Show me the latest issues I'm assigned to. Show me"
+    },
+    {
+        "timestamp": [
+            1134.12,
+            1138.64
+        ],
+        "text": " the projects that I'm assigned to. What are the latest orders that have been reached into"
+    },
+    {
+        "timestamp": [
+            1138.64,
+            1145.74
+        ],
+        "text": " the system? And the nice thing about plug-ins is as well as being able to summarize the data that you"
+    },
+    {
+        "timestamp": [
+            1145.74,
+            1149.16
+        ],
+        "text": " can reach out to through those APIs, you can also do actions on it."
+    },
+    {
+        "timestamp": [
+            1149.16,
+            1153.8
+        ],
+        "text": " And you saw in Jeff's keynote this ability to go and update the system and confirming"
+    },
+    {
+        "timestamp": [
+            1153.8,
+            1156.18
+        ],
+        "text": " with Copilot you want to do that update."
+    },
+    {
+        "timestamp": [
+            1156.18,
+            1160.12
+        ],
+        "text": " And obviously if you've already got an API in your system, all you have to do is wrap"
+    },
+    {
+        "timestamp": [
+            1160.12,
+            1166.0
+        ],
+        "text": " that in an open API document, provide a plug-in manifest, and you're off To the races deploying that in your environment."
+    },
+    {
+        "timestamp": [
+            1166.0,
+            1170.0
+        ],
+        "text": " It's a good way to get started if you have an api with a good"
+    },
+    {
+        "timestamp": [
+            1170.0,
+            1173.0
+        ],
+        "text": " Set of crud capabilities on it. Create, read, update, delete."
+    },
+    {
+        "timestamp": [
+            1173.0,
+            1176.0
+        ],
+        "text": " Good candidates for plug-ins, as you would expect, all the"
+    },
+    {
+        "timestamp": [
+            1176.0,
+            1180.0
+        ],
+        "text": " Large enterprise systems that have transactional data or are"
+    },
+    {
+        "timestamp": [
+            1180.0,
+            1183.0
+        ],
+        "text": " Dealing with customers and the frequency of the items being"
+    },
+    {
+        "timestamp": [
+            1183.0,
+            1188.42
+        ],
+        "text": " Updated is very, very high. If you have these within your experience or you're a vendor that owns a system like this,"
+    },
+    {
+        "timestamp": [
+            1188.78,
+            1190.2
+        ],
+        "text": " plugins is going to be a good fit for you."
+    },
+    {
+        "timestamp": [
+            1192.94,
+            1196.22
+        ],
+        "text": " Now there are two ways you can build plugins as has been mentioned before."
+    },
+    {
+        "timestamp": [
+            1196.62,
+            1200.58
+        ],
+        "text": " First is Copilot Studio and then there is Teams Toolkit and Visual Studio Code."
+    },
+    {
+        "timestamp": [
+            1201.76,
+            1208.0
+        ],
+        "text": " If you're familiar with low code, if you've used Power Apps, Power Platform,"
+    },
+    {
+        "timestamp": [
+            1208.0,
+            1212.18
+        ],
+        "text": " Power Automate, Power Connect, Power Platform connectors, then Copilot Studio is probably"
+    },
+    {
+        "timestamp": [
+            1212.18,
+            1215.18
+        ],
+        "text": " the best place for you to start because you can take advantage of those things and wrap"
+    },
+    {
+        "timestamp": [
+            1215.18,
+            1220.5
+        ],
+        "text": " those in plug-ins and deploy them into Copilot. It is a rapid developer environment. And another"
+    },
+    {
+        "timestamp": [
+            1220.5,
+            1225.78
+        ],
+        "text": " benefit of Copilot Studio is that it's managed infrastructure on your behalf."
+    },
+    {
+        "timestamp": [
+            1233.94,
+            1234.4
+        ],
+        "text": " Now, with Teams Toolkit, if you're familiar with managed code, you've written C Sharp, you've written JavaScript, TypeScript, Teams Toolkit is going to be a better spot for you."
+    },
+    {
+        "timestamp": [
+            1242.58,
+            1248.0
+        ],
+        "text": " If you've built existing Teams app in Teams Toolkit, you can easily add plugins and graph connectors into them and deploy those into your environment. Teamstalk also gives you the luxury through the CLI to deploy to multiple tenants, which"
+    },
+    {
+        "timestamp": [
+            1248.0,
+            1252.0
+        ],
+        "text": " gives you kind of release management, branch management, and also if you've got multiple"
+    },
+    {
+        "timestamp": [
+            1252.0,
+            1255.0
+        ],
+        "text": " customers, the ability to push things out in a very controlled way."
+    },
+    {
+        "timestamp": [
+            1255.0,
+            1260.0
+        ],
+        "text": " And obviously because it's managed code, you get the benefits of very fine source control,"
+    },
+    {
+        "timestamp": [
+            1260.0,
+            1267.94
+        ],
+        "text": " branching and release management procedures that you have within your own teams. Now, obviously, you do need to host your own infrastructure for this."
+    },
+    {
+        "timestamp": [
+            1272.42,
+            1276.96
+        ],
+        "text": " So, Tempify is another partner we've been working with, and this is a great example"
+    },
+    {
+        "timestamp": [
+            1276.96,
+            1280.4
+        ],
+        "text": " of bringing M365 data together with their solution."
+    },
+    {
+        "timestamp": [
+            1281.04,
+            1284.68
+        ],
+        "text": " They've asked for the latest communications from Contoso, and what you would have seen"
+    },
+    {
+        "timestamp": [
+            1284.68,
+            1289.44
+        ],
+        "text": " very briefly in the keynote is a new feature of Copilot for Microsoft 365 which allows"
+    },
+    {
+        "timestamp": [
+            1289.44,
+            1293.8
+        ],
+        "text": " you to app mention a plug-in. Now, the main reason this is beneficial is because you can"
+    },
+    {
+        "timestamp": [
+            1293.8,
+            1300.16
+        ],
+        "text": " now really allow Copilot to focus in on just asking Tempify and not the hundreds of plug-ins"
+    },
+    {
+        "timestamp": [
+            1300.16,
+            1310.24
+        ],
+        "text": " or the hundreds of graph-connected information or the M365 data there, and it's feedback we've had since we've been doing these private previews and public previews."
+    },
+    {
+        "timestamp": [
+            1310.24,
+            1315.62
+        ],
+        "text": " After that app mention has happened, essentially what you'll see is that Temporafly will look"
+    },
+    {
+        "timestamp": [
+            1315.62,
+            1321.02
+        ],
+        "text": " at the information that it got from the communications with Contoso and it will suggest two templates."
+    },
+    {
+        "timestamp": [
+            1321.02,
+            1326.2
+        ],
+        "text": " Now as a user, I'm going to go choose the basic template that Tempify has"
+    },
+    {
+        "timestamp": [
+            1326.2,
+            1330.4
+        ],
+        "text": " picked. And here's a new thing that we're providing inside of Copilot for Microsoft"
+    },
+    {
+        "timestamp": [
+            1330.4,
+            1336.4
+        ],
+        "text": " 365. You now have the ability for Copilot to push information that it got from another"
+    },
+    {
+        "timestamp": [
+            1336.4,
+            1342.18
+        ],
+        "text": " query that came from M365 in this case and ask the user, are you okay with me sending"
+    },
+    {
+        "timestamp": [
+            1342.18,
+            1345.56
+        ],
+        "text": " this information to Tempify? And the user explicitly has to"
+    },
+    {
+        "timestamp": [
+            1345.56,
+            1351.08
+        ],
+        "text": " say confirm to send that information. Tempify creates that sales agreement and the user"
+    },
+    {
+        "timestamp": [
+            1351.08,
+            1354.84
+        ],
+        "text": " can within the flow of his work launch that document and see that Tempify has built that"
+    },
+    {
+        "timestamp": [
+            1354.84,
+            1360.42
+        ],
+        "text": " document based on its template with the information it got from the other experience. And so it's"
+    },
+    {
+        "timestamp": [
+            1360.42,
+            1369.4
+        ],
+        "text": " a really good end-to-end flow that is common in Copilot from a productivity perspective, allowing you to see how our partners out there can leverage plug-ins."
+    },
+    {
+        "timestamp": [
+            1370.3,
+            1375.8
+        ],
+        "text": " Now, I've covered those two things real quick because we've got a lot of great content that Barnum's going to cover next."
+    },
+    {
+        "timestamp": [
+            1376.32,
+            1388.8
+        ],
+        "text": " There are two essentially good breakouts in BRK148 and 151 that are later on this afternoon in this room. I'd encourage you if you want to go deeper in either of these two things, whether it's choosing Teams Toolkit or Copilot Studio,"
+    },
+    {
+        "timestamp": [
+            1389.28,
+            1394.42
+        ],
+        "text": " check out those breakouts. I want to cover one last thing before I hand over to Barnum."
+    },
+    {
+        "timestamp": [
+            1395.98,
+            1400.18
+        ],
+        "text": " We get this question a lot. How do we start building with Copilot for Microsoft 365?"
+    },
+    {
+        "timestamp": [
+            1401.54,
+            1406.68
+        ],
+        "text": " If you're in the ISV program that my team runs, you can have access to a private"
+    },
+    {
+        "timestamp": [
+            1406.68,
+            1412.94
+        ],
+        "text": " preview of what we will launch publicly later in the year. Effectively get three 25 E5 users"
+    },
+    {
+        "timestamp": [
+            1412.94,
+            1418.66
+        ],
+        "text": " and then you can purchase copilot licenses on top. If you're not an ISV, a software company,"
+    },
+    {
+        "timestamp": [
+            1418.66,
+            1424.64
+        ],
+        "text": " you can go directly to Microsoft365.com and you can purchase a business basic plan and"
+    },
+    {
+        "timestamp": [
+            1424.64,
+            1426.34
+        ],
+        "text": " copilot for Microsoft 365 for one"
+    },
+    {
+        "timestamp": [
+            1426.34,
+            1430.6
+        ],
+        "text": " user and that will get you off to the races building on top of copilot for now."
+    },
+    {
+        "timestamp": [
+            1430.6,
+            1435.06
+        ],
+        "text": " And then by the end of the year, we will be announcing that if you have used the M365"
+    },
+    {
+        "timestamp": [
+            1435.06,
+            1439.98
+        ],
+        "text": " developer program, you will be able to essentially take your tenant and purchase copilot for"
+    },
+    {
+        "timestamp": [
+            1439.98,
+            1448.56
+        ],
+        "text": " Microsoft 365 on top. This is a journey we're on at the minute in the notion of how quickly we're speeding up. And if you have any feedback, we'd love to hear from it. But that's just"
+    },
+    {
+        "timestamp": [
+            1448.56,
+            1451.26
+        ],
+        "text": " where we're at right now in terms of how you can get going on the developer side."
+    },
+    {
+        "timestamp": [
+            1452.8,
+            1457.34
+        ],
+        "text": " Okay. So I've talked a lot about plug-ins and graph connectors. I'm going to hand over"
+    },
+    {
+        "timestamp": [
+            1457.34,
+            1468.4
+        ],
+        "text": " to Barnum to talk about how you can bring your own immersive experiences into Copilot for Microsoft 365. Thanks, mate. Thank you."
+    },
+    {
+        "timestamp": [
+            1469.78,
+            1471.0
+        ],
+        "text": " It's a hard act to follow, huh?"
+    },
+    {
+        "timestamp": [
+            1477.04,
+            1487.94
+        ],
+        "text": " Well, we've already talked, you know, Jeremy's given us a great update into essentially the, how you add additional semantic grounding through connectors and how you also are able to connect to your source systems"
+    },
+    {
+        "timestamp": [
+            1487.94,
+            1491.08
+        ],
+        "text": " or other systems of record in your business using plugins,"
+    },
+    {
+        "timestamp": [
+            1491.34,
+            1493.22
+        ],
+        "text": " both for actions and for retrieval."
+    },
+    {
+        "timestamp": [
+            1494.02,
+            1497.16
+        ],
+        "text": " Now, what these technologies essentially do"
+    },
+    {
+        "timestamp": [
+            1497.16,
+            1501.42
+        ],
+        "text": " is they widen the scope of what Copilot,"
+    },
+    {
+        "timestamp": [
+            1501.84,
+            1504.9
+        ],
+        "text": " that's built by Microsoft, is able to do for you."
+    },
+    {
+        "timestamp": [
+            1503.38,
+            1504.9
+        ],
+        "text": " of what Copilot that's built by Microsoft is able to do for you."
+    },
+    {
+        "timestamp": [
+            1505.94,
+            1510.66
+        ],
+        "text": " But in our work with our early access customers and partners"
+    },
+    {
+        "timestamp": [
+            1510.66,
+            1514.2
+        ],
+        "text": " and also as we get ourselves more and more involved"
+    },
+    {
+        "timestamp": [
+            1514.2,
+            1516.24
+        ],
+        "text": " in the research of building these systems,"
+    },
+    {
+        "timestamp": [
+            1516.72,
+            1519.46
+        ],
+        "text": " we realize that focused experiences"
+    },
+    {
+        "timestamp": [
+            1519.46,
+            1520.58
+        ],
+        "text": " is also a requirement"
+    },
+    {
+        "timestamp": [
+            1520.58,
+            1523.06
+        ],
+        "text": " where we actually need to narrow down"
+    },
+    {
+        "timestamp": [
+            1523.06,
+            1528.44
+        ],
+        "text": " the bandwidth of what the specific co-pilot"
+    },
+    {
+        "timestamp": [
+            1528.44,
+            1534.04
+        ],
+        "text": " experience needs to focus on. And that's why we, you've seen in the keynote, we've launched this"
+    },
+    {
+        "timestamp": [
+            1534.04,
+            1539.98
+        ],
+        "text": " notion of your own co-pilots. Your own co-pilots are effectively instantiations of co-pilot,"
+    },
+    {
+        "timestamp": [
+            1540.44,
+            1546.3
+        ],
+        "text": " which have your own specific business context, your own applications are plugged into it already,"
+    },
+    {
+        "timestamp": [
+            1546.78,
+            1548.72
+        ],
+        "text": " and your workflows are plugged into it,"
+    },
+    {
+        "timestamp": [
+            1548.8,
+            1550.36
+        ],
+        "text": " and maybe your automation as well."
+    },
+    {
+        "timestamp": [
+            1552.24,
+            1554.3
+        ],
+        "text": " One of the benefits of building this,"
+    },
+    {
+        "timestamp": [
+            1554.3,
+            1555.62
+        ],
+        "text": " we've already announced that,"
+    },
+    {
+        "timestamp": [
+            1555.82,
+            1558.68
+        ],
+        "text": " is that you can actually take your own custom,"
+    },
+    {
+        "timestamp": [
+            1558.92,
+            1561.78
+        ],
+        "text": " these co-pilots that you build and instantiate on top of us"
+    },
+    {
+        "timestamp": [
+            1561.78,
+            1564.4
+        ],
+        "text": " and publish them as co-pilot extensions."
+    },
+    {
+        "timestamp": [
+            1564.74,
+            1566.52
+        ],
+        "text": " So essentially, you're not missing out."
+    },
+    {
+        "timestamp": [
+            1567.1,
+            1569.06
+        ],
+        "text": " Effectively, your co-pilots show up"
+    },
+    {
+        "timestamp": [
+            1569.06,
+            1570.94
+        ],
+        "text": " very similar to how plugins would show up"
+    },
+    {
+        "timestamp": [
+            1570.94,
+            1573.6
+        ],
+        "text": " in our co-pilot experiences across our hubs,"
+    },
+    {
+        "timestamp": [
+            1574.0,
+            1576.64
+        ],
+        "text": " but it will also be available"
+    },
+    {
+        "timestamp": [
+            1576.64,
+            1580.36
+        ],
+        "text": " in your own immersive experience as well."
+    },
+    {
+        "timestamp": [
+            1581.06,
+            1582.98
+        ],
+        "text": " We are trying to make it very easy for you"
+    },
+    {
+        "timestamp": [
+            1582.98,
+            1584.12
+        ],
+        "text": " to publish these co-pilots"
+    },
+    {
+        "timestamp": [
+            1584.12,
+            1585.18
+        ],
+        "text": " through a click-through experience onpilots through a click-through"
+    },
+    {
+        "timestamp": [
+            1585.18,
+            1590.14
+        ],
+        "text": " experience on SharePoint or through a click-through experience on Co-Pilot Studio or on VS Code in a"
+    },
+    {
+        "timestamp": [
+            1590.14,
+            1596.66
+        ],
+        "text": " development environment. Now, moving into this stack slide that Jeremy covered before,"
+    },
+    {
+        "timestamp": [
+            1597.22,
+            1605.24
+        ],
+        "text": " effectively, there are two forms, two large forms of your own co-pilots. Let's talk about the first one, which is declarative co-pilots."
+    },
+    {
+        "timestamp": [
+            1605.84,
+            1611.84
+        ],
+        "text": " You've heard this term today a few times. Declarative co-pilots is essentially the kind"
+    },
+    {
+        "timestamp": [
+            1611.84,
+            1617.68
+        ],
+        "text": " of co-pilot where you've actually taken the engine that Microsoft has already built in our"
+    },
+    {
+        "timestamp": [
+            1617.68,
+            1627.32
+        ],
+        "text": " own Microsoft co-pilot and added some declarative instructions on top of it. So you're not necessarily messing with the innards of the LLM model itself,"
+    },
+    {
+        "timestamp": [
+            1627.54,
+            1631.28
+        ],
+        "text": " but what you've given to it is a specific set of instructions"
+    },
+    {
+        "timestamp": [
+            1631.28,
+            1634.4
+        ],
+        "text": " set on top that gives it the personality or the focus."
+    },
+    {
+        "timestamp": [
+            1635.78,
+            1639.92
+        ],
+        "text": " What do these declarative co-pilots really help out in?"
+    },
+    {
+        "timestamp": [
+            1640.18,
+            1642.98
+        ],
+        "text": " Effectively, you know, we all work in organizations,"
+    },
+    {
+        "timestamp": [
+            1643.46,
+            1645.22
+        ],
+        "text": " and some of us are generalists"
+    },
+    {
+        "timestamp": [
+            1645.22,
+            1646.34
+        ],
+        "text": " and some of us are specialists."
+    },
+    {
+        "timestamp": [
+            1647.06,
+            1651.32
+        ],
+        "text": " When you want specialist behavior of your co-pilot,"
+    },
+    {
+        "timestamp": [
+            1651.5,
+            1652.84
+        ],
+        "text": " you know, think of Microsoft co-pilot"
+    },
+    {
+        "timestamp": [
+            1652.84,
+            1655.2
+        ],
+        "text": " as the generalist, full-capacity co-pilot."
+    },
+    {
+        "timestamp": [
+            1655.2,
+            1657.54
+        ],
+        "text": " Then you want specific specialist behavior,"
+    },
+    {
+        "timestamp": [
+            1657.72,
+            1660.16
+        ],
+        "text": " maybe for your HR, for your IT, you know,"
+    },
+    {
+        "timestamp": [
+            1660.38,
+            1661.74
+        ],
+        "text": " all of these kind of behaviors,"
+    },
+    {
+        "timestamp": [
+            1662.02,
+            1664.68
+        ],
+        "text": " where you want it to focus on a specific area"
+    },
+    {
+        "timestamp": [
+            1664.68,
+            1665.84
+        ],
+        "text": " or specific documentation,"
+    },
+    {
+        "timestamp": [
+            1666.4,
+            1668.5
+        ],
+        "text": " that's when declarative co-pilots come to play."
+    },
+    {
+        "timestamp": [
+            1669.16,
+            1671.06
+        ],
+        "text": " Effectively, they are Microsoft co-pilot"
+    },
+    {
+        "timestamp": [
+            1671.06,
+            1672.08
+        ],
+        "text": " plus your instructions,"
+    },
+    {
+        "timestamp": [
+            1672.7,
+            1676.96
+        ],
+        "text": " which in reality just gives co-pilot more context"
+    },
+    {
+        "timestamp": [
+            1676.96,
+            1679.36
+        ],
+        "text": " to do generations that are more relevant to you."
+    },
+    {
+        "timestamp": [
+            1680.12,
+            1681.68
+        ],
+        "text": " What's important to also note"
+    },
+    {
+        "timestamp": [
+            1681.68,
+            1688.24
+        ],
+        "text": " that this context is actually a combination of a few very simple things."
+    },
+    {
+        "timestamp": [
+            1688.86,
+            1690.94
+        ],
+        "text": " These are your declarative custom instructions,"
+    },
+    {
+        "timestamp": [
+            1691.04,
+            1692.1
+        ],
+        "text": " and we'll look at that very shortly."
+    },
+    {
+        "timestamp": [
+            1692.66,
+            1694.72
+        ],
+        "text": " Effectively, you have your custom prompt instructions,"
+    },
+    {
+        "timestamp": [
+            1694.72,
+            1698.22
+        ],
+        "text": " which are your natural language prompt that instantiates it."
+    },
+    {
+        "timestamp": [
+            1698.5,
+            1700.06
+        ],
+        "text": " You have the additional grounding data."
+    },
+    {
+        "timestamp": [
+            1700.18,
+            1701.54
+        ],
+        "text": " You can point to a SharePoint site"
+    },
+    {
+        "timestamp": [
+            1701.54,
+            1703.5
+        ],
+        "text": " or maybe upload new data, et cetera."
+    },
+    {
+        "timestamp": [
+            1704.34,
+            1707.68
+        ],
+        "text": " And you also encapsulate your plugins and connectors"
+    },
+    {
+        "timestamp": [
+            1707.68,
+            1708.88
+        ],
+        "text": " into that one thing."
+    },
+    {
+        "timestamp": [
+            1709.96,
+            1713.1
+        ],
+        "text": " What I want to actually show you after this"
+    },
+    {
+        "timestamp": [
+            1713.1,
+            1715.54
+        ],
+        "text": " is that you can encapsulate that"
+    },
+    {
+        "timestamp": [
+            1715.54,
+            1717.98
+        ],
+        "text": " into a single copilot experience"
+    },
+    {
+        "timestamp": [
+            1717.98,
+            1720.1
+        ],
+        "text": " on top of Microsoft 365 Copilot"
+    },
+    {
+        "timestamp": [
+            1720.1,
+            1722.92
+        ],
+        "text": " and deploy that as your own copilot."
+    },
+    {
+        "timestamp": [
+            1723.28,
+            1761.26
+        ],
+        "text": " Let's look at VS Code. Well, effectively, the custom instructions"
+    },
+    {
+        "timestamp": [
+            1761.26,
+            1763.56
+        ],
+        "text": " that I was talking about on your screen,"
+    },
+    {
+        "timestamp": [
+            1764.98,
+            1766.0
+        ],
+        "text": " you've got your..."
+    },
+    {
+        "timestamp": [
+            1766.0,
+            1769.34
+        ],
+        "text": " This is a VS Code project"
+    },
+    {
+        "timestamp": [
+            1769.34,
+            1770.84
+        ],
+        "text": " where you've actually..."
+    },
+    {
+        "timestamp": [
+            1770.84,
+            1772.36
+        ],
+        "text": " We've gone ahead and created"
+    },
+    {
+        "timestamp": [
+            1772.36,
+            1775.26
+        ],
+        "text": " a declarative copilot."
+    },
+    {
+        "timestamp": [
+            1775.7,
+            1777.62
+        ],
+        "text": " Effectively, it's a combination of those three things"
+    },
+    {
+        "timestamp": [
+            1777.62,
+            1778.52
+        ],
+        "text": " that we just spoke about."
+    },
+    {
+        "timestamp": [
+            1778.82,
+            1781.22
+        ],
+        "text": " It's your custom instruction set in plain language."
+    },
+    {
+        "timestamp": [
+            1782.1,
+            1784.04
+        ],
+        "text": " And I've gone ahead and identified"
+    },
+    {
+        "timestamp": [
+            1784.04,
+            1786.36
+        ],
+        "text": " and instantiated a few conversation"
+    },
+    {
+        "timestamp": [
+            1786.36,
+            1789.66
+        ],
+        "text": " starters for your immersive experience, which actually prompts the user to say, hey, let's"
+    },
+    {
+        "timestamp": [
+            1789.66,
+            1793.68
+        ],
+        "text": " go have this conversation this way. And then I've said, I've pointed to a SharePoint"
+    },
+    {
+        "timestamp": [
+            1793.68,
+            1799.32
+        ],
+        "text": " site, which actually has effectively now it knows that, hey, the documents in the SharePoint"
+    },
+    {
+        "timestamp": [
+            1799.32,
+            1803.8
+        ],
+        "text": " site are the ones that I need to focus on, and then the actions is effectively a plug-in"
+    },
+    {
+        "timestamp": [
+            1803.8,
+            1808.64
+        ],
+        "text": " that I've encapsulated into this particular declarative copilot."
+    },
+    {
+        "timestamp": [
+            1815.66,
+            1820.14
+        ],
+        "text": " Now, these declarative copilots, obviously, you can build them through VS Code or through"
+    },
+    {
+        "timestamp": [
+            1820.14,
+            1826.2
+        ],
+        "text": " Copilot Studio. The beauty of it is they can appear in context and in your focused immersive experience as well."
+    },
+    {
+        "timestamp": [
+            1827.46,
+            1829.4
+        ],
+        "text": " So let's talk about why would you do"
+    },
+    {
+        "timestamp": [
+            1829.4,
+            1830.34
+        ],
+        "text": " these declarative copilots"
+    },
+    {
+        "timestamp": [
+            1830.34,
+            1832.06
+        ],
+        "text": " and what are the sort of specific scenarios"
+    },
+    {
+        "timestamp": [
+            1832.06,
+            1833.98
+        ],
+        "text": " where they really become powerful."
+    },
+    {
+        "timestamp": [
+            1834.9,
+            1836.36
+        ],
+        "text": " Any scenario, as I said,"
+    },
+    {
+        "timestamp": [
+            1836.44,
+            1838.4
+        ],
+        "text": " that requires focus or specialization"
+    },
+    {
+        "timestamp": [
+            1838.4,
+            1840.18
+        ],
+        "text": " where you want to give it nuance."
+    },
+    {
+        "timestamp": [
+            1841.08,
+            1843.04
+        ],
+        "text": " Any scenario where you want to layer"
+    },
+    {
+        "timestamp": [
+            1843.04,
+            1844.62
+        ],
+        "text": " on top of the existing capability"
+    },
+    {
+        "timestamp": [
+            1844.62,
+            1846.0
+        ],
+        "text": " of Microsoft 365 Copilot. Any scenario where you want to layer on top of the existing capability of Microsoft 365 Copilot,"
+    },
+    {
+        "timestamp": [
+            1846.0,
+            1851.0
+        ],
+        "text": " any scenario where you want to target specific roles in your organization or your customer set,"
+    },
+    {
+        "timestamp": [
+            1851.0,
+            1855.0
+        ],
+        "text": " and any scenario where you want to scope it to specific data sources."
+    },
+    {
+        "timestamp": [
+            1855.0,
+            1859.0
+        ],
+        "text": " These are great examples of where declarative copilots are powerful."
+    },
+    {
+        "timestamp": [
+            1859.0,
+            1863.0
+        ],
+        "text": " Here's a point I actually want to focus on myself."
+    },
+    {
+        "timestamp": [
+            1863.0,
+            1866.14
+        ],
+        "text": " You know, a plug-in gives you data."
+    },
+    {
+        "timestamp": [
+            1866.24,
+            1869.02
+        ],
+        "text": " For example, you know, it might be a JSON response"
+    },
+    {
+        "timestamp": [
+            1869.02,
+            1871.34
+        ],
+        "text": " through an API or you're looking at a database"
+    },
+    {
+        "timestamp": [
+            1871.34,
+            1872.5
+        ],
+        "text": " and getting structured data."
+    },
+    {
+        "timestamp": [
+            1873.08,
+            1877.44
+        ],
+        "text": " Sometimes you need to add nuance or domain understanding"
+    },
+    {
+        "timestamp": [
+            1877.44,
+            1879.08
+        ],
+        "text": " of how to interpret that data."
+    },
+    {
+        "timestamp": [
+            1879.76,
+            1881.78
+        ],
+        "text": " That's not possible just through a plug-in"
+    },
+    {
+        "timestamp": [
+            1881.78,
+            1883.02
+        ],
+        "text": " because you're getting raw data."
+    },
+    {
+        "timestamp": [
+            1883.8,
+            1885.66
+        ],
+        "text": " So when you add that nuance"
+    },
+    {
+        "timestamp": [
+            1885.66,
+            1887.92
+        ],
+        "text": " into your declarative custom instruction,"
+    },
+    {
+        "timestamp": [
+            1888.02,
+            1889.8
+        ],
+        "text": " say, hey, when I read this type of data,"
+    },
+    {
+        "timestamp": [
+            1890.04,
+            1890.8
+        ],
+        "text": " this is what it means."
+    },
+    {
+        "timestamp": [
+            1891.44,
+            1893.58
+        ],
+        "text": " That's one of the powers of declarative copilot"
+    },
+    {
+        "timestamp": [
+            1893.58,
+            1894.18
+        ],
+        "text": " that you can enable."
+    },
+    {
+        "timestamp": [
+            1894.58,
+            1896.96
+        ],
+        "text": " Let's look at an example of a declarative copilot."
+    },
+    {
+        "timestamp": [
+            1901.4,
+            1904.46
+        ],
+        "text": " This is what I would have deployed if I had more time."
+    },
+    {
+        "timestamp": [
+            1905.0,
+            1908.0
+        ],
+        "text": " But let's look at Adobe's declarative co-pilot"
+    },
+    {
+        "timestamp": [
+            1908.0,
+            1910.0
+        ],
+        "text": " and go through that example."
+    },
+    {
+        "timestamp": [
+            1910.0,
+            1913.0
+        ],
+        "text": " As you can see, Adobe, in this scenario,"
+    },
+    {
+        "timestamp": [
+            1913.0,
+            1915.0
+        ],
+        "text": " somebody is actually using Word,"
+    },
+    {
+        "timestamp": [
+            1915.0,
+            1918.0
+        ],
+        "text": " and they actually want to build an Instagram campaign,"
+    },
+    {
+        "timestamp": [
+            1918.0,
+            1921.0
+        ],
+        "text": " and they've instantiated a declarative co-pilot for Adobe"
+    },
+    {
+        "timestamp": [
+            1921.0,
+            1923.0
+        ],
+        "text": " through Word's co-pilot experience."
+    },
+    {
+        "timestamp": [
+            1923.0,
+            1926.62
+        ],
+        "text": " And what it is actually doing is it's taking all of the Word document"
+    },
+    {
+        "timestamp": [
+            1926.62,
+            1930.52
+        ],
+        "text": " and suggesting a few options to use as an Instagram campaign."
+    },
+    {
+        "timestamp": [
+            1930.92,
+            1932.54
+        ],
+        "text": " Now, they open it up in Adobe Express."
+    },
+    {
+        "timestamp": [
+            1932.92,
+            1935.7
+        ],
+        "text": " They're going and editing it in Adobe Express itself."
+    },
+    {
+        "timestamp": [
+            1936.12,
+            1940.34
+        ],
+        "text": " And you're able to actually see that the workflow is moving from Copilot"
+    },
+    {
+        "timestamp": [
+            1940.34,
+            1944.2
+        ],
+        "text": " to the source application where you're going to edit that"
+    },
+    {
+        "timestamp": [
+            1944.2,
+            1947.36
+        ],
+        "text": " and then go back and share it back to the team chat"
+    },
+    {
+        "timestamp": [
+            1947.36,
+            1950.02
+        ],
+        "text": " where you're having where CoPilot also has access to that data."
+    },
+    {
+        "timestamp": [
+            1954.2,
+            1957.2
+        ],
+        "text": " Now, this is one thing I want to draw your attention to."
+    },
+    {
+        "timestamp": [
+            1957.68,
+            1961.36
+        ],
+        "text": " There's a session later today that focuses on this."
+    },
+    {
+        "timestamp": [
+            1961.48,
+            1964.18
+        ],
+        "text": " We don't necessarily have time today in this session to cover it."
+    },
+    {
+        "timestamp": [
+            1964.4,
+            1969.52
+        ],
+        "text": " Please go to this session, Build CoP extensions in Copilot Studio, where you'll get to build this"
+    },
+    {
+        "timestamp": [
+            1969.52,
+            1976.5
+        ],
+        "text": " with Copilot Studio. Another session, there's also a lab for this session. Just a shout out to the"
+    },
+    {
+        "timestamp": [
+            1976.5,
+            1982.56
+        ],
+        "text": " folks doing the lab as well. We've already just covered declarative Copilots. Let's now focus on"
+    },
+    {
+        "timestamp": [
+            1982.56,
+            1986.8
+        ],
+        "text": " custom engine Copilots. Well, custom engine"
+    },
+    {
+        "timestamp": [
+            1986.8,
+            1993.64
+        ],
+        "text": " co-pilots is interesting because this is the kind of scenario where we've said, hey, there are"
+    },
+    {
+        "timestamp": [
+            1993.64,
+            2000.22
+        ],
+        "text": " nuances that are way more than what declarative co-pilots enables us to do. And in this scenario,"
+    },
+    {
+        "timestamp": [
+            2000.58,
+            2005.48
+        ],
+        "text": " what I'm going to do is I'm going to pick my own model, add my own data, give my own logic,"
+    },
+    {
+        "timestamp": [
+            2005.6,
+            2006.5
+        ],
+        "text": " have my own automation,"
+    },
+    {
+        "timestamp": [
+            2006.84,
+            2009.94
+        ],
+        "text": " and essentially manage my whole stack myself."
+    },
+    {
+        "timestamp": [
+            2010.34,
+            2011.28
+        ],
+        "text": " And in that scenario,"
+    },
+    {
+        "timestamp": [
+            2011.42,
+            2013.82
+        ],
+        "text": " I'm going to choose a custom engine copilot."
+    },
+    {
+        "timestamp": [
+            2014.32,
+            2018.62
+        ],
+        "text": " A custom engine copilot is basically built"
+    },
+    {
+        "timestamp": [
+            2018.62,
+            2021.38
+        ],
+        "text": " with VS Code and Teams AI library,"
+    },
+    {
+        "timestamp": [
+            2021.76,
+            2023.12
+        ],
+        "text": " and we're going to see that in a little bit."
+    },
+    {
+        "timestamp": [
+            2025.92,
+            2027.96
+        ],
+        "text": " So in a custom engine co-pilot,"
+    },
+    {
+        "timestamp": [
+            2028.18,
+            2033.42
+        ],
+        "text": " you are effectively using it in a scenario"
+    },
+    {
+        "timestamp": [
+            2033.42,
+            2037.38
+        ],
+        "text": " where your LLM of choice can be used."
+    },
+    {
+        "timestamp": [
+            2037.46,
+            2039.68
+        ],
+        "text": " You can either use Azure AI Studio, for example,"
+    },
+    {
+        "timestamp": [
+            2039.68,
+            2044.52
+        ],
+        "text": " to go and select your own LLM or SLM model from there."
+    },
+    {
+        "timestamp": [
+            2045.34,
+            2048.98
+        ],
+        "text": " You can publish these co- copilots to external users."
+    },
+    {
+        "timestamp": [
+            2049.12,
+            2050.5
+        ],
+        "text": " Here's a big actual difference"
+    },
+    {
+        "timestamp": [
+            2050.5,
+            2053.76
+        ],
+        "text": " between a declarative copilot and custom engine copilot."
+    },
+    {
+        "timestamp": [
+            2054.74,
+            2056.64
+        ],
+        "text": " Declarative copilots are available to users"
+    },
+    {
+        "timestamp": [
+            2056.64,
+            2059.06
+        ],
+        "text": " who are in your M365 identity."
+    },
+    {
+        "timestamp": [
+            2059.96,
+            2062.0
+        ],
+        "text": " If you want to publish, let's say, to customers,"
+    },
+    {
+        "timestamp": [
+            2062.0,
+            2065.32
+        ],
+        "text": " you actually go and publish as a custom engine copilot. So if you want to publish, let's say, to customers, you actually go and publish as a custom engine copilot."
+    },
+    {
+        "timestamp": [
+            2066.44,
+            2069.34
+        ],
+        "text": " So if you want to publish it into your custom UX,"
+    },
+    {
+        "timestamp": [
+            2070.08,
+            2073.38
+        ],
+        "text": " you know, plus your Microsoft 365 hubs as well,"
+    },
+    {
+        "timestamp": [
+            2073.58,
+            2076.28
+        ],
+        "text": " a custom engine copilot is the answer in that scenario."
+    },
+    {
+        "timestamp": [
+            2076.92,
+            2079.28
+        ],
+        "text": " It also gives you more control, obviously,"
+    },
+    {
+        "timestamp": [
+            2079.28,
+            2081.7
+        ],
+        "text": " over the automations and instantiations within"
+    },
+    {
+        "timestamp": [
+            2081.7,
+            2083.5
+        ],
+        "text": " and workflows that you want to plug in there."
+    },
+    {
+        "timestamp": [
+            2084.7,
+            2088.1
+        ],
+        "text": " One of the key kind of decision points you need to make"
+    },
+    {
+        "timestamp": [
+            2088.1,
+            2090.46
+        ],
+        "text": " is when you're building these AI systems,"
+    },
+    {
+        "timestamp": [
+            2090.6,
+            2092.06
+        ],
+        "text": " do you need custom moderation"
+    },
+    {
+        "timestamp": [
+            2092.06,
+            2095.02
+        ],
+        "text": " or compliance to regulatory frameworks"
+    },
+    {
+        "timestamp": [
+            2095.02,
+            2097.42
+        ],
+        "text": " and, like, you know, healthcare frameworks"
+    },
+    {
+        "timestamp": [
+            2097.42,
+            2099.38
+        ],
+        "text": " and all of that or government regulations?"
+    },
+    {
+        "timestamp": [
+            2099.68,
+            2102.44
+        ],
+        "text": " And for that scenario, you may need a custom engine"
+    },
+    {
+        "timestamp": [
+            2102.44,
+            2104.96
+        ],
+        "text": " or, you know, custom controls that are built in"
+    },
+    {
+        "timestamp": [
+            2104.96,
+            2109.14
+        ],
+        "text": " that are, you know, beyond what a natural language instruction set"
+    },
+    {
+        "timestamp": [
+            2109.14,
+            2110.8
+        ],
+        "text": " on a declarative copilot may enable."
+    },
+    {
+        "timestamp": [
+            2110.8,
+            2113.28
+        ],
+        "text": " And for that reason, a custom engine copilot"
+    },
+    {
+        "timestamp": [
+            2113.28,
+            2114.88
+        ],
+        "text": " is a reality requirement."
+    },
+    {
+        "timestamp": [
+            2117.04,
+            2118.2
+        ],
+        "text": " It also gives you, again,"
+    },
+    {
+        "timestamp": [
+            2118.3,
+            2119.78
+        ],
+        "text": " full control of the prompt management."
+    },
+    {
+        "timestamp": [
+            2119.96,
+            2121.68
+        ],
+        "text": " You don't have to send a prompt to us."
+    },
+    {
+        "timestamp": [
+            2121.86,
+            2124.78
+        ],
+        "text": " You know, you use the prompt yourself."
+    },
+    {
+        "timestamp": [
+            2124.96,
+            2126.84
+        ],
+        "text": " You use the actions and triggers"
+    },
+    {
+        "timestamp": [
+            2126.84,
+            2131.72
+        ],
+        "text": " yourself. You also build your own orchestrator on top of it. So, again, full control over that."
+    },
+    {
+        "timestamp": [
+            2132.72,
+            2137.2
+        ],
+        "text": " And then finally, if you already have investment into deterministic bots,"
+    },
+    {
+        "timestamp": [
+            2138.06,
+            2142.94
+        ],
+        "text": " here's the difference. LLMs are probabilistic systems. Deterministic bots, which have"
+    },
+    {
+        "timestamp": [
+            2142.94,
+            2145.26
+        ],
+        "text": " predefined workflows, and we all need them,"
+    },
+    {
+        "timestamp": [
+            2145.62,
+            2148.3
+        ],
+        "text": " if those are already existing investments that you've made,"
+    },
+    {
+        "timestamp": [
+            2149.02,
+            2150.98
+        ],
+        "text": " custom engine co-pilots encapsulate that"
+    },
+    {
+        "timestamp": [
+            2150.98,
+            2151.8
+        ],
+        "text": " with the bot framework,"
+    },
+    {
+        "timestamp": [
+            2151.98,
+            2153.8
+        ],
+        "text": " and you're able to deploy them out of that."
+    },
+    {
+        "timestamp": [
+            2154.76,
+            2157.66
+        ],
+        "text": " Now, one big thing for those of you out there"
+    },
+    {
+        "timestamp": [
+            2157.66,
+            2158.62
+        ],
+        "text": " who are SaaS companies"
+    },
+    {
+        "timestamp": [
+            2158.62,
+            2160.54
+        ],
+        "text": " and you want to publish this to your customers,"
+    },
+    {
+        "timestamp": [
+            2160.96,
+            2162.06
+        ],
+        "text": " custom engine co-pilots,"
+    },
+    {
+        "timestamp": [
+            2162.06,
+            2165.82
+        ],
+        "text": " you can publish them into the Microsoftrosoft stores as a sas provider as well."
+    },
+    {
+        "timestamp": [
+            2167.56,
+            2172.7
+        ],
+        "text": " Let's look at what actually is a custom engine co-pilot and how"
+    },
+    {
+        "timestamp": [
+            2172.7,
+            2197.6
+        ],
+        "text": " You might be able to instantiate it. Let me roll the video first. So basically this is azure open ai studio."
+    },
+    {
+        "timestamp": [
+            2197.6,
+            2203.16
+        ],
+        "text": " I've actually gone in just before the session and actually instantiated a gpd 3.5 model."
+    },
+    {
+        "timestamp": [
+            2203.16,
+            2205.02
+        ],
+        "text": " You can actually go and play with it."
+    },
+    {
+        "timestamp": [
+            2206.72,
+            2210.9
+        ],
+        "text": " Effectively, what I've done in this scenario is taken, you know, a policy document,"
+    },
+    {
+        "timestamp": [
+            2211.16,
+            2212.32
+        ],
+        "text": " a set of policy documents,"
+    },
+    {
+        "timestamp": [
+            2212.42,
+            2215.44
+        ],
+        "text": " and inserted into OpenAI Studio"
+    },
+    {
+        "timestamp": [
+            2215.44,
+            2217.8
+        ],
+        "text": " and said, hey, this is..."
+    },
+    {
+        "timestamp": [
+            2217.8,
+            2220.16
+        ],
+        "text": " go and build your embeddings on top of this"
+    },
+    {
+        "timestamp": [
+            2220.16,
+            2222.38
+        ],
+        "text": " and provide me a custom engine that I can work with."
+    },
+    {
+        "timestamp": [
+            2222.92,
+            2224.0
+        ],
+        "text": " Now, if you have..."
+    },
+    {
+        "timestamp": [
+            2224.72,
+            2226.0
+        ],
+        "text": " if you've already done this and you have access to a custom engine that I can work with. Now, if you've already done this"
+    },
+    {
+        "timestamp": [
+            2226.0,
+            2227.7
+        ],
+        "text": " and you have access to a custom model"
+    },
+    {
+        "timestamp": [
+            2227.7,
+            2229.34
+        ],
+        "text": " or you're bringing your own model,"
+    },
+    {
+        "timestamp": [
+            2229.62,
+            2235.98
+        ],
+        "text": " you then go in and go to your VS Code environment,"
+    },
+    {
+        "timestamp": [
+            2236.32,
+            2237.96
+        ],
+        "text": " and in your VS Code environment,"
+    },
+    {
+        "timestamp": [
+            2238.32,
+            2242.2
+        ],
+        "text": " you're able to then go and edit this functionality"
+    },
+    {
+        "timestamp": [
+            2242.2,
+            2245.0
+        ],
+        "text": " and go and edit this functionality and go and edit the project"
+    },
+    {
+        "timestamp": [
+            2245.0,
+            2247.0
+        ],
+        "text": " and basically..."
+    },
+    {
+        "timestamp": [
+            2253.0,
+            2258.8
+        ],
+        "text": " I had one more video to show, actually."
+    },
+    {
+        "timestamp": [
+            2259.48,
+            2262.1
+        ],
+        "text": " You actually use Teams Toolkit in VS Code"
+    },
+    {
+        "timestamp": [
+            2262.1,
+            2264.26
+        ],
+        "text": " and go and choose custom and co-pilot,"
+    },
+    {
+        "timestamp": [
+            2264.58,
+            2265.3
+        ],
+        "text": " and once you"
+    },
+    {
+        "timestamp": [
+            2265.3,
+            2267.94
+        ],
+        "text": " instantiate a project and you can"
+    },
+    {
+        "timestamp": [
+            2267.94,
+            2269.98
+        ],
+        "text": " go and actually edit the"
+    },
+    {
+        "timestamp": [
+            2269.98,
+            2271.98
+        ],
+        "text": " project inside VS Code and"
+    },
+    {
+        "timestamp": [
+            2271.98,
+            2273.9
+        ],
+        "text": " publish it either to Teams or your"
+    },
+    {
+        "timestamp": [
+            2273.9,
+            2276.66
+        ],
+        "text": " own custom UX."
+    },
+    {
+        "timestamp": [
+            2281.72,
+            2284.06
+        ],
+        "text": " So effectively, in VS Code,"
+    },
+    {
+        "timestamp": [
+            2284.16,
+            2289.44
+        ],
+        "text": " what you're looking at is your instantiation prompt and the specifics"
+    },
+    {
+        "timestamp": [
+            2289.44,
+            2294.5
+        ],
+        "text": " of the project that you need in the package that you need to deploy."
+    },
+    {
+        "timestamp": [
+            2294.5,
+            2298.24
+        ],
+        "text": " Like, for example, do you need a specific model?"
+    },
+    {
+        "timestamp": [
+            2298.24,
+            2299.96
+        ],
+        "text": " What's the open AI key?"
+    },
+    {
+        "timestamp": [
+            2299.96,
+            2304.14
+        ],
+        "text": " Once you specify those in your project, you can go and deploy that as your custom engine"
+    },
+    {
+        "timestamp": [
+            2304.14,
+            2305.24
+        ],
+        "text": " copilot. Let's look at the example as your custom engine co-pilot."
+    },
+    {
+        "timestamp": [
+            2307.8,
+            2308.94
+        ],
+        "text": " Let's look at the example of a custom engine co-pilot deployed by Isera."
+    },
+    {
+        "timestamp": [
+            2309.42,
+            2310.66
+        ],
+        "text": " In this scenario, Isera,"
+    },
+    {
+        "timestamp": [
+            2310.84,
+            2313.68
+        ],
+        "text": " the reason why they've done custom engine is because,"
+    },
+    {
+        "timestamp": [
+            2314.3,
+            2315.88
+        ],
+        "text": " and they call it Isera AI co-pilot,"
+    },
+    {
+        "timestamp": [
+            2315.88,
+            2319.3
+        ],
+        "text": " is because they actually have custom automation"
+    },
+    {
+        "timestamp": [
+            2319.3,
+            2325.78
+        ],
+        "text": " built in to a back-end system for many, many APIs."
+    },
+    {
+        "timestamp": [
+            2326.56,
+            2330.14
+        ],
+        "text": " So it's actually way more beneficial for them"
+    },
+    {
+        "timestamp": [
+            2330.14,
+            2333.18
+        ],
+        "text": " to build a copilot encapsulation on top"
+    },
+    {
+        "timestamp": [
+            2333.18,
+            2335.06
+        ],
+        "text": " which instantiate that backend"
+    },
+    {
+        "timestamp": [
+            2335.06,
+            2338.64
+        ],
+        "text": " instead of trying to build plugins for every single API."
+    },
+    {
+        "timestamp": [
+            2339.22,
+            2340.3
+        ],
+        "text": " And in that scenario,"
+    },
+    {
+        "timestamp": [
+            2340.54,
+            2342.56
+        ],
+        "text": " they've actually built a custom engine copilot"
+    },
+    {
+        "timestamp": [
+            2342.56,
+            2346.0
+        ],
+        "text": " which you can invoke from the copilot experience itself. And, youilot, which you can invoke from the co-pilot experience itself."
+    },
+    {
+        "timestamp": [
+            2346.0,
+            2350.0
+        ],
+        "text": " And, you know, as you can see on the video,"
+    },
+    {
+        "timestamp": [
+            2350.0,
+            2353.0
+        ],
+        "text": " once they've invoked the custom engine co-pilot"
+    },
+    {
+        "timestamp": [
+            2353.0,
+            2355.0
+        ],
+        "text": " from co-pilot experience,"
+    },
+    {
+        "timestamp": [
+            2355.0,
+            2358.0
+        ],
+        "text": " you can actually go and click into that"
+    },
+    {
+        "timestamp": [
+            2358.0,
+            2361.0
+        ],
+        "text": " and do a handoff to the immersive experience."
+    },
+    {
+        "timestamp": [
+            2361.0,
+            2363.0
+        ],
+        "text": " The immersive experience is basically..."
+    },
+    {
+        "timestamp": [
+            2363.0,
+            2366.5
+        ],
+        "text": " It goes into a dedicated experience where a user"
+    },
+    {
+        "timestamp": [
+            2366.5,
+            2372.96
+        ],
+        "text": " can chat to only the custom engine. And once they're happy with that, you know, with the chat,"
+    },
+    {
+        "timestamp": [
+            2373.06,
+            2378.74
+        ],
+        "text": " and they actually keep on prompting to, let's say, in this scenario, what they've realized is they"
+    },
+    {
+        "timestamp": [
+            2378.74,
+            2387.5
+        ],
+        "text": " want a meeting. And the prompt is being interpreted by the custom engine to call a meeting API, which, you know, they have developed,"
+    },
+    {
+        "timestamp": [
+            2387.78,
+            2390.26
+        ],
+        "text": " and they go and book that particular meeting"
+    },
+    {
+        "timestamp": [
+            2390.26,
+            2390.9
+        ],
+        "text": " in that scenario."
+    },
+    {
+        "timestamp": [
+            2393.78,
+            2396.0
+        ],
+        "text": " These custom, as we discussed before,"
+    },
+    {
+        "timestamp": [
+            2396.1,
+            2397.78
+        ],
+        "text": " these custom engine copilots can be published"
+    },
+    {
+        "timestamp": [
+            2397.78,
+            2399.64
+        ],
+        "text": " as copilot extensions, and you can have them"
+    },
+    {
+        "timestamp": [
+            2399.64,
+            2401.74
+        ],
+        "text": " both even in the immersive experience"
+    },
+    {
+        "timestamp": [
+            2401.74,
+            2405.84
+        ],
+        "text": " or in the inline copilot experience as well."
+    },
+    {
+        "timestamp": [
+            2407.46,
+            2409.88
+        ],
+        "text": " Now, I just want to call out the two sessions"
+    },
+    {
+        "timestamp": [
+            2409.88,
+            2413.7
+        ],
+        "text": " that we'll be covering these copilots after this,"
+    },
+    {
+        "timestamp": [
+            2413.8,
+            2415.16
+        ],
+        "text": " the Azure AI Studio session,"
+    },
+    {
+        "timestamp": [
+            2415.26,
+            2416.94
+        ],
+        "text": " Creating and Scaling Your Custom Copilots,"
+    },
+    {
+        "timestamp": [
+            2417.4,
+            2419.76
+        ],
+        "text": " and Build Your Own Copilot in Copilot Studio."
+    },
+    {
+        "timestamp": [
+            2421.02,
+            2428.82
+        ],
+        "text": " And if you want to dive deep on Teams AI library and how to actually go and build custom engine"
+    },
+    {
+        "timestamp": [
+            2428.82,
+            2436.28
+        ],
+        "text": " copiers with VS code, here's the session breakout 146, 320 million Teams users, how to reach"
+    },
+    {
+        "timestamp": [
+            2436.28,
+            2438.52
+        ],
+        "text": " them through Teams, go to that session."
+    },
+    {
+        "timestamp": [
+            2438.52,
+            2441.14
+        ],
+        "text": " I'll hand back to Jeremy."
+    },
+    {
+        "timestamp": [
+            2441.14,
+            2444.2
+        ],
+        "text": " Thank you, Barnum."
+    },
+    {
+        "timestamp": [
+            2444.2,
+            2448.06
+        ],
+        "text": " So hopefully today you've seen that we have choice."
+    },
+    {
+        "timestamp": [
+            2448.06,
+            2451.94
+        ],
+        "text": " We've given you choice whether you build on top of our AI platform or whether you bring"
+    },
+    {
+        "timestamp": [
+            2451.94,
+            2453.86
+        ],
+        "text": " your own."
+    },
+    {
+        "timestamp": [
+            2453.86,
+            2457.42
+        ],
+        "text": " In a lot of the AKA links at the bottom here, you'll see that we're pointing to particular"
+    },
+    {
+        "timestamp": [
+            2457.42,
+            2461.44
+        ],
+        "text": " developer center slides that the team back at base have been building to further go into"
+    },
+    {
+        "timestamp": [
+            2461.44,
+            2462.76
+        ],
+        "text": " detail about some of these decisions."
+    },
+    {
+        "timestamp": [
+            2462.76,
+            2466.0
+        ],
+        "text": " We'll continue to keep revving on those as we learn from your experiences"
+    },
+    {
+        "timestamp": [
+            2466.0,
+            2468.0
+        ],
+        "text": " in building on top of this."
+    },
+    {
+        "timestamp": [
+            2468.0,
+            2471.0
+        ],
+        "text": " I'd just like to pause to take thanks to all the partners we've been working with"
+    },
+    {
+        "timestamp": [
+            2471.0,
+            2474.0
+        ],
+        "text": " in both the private preview and the public previews"
+    },
+    {
+        "timestamp": [
+            2474.0,
+            2477.0
+        ],
+        "text": " to build these experiences and to be able to provide this type of guidance"
+    },
+    {
+        "timestamp": [
+            2477.0,
+            2479.0
+        ],
+        "text": " to you at Build this week."
+    },
+    {
+        "timestamp": [
+            2479.0,
+            2486.16
+        ],
+        "text": " Now, there is a great session that Srini is doing, 147, on Thursday at 8 a.m., at 8.30 a.m., that's going to go"
+    },
+    {
+        "timestamp": [
+            2486.16,
+            2490.16
+        ],
+        "text": " into a lot more detail. If you're a software vendor and you're wearing that hat, I'd encourage"
+    },
+    {
+        "timestamp": [
+            2490.16,
+            2494.16
+        ],
+        "text": " you to go check out that session, as well as the transferring the most valuable industry"
+    },
+    {
+        "timestamp": [
+            2494.16,
+            2497.32
+        ],
+        "text": " workflows with Copilot, which is at 3 p.m. on Thursday as well."
+    },
+    {
+        "timestamp": [
+            2499.0,
+            2510.0
+        ],
+        "text": " Now, just to recap on some of the things we've shown and what that looks like timeline-wise from roadmaps. Obviously, with Copilot Studio today, Copilot connectors are actually in public preview right"
+    },
+    {
+        "timestamp": [
+            2510.0,
+            2515.96
+        ],
+        "text": " now. The plugins that we've shown you will be available in public preview right now,"
+    },
+    {
+        "timestamp": [
+            2516.3,
+            2521.0
+        ],
+        "text": " and there is a sign-up sheet that you can go to at aka.ms slash copilot dash extensions,"
+    },
+    {
+        "timestamp": [
+            2521.62,
+            2527.9
+        ],
+        "text": " and if you fill that form out, we'll notify you when it's available to light up in your particular tenant to use Copilot Studio plugins."
+    },
+    {
+        "timestamp": [
+            2527.9,
+            2531.3
+        ],
+        "text": " And additionally, there is a private preview going on right now if you wanted to build"
+    },
+    {
+        "timestamp": [
+            2531.3,
+            2536.06
+        ],
+        "text": " your own custom engine copilots within Copilot Studio."
+    },
+    {
+        "timestamp": [
+            2536.06,
+            2539.9
+        ],
+        "text": " From a Teams toolkit and Visual Studio Code perspective, Graph connectors are generally"
+    },
+    {
+        "timestamp": [
+            2539.9,
+            2543.76
+        ],
+        "text": " available and they're available as part of the Copilot for Microsoft experience in public"
+    },
+    {
+        "timestamp": [
+            2543.76,
+            2549.16
+        ],
+        "text": " preview still. The Teams message extensions are still available right now in your attendance"
+    },
+    {
+        "timestamp": [
+            2549.16,
+            2554.28
+        ],
+        "text": " today and coming very, very soon, API plug-ins which I demonstrated backed by those open"
+    },
+    {
+        "timestamp": [
+            2554.28,
+            2560.12
+        ],
+        "text": " API documents will be available in your attendance to play with too. In addition to if you want"
+    },
+    {
+        "timestamp": [
+            2560.12,
+            2568.38
+        ],
+        "text": " to build custom engine copilots in Teams AI library, those are available right standalone, and very shortly you'll be able to have that immersive experience and that"
+    },
+    {
+        "timestamp": [
+            2568.38,
+            2573.2
+        ],
+        "text": " handoff from our co-pilot to your co-pilot in your public tenants too."
+    },
+    {
+        "timestamp": [
+            2574.72,
+            2578.12
+        ],
+        "text": " Now, there are a lot of sessions at Build that go into a lot more detail here."
+    },
+    {
+        "timestamp": [
+            2578.2,
+            2580.06
+        ],
+        "text": " Some of those we've called out in particular slides."
+    },
+    {
+        "timestamp": [
+            2580.44,
+            2583.66
+        ],
+        "text": " I'll give you a moment to take a picture of the screen that will cover those in more detail."
+    },
+    {
+        "timestamp": [
+            2590.12,
+            2590.7
+        ],
+        "text": " There is obviously the hall upstairs on the top floor where you'll be able to ask more questions to our experts in person."
+    },
+    {
+        "timestamp": [
+            2592.9,
+            2593.02
+        ],
+        "text": " And so just a big thank you for taking your time to take that photo."
+    },
+    {
+        "timestamp": [
+            2596.28,
+            2597.8
+        ],
+        "text": " And we hopefully see a lot of your faces in those breakouts moving forward."
+    },
+    {
+        "timestamp": [
+            2599.0,
+            2599.08
+        ],
+        "text": " So the time is now."
+    },
+    {
+        "timestamp": [
+            2599.92,
+            2607.68
+        ],
+        "text": " Go build, please. We'd love to see what you can do with taking Copilot for Microsoft 365, an AI platform or your AI platform, and helping users be more productive."
+    },
+    {
+        "timestamp": [
+            2608.18,
+            2610.26
+        ],
+        "text": " Thank you again for your time today and enjoy the rest of Build."
+    },
+    {
+        "timestamp": [
+            2611.7,
+            null
+        ],
+        "text": " Thanks, Adam. you you you"
+    }
+]

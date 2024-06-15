@@ -1,0 +1,620 @@
+[SPEAKER_00] : [(00:00:00.000, 00:00:23.660)] :  All right, everybody. Welcome, welcome, welcome, welcome. First breakout of Build. I'm Barnum Bora, and I lead the developer advocacy team for Microsoft 365 and Copilot Platform.
+[SPEAKER_00] : [(00:00:23.660, 00:00:24.340)] :  advocacy team for Microsoft 365 and Copilot platform.
+[SPEAKER_00] : [(00:00:27.920, 00:00:28.120)] :  But without further ado, before I come back and do more things,
+[SPEAKER_00] : [(00:00:31.980, 00:00:36.160)] :  I'm going to hand off to my good friend Jeremy Thake, and he's going to walk you through the first half of this session. Thanks, Barno. I appreciate it. And thank you for coming to Build.
+[SPEAKER_01] : [(00:00:37.960, 00:00:40.280)] :  So I'm Jeremy Thake. I'm a
+[SPEAKER_01] : [(00:00:40.280, 00:00:44.100)] :  principal program manager in the Copilot developer experience team. And a slight
+[SPEAKER_01] : [(00:00:44.100, 00:00:46.340)] :  plug, you may have heard my voice before.
+[SPEAKER_01] : [(00:00:46.340, 00:00:49.940)] :  I've run a developer podcast on Microsoft 365 for the last ten years.
+[SPEAKER_01] : [(00:00:49.940, 00:00:52.060)] :  And we've just rebooted the show this week.
+[SPEAKER_01] : [(00:00:52.060, 00:00:55.700)] :  So if you haven't checked it out, please go on our podcasting apps of choice and download
+[SPEAKER_01] : [(00:00:55.700, 00:00:57.780)] :  the latest episode.
+[SPEAKER_01] : [(00:00:57.780, 00:01:00.520)] :  So you're going to see a lot about Copilot this week.
+[SPEAKER_01] : [(00:01:00.520, 00:01:07.940)] :  I believe there may be some drinking games going on on how many times we mention copilot in a particular session. So copilot, copilot, copilot, copilot. There we go. We
+[SPEAKER_01] : [(00:01:07.940, 00:01:12.840)] :  get that out of the way. You would have seen this slide in the keynote.
+[SPEAKER_01] : [(00:01:12.840, 00:01:16.980)] :  And I think it's just worth just revisiting it with a different flavor to it. Essentially
+[SPEAKER_01] : [(00:01:16.980, 00:01:28.100)] :  when we think about copilot for Microsoft 365, not only do you get access to all of the web information out there if you choose to turn the toggle on, but you also most importantly get access to all that graph data.
+[SPEAKER_01] : [(00:01:28.100, 00:01:31.680)] :  And I've worked with the Microsoft Graph for a long time and we have some of the founders
+[SPEAKER_01] : [(00:01:31.680, 00:01:33.620)] :  of the Graph sitting at the front here.
+[SPEAKER_01] : [(00:01:33.620, 00:01:39.280)] :  And it really empowers how Copilot works from a product perspective for users.
+[SPEAKER_01] : [(00:01:39.280, 00:01:46.180)] :  Now the nice thing is that can be done and used within the application context of Teams, Office.com, Windows, Edge,
+[SPEAKER_01] : [(00:01:46.180, 00:01:50.660)] :  and you can make those queries all in that case not only with the web search but with
+[SPEAKER_01] : [(00:01:50.660, 00:01:57.180)] :  that M365 data, whether it's files, mail, calendar, contacts, wherever it's Teams conversations,
+[SPEAKER_01] : [(00:01:57.180, 00:01:59.420)] :  and a lot more to come in the future.
+[SPEAKER_01] : [(00:01:59.420, 00:02:04.600)] :  And you as developers, whether you're makers or pro code developers, can extend both the
+[SPEAKER_01] : [(00:02:04.600, 00:02:05.160)] :  Microsoft Graph and the application context to make that experience even better for your developers, whether you're makers or pro code developers, can extend both the Microsoft
+[SPEAKER_01] : [(00:02:05.160, 00:02:09.180)] :  Graph and the application context to make that experience even better for your users
+[SPEAKER_01] : [(00:02:09.180, 00:02:11.500)] :  inside of Microsoft 365.
+[SPEAKER_01] : [(00:02:11.500, 00:02:17.060)] :  Now, there are lots of opportunity inside of Microsoft 365.
+[SPEAKER_01] : [(00:02:17.060, 00:02:21.660)] :  And one thing I wanted to recall was essentially that we have lots of customers in common,
+[SPEAKER_01] : [(00:02:21.660, 00:02:29.100)] :  whether you're a software vendor or a customer that are using our products because they trust it and they trust our partners with how we can extend our platforms.
+[SPEAKER_01] : [(00:02:30.240, 00:02:34.880)] :  And additionally to that, one of the things that's going to become very, very clear to
+[SPEAKER_01] : [(00:02:34.880, 00:02:36.820)] :  you today is we're giving you a lot of choice.
+[SPEAKER_01] : [(00:02:37.380, 00:02:42.160)] :  You can either build on top of our AI platform or you can bring your own AI platform into
+[SPEAKER_01] : [(00:02:42.160, 00:02:43.100)] :  ours and extend it.
+[SPEAKER_01] : [(00:02:43.660, 00:02:47.880)] :  Now, users are really used to accessing not only M365 data
+[SPEAKER_01] : [(00:02:47.880, 00:02:51.220)] :  within our products, but also accessing your other systems,
+[SPEAKER_01] : [(00:02:51.220, 00:02:53.600)] :  whether you're a software vendor with a SaaS company,
+[SPEAKER_01] : [(00:02:53.600, 00:02:55.600)] :  or whether you've got your internal systems, maybe
+[SPEAKER_01] : [(00:02:55.600, 00:02:57.560)] :  on-premises systems, that you want to bring up
+[SPEAKER_01] : [(00:02:57.560, 00:03:00.480)] :  into that Microsoft 365 experience.
+[SPEAKER_01] : [(00:03:00.480, 00:03:02.280)] :  Now, we've mentioned numbers in the past,
+[SPEAKER_01] : [(00:03:02.280, 00:03:04.320)] :  but there's a tremendous amount of reach
+[SPEAKER_01] : [(00:03:04.320, 00:03:07.280)] :  with Microsoft Teams and other products that you're familiar with within our suite.
+[SPEAKER_01] : [(00:03:07.880, 00:03:19.580)] :  And the opportunity of having 320 million users of Teams every month is a real huge opportunity for you to build on top of and be part of this experience we have now, especially with lighting up artificial intelligence inside of it.
+[SPEAKER_01] : [(00:03:20.980, 00:03:25.240)] :  Not only can you summarize that information that comes through with M365 data with your
+[SPEAKER_01] : [(00:03:25.240, 00:03:28.320)] :  system data, but now you can actually act on it.
+[SPEAKER_01] : [(00:03:28.320, 00:03:31.120)] :  And you would have seen some of that in the keynote this morning, and we'll show you some
+[SPEAKER_01] : [(00:03:31.120, 00:03:35.220)] :  more demos today from some of our partners that are highlighting how you can act on data
+[SPEAKER_01] : [(00:03:35.220, 00:03:37.740)] :  as well as summarize.
+[SPEAKER_01] : [(00:03:37.740, 00:03:41.300)] :  And obviously, as Jeff mentioned, we have a huge ecosystem there that you can be a part
+[SPEAKER_01] : [(00:03:41.300, 00:03:49.320)] :  of where you can bring and expand your customer base as a software vendor and also from a private store have your own users within your organization
+[SPEAKER_01] : [(00:03:49.320, 00:03:56.900)] :  be available and see what solutions they can use within their own Microsoft 365 hubs.
+[SPEAKER_01] : [(00:03:56.900, 00:04:01.180)] :  Now as I've mentioned before, whether you're a maker in Copilot Studio or whether you're
+[SPEAKER_01] : [(00:04:01.180, 00:04:05.380)] :  a Pro Code developer in Visual Studio Code using Teams toolkit, we have choices
+[SPEAKER_01] : [(00:04:05.380, 00:04:08.380)] :  for you today.
+[SPEAKER_01] : [(00:04:08.380, 00:04:13.540)] :  And I think what I wanted to do was basically ground what we mean by the AI platform with
+[SPEAKER_01] : [(00:04:13.540, 00:04:18.640)] :  inside of Copilot for Microsoft 365.
+[SPEAKER_01] : [(00:04:18.640, 00:04:21.640)] :  Now you would be familiar with some terms that have been going on in the industry.
+[SPEAKER_01] : [(00:04:21.640, 00:04:29.980)] :  And I've been working in this space now for nearly two years, both in the internal builds before we announced at Build last year, and
+[SPEAKER_01] : [(00:04:29.980, 00:04:33.020)] :  some of the terms I just wanted to recapture with you just so you understand how we're
+[SPEAKER_01] : [(00:04:33.020, 00:04:36.960)] :  talking about them in terms of the different choices you have.
+[SPEAKER_01] : [(00:04:36.960, 00:04:43.260)] :  So as a first example here, when we talk about foundational models, that's kind of the base
+[SPEAKER_01] : [(00:04:43.260, 00:04:47.940)] :  that Kevin Scott would have talked about in the keynote this morning of which large language models you are using
+[SPEAKER_01] : [(00:04:47.940, 00:04:52.180)] :  or small language models you are using inside of your copilot.
+[SPEAKER_01] : [(00:04:52.180, 00:04:53.820)] :  And the orchestrator is really the brains.
+[SPEAKER_01] : [(00:04:53.820, 00:04:57.000)] :  That's the thing that takes all the data at the top of the stack and brings it to the
+[SPEAKER_01] : [(00:04:57.000, 00:05:01.060)] :  large language model to then understand what it does with it and how it responds to the
+[SPEAKER_01] : [(00:05:01.060, 00:05:09.720)] :  user, and then the orchestrator throws that back up to the user in our user experience. And the key thing is by default the orchestrator has access to this knowledge
+[SPEAKER_01] : [(00:05:09.720, 00:05:17.000)] :  and that knowledge is the M365 data that's inside of that Microsoft Graph.
+[SPEAKER_01] : [(00:05:17.000, 00:05:21.440)] :  But what we're seeing with AI platforms is this notion of triggers. And triggers is that
+[SPEAKER_01] : [(00:05:21.440, 00:05:28.220)] :  concept of being able to proactively reach out to your user through that copilot to do certain things based on events happening in other systems.
+[SPEAKER_01] : [(00:05:28.760, 00:05:34.120)] :  You'd see this traditionally in things like how we use webhooks or change notifications in the graph.
+[SPEAKER_01] : [(00:05:34.320, 00:05:40.400)] :  But now we're bringing that triggers concept in the concept of how we use Microsoft 365 copilot and other AI platforms.
+[SPEAKER_01] : [(00:05:42.080, 00:05:45.500)] :  And then alongside knowledge as a way to get access to information, we have
+[SPEAKER_01] : [(00:05:45.500, 00:05:51.300)] :  this notion of actions. And actions is all about calling out to external systems outside
+[SPEAKER_01] : [(00:05:51.300, 00:05:56.100)] :  of the knowledge that the orchestrator has access to to get information from other systems.
+[SPEAKER_01] : [(00:05:56.100, 00:05:59.880)] :  And these are federated API calls, whether I'm using the semantic kernel, whether I'm
+[SPEAKER_01] : [(00:05:59.880, 00:06:06.680)] :  using Copart for Microsoft 365 or any other BYO AI platform stack you're bringing.
+[SPEAKER_01] : [(00:06:11.320, 00:06:12.460)] :  And what we've seen very, very early on with AI is that you like to tailor what that large language model can do.
+[SPEAKER_01] : [(00:06:13.180, 00:06:16.540)] :  And so some of the things we've announced today essentially allow you to bring your
+[SPEAKER_01] : [(00:06:16.540, 00:06:21.100)] :  own instructions to tailor how a large language model and how the Copilot user experience
+[SPEAKER_01] : [(00:06:21.100, 00:06:23.900)] :  works to customize it for the user scenarios you have.
+[SPEAKER_01] : [(00:06:23.940, 00:06:27.500)] :  And the demos will show, will bring this into account.
+[SPEAKER_01] : [(00:06:27.500, 00:06:32.220)] :  Now the reason I'm explaining this stack is for this next build, which is essentially
+[SPEAKER_01] : [(00:06:32.220, 00:06:37.120)] :  that with those choices, there are a few ways, a few paths you can take.
+[SPEAKER_01] : [(00:06:37.120, 00:06:42.340)] :  Now naturally when we talk about M365 and we talk about copilot for Microsoft 365, we
+[SPEAKER_01] : [(00:06:42.340, 00:06:52.640)] :  have the identity of the user that's logged into Teams or into the Microsoft 365 app or the Copilot.Microsoft.com web application. We're using our own foundational
+[SPEAKER_01] : [(00:06:52.640, 00:06:56.620)] :  model in that instance and we have our own orchestrator which you've heard Kevin Stott
+[SPEAKER_01] : [(00:06:56.620, 00:07:01.660)] :  talk about from a Sydney perspective. And the knowledge is Microsoft Graph knowledge,
+[SPEAKER_01] : [(00:07:01.660, 00:07:10.500)] :  but you can bring your own data into it. And we provide this copilot across all the different Microsoft 365 hubs.
+[SPEAKER_01] : [(00:07:10.500, 00:07:15.160)] :  So our first choice that you can pick from is Graph Connectors.
+[SPEAKER_01] : [(00:07:15.160, 00:07:20.100)] :  And effectively what Graph Connectors do is bring additional semantic grounding directly
+[SPEAKER_01] : [(00:07:20.100, 00:07:24.660)] :  into the Microsoft Graph that the orchestrator has access to.
+[SPEAKER_01] : [(00:07:24.660, 00:07:28.940)] :  And the important part with this is that you can put all of that knowledge directly in
+[SPEAKER_01] : [(00:07:28.940, 00:07:31.120)] :  there for the orchestrator to query.
+[SPEAKER_01] : [(00:07:31.120, 00:07:34.900)] :  And that brings some scenarios that are very, very different from some of the other choices
+[SPEAKER_01] : [(00:07:34.900, 00:07:37.820)] :  that we offer on the table.
+[SPEAKER_01] : [(00:07:37.820, 00:07:41.580)] :  As an example, when we talk about plug-ins, which is that second choice, again, both of
+[SPEAKER_01] : [(00:07:41.580, 00:07:49.000)] :  these we announced at Build last year in public preview. Plug-ins are actually doing an action. They're calling out to a system via an API
+[SPEAKER_01] : [(00:07:49.000, 00:07:54.640)] :  or a bot command. And so they're not part of the knowledge stack within the AI platform.
+[SPEAKER_01] : [(00:07:54.640, 00:07:59.280)] :  They're a little bit higher up. And that provides different alternatives and different pros
+[SPEAKER_01] : [(00:07:59.280, 00:08:03.260)] :  and cons that we'll talk about as part of this session.
+[SPEAKER_01] : [(00:08:03.260, 00:08:10.860)] :  What we announced new today is what we call declarative coilots. And a declarative copilot allows you to provide those custom work instructions
+[SPEAKER_01] : [(00:08:10.860, 00:08:16.400)] :  to really tailor how your large language model works. And the nice thing about a declarative
+[SPEAKER_01] : [(00:08:16.400, 00:08:22.120)] :  copilot is you can bring both plug-ins and graph connectors and bundle those in a declarative
+[SPEAKER_01] : [(00:08:22.120, 00:08:26.000)] :  copilot alongside those custom workflow instructions.
+[SPEAKER_01] : [(00:08:26.000, 00:08:30.700)] :  Now, all of these choices are on top of our stack.
+[SPEAKER_01] : [(00:08:30.700, 00:08:33.600)] :  They're on our AI platform.
+[SPEAKER_01] : [(00:08:33.600, 00:08:37.740)] :  But we know from talking to customers for the last two years on this stuff that you're
+[SPEAKER_01] : [(00:08:37.740, 00:08:42.960)] :  also investigating your own AI platforms and you've asked for the ability to bring those
+[SPEAKER_01] : [(00:08:42.960, 00:08:48.400)] :  AI platforms within our experiences alongside what we offer on top of their own stack.
+[SPEAKER_01] : [(00:08:48.400, 00:08:54.080)] :  And so in this case, with what we call custom engine co-pilots, you have the ability to
+[SPEAKER_01] : [(00:08:54.080, 00:08:56.680)] :  essentially BYO.
+[SPEAKER_01] : [(00:08:56.680, 00:09:00.320)] :  And the benefit of this notion of bring your own is that not only can you be part of our
+[SPEAKER_01] : [(00:09:00.320, 00:09:05.760)] :  user experience, you can also be part of your own user experience with the same
+[SPEAKER_01] : [(00:09:05.760, 00:09:10.320)] :  I.I. platform. And so today we're going to walk through all of these different options
+[SPEAKER_01] : [(00:09:10.320, 00:09:15.600)] :  and choices so that you understand not at a visual level that we saw in the keynote
+[SPEAKER_01] : [(00:09:15.600, 00:09:19.240)] :  but in a decision process as a maker or developer right now on what you should be doing this
+[SPEAKER_01] : [(00:09:19.240, 00:09:28.780)] :  week. So let's start with Graph Connectors. Graph Connectors, as I say, have been around for
+[SPEAKER_01] : [(00:09:28.780, 00:09:33.140)] :  about four years in the platform. And obviously with Copilot, we realized we had a really
+[SPEAKER_01] : [(00:09:33.140, 00:09:37.400)] :  good shoe-in ramp to take the existing Graph Connectors we have, the power of Microsoft
+[SPEAKER_01] : [(00:09:37.400, 00:09:43.600)] :  Search, and take advantage of those as knowledge with the inside of Copilot for Microsoft 365.
+[SPEAKER_01] : [(00:09:43.600, 00:09:49.040)] :  Now you've just seen Rajesh on stage announce Copilot connectors as an overarching term.
+[SPEAKER_01] : [(00:09:49.040, 00:09:53.020)] :  Now one piece of clarity I want to bring to the table here is that the Microsoft Graph
+[SPEAKER_01] : [(00:09:53.020, 00:09:59.240)] :  connectors are the only connectors that bring the information directly into the knowledge
+[SPEAKER_01] : [(00:09:59.240, 00:10:01.400)] :  part of the stack.
+[SPEAKER_01] : [(00:10:01.400, 00:10:04.780)] :  All of the Copilot Studio connectors that you can see on the right-hand side of this
+[SPEAKER_01] : [(00:10:04.780, 00:10:09.120)] :  slide are actually plug-ins. They're wrapped plug-ins from existing technology
+[SPEAKER_01] : [(00:10:09.120, 00:10:14.480)] :  we have in the Power Platform stack, whether they're Power Platform connectors, flows,
+[SPEAKER_01] : [(00:10:14.480, 00:10:19.620)] :  Dataverse connectors or Microsoft Fabric connectors. And so there's a little difference between
+[SPEAKER_01] : [(00:10:19.620, 00:10:24.500)] :  when you're picking those copilot studio connectors versus this Graph connector which gets straight
+[SPEAKER_01] : [(00:10:24.500, 00:10:29.300)] :  into that knowledge of the stack. Now, one of the main benefits that people
+[SPEAKER_01] : [(00:10:29.300, 00:10:34.920)] :  pick Graph connectors as their choice is that effectively when you push that data into the
+[SPEAKER_01] : [(00:10:34.920, 00:10:39.360)] :  Microsoft Graph, it's in the index of the Microsoft Graph, whenever the orchestrator
+[SPEAKER_01] : [(00:10:39.360, 00:10:44.960)] :  uses a prompt like can you give me guidance on operational efficiency, the orchestrator
+[SPEAKER_01] : [(00:10:44.960, 00:10:45.640)] :  is never having
+[SPEAKER_01] : [(00:10:45.640, 00:10:50.720)] :  to call anything outside the Microsoft boundary because a graph connector is pushing that
+[SPEAKER_01] : [(00:10:50.720, 00:10:55.240)] :  content into Microsoft Graph. Your system is pushing information into the Microsoft
+[SPEAKER_01] : [(00:10:55.240, 00:11:00.040)] :  Graph and there's never any calls that come outside.
+[SPEAKER_01] : [(00:11:00.040, 00:11:08.780)] :  Now where do graph connectors make the most sense? Like most search indexes, unstructured data is really where it sings.
+[SPEAKER_01] : [(00:11:08.780, 00:11:13.460)] :  Anything you can take a bunch of information and flatten it into a JSON file or plain text
+[SPEAKER_01] : [(00:11:13.460, 00:11:17.060)] :  file and throw that through the Microsoft Graph to get it in our index is really where
+[SPEAKER_01] : [(00:11:17.060, 00:11:19.560)] :  it's going to make most sense.
+[SPEAKER_01] : [(00:11:19.560, 00:11:24.240)] :  And large language models do a really good job of taking that flattened content and using
+[SPEAKER_01] : [(00:11:24.240, 00:11:25.240)] :  it in summarization.
+[SPEAKER_01] : [(00:11:25.240, 00:11:28.880)] :  You'll see that in some of the partner demos we'll show today.
+[SPEAKER_01] : [(00:11:28.880, 00:11:34.800)] :  Now the beauty of this, in my opinion, is that you don't have to plan much about what
+[SPEAKER_01] : [(00:11:34.800, 00:11:37.800)] :  prompts you think your users are going to go do.
+[SPEAKER_01] : [(00:11:37.800, 00:11:42.760)] :  Because if you're indexing the entire page, much like a Copilot index is a public website,
+[SPEAKER_01] : [(00:11:42.760, 00:11:45.420)] :  you can ask it questions in all different ways because
+[SPEAKER_01] : [(00:11:45.420, 00:11:48.180)] :  it's indexing that into a vector database.
+[SPEAKER_01] : [(00:11:48.180, 00:11:51.160)] :  And so I can get quite random prompts that I can ask.
+[SPEAKER_01] : [(00:11:51.160, 00:11:55.440)] :  And as long as the answer is in the page, most likely the orchestrator and the copilot
+[SPEAKER_01] : [(00:11:55.440, 00:11:59.220)] :  is going to work together to make sure that it can find that answer and respond to that
+[SPEAKER_01] : [(00:11:59.220, 00:12:00.220)] :  user.
+[SPEAKER_01] : [(00:12:00.220, 00:12:04.720)] :  So the notion of unpredictable prompts on large sets of information that's unstructured
+[SPEAKER_01] : [(00:12:04.720, 00:12:07.680)] :  is really, really valuable when it comes to graph connectors.
+[SPEAKER_01] : [(00:12:07.680, 00:12:12.320)] :  A thing to call out is obviously the fact that it's punching things into the index in
+[SPEAKER_01] : [(00:12:12.320, 00:12:17.960)] :  the Microsoft graph means that from a scalability perspective and us defending our API and our
+[SPEAKER_01] : [(00:12:17.960, 00:12:23.200)] :  service quality, we can't really have you indexing systems that are very high throughput,
+[SPEAKER_01] : [(00:12:23.200, 00:12:25.240)] :  very high transactions.
+[SPEAKER_01] : [(00:12:25.240, 00:12:30.620)] :  And so we look for systems in this place that are more low activity updated items.
+[SPEAKER_01] : [(00:12:30.620, 00:12:34.700)] :  And so good candidates for that for the Graph Connectors are things like document repositories.
+[SPEAKER_01] : [(00:12:34.700, 00:12:38.440)] :  They could be other SaaS providers that you use within your organization or you could
+[SPEAKER_01] : [(00:12:38.440, 00:12:41.760)] :  be the vendor that's running those document repositories.
+[SPEAKER_01] : [(00:12:41.760, 00:12:45.120)] :  It could be a knowledge base that's running in the cloud like a wiki.
+[SPEAKER_01] : [(00:12:45.120, 00:12:50.760)] :  You could be on a public website or an internal website. It could be also content management
+[SPEAKER_01] : [(00:12:50.760, 00:12:54.380)] :  systems that you're running for your intranet that might not be SharePoint. You've chosen
+[SPEAKER_01] : [(00:12:54.380, 00:12:58.480)] :  to use another product in the ecosystem. All of these things are really good candidates
+[SPEAKER_01] : [(00:12:58.480, 00:13:02.560)] :  for being put through as an index for Graph Connectors.
+[SPEAKER_01] : [(00:13:02.560, 00:13:05.840)] :  Now this first demo is from a partner called Tiger Hall. And Tiger
+[SPEAKER_01] : [(00:13:05.840, 00:13:10.900)] :  Hall has been working with us in private preview for a while. And this demo is a really good
+[SPEAKER_01] : [(00:13:10.900, 00:13:16.180)] :  explanation of how things work in Copilot. They've indexed videos and they've indexed
+[SPEAKER_01] : [(00:13:16.180, 00:13:19.900)] :  their articles that they store within their own product. And essentially what you'll see
+[SPEAKER_01] : [(00:13:19.900, 00:13:25.340)] :  here is the user is asked about how he can be more strategic. And that video has actually
+[SPEAKER_01] : [(00:13:25.340, 00:13:31.140)] :  been replayed, clicked on, launches in Teams. The user never leaves the flow of the work.
+[SPEAKER_01] : [(00:13:31.140, 00:13:36.700)] :  But as another example here with what is operational scalability, you'll notice that it's giving
+[SPEAKER_01] : [(00:13:36.700, 00:13:42.280)] :  nice long form responses and I have the ability to launch the article directly inside of Tiger
+[SPEAKER_01] : [(00:13:42.280, 00:13:50.520)] :  Hall. These are both really good examples of how you can get content into Graph Connectors, into the Microsoft Graph, and then just immediately
+[SPEAKER_01] : [(00:13:50.520, 00:13:55.700)] :  start prompts without having to app mention plug-ins or launch your declarative copilots,
+[SPEAKER_01] : [(00:13:55.700, 00:13:59.780)] :  which we'll see in a moment, and just have that knowledge available to that copilot in
+[SPEAKER_01] : [(00:13:59.780, 00:14:05.880)] :  that way. This is a great way of connecting your business information directly into M365.
+[SPEAKER_01] : [(00:14:09.440, 00:14:15.880)] :  Now, if I go over to some code just to show you how you can get started as a developer here, I'm just going to switch over to my machine. You'll see I have some code on the
+[SPEAKER_01] : [(00:14:15.880, 00:14:30.140)] :  screen. No, you don't. There we go. And this sample is available online. Essentially, if you have Teams Talk installed on your machine, there is a sample section
+[SPEAKER_01] : [(00:14:30.140, 00:14:32.520)] :  where you can search for Graph Connectors.
+[SPEAKER_01] : [(00:14:32.520, 00:14:37.180)] :  And this one is called the ingest custom API data into Microsoft 365.
+[SPEAKER_01] : [(00:14:37.180, 00:14:41.240)] :  There's a great read me on how you get started with this inside of your own Microsoft 365
+[SPEAKER_01] : [(00:14:41.240, 00:14:42.240)] :  tenant.
+[SPEAKER_01] : [(00:14:42.240, 00:14:45.160)] :  And the one thing I wanted to call out here is that if you've already used
+[SPEAKER_01] : [(00:14:45.160, 00:14:50.340)] :  the Microsoft Graph APIs and you've used our SDKs, this is going to become smooth sailing for you.
+[SPEAKER_01] : [(00:14:51.300, 00:14:55.160)] :  Effectively, you're providing a schema of what your indexed item looks like.
+[SPEAKER_01] : [(00:14:55.660, 00:15:00.880)] :  You can have custom properties to really tie in and tune in what that search experience looks like.
+[SPEAKER_01] : [(00:15:01.860, 00:15:05.000)] :  And then you can provide the level of the content here. And in this example,
+[SPEAKER_01] : [(00:15:05.000, 00:15:08.500)] :  we're very straightforward with the content is just the product name. But you can imagine
+[SPEAKER_01] : [(00:15:08.500, 00:15:13.160)] :  that being the body of the entire article so that the knowledge is very deep inside
+[SPEAKER_01] : [(00:15:13.160, 00:15:18.680)] :  of that experience. Now, what does that look like with inside of Microsoft 365? If you're
+[SPEAKER_01] : [(00:15:18.680, 00:15:23.500)] :  a search admin or you're a global admin on a developer tenant like I am where you can
+[SPEAKER_01] : [(00:15:23.500, 00:15:25.500)] :  do all sorts of trouble.
+[SPEAKER_01] : [(00:15:25.500, 00:15:28.500)] :  You'll see in the Search Intelligence Center that they list all of the different Graph
+[SPEAKER_01] : [(00:15:28.500, 00:15:30.200)] :  Connectors that have been deployed.
+[SPEAKER_01] : [(00:15:30.200, 00:15:35.560)] :  And you'll be able to see here we've indexed 50 items inside of that connected content.
+[SPEAKER_01] : [(00:15:35.560, 00:15:42.640)] :  Now, the beauty of this is that that shows up in Microsoft Search.
+[SPEAKER_01] : [(00:15:42.640, 00:15:46.740)] :  And so we can search for under the Graph graph connector vertical there or even the all bucket.
+[SPEAKER_01] : [(00:15:47.260, 00:15:50.420)] :  And that will list all the different chocolate that we've indexed inside there.
+[SPEAKER_01] : [(00:15:50.500, 00:15:54.500)] :  And you can have adaptive cards to control exactly how that renders in Microsoft Search.
+[SPEAKER_01] : [(00:15:54.560, 00:15:57.600)] :  And that technology has been in our platform for a long time now, generally available.
+[SPEAKER_01] : [(00:15:58.720, 00:16:01.840)] :  But in addition to that, we can start making queries there.
+[SPEAKER_01] : [(00:16:01.840, 00:16:04.520)] :  Like what countries is dairy milk sold in?
+[SPEAKER_01] : [(00:16:08.380, 00:16:08.900)] :  And you'll see that it's given a citation here of the World Open Food Facts.
+[SPEAKER_01] : [(00:16:14.660, 00:16:18.520)] :  And if I launch that there, what you'll see is that that's given me the information about dairy milk. And it's essentially not only have we injected the properties directly into the page,
+[SPEAKER_01] : [(00:16:18.580, 00:16:22.140)] :  but it's using the whole scraped page of that as well to make those answers.
+[SPEAKER_01] : [(00:16:22.760, 00:16:31.320)] :  So just a quick example of how you can use a graph connector to pull information through. And, again, just use the Teams toolkit and
+[SPEAKER_01] : [(00:16:31.320, 00:16:37.240)] :  that sample in there to get that going. So that was graph connectors.
+[SPEAKER_01] : [(00:16:37.240, 00:16:46.340)] :  Now, with that, with plug-ins, essentially what we announced last year at Build was message extensions.
+[SPEAKER_01] : [(00:16:46.340, 00:16:51.760)] :  And again, much like Graph Connectors, we wanted to provide a ramp for existing people
+[SPEAKER_01] : [(00:16:51.760, 00:16:55.000)] :  in our ecosystem that have been building extensions for Teams.
+[SPEAKER_01] : [(00:16:55.000, 00:16:56.600)] :  And so those are still supported.
+[SPEAKER_01] : [(00:16:56.600, 00:16:58.660)] :  They're still in public preview.
+[SPEAKER_01] : [(00:16:58.660, 00:17:03.480)] :  But we've announced today with API plug-ins that we wanted to give a little bit more direct
+[SPEAKER_01] : [(00:17:03.480, 00:17:09.880)] :  control of how you can connect to APIs. Message extensions are great if you're in the Teams ecosystem world
+[SPEAKER_01] : [(00:17:09.880, 00:17:14.240)] :  and you want to have things work in Teams chats and have those adaptive calls inject
+[SPEAKER_01] : [(00:17:14.240, 00:17:19.860)] :  straight into concepts and Copilot can call those same bot framework commands. But we
+[SPEAKER_01] : [(00:17:19.860, 00:17:23.500)] :  had a lot of feedback in the last year that we want developers wanted just to have that
+[SPEAKER_01] : [(00:17:23.500, 00:17:29.720)] :  mapping of, look, I've got an open API document with a description of my API and I want our copilot
+[SPEAKER_01] : [(00:17:29.720, 00:17:34.180)] :  to look with its orchestrator and see this plug-in matches, here are the functions that
+[SPEAKER_01] : [(00:17:34.180, 00:17:38.580)] :  make sense for me to call to try and get the answer and let the large language model make
+[SPEAKER_01] : [(00:17:38.580, 00:17:45.100)] :  a decision on whether it should use that particular response from this particular plugin.
+[SPEAKER_01] : [(00:17:45.100, 00:17:49.440)] :  And then the third option, which we announced in November at Ignite, was Copilot Studio
+[SPEAKER_01] : [(00:17:49.440, 00:17:54.420)] :  plugins. Today I'm going to focus on API plugins, and there's some great sessions that will
+[SPEAKER_01] : [(00:17:54.420, 00:17:58.380)] :  go into a lot more depth around the other ways you can do things.
+[SPEAKER_01] : [(00:17:58.380, 00:18:03.680)] :  So if we look at plugins, the difference here, if you notice on the screen, is that API plugins
+[SPEAKER_01] : [(00:18:03.680, 00:18:08.580)] :  leave the Microsoft 365 boundary because it's calling an API that isn't hosted inside of Microsoft 365.
+[SPEAKER_01] : [(00:18:09.260, 00:18:13.420)] :  So that's a choice you have to make by using plugins in this platform.
+[SPEAKER_01] : [(00:18:14.800, 00:18:20.820)] :  Now, plugins are really good for real-time data, and especially so for highly relational data.
+[SPEAKER_01] : [(00:18:21.100, 00:18:24.160)] :  We mentioned with Graph Connectors, you have to flatten that data to put it in the index.
+[SPEAKER_01] : [(00:18:23.640, 00:18:28.600)] :  relational data. We mentioned with Graph Connectors you have to flatten that data to put it in the index. With high relational data, the API, you can build the shapes of your API,
+[SPEAKER_01] : [(00:18:28.740, 00:18:33.080)] :  what parameters you need to be able to get at that highly relational data. With Graph
+[SPEAKER_01] : [(00:18:33.080, 00:18:39.220)] :  Connectors we do have some limits on how much items you can index inside of Microsoft Graph.
+[SPEAKER_01] : [(00:18:39.220, 00:18:43.380)] :  And so if you're dealing with systems that are larger than those limits, then plug-ins
+[SPEAKER_01] : [(00:18:43.380, 00:18:49.560)] :  are going to be the best place for you. Plug-ins really rely on you understanding the precision of the
+[SPEAKER_01] : [(00:18:49.560, 00:18:54.120)] :  prompts your user is going to ask. Show me the latest issues I'm assigned to. Show me
+[SPEAKER_01] : [(00:18:54.120, 00:18:58.640)] :  the projects that I'm assigned to. What are the latest orders that have been reached into
+[SPEAKER_01] : [(00:18:58.640, 00:19:05.740)] :  the system? And the nice thing about plug-ins is as well as being able to summarize the data that you
+[SPEAKER_01] : [(00:19:05.740, 00:19:09.160)] :  can reach out to through those APIs, you can also do actions on it.
+[SPEAKER_01] : [(00:19:09.160, 00:19:13.800)] :  And you saw in Jeff's keynote this ability to go and update the system and confirming
+[SPEAKER_01] : [(00:19:13.800, 00:19:16.180)] :  with Copilot you want to do that update.
+[SPEAKER_01] : [(00:19:16.180, 00:19:20.120)] :  And obviously if you've already got an API in your system, all you have to do is wrap
+[SPEAKER_01] : [(00:19:20.120, 00:19:26.000)] :  that in an open API document, provide a plug-in manifest, and you're off To the races deploying that in your environment.
+[SPEAKER_01] : [(00:19:26.000, 00:19:30.000)] :  It's a good way to get started if you have an api with a good
+[SPEAKER_01] : [(00:19:30.000, 00:19:33.000)] :  Set of crud capabilities on it. Create, read, update, delete.
+[SPEAKER_01] : [(00:19:33.000, 00:19:36.000)] :  Good candidates for plug-ins, as you would expect, all the
+[SPEAKER_01] : [(00:19:36.000, 00:19:40.000)] :  Large enterprise systems that have transactional data or are
+[SPEAKER_01] : [(00:19:40.000, 00:19:43.000)] :  Dealing with customers and the frequency of the items being
+[SPEAKER_01] : [(00:19:43.000, 00:19:48.420)] :  Updated is very, very high. If you have these within your experience or you're a vendor that owns a system like this,
+[SPEAKER_01] : [(00:19:48.780, 00:19:50.200)] :  plugins is going to be a good fit for you.
+[SPEAKER_01] : [(00:19:52.940, 00:19:56.220)] :  Now there are two ways you can build plugins as has been mentioned before.
+[SPEAKER_01] : [(00:19:56.620, 00:20:00.580)] :  First is Copilot Studio and then there is Teams Toolkit and Visual Studio Code.
+[SPEAKER_01] : [(00:20:01.760, 00:20:08.000)] :  If you're familiar with low code, if you've used Power Apps, Power Platform,
+[SPEAKER_01] : [(00:20:08.000, 00:20:12.180)] :  Power Automate, Power Connect, Power Platform connectors, then Copilot Studio is probably
+[SPEAKER_01] : [(00:20:12.180, 00:20:15.180)] :  the best place for you to start because you can take advantage of those things and wrap
+[SPEAKER_01] : [(00:20:15.180, 00:20:20.500)] :  those in plug-ins and deploy them into Copilot. It is a rapid developer environment. And another
+[SPEAKER_01] : [(00:20:20.500, 00:20:25.780)] :  benefit of Copilot Studio is that it's managed infrastructure on your behalf.
+[SPEAKER_01] : [(00:20:33.940, 00:20:34.400)] :  Now, with Teams Toolkit, if you're familiar with managed code, you've written C Sharp, you've written JavaScript, TypeScript, Teams Toolkit is going to be a better spot for you.
+[SPEAKER_01] : [(00:20:42.580, 00:20:48.000)] :  If you've built existing Teams app in Teams Toolkit, you can easily add plugins and graph connectors into them and deploy those into your environment. Teamstalk also gives you the luxury through the CLI to deploy to multiple tenants, which
+[SPEAKER_01] : [(00:20:48.000, 00:20:52.000)] :  gives you kind of release management, branch management, and also if you've got multiple
+[SPEAKER_01] : [(00:20:52.000, 00:20:55.000)] :  customers, the ability to push things out in a very controlled way.
+[SPEAKER_01] : [(00:20:55.000, 00:21:00.000)] :  And obviously because it's managed code, you get the benefits of very fine source control,
+[SPEAKER_01] : [(00:21:00.000, 00:21:07.940)] :  branching and release management procedures that you have within your own teams. Now, obviously, you do need to host your own infrastructure for this.
+[SPEAKER_01] : [(00:21:12.420, 00:21:16.960)] :  So, Tempify is another partner we've been working with, and this is a great example
+[SPEAKER_01] : [(00:21:16.960, 00:21:20.400)] :  of bringing M365 data together with their solution.
+[SPEAKER_01] : [(00:21:21.040, 00:21:24.680)] :  They've asked for the latest communications from Contoso, and what you would have seen
+[SPEAKER_01] : [(00:21:24.680, 00:21:29.440)] :  very briefly in the keynote is a new feature of Copilot for Microsoft 365 which allows
+[SPEAKER_01] : [(00:21:29.440, 00:21:33.800)] :  you to app mention a plug-in. Now, the main reason this is beneficial is because you can
+[SPEAKER_01] : [(00:21:33.800, 00:21:40.160)] :  now really allow Copilot to focus in on just asking Tempify and not the hundreds of plug-ins
+[SPEAKER_01] : [(00:21:40.160, 00:21:50.240)] :  or the hundreds of graph-connected information or the M365 data there, and it's feedback we've had since we've been doing these private previews and public previews.
+[SPEAKER_01] : [(00:21:50.240, 00:21:55.620)] :  After that app mention has happened, essentially what you'll see is that Temporafly will look
+[SPEAKER_01] : [(00:21:55.620, 00:22:01.020)] :  at the information that it got from the communications with Contoso and it will suggest two templates.
+[SPEAKER_01] : [(00:22:01.020, 00:22:06.200)] :  Now as a user, I'm going to go choose the basic template that Tempify has
+[SPEAKER_01] : [(00:22:06.200, 00:22:10.400)] :  picked. And here's a new thing that we're providing inside of Copilot for Microsoft
+[SPEAKER_01] : [(00:22:10.400, 00:22:16.400)] :  365. You now have the ability for Copilot to push information that it got from another
+[SPEAKER_01] : [(00:22:16.400, 00:22:22.180)] :  query that came from M365 in this case and ask the user, are you okay with me sending
+[SPEAKER_01] : [(00:22:22.180, 00:22:25.560)] :  this information to Tempify? And the user explicitly has to
+[SPEAKER_01] : [(00:22:25.560, 00:22:31.080)] :  say confirm to send that information. Tempify creates that sales agreement and the user
+[SPEAKER_01] : [(00:22:31.080, 00:22:34.840)] :  can within the flow of his work launch that document and see that Tempify has built that
+[SPEAKER_01] : [(00:22:34.840, 00:22:40.420)] :  document based on its template with the information it got from the other experience. And so it's
+[SPEAKER_01] : [(00:22:40.420, 00:22:49.400)] :  a really good end-to-end flow that is common in Copilot from a productivity perspective, allowing you to see how our partners out there can leverage plug-ins.
+[SPEAKER_01] : [(00:22:50.300, 00:22:55.800)] :  Now, I've covered those two things real quick because we've got a lot of great content that Barnum's going to cover next.
+[SPEAKER_01] : [(00:22:56.320, 00:23:08.800)] :  There are two essentially good breakouts in BRK148 and 151 that are later on this afternoon in this room. I'd encourage you if you want to go deeper in either of these two things, whether it's choosing Teams Toolkit or Copilot Studio,
+[SPEAKER_01] : [(00:23:09.280, 00:23:14.420)] :  check out those breakouts. I want to cover one last thing before I hand over to Barnum.
+[SPEAKER_01] : [(00:23:15.980, 00:23:20.180)] :  We get this question a lot. How do we start building with Copilot for Microsoft 365?
+[SPEAKER_01] : [(00:23:21.540, 00:23:26.680)] :  If you're in the ISV program that my team runs, you can have access to a private
+[SPEAKER_01] : [(00:23:26.680, 00:23:32.940)] :  preview of what we will launch publicly later in the year. Effectively get three 25 E5 users
+[SPEAKER_01] : [(00:23:32.940, 00:23:38.660)] :  and then you can purchase copilot licenses on top. If you're not an ISV, a software company,
+[SPEAKER_01] : [(00:23:38.660, 00:23:44.640)] :  you can go directly to Microsoft365.com and you can purchase a business basic plan and
+[SPEAKER_01] : [(00:23:44.640, 00:23:46.340)] :  copilot for Microsoft 365 for one
+[SPEAKER_01] : [(00:23:46.340, 00:23:50.600)] :  user and that will get you off to the races building on top of copilot for now.
+[SPEAKER_01] : [(00:23:50.600, 00:23:55.060)] :  And then by the end of the year, we will be announcing that if you have used the M365
+[SPEAKER_01] : [(00:23:55.060, 00:23:59.980)] :  developer program, you will be able to essentially take your tenant and purchase copilot for
+[SPEAKER_01] : [(00:23:59.980, 00:24:08.560)] :  Microsoft 365 on top. This is a journey we're on at the minute in the notion of how quickly we're speeding up. And if you have any feedback, we'd love to hear from it. But that's just
+[SPEAKER_01] : [(00:24:08.560, 00:24:11.260)] :  where we're at right now in terms of how you can get going on the developer side.
+[SPEAKER_01] : [(00:24:12.800, 00:24:17.340)] :  Okay. So I've talked a lot about plug-ins and graph connectors. I'm going to hand over
+[SPEAKER_01] : [(00:24:17.340, 00:24:28.400)] :  to Barnum to talk about how you can bring your own immersive experiences into Copilot for Microsoft 365. Thanks, mate. Thank you.
+[SPEAKER_00] : [(00:24:29.780, 00:24:31.000)] :  It's a hard act to follow, huh?
+[SPEAKER_00] : [(00:24:37.040, 00:24:47.940)] :  Well, we've already talked, you know, Jeremy's given us a great update into essentially the, how you add additional semantic grounding through connectors and how you also are able to connect to your source systems
+[SPEAKER_00] : [(00:24:47.940, 00:24:51.080)] :  or other systems of record in your business using plugins,
+[SPEAKER_00] : [(00:24:51.340, 00:24:53.220)] :  both for actions and for retrieval.
+[SPEAKER_00] : [(00:24:54.020, 00:24:57.160)] :  Now, what these technologies essentially do
+[SPEAKER_00] : [(00:24:57.160, 00:25:01.420)] :  is they widen the scope of what Copilot,
+[SPEAKER_00] : [(00:25:01.840, 00:25:04.900)] :  that's built by Microsoft, is able to do for you.
+[SPEAKER_00] : [(00:25:03.380, 00:25:04.900)] :  of what Copilot that's built by Microsoft is able to do for you.
+[SPEAKER_00] : [(00:25:05.940, 00:25:10.660)] :  But in our work with our early access customers and partners
+[SPEAKER_00] : [(00:25:10.660, 00:25:14.200)] :  and also as we get ourselves more and more involved
+[SPEAKER_00] : [(00:25:14.200, 00:25:16.240)] :  in the research of building these systems,
+[SPEAKER_00] : [(00:25:16.720, 00:25:19.460)] :  we realize that focused experiences
+[SPEAKER_00] : [(00:25:19.460, 00:25:20.580)] :  is also a requirement
+[SPEAKER_00] : [(00:25:20.580, 00:25:23.060)] :  where we actually need to narrow down
+[SPEAKER_00] : [(00:25:23.060, 00:25:28.440)] :  the bandwidth of what the specific co-pilot
+[SPEAKER_00] : [(00:25:28.440, 00:25:34.040)] :  experience needs to focus on. And that's why we, you've seen in the keynote, we've launched this
+[SPEAKER_00] : [(00:25:34.040, 00:25:39.980)] :  notion of your own co-pilots. Your own co-pilots are effectively instantiations of co-pilot,
+[SPEAKER_00] : [(00:25:40.440, 00:25:46.300)] :  which have your own specific business context, your own applications are plugged into it already,
+[SPEAKER_00] : [(00:25:46.780, 00:25:48.720)] :  and your workflows are plugged into it,
+[SPEAKER_00] : [(00:25:48.800, 00:25:50.360)] :  and maybe your automation as well.
+[SPEAKER_00] : [(00:25:52.240, 00:25:54.300)] :  One of the benefits of building this,
+[SPEAKER_00] : [(00:25:54.300, 00:25:55.620)] :  we've already announced that,
+[SPEAKER_00] : [(00:25:55.820, 00:25:58.680)] :  is that you can actually take your own custom,
+[SPEAKER_00] : [(00:25:58.920, 00:26:01.780)] :  these co-pilots that you build and instantiate on top of us
+[SPEAKER_00] : [(00:26:01.780, 00:26:04.400)] :  and publish them as co-pilot extensions.
+[SPEAKER_00] : [(00:26:04.740, 00:26:06.520)] :  So essentially, you're not missing out.
+[SPEAKER_00] : [(00:26:07.100, 00:26:09.060)] :  Effectively, your co-pilots show up
+[SPEAKER_00] : [(00:26:09.060, 00:26:10.940)] :  very similar to how plugins would show up
+[SPEAKER_00] : [(00:26:10.940, 00:26:13.600)] :  in our co-pilot experiences across our hubs,
+[SPEAKER_00] : [(00:26:14.000, 00:26:16.640)] :  but it will also be available
+[SPEAKER_00] : [(00:26:16.640, 00:26:20.360)] :  in your own immersive experience as well.
+[SPEAKER_00] : [(00:26:21.060, 00:26:22.980)] :  We are trying to make it very easy for you
+[SPEAKER_00] : [(00:26:22.980, 00:26:24.120)] :  to publish these co-pilots
+[SPEAKER_00] : [(00:26:24.120, 00:26:25.180)] :  through a click-through experience onpilots through a click-through
+[SPEAKER_00] : [(00:26:25.180, 00:26:30.140)] :  experience on SharePoint or through a click-through experience on Co-Pilot Studio or on VS Code in a
+[SPEAKER_00] : [(00:26:30.140, 00:26:36.660)] :  development environment. Now, moving into this stack slide that Jeremy covered before,
+[SPEAKER_00] : [(00:26:37.220, 00:26:45.240)] :  effectively, there are two forms, two large forms of your own co-pilots. Let's talk about the first one, which is declarative co-pilots.
+[SPEAKER_00] : [(00:26:45.840, 00:26:51.840)] :  You've heard this term today a few times. Declarative co-pilots is essentially the kind
+[SPEAKER_00] : [(00:26:51.840, 00:26:57.680)] :  of co-pilot where you've actually taken the engine that Microsoft has already built in our
+[SPEAKER_00] : [(00:26:57.680, 00:27:07.320)] :  own Microsoft co-pilot and added some declarative instructions on top of it. So you're not necessarily messing with the innards of the LLM model itself,
+[SPEAKER_00] : [(00:27:07.540, 00:27:11.280)] :  but what you've given to it is a specific set of instructions
+[SPEAKER_00] : [(00:27:11.280, 00:27:14.400)] :  set on top that gives it the personality or the focus.
+[SPEAKER_00] : [(00:27:15.780, 00:27:19.920)] :  What do these declarative co-pilots really help out in?
+[SPEAKER_00] : [(00:27:20.180, 00:27:22.980)] :  Effectively, you know, we all work in organizations,
+[SPEAKER_00] : [(00:27:23.460, 00:27:25.220)] :  and some of us are generalists
+[SPEAKER_00] : [(00:27:25.220, 00:27:26.340)] :  and some of us are specialists.
+[SPEAKER_00] : [(00:27:27.060, 00:27:31.320)] :  When you want specialist behavior of your co-pilot,
+[SPEAKER_00] : [(00:27:31.500, 00:27:32.840)] :  you know, think of Microsoft co-pilot
+[SPEAKER_00] : [(00:27:32.840, 00:27:35.200)] :  as the generalist, full-capacity co-pilot.
+[SPEAKER_00] : [(00:27:35.200, 00:27:37.540)] :  Then you want specific specialist behavior,
+[SPEAKER_00] : [(00:27:37.720, 00:27:40.160)] :  maybe for your HR, for your IT, you know,
+[SPEAKER_00] : [(00:27:40.380, 00:27:41.740)] :  all of these kind of behaviors,
+[SPEAKER_00] : [(00:27:42.020, 00:27:44.680)] :  where you want it to focus on a specific area
+[SPEAKER_00] : [(00:27:44.680, 00:27:45.840)] :  or specific documentation,
+[SPEAKER_00] : [(00:27:46.400, 00:27:48.500)] :  that's when declarative co-pilots come to play.
+[SPEAKER_00] : [(00:27:49.160, 00:27:51.060)] :  Effectively, they are Microsoft co-pilot
+[SPEAKER_00] : [(00:27:51.060, 00:27:52.080)] :  plus your instructions,
+[SPEAKER_00] : [(00:27:52.700, 00:27:56.960)] :  which in reality just gives co-pilot more context
+[SPEAKER_00] : [(00:27:56.960, 00:27:59.360)] :  to do generations that are more relevant to you.
+[SPEAKER_00] : [(00:28:00.120, 00:28:01.680)] :  What's important to also note
+[SPEAKER_00] : [(00:28:01.680, 00:28:08.240)] :  that this context is actually a combination of a few very simple things.
+[SPEAKER_00] : [(00:28:08.860, 00:28:10.940)] :  These are your declarative custom instructions,
+[SPEAKER_00] : [(00:28:11.040, 00:28:12.100)] :  and we'll look at that very shortly.
+[SPEAKER_00] : [(00:28:12.660, 00:28:14.720)] :  Effectively, you have your custom prompt instructions,
+[SPEAKER_00] : [(00:28:14.720, 00:28:18.220)] :  which are your natural language prompt that instantiates it.
+[SPEAKER_00] : [(00:28:18.500, 00:28:20.060)] :  You have the additional grounding data.
+[SPEAKER_00] : [(00:28:20.180, 00:28:21.540)] :  You can point to a SharePoint site
+[SPEAKER_00] : [(00:28:21.540, 00:28:23.500)] :  or maybe upload new data, et cetera.
+[SPEAKER_00] : [(00:28:24.340, 00:28:27.680)] :  And you also encapsulate your plugins and connectors
+[SPEAKER_00] : [(00:28:27.680, 00:28:28.880)] :  into that one thing.
+[SPEAKER_00] : [(00:28:29.960, 00:28:33.100)] :  What I want to actually show you after this
+[SPEAKER_00] : [(00:28:33.100, 00:28:35.540)] :  is that you can encapsulate that
+[SPEAKER_00] : [(00:28:35.540, 00:28:37.980)] :  into a single copilot experience
+[SPEAKER_00] : [(00:28:37.980, 00:28:40.100)] :  on top of Microsoft 365 Copilot
+[SPEAKER_00] : [(00:28:40.100, 00:28:42.920)] :  and deploy that as your own copilot.
+[SPEAKER_00] : [(00:28:43.280, 00:29:21.260)] :  Let's look at VS Code. Well, effectively, the custom instructions
+[SPEAKER_00] : [(00:29:21.260, 00:29:23.560)] :  that I was talking about on your screen,
+[SPEAKER_00] : [(00:29:24.980, 00:29:26.000)] :  you've got your...
+[SPEAKER_00] : [(00:29:26.000, 00:29:29.340)] :  This is a VS Code project
+[SPEAKER_00] : [(00:29:29.340, 00:29:30.840)] :  where you've actually...
+[SPEAKER_00] : [(00:29:30.840, 00:29:32.360)] :  We've gone ahead and created
+[SPEAKER_00] : [(00:29:32.360, 00:29:35.260)] :  a declarative copilot.
+[SPEAKER_00] : [(00:29:35.700, 00:29:37.620)] :  Effectively, it's a combination of those three things
+[SPEAKER_00] : [(00:29:37.620, 00:29:38.520)] :  that we just spoke about.
+[SPEAKER_00] : [(00:29:38.820, 00:29:41.220)] :  It's your custom instruction set in plain language.
+[SPEAKER_00] : [(00:29:42.100, 00:29:44.040)] :  And I've gone ahead and identified
+[SPEAKER_00] : [(00:29:44.040, 00:29:46.360)] :  and instantiated a few conversation
+[SPEAKER_00] : [(00:29:46.360, 00:29:49.660)] :  starters for your immersive experience, which actually prompts the user to say, hey, let's
+[SPEAKER_00] : [(00:29:49.660, 00:29:53.680)] :  go have this conversation this way. And then I've said, I've pointed to a SharePoint
+[SPEAKER_00] : [(00:29:53.680, 00:29:59.320)] :  site, which actually has effectively now it knows that, hey, the documents in the SharePoint
+[SPEAKER_00] : [(00:29:59.320, 00:30:03.800)] :  site are the ones that I need to focus on, and then the actions is effectively a plug-in
+[SPEAKER_00] : [(00:30:03.800, 00:30:08.640)] :  that I've encapsulated into this particular declarative copilot.
+[SPEAKER_00] : [(00:30:15.660, 00:30:20.140)] :  Now, these declarative copilots, obviously, you can build them through VS Code or through
+[SPEAKER_00] : [(00:30:20.140, 00:30:26.200)] :  Copilot Studio. The beauty of it is they can appear in context and in your focused immersive experience as well.
+[SPEAKER_00] : [(00:30:27.460, 00:30:29.400)] :  So let's talk about why would you do
+[SPEAKER_00] : [(00:30:29.400, 00:30:30.340)] :  these declarative copilots
+[SPEAKER_00] : [(00:30:30.340, 00:30:32.060)] :  and what are the sort of specific scenarios
+[SPEAKER_00] : [(00:30:32.060, 00:30:33.980)] :  where they really become powerful.
+[SPEAKER_00] : [(00:30:34.900, 00:30:36.360)] :  Any scenario, as I said,
+[SPEAKER_00] : [(00:30:36.440, 00:30:38.400)] :  that requires focus or specialization
+[SPEAKER_00] : [(00:30:38.400, 00:30:40.180)] :  where you want to give it nuance.
+[SPEAKER_00] : [(00:30:41.080, 00:30:43.040)] :  Any scenario where you want to layer
+[SPEAKER_00] : [(00:30:43.040, 00:30:44.620)] :  on top of the existing capability
+[SPEAKER_00] : [(00:30:44.620, 00:30:46.000)] :  of Microsoft 365 Copilot. Any scenario where you want to layer on top of the existing capability of Microsoft 365 Copilot,
+[SPEAKER_00] : [(00:30:46.000, 00:30:51.000)] :  any scenario where you want to target specific roles in your organization or your customer set,
+[SPEAKER_00] : [(00:30:51.000, 00:30:55.000)] :  and any scenario where you want to scope it to specific data sources.
+[SPEAKER_00] : [(00:30:55.000, 00:30:59.000)] :  These are great examples of where declarative copilots are powerful.
+[SPEAKER_00] : [(00:30:59.000, 00:31:03.000)] :  Here's a point I actually want to focus on myself.
+[SPEAKER_00] : [(00:31:03.000, 00:31:06.140)] :  You know, a plug-in gives you data.
+[SPEAKER_00] : [(00:31:06.240, 00:31:09.020)] :  For example, you know, it might be a JSON response
+[SPEAKER_00] : [(00:31:09.020, 00:31:11.340)] :  through an API or you're looking at a database
+[SPEAKER_00] : [(00:31:11.340, 00:31:12.500)] :  and getting structured data.
+[SPEAKER_00] : [(00:31:13.080, 00:31:17.440)] :  Sometimes you need to add nuance or domain understanding
+[SPEAKER_00] : [(00:31:17.440, 00:31:19.080)] :  of how to interpret that data.
+[SPEAKER_00] : [(00:31:19.760, 00:31:21.780)] :  That's not possible just through a plug-in
+[SPEAKER_00] : [(00:31:21.780, 00:31:23.020)] :  because you're getting raw data.
+[SPEAKER_00] : [(00:31:23.800, 00:31:25.660)] :  So when you add that nuance
+[SPEAKER_00] : [(00:31:25.660, 00:31:27.920)] :  into your declarative custom instruction,
+[SPEAKER_00] : [(00:31:28.020, 00:31:29.800)] :  say, hey, when I read this type of data,
+[SPEAKER_00] : [(00:31:30.040, 00:31:30.800)] :  this is what it means.
+[SPEAKER_00] : [(00:31:31.440, 00:31:33.580)] :  That's one of the powers of declarative copilot
+[SPEAKER_00] : [(00:31:33.580, 00:31:34.180)] :  that you can enable.
+[SPEAKER_00] : [(00:31:34.580, 00:31:36.960)] :  Let's look at an example of a declarative copilot.
+[SPEAKER_00] : [(00:31:41.400, 00:31:44.460)] :  This is what I would have deployed if I had more time.
+[SPEAKER_00] : [(00:31:45.000, 00:31:48.000)] :  But let's look at Adobe's declarative co-pilot
+[SPEAKER_00] : [(00:31:48.000, 00:31:50.000)] :  and go through that example.
+[SPEAKER_00] : [(00:31:50.000, 00:31:53.000)] :  As you can see, Adobe, in this scenario,
+[SPEAKER_00] : [(00:31:53.000, 00:31:55.000)] :  somebody is actually using Word,
+[SPEAKER_00] : [(00:31:55.000, 00:31:58.000)] :  and they actually want to build an Instagram campaign,
+[SPEAKER_00] : [(00:31:58.000, 00:32:01.000)] :  and they've instantiated a declarative co-pilot for Adobe
+[SPEAKER_00] : [(00:32:01.000, 00:32:03.000)] :  through Word's co-pilot experience.
+[SPEAKER_00] : [(00:32:03.000, 00:32:06.620)] :  And what it is actually doing is it's taking all of the Word document
+[SPEAKER_00] : [(00:32:06.620, 00:32:10.520)] :  and suggesting a few options to use as an Instagram campaign.
+[SPEAKER_00] : [(00:32:10.920, 00:32:12.540)] :  Now, they open it up in Adobe Express.
+[SPEAKER_00] : [(00:32:12.920, 00:32:15.700)] :  They're going and editing it in Adobe Express itself.
+[SPEAKER_00] : [(00:32:16.120, 00:32:20.340)] :  And you're able to actually see that the workflow is moving from Copilot
+[SPEAKER_00] : [(00:32:20.340, 00:32:24.200)] :  to the source application where you're going to edit that
+[SPEAKER_00] : [(00:32:24.200, 00:32:27.360)] :  and then go back and share it back to the team chat
+[SPEAKER_00] : [(00:32:27.360, 00:32:30.020)] :  where you're having where CoPilot also has access to that data.
+[SPEAKER_00] : [(00:32:34.200, 00:32:37.200)] :  Now, this is one thing I want to draw your attention to.
+[SPEAKER_00] : [(00:32:37.680, 00:32:41.360)] :  There's a session later today that focuses on this.
+[SPEAKER_00] : [(00:32:41.480, 00:32:44.180)] :  We don't necessarily have time today in this session to cover it.
+[SPEAKER_00] : [(00:32:44.400, 00:32:49.520)] :  Please go to this session, Build CoP extensions in Copilot Studio, where you'll get to build this
+[SPEAKER_00] : [(00:32:49.520, 00:32:56.500)] :  with Copilot Studio. Another session, there's also a lab for this session. Just a shout out to the
+[SPEAKER_00] : [(00:32:56.500, 00:33:02.560)] :  folks doing the lab as well. We've already just covered declarative Copilots. Let's now focus on
+[SPEAKER_00] : [(00:33:02.560, 00:33:06.800)] :  custom engine Copilots. Well, custom engine
+[SPEAKER_00] : [(00:33:06.800, 00:33:13.640)] :  co-pilots is interesting because this is the kind of scenario where we've said, hey, there are
+[SPEAKER_00] : [(00:33:13.640, 00:33:20.220)] :  nuances that are way more than what declarative co-pilots enables us to do. And in this scenario,
+[SPEAKER_00] : [(00:33:20.580, 00:33:25.480)] :  what I'm going to do is I'm going to pick my own model, add my own data, give my own logic,
+[SPEAKER_00] : [(00:33:25.600, 00:33:26.500)] :  have my own automation,
+[SPEAKER_00] : [(00:33:26.840, 00:33:29.940)] :  and essentially manage my whole stack myself.
+[SPEAKER_00] : [(00:33:30.340, 00:33:31.280)] :  And in that scenario,
+[SPEAKER_00] : [(00:33:31.420, 00:33:33.820)] :  I'm going to choose a custom engine copilot.
+[SPEAKER_00] : [(00:33:34.320, 00:33:38.620)] :  A custom engine copilot is basically built
+[SPEAKER_00] : [(00:33:38.620, 00:33:41.380)] :  with VS Code and Teams AI library,
+[SPEAKER_00] : [(00:33:41.760, 00:33:43.120)] :  and we're going to see that in a little bit.
+[SPEAKER_00] : [(00:33:45.920, 00:33:47.960)] :  So in a custom engine co-pilot,
+[SPEAKER_00] : [(00:33:48.180, 00:33:53.420)] :  you are effectively using it in a scenario
+[SPEAKER_00] : [(00:33:53.420, 00:33:57.380)] :  where your LLM of choice can be used.
+[SPEAKER_00] : [(00:33:57.460, 00:33:59.680)] :  You can either use Azure AI Studio, for example,
+[SPEAKER_00] : [(00:33:59.680, 00:34:04.520)] :  to go and select your own LLM or SLM model from there.
+[SPEAKER_00] : [(00:34:05.340, 00:34:08.980)] :  You can publish these co- copilots to external users.
+[SPEAKER_00] : [(00:34:09.120, 00:34:10.500)] :  Here's a big actual difference
+[SPEAKER_00] : [(00:34:10.500, 00:34:13.760)] :  between a declarative copilot and custom engine copilot.
+[SPEAKER_00] : [(00:34:14.740, 00:34:16.640)] :  Declarative copilots are available to users
+[SPEAKER_00] : [(00:34:16.640, 00:34:19.060)] :  who are in your M365 identity.
+[SPEAKER_00] : [(00:34:19.960, 00:34:22.000)] :  If you want to publish, let's say, to customers,
+[SPEAKER_00] : [(00:34:22.000, 00:34:25.320)] :  you actually go and publish as a custom engine copilot. So if you want to publish, let's say, to customers, you actually go and publish as a custom engine copilot.
+[SPEAKER_00] : [(00:34:26.440, 00:34:29.340)] :  So if you want to publish it into your custom UX,
+[SPEAKER_00] : [(00:34:30.080, 00:34:33.380)] :  you know, plus your Microsoft 365 hubs as well,
+[SPEAKER_00] : [(00:34:33.580, 00:34:36.280)] :  a custom engine copilot is the answer in that scenario.
+[SPEAKER_00] : [(00:34:36.920, 00:34:39.280)] :  It also gives you more control, obviously,
+[SPEAKER_00] : [(00:34:39.280, 00:34:41.700)] :  over the automations and instantiations within
+[SPEAKER_00] : [(00:34:41.700, 00:34:43.500)] :  and workflows that you want to plug in there.
+[SPEAKER_00] : [(00:34:44.700, 00:34:48.100)] :  One of the key kind of decision points you need to make
+[SPEAKER_00] : [(00:34:48.100, 00:34:50.460)] :  is when you're building these AI systems,
+[SPEAKER_00] : [(00:34:50.600, 00:34:52.060)] :  do you need custom moderation
+[SPEAKER_00] : [(00:34:52.060, 00:34:55.020)] :  or compliance to regulatory frameworks
+[SPEAKER_00] : [(00:34:55.020, 00:34:57.420)] :  and, like, you know, healthcare frameworks
+[SPEAKER_00] : [(00:34:57.420, 00:34:59.380)] :  and all of that or government regulations?
+[SPEAKER_00] : [(00:34:59.680, 00:35:02.440)] :  And for that scenario, you may need a custom engine
+[SPEAKER_00] : [(00:35:02.440, 00:35:04.960)] :  or, you know, custom controls that are built in
+[SPEAKER_00] : [(00:35:04.960, 00:35:09.140)] :  that are, you know, beyond what a natural language instruction set
+[SPEAKER_00] : [(00:35:09.140, 00:35:10.800)] :  on a declarative copilot may enable.
+[SPEAKER_00] : [(00:35:10.800, 00:35:13.280)] :  And for that reason, a custom engine copilot
+[SPEAKER_00] : [(00:35:13.280, 00:35:14.880)] :  is a reality requirement.
+[SPEAKER_00] : [(00:35:17.040, 00:35:18.200)] :  It also gives you, again,
+[SPEAKER_00] : [(00:35:18.300, 00:35:19.780)] :  full control of the prompt management.
+[SPEAKER_00] : [(00:35:19.960, 00:35:21.680)] :  You don't have to send a prompt to us.
+[SPEAKER_00] : [(00:35:21.860, 00:35:24.780)] :  You know, you use the prompt yourself.
+[SPEAKER_00] : [(00:35:24.960, 00:35:26.840)] :  You use the actions and triggers
+[SPEAKER_00] : [(00:35:26.840, 00:35:31.720)] :  yourself. You also build your own orchestrator on top of it. So, again, full control over that.
+[SPEAKER_00] : [(00:35:32.720, 00:35:37.200)] :  And then finally, if you already have investment into deterministic bots,
+[SPEAKER_00] : [(00:35:38.060, 00:35:42.940)] :  here's the difference. LLMs are probabilistic systems. Deterministic bots, which have
+[SPEAKER_00] : [(00:35:42.940, 00:35:45.260)] :  predefined workflows, and we all need them,
+[SPEAKER_00] : [(00:35:45.620, 00:35:48.300)] :  if those are already existing investments that you've made,
+[SPEAKER_00] : [(00:35:49.020, 00:35:50.980)] :  custom engine co-pilots encapsulate that
+[SPEAKER_00] : [(00:35:50.980, 00:35:51.800)] :  with the bot framework,
+[SPEAKER_00] : [(00:35:51.980, 00:35:53.800)] :  and you're able to deploy them out of that.
+[SPEAKER_00] : [(00:35:54.760, 00:35:57.660)] :  Now, one big thing for those of you out there
+[SPEAKER_00] : [(00:35:57.660, 00:35:58.620)] :  who are SaaS companies
+[SPEAKER_00] : [(00:35:58.620, 00:36:00.540)] :  and you want to publish this to your customers,
+[SPEAKER_00] : [(00:36:00.960, 00:36:02.060)] :  custom engine co-pilots,
+[SPEAKER_00] : [(00:36:02.060, 00:36:05.820)] :  you can publish them into the Microsoftrosoft stores as a sas provider as well.
+[SPEAKER_00] : [(00:36:07.560, 00:36:12.700)] :  Let's look at what actually is a custom engine co-pilot and how
+[SPEAKER_00] : [(00:36:12.700, 00:36:37.600)] :  You might be able to instantiate it. Let me roll the video first. So basically this is azure open ai studio.
+[SPEAKER_00] : [(00:36:37.600, 00:36:43.160)] :  I've actually gone in just before the session and actually instantiated a gpd 3.5 model.
+[SPEAKER_00] : [(00:36:43.160, 00:36:45.020)] :  You can actually go and play with it.
+[SPEAKER_00] : [(00:36:46.720, 00:36:50.900)] :  Effectively, what I've done in this scenario is taken, you know, a policy document,
+[SPEAKER_00] : [(00:36:51.160, 00:36:52.320)] :  a set of policy documents,
+[SPEAKER_00] : [(00:36:52.420, 00:36:55.440)] :  and inserted into OpenAI Studio
+[SPEAKER_00] : [(00:36:55.440, 00:36:57.800)] :  and said, hey, this is...
+[SPEAKER_00] : [(00:36:57.800, 00:37:00.160)] :  go and build your embeddings on top of this
+[SPEAKER_00] : [(00:37:00.160, 00:37:02.380)] :  and provide me a custom engine that I can work with.
+[SPEAKER_00] : [(00:37:02.920, 00:37:04.000)] :  Now, if you have...
+[SPEAKER_00] : [(00:37:04.720, 00:37:06.000)] :  if you've already done this and you have access to a custom engine that I can work with. Now, if you've already done this
+[SPEAKER_00] : [(00:37:06.000, 00:37:07.700)] :  and you have access to a custom model
+[SPEAKER_00] : [(00:37:07.700, 00:37:09.340)] :  or you're bringing your own model,
+[SPEAKER_00] : [(00:37:09.620, 00:37:15.980)] :  you then go in and go to your VS Code environment,
+[SPEAKER_00] : [(00:37:16.320, 00:37:17.960)] :  and in your VS Code environment,
+[SPEAKER_00] : [(00:37:18.320, 00:37:22.200)] :  you're able to then go and edit this functionality
+[SPEAKER_00] : [(00:37:22.200, 00:37:25.000)] :  and go and edit this functionality and go and edit the project
+[SPEAKER_00] : [(00:37:25.000, 00:37:27.000)] :  and basically...
+[SPEAKER_00] : [(00:37:33.000, 00:37:38.800)] :  I had one more video to show, actually.
+[SPEAKER_00] : [(00:37:39.480, 00:37:42.100)] :  You actually use Teams Toolkit in VS Code
+[SPEAKER_00] : [(00:37:42.100, 00:37:44.260)] :  and go and choose custom and co-pilot,
+[SPEAKER_00] : [(00:37:44.580, 00:37:45.300)] :  and once you
+[SPEAKER_00] : [(00:37:45.300, 00:37:47.940)] :  instantiate a project and you can
+[SPEAKER_00] : [(00:37:47.940, 00:37:49.980)] :  go and actually edit the
+[SPEAKER_00] : [(00:37:49.980, 00:37:51.980)] :  project inside VS Code and
+[SPEAKER_00] : [(00:37:51.980, 00:37:53.900)] :  publish it either to Teams or your
+[SPEAKER_00] : [(00:37:53.900, 00:37:56.660)] :  own custom UX.
+[SPEAKER_00] : [(00:38:01.720, 00:38:04.060)] :  So effectively, in VS Code,
+[SPEAKER_00] : [(00:38:04.160, 00:38:09.440)] :  what you're looking at is your instantiation prompt and the specifics
+[SPEAKER_00] : [(00:38:09.440, 00:38:14.500)] :  of the project that you need in the package that you need to deploy.
+[SPEAKER_00] : [(00:38:14.500, 00:38:18.240)] :  Like, for example, do you need a specific model?
+[SPEAKER_00] : [(00:38:18.240, 00:38:19.960)] :  What's the open AI key?
+[SPEAKER_00] : [(00:38:19.960, 00:38:24.140)] :  Once you specify those in your project, you can go and deploy that as your custom engine
+[SPEAKER_00] : [(00:38:24.140, 00:38:25.240)] :  copilot. Let's look at the example as your custom engine co-pilot.
+[SPEAKER_00] : [(00:38:27.800, 00:38:28.940)] :  Let's look at the example of a custom engine co-pilot deployed by Isera.
+[SPEAKER_00] : [(00:38:29.420, 00:38:30.660)] :  In this scenario, Isera,
+[SPEAKER_00] : [(00:38:30.840, 00:38:33.680)] :  the reason why they've done custom engine is because,
+[SPEAKER_00] : [(00:38:34.300, 00:38:35.880)] :  and they call it Isera AI co-pilot,
+[SPEAKER_00] : [(00:38:35.880, 00:38:39.300)] :  is because they actually have custom automation
+[SPEAKER_00] : [(00:38:39.300, 00:38:45.780)] :  built in to a back-end system for many, many APIs.
+[SPEAKER_00] : [(00:38:46.560, 00:38:50.140)] :  So it's actually way more beneficial for them
+[SPEAKER_00] : [(00:38:50.140, 00:38:53.180)] :  to build a copilot encapsulation on top
+[SPEAKER_00] : [(00:38:53.180, 00:38:55.060)] :  which instantiate that backend
+[SPEAKER_00] : [(00:38:55.060, 00:38:58.640)] :  instead of trying to build plugins for every single API.
+[SPEAKER_00] : [(00:38:59.220, 00:39:00.300)] :  And in that scenario,
+[SPEAKER_00] : [(00:39:00.540, 00:39:02.560)] :  they've actually built a custom engine copilot
+[SPEAKER_00] : [(00:39:02.560, 00:39:06.000)] :  which you can invoke from the copilot experience itself. And, youilot, which you can invoke from the co-pilot experience itself.
+[SPEAKER_00] : [(00:39:06.000, 00:39:10.000)] :  And, you know, as you can see on the video,
+[SPEAKER_00] : [(00:39:10.000, 00:39:13.000)] :  once they've invoked the custom engine co-pilot
+[SPEAKER_00] : [(00:39:13.000, 00:39:15.000)] :  from co-pilot experience,
+[SPEAKER_00] : [(00:39:15.000, 00:39:18.000)] :  you can actually go and click into that
+[SPEAKER_00] : [(00:39:18.000, 00:39:21.000)] :  and do a handoff to the immersive experience.
+[SPEAKER_00] : [(00:39:21.000, 00:39:23.000)] :  The immersive experience is basically...
+[SPEAKER_00] : [(00:39:23.000, 00:39:26.500)] :  It goes into a dedicated experience where a user
+[SPEAKER_00] : [(00:39:26.500, 00:39:32.960)] :  can chat to only the custom engine. And once they're happy with that, you know, with the chat,
+[SPEAKER_00] : [(00:39:33.060, 00:39:38.740)] :  and they actually keep on prompting to, let's say, in this scenario, what they've realized is they
+[SPEAKER_00] : [(00:39:38.740, 00:39:47.500)] :  want a meeting. And the prompt is being interpreted by the custom engine to call a meeting API, which, you know, they have developed,
+[SPEAKER_00] : [(00:39:47.780, 00:39:50.260)] :  and they go and book that particular meeting
+[SPEAKER_00] : [(00:39:50.260, 00:39:50.900)] :  in that scenario.
+[SPEAKER_00] : [(00:39:53.780, 00:39:56.000)] :  These custom, as we discussed before,
+[SPEAKER_00] : [(00:39:56.100, 00:39:57.780)] :  these custom engine copilots can be published
+[SPEAKER_00] : [(00:39:57.780, 00:39:59.640)] :  as copilot extensions, and you can have them
+[SPEAKER_00] : [(00:39:59.640, 00:40:01.740)] :  both even in the immersive experience
+[SPEAKER_00] : [(00:40:01.740, 00:40:05.840)] :  or in the inline copilot experience as well.
+[SPEAKER_00] : [(00:40:07.460, 00:40:09.880)] :  Now, I just want to call out the two sessions
+[SPEAKER_00] : [(00:40:09.880, 00:40:13.700)] :  that we'll be covering these copilots after this,
+[SPEAKER_00] : [(00:40:13.800, 00:40:15.160)] :  the Azure AI Studio session,
+[SPEAKER_00] : [(00:40:15.260, 00:40:16.940)] :  Creating and Scaling Your Custom Copilots,
+[SPEAKER_00] : [(00:40:17.400, 00:40:19.760)] :  and Build Your Own Copilot in Copilot Studio.
+[SPEAKER_00] : [(00:40:21.020, 00:40:28.820)] :  And if you want to dive deep on Teams AI library and how to actually go and build custom engine
+[SPEAKER_00] : [(00:40:28.820, 00:40:36.280)] :  copiers with VS code, here's the session breakout 146, 320 million Teams users, how to reach
+[SPEAKER_00] : [(00:40:36.280, 00:40:38.520)] :  them through Teams, go to that session.
+[SPEAKER_00] : [(00:40:38.520, 00:40:41.140)] :  I'll hand back to Jeremy.
+[SPEAKER_01] : [(00:40:41.140, 00:40:44.200)] :  Thank you, Barnum.
+[SPEAKER_01] : [(00:40:44.200, 00:40:48.060)] :  So hopefully today you've seen that we have choice.
+[SPEAKER_01] : [(00:40:48.060, 00:40:51.940)] :  We've given you choice whether you build on top of our AI platform or whether you bring
+[SPEAKER_01] : [(00:40:51.940, 00:40:53.860)] :  your own.
+[SPEAKER_01] : [(00:40:53.860, 00:40:57.420)] :  In a lot of the AKA links at the bottom here, you'll see that we're pointing to particular
+[SPEAKER_01] : [(00:40:57.420, 00:41:01.440)] :  developer center slides that the team back at base have been building to further go into
+[SPEAKER_01] : [(00:41:01.440, 00:41:02.760)] :  detail about some of these decisions.
+[SPEAKER_01] : [(00:41:02.760, 00:41:06.000)] :  We'll continue to keep revving on those as we learn from your experiences
+[SPEAKER_01] : [(00:41:06.000, 00:41:08.000)] :  in building on top of this.
+[SPEAKER_01] : [(00:41:08.000, 00:41:11.000)] :  I'd just like to pause to take thanks to all the partners we've been working with
+[SPEAKER_01] : [(00:41:11.000, 00:41:14.000)] :  in both the private preview and the public previews
+[SPEAKER_01] : [(00:41:14.000, 00:41:17.000)] :  to build these experiences and to be able to provide this type of guidance
+[SPEAKER_01] : [(00:41:17.000, 00:41:19.000)] :  to you at Build this week.
+[SPEAKER_01] : [(00:41:19.000, 00:41:26.160)] :  Now, there is a great session that Srini is doing, 147, on Thursday at 8 a.m., at 8.30 a.m., that's going to go
+[SPEAKER_01] : [(00:41:26.160, 00:41:30.160)] :  into a lot more detail. If you're a software vendor and you're wearing that hat, I'd encourage
+[SPEAKER_01] : [(00:41:30.160, 00:41:34.160)] :  you to go check out that session, as well as the transferring the most valuable industry
+[SPEAKER_01] : [(00:41:34.160, 00:41:37.320)] :  workflows with Copilot, which is at 3 p.m. on Thursday as well.
+[SPEAKER_01] : [(00:41:39.000, 00:41:50.000)] :  Now, just to recap on some of the things we've shown and what that looks like timeline-wise from roadmaps. Obviously, with Copilot Studio today, Copilot connectors are actually in public preview right
+[SPEAKER_01] : [(00:41:50.000, 00:41:55.960)] :  now. The plugins that we've shown you will be available in public preview right now,
+[SPEAKER_01] : [(00:41:56.300, 00:42:01.000)] :  and there is a sign-up sheet that you can go to at aka.ms slash copilot dash extensions,
+[SPEAKER_01] : [(00:42:01.620, 00:42:07.900)] :  and if you fill that form out, we'll notify you when it's available to light up in your particular tenant to use Copilot Studio plugins.
+[SPEAKER_01] : [(00:42:07.900, 00:42:11.300)] :  And additionally, there is a private preview going on right now if you wanted to build
+[SPEAKER_01] : [(00:42:11.300, 00:42:16.060)] :  your own custom engine copilots within Copilot Studio.
+[SPEAKER_01] : [(00:42:16.060, 00:42:19.900)] :  From a Teams toolkit and Visual Studio Code perspective, Graph connectors are generally
+[SPEAKER_01] : [(00:42:19.900, 00:42:23.760)] :  available and they're available as part of the Copilot for Microsoft experience in public
+[SPEAKER_01] : [(00:42:23.760, 00:42:29.160)] :  preview still. The Teams message extensions are still available right now in your attendance
+[SPEAKER_01] : [(00:42:29.160, 00:42:34.280)] :  today and coming very, very soon, API plug-ins which I demonstrated backed by those open
+[SPEAKER_01] : [(00:42:34.280, 00:42:40.120)] :  API documents will be available in your attendance to play with too. In addition to if you want
+[SPEAKER_01] : [(00:42:40.120, 00:42:48.380)] :  to build custom engine copilots in Teams AI library, those are available right standalone, and very shortly you'll be able to have that immersive experience and that
+[SPEAKER_01] : [(00:42:48.380, 00:42:53.200)] :  handoff from our co-pilot to your co-pilot in your public tenants too.
+[SPEAKER_01] : [(00:42:54.720, 00:42:58.120)] :  Now, there are a lot of sessions at Build that go into a lot more detail here.
+[SPEAKER_01] : [(00:42:58.200, 00:43:00.060)] :  Some of those we've called out in particular slides.
+[SPEAKER_01] : [(00:43:00.440, 00:43:03.660)] :  I'll give you a moment to take a picture of the screen that will cover those in more detail.
+[SPEAKER_01] : [(00:43:10.120, 00:43:10.700)] :  There is obviously the hall upstairs on the top floor where you'll be able to ask more questions to our experts in person.
+[SPEAKER_01] : [(00:43:12.900, 00:43:13.020)] :  And so just a big thank you for taking your time to take that photo.
+[SPEAKER_01] : [(00:43:16.280, 00:43:17.800)] :  And we hopefully see a lot of your faces in those breakouts moving forward.
+[SPEAKER_01] : [(00:43:19.000, 00:43:19.080)] :  So the time is now.
+[SPEAKER_01] : [(00:43:19.920, 00:43:27.680)] :  Go build, please. We'd love to see what you can do with taking Copilot for Microsoft 365, an AI platform or your AI platform, and helping users be more productive.
+[SPEAKER_01] : [(00:43:28.180, 00:43:30.260)] :  Thank you again for your time today and enjoy the rest of Build.
+[SPEAKER_01] : [(00:43:31.700, 00:43:35.260)] :  Thanks, Adam. you you you
