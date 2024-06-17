@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>This project demonstrates the use of local AI to transcribe, diarize, and enrich transcripts created from videos </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="This project demonstrates the use of local AI to transcribe, diarize, and enrich transcripts created from videos ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h2 id="this-projecthttpsgithubcomdouglaswareelumenotionsitetreemasterprojectstranscriptionanddiarization-demonstrates-the-use-of-local-ai-to-transcribe-diarize-and-enrich-transcripts-created-from-videos"><a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/TranscriptionAndDiarization">This project</a> demonstrates the use of local AI to transcribe, diarize, and enrich transcripts created from videos</h2>
+
+<p>It uses:</p>
+<ul>
+<li><a href="https://pytube.io/en/latest/index.html">pytube</a></li>
+<li><a href="https://pypi.org/project/moviepy/">moviepy</a></li>
+<li><a href="https://github.com/huggingface/transformers">transformers</a></li>
+<li><a href="https://pypi.org/project/pyannote.audio/">pyannote</a></li>
+<li><a href="https://pypi.org/project/onnxruntime-genai-directml/">onnx-directml</a></li>
+</ul>
+<p>You will need to download and install microsoft/Phi-3-medium-4k-instruct-onnx-directml and update the model_path below. If you do not have GPU or are not using Windows, see the Phi-3 docs and set yourself up accordingly.</p>
+<p>Pyannote.audio is gated on huggingface and requires an account and access key. See <a href="https://huggingface.co/pyannote/speaker-diarization-3.1">https://huggingface.co/pyannote/speaker-diarization-3.1</a> for instructions.</p>
+<h2 id="notebooks">Notebooks</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/TranscriptionAndDiarization/DownloadFromYoutube.ipynb">DownloadFromYoutube.ipynb</a></td>
+<td>Use pytube to download a video</td>
+</tr>
+<tr>
+<td><a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/TranscriptionAndDiarization/ExtractAudioFromVideo.ipynb">ExtractAudioFromVideo.ipynb</a></td>
+<td>Extract mp3 from mp4 with moviepy</td>
+</tr>
+<tr>
+<td><a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/TranscriptionAndDiarization/TranscribeVideoWithWhisperLarge.ipynb">TranscribeVideoWithWhisperLarge.ipynb</a></td>
+<td>Create a transcript with whisper-large-v3</td>
+</tr>
+<tr>
+<td><a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/TranscriptionAndDiarization/DiarizeWithPyannote.ipynb">DiarizeWithPyannote.ipynb</a></td>
+<td>Diarize with Pyannote</td>
+</tr>
+<tr>
+<td><a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/TranscriptionAndDiarization/Phi3-ONNX.ipynb">Phi3-ONNX.ipynb</a></td>
+<td>Use Phi-3 with ONNX to identify names and finalize transcript</td>
+</tr>
+<tr>
+<td><a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/TranscriptionAndDiarization/phi3test-transformers.ipynb">phi3test-transformers.ipynb</a></td>
+<td>A test for comparing transformers to ONNX (spoiler ONNX is waaaaay faster)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/TranscriptionAndDiarization/VideoToFullTranscriptWithWhisperPyannoteAndPhi3-medium.ipynb">VideoToFullTranscriptWithWhisperPyannoteAndPhi3-medium.ipynb</a></td>
+<td>Complete process in a single notebook</td>
+</tr>
+</tbody>
+</table>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

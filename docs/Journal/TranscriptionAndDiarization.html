@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Locally and Privately Extracting Meaning from Video with Transcription, Diarization, and LLMs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Locally and Privately Extracting Meaning from Video with Transcription, Diarization, and LLMs ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="locally-and-privately-extracting-meaning-from-video-with-transcription-diarization-and-llms">Locally and Privately Extracting Meaning from Video with Transcription, Diarization, and LLMs</h1>
+
+<p><img src="../Images/TranscriptionAndDiarization/image1.png" alt="">  </p>
+<p>My <a href="IngestingPdfContent.html">previous entry</a> was about using computer vision and OCR along with various versions of GPT-4 with vision to convert PDFs into text files containing descriptions of images and text-based diagrams. I’m excited by the ability to turn images into words, but I am also excited about turning sound into words!<br><br>… and sound into images, images into sound, etc. <br><br>Ultimately, I think user experiences should <a href="ProjectedUserExperiencesWithAI">adapt to the person</a> and be multimodal for the benefit of all kinds of people, but another reason for my interest is because there is a lot of information that isn’t written down or must been seen and/or heard.<br><br>Microsoft stirred up a lot of controversy these past weeks with <a href="https://apnews.com/article/microsoft-ai-recall-windows-6ba8df3f22e9fca599d20f2d5770cd95?utm_source=copy&amp;utm_medium=share">Recall</a> and it reminded my why I am so interested in private and local AI applications. That reason is simply that there are a lot of reasons people might hesitate to trust cloud providers with certain information.   </p>
+<h2 id="who-is-this-entry-for">Who is this entry for?</h2>
+<p>I am writing this for as general an audience as possible. The technical details are in the <a href="../Projects/TranscriptionAndDiarization.html">demonstration project</a> and <a href="https://github.com/douglasware/ElumenotionSite/tree/master/Projects/TranscriptionAndDiarization">gihub</a>. If you want to do this yourself, I broke it down into each step using jupyter notebooks and included one with the complete process to create a transcript with speakers from a video. Here, I will talk about it at all a much higher level.<br><br>I see this topic as a continuation of my previous ones about <a href="BuildingDomainSpecificLLMBots.html">building and grounding chatbots</a> and <a href="IngestingPdfContent.html">ingesting PDF content</a>, but the truth is that I use these techniques all the time to create interview and meeting notes and to analyze content.<br><br>Teams Copilot does a great job at many off these tasks if you can use it, but the way it is licensed and the fact that it’s locked into Teams limit its utility for me. This works on any video or audio, I can use its output however I like, it’s private and completely free.<br><br>The key thing though is that the transcript and other information I create when I do this is the end of the first step. The next step might be some kind of analysis, additional content generation, indexing, or work by an AI agent.  </p>
+<h2 id="local-or-privately-hosted-generative-ai-with-open-source-models-and-libraries">Local or privately hosted generative AI with open source models and libraries</h2>
+<p>Everything I will write about in this article happened on my desktop computer. It is similar in specs to the configuration shown below.    </p>
+<p><img src="../Images/TranscriptionAndDiarization/image2.png" alt="">  </p>
+<p>Let me just start by saying that I completely get that that is an expensive setup and most people don’t have a desktop with a top-end consumer GPU and CPU. The good news is that everything I use here is possible on a lot of consumer hardware, but it will be slower, and you might have to break up the steps a bit. Part of my experiment was to see if I could do everything in a single process with my GPU.<br><br>Alternatively, you can do all of this in the cloud in notebooks, containers, or virtual machines using many different providers. The point is that the models and tools are all open source. All of this works on Windows, Mac, and Linux.   </p>
+<h2 id="the-process">The process</h2>
+<p>This diagram shows the steps.  </p>
+<pre><code class="lang-mermaid">graph TD  
+    A[&quot;Download a video from YouTube using pytube&quot;] --&gt; B[&quot;Extract audio from video using MoviePy&quot;]  
+    B --&gt; C[&quot;Create transcript using whisper-large-v3&quot;]  
+    C --&gt; D[&quot;Identify distinct speakers using pyannote.audio&quot;]  
+    D --&gt; E[&quot;Combine Whisper transcript with pyannote speaker data&quot;]  
+    E --&gt; F[&quot;Identify speaker names using phi-3-medium&quot;]  
+    F --&gt; G[&quot;Create final output&quot;]  
+</code></pre><h3 id="test-video">Test video</h3>
+<p>The test video I am using is <a href="https://www.youtube.com/watch?v=MI9DHkyH8Yk">Developer’s Guide to Customizing Microsoft Copilot - Microsoft Build 2024</a>. I chose it because it was a great presentation, because Jeremy has an accent, and because Barnam and Jeremy introduced themselves and said their names! It’s funny what you notice when you start looking for specific information, but often people forget to introduce themselves.<br><br><iframe width="560" height="315" src="https://www.youtube.com/embed/MI9DHkyH8Yk?si=CjeMA_mM-zwwOQpM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>  </p>
+<p>I use <a href="https://pypi.org/project/pytube/">pytube</a> to download videos from YouTube. There are some dodgy websites that will do it for you too.   </p>
+<h3 id="extract-audio-from-video-using-moviepy">Extract audio from video using MoviePy</h3>
+<p>I use <a href="https://pypi.org/project/moviepy/">moviepy</a> to easily extract the audio track. Pytube and moviepy are venerable and popular, and ChatGPT has no trouble writing code using them.  </p>
+<p><img src="../Images/TranscriptionAndDiarization/image3.png" alt="">  </p>
+<h3 id="create-transcript-using-whisper-large-v3">Create transcript using whisper-large-v3</h3>
+<p><a href="https://github.com/openai/whisper">Whisper</a> is a speech recognition model from OpenAI you can use as a service, but it has an open license which means that, unlike GPT-4 and DALL-E, you can download it and run it yourself. It is available on <a href="https://huggingface.co/openai/whisper-large-v3">huggingface</a> and has millions of downloads across its different versions and <a href="https://huggingface.co/spaces/hf-audio/open_asr_leaderboard">ranks among the very best automatic speech recognition options</a>.<br><br>For comparison:  </p>
+<p><img src="../Images/TranscriptionAndDiarization/image4.png" alt="">  </p>
+<p>The YouTube transcript lacks spelling and punctuation and is also less accurate. Where YouTube failed badly, Whisper did a good job phonetically with Barnam’s name. The fact that it spelled it incorrectly isn’t surprising and is even expected.<br><br>To me ‘mistakes’ made by a model fall into two categories:<br>  </p>
+<ul>
+<li>Things the model should know either through its training or grounding data</li>
+<li>Things that the model does not know or have any way of knowing</li>
+</ul>
+<p>The easiest way to identify the second category is ask yourself if a normal person could it. If we were talking, and I said his name, could you correctly spell Barnam Bora?  </p>
+<h3 id="who-said-what-identify-distinct-speakers-using-pyannoteaudio">Who said what? Identify distinct speakers using pyannote.audio</h3>
+<p>If the audio is a single speaker, the whisper transcript would be enough to use with an LLM, but without knowing who said what, there are a lot of questions an LLM (or a person) would not be able to answer. Conceptually, this is the same sort of problem I wrote about in <a href="IngestingPdfContent.html">my article about ingesting PDFs</a>. Concepts aside, it is a different problem and requires a different solution.<br><br>I use <a href="https://pypi.org/project/pyannote.audio/">pyannote.audio</a> which is also available as a more robust <a href="https://pyannote.ai/">service</a> to perform diarization. The diarization creates a Rich Transcription Time Marked (RTTM) file, a space-delimited text files containing one turn per line. <br><br>This video covers the topic in more depth:<br><iframe width="560" height="315" src="https://www.youtube.com/embed/37R_R82lfwA?si=61ATFFZwDcH-7Sky" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>  </p>
+<p>For reference, the first five lines of the output look like this:  </p>
+<pre><code>SPEAKER Developer’sGuidetoCustomizingMicrosoftCopilot-MicrososftBuild2024 1 10.240 3.324 &lt;NA&gt; &lt;NA&gt; SPEAKER_00 &lt;NA&gt; &lt;NA&gt;  
+SPEAKER Developer’sGuidetoCustomizingMicrosoftCopilot-MicrososftBuild2024 1 14.257 19.389 &lt;NA&gt; &lt;NA&gt; SPEAKER_00 &lt;NA&gt; &lt;NA&gt;  
+SPEAKER Developer’sGuidetoCustomizingMicrosoftCopilot-MicrososftBuild2024 1 34.102 0.017 &lt;NA&gt; &lt;NA&gt; SPEAKER_00 &lt;NA&gt; &lt;NA&gt;  
+SPEAKER Developer’sGuidetoCustomizingMicrosoftCopilot-MicrososftBuild2024 1 34.118 0.456 &lt;NA&gt; &lt;NA&gt; SPEAKER_01 &lt;NA&gt; &lt;NA&gt;  
+SPEAKER Developer’sGuidetoCustomizingMicrosoftCopilot-MicrososftBuild2024 1 34.574 0.388 &lt;NA&gt; &lt;NA&gt; SPEAKER_00 &lt;NA&gt; &lt;NA&gt;  
+</code></pre><h3 id="combine-whisper-transcript-with-pyannote-speaker-data">Combine whisper transcript with pyannote speaker data</h3>
+<p>At this point we have a file with a transcript and time codes but not speaker information from whisper and another with time codes and speakers without a transcript from pyannote. The code is in <a href="https://github.com/douglasware/ElumenotionSite/blob/master/Projects/TranscriptionAndDiarization/DiarizeWithPyannote.ipynb">this notebook</a>. It also changes the time codes from seconds to something easier to read (hh:mm:ss). One wrinkle to this is that the time codes from the two models don’t line up perfectly, and so the final result often some issues where the speaker changed in the middle of a line in the whisper transcript, although in this case it was fine.<br><br>The <a href="https://github.com/douglasware/ElumenotionSite/blob/master/Projects/TranscriptionAndDiarization/Transcript/Developer%E2%80%99s%20Guide%20to%20Customizing%20Microsoft%20Copilot%20-%20Micrososft%20Build%202024.transcript.txt">result</a> looks like this:  </p>
+<pre><code>[SPEAKER_00] : [(00:00:00.000, 00:00:23.660)] :  All right, everybody. Welcome, welcome, welcome, welcome. First breakout of Build. I&#39;m Barnum Bora, and I lead the developer advocacy team for Microsoft 365 and Copilot Platform.  
+[SPEAKER_00] : [(00:00:23.660, 00:00:24.340)] :  advocacy team for Microsoft 365 and Copilot platform.  
+[SPEAKER_00] : [(00:00:27.920, 00:00:28.120)] :  But without further ado, before I come back and do more things,  
+[SPEAKER_00] : [(00:00:31.980, 00:00:36.160)] :  I&#39;m going to hand off to my good friend Jeremy Thake, and he&#39;s going to walk you through the first half of this session. Thanks, Barno. I appreciate it. And thank you for coming to Build.  
+[SPEAKER_01] : [(00:00:37.960, 00:00:40.280)] :  So I&#39;m Jeremy Thake. I&#39;m a   
+</code></pre><h3 id="identify-speaker-names-using-phi-3-medium">Identify speaker names using phi-3-medium</h3>
+<p>Often at this point I have to do some manual step to replace “SPEAKER_00” with a real name because I find that very often, perhaps most of the time, people don’t say their own names or refer to others by name. But still, if I am doing this process, I intend to use the transcript with a language model to get insight from the content.<br><br>In this case, Barnam and Jeremy demonstrated excellent presenter skills and the text contains their names. Thanks to this, I can use a language model to extract their names and update the transcript. For this task I used <a href="https://huggingface.co/microsoft/Phi-3-medium-4k-instruct-onnx-directml">microsoft/Phi-3-medium-4k-instruct-onnx-directml</a> which is a version of Phi-3-medium-4k-instruct optimized for use with <a href="https://onnxruntime.ai/docs/genai/tutorials/phi3-python.html">ONNX runtime</a> which makes it super fast on my RTX-4090 GPU. Use it if you have a GPU and are using Windows.  </p>
+<p>My notebook contains code to pull out a few lines before and after a speaker’s first appearance and build a prompt:  </p>
+<pre><code> # Create the prompt with the current speaker and their context  
+        prompt = f&quot;&quot;&quot;  
+        The following text is a piece of a transcript. Examine the text and if the text identifies the speaker reply with ONLY the full name matching the exact spelling of the person listed as {speaker} and nothing else.   
+        ----------------------------------------  
+        {context_text}&quot;&quot;&quot;  
+</code></pre><p>The output of the function looks like this:  </p>
+<pre><code>SPEAKER_00:  Barnum Bora  
+SPEAKER_01:  Jeremy Thake  
+</code></pre><p>Once the file is updated, the <a href="https://github.com/douglasware/ElumenotionSite/blob/master/Projects/TranscriptionAndDiarization/Transcript/Developer%E2%80%99s%20Guide%20to%20Customizing%20Microsoft%20Copilot%20-%20Micrososft%20Build%202024.transcript.FINAL.txt">final transcript</a> looks like this:  </p>
+<pre><code>[Barnum Bora] : [(00:00:00.000, 00:00:23.660)] :  All right, everybody. Welcome, welcome, welcome, welcome. First breakout of Build. I&#39;m Barnum Bora, and I lead the developer advocacy team for Microsoft 365 and Copilot Platform.  
+[Barnum Bora] : [(00:00:23.660, 00:00:24.340)] :  advocacy team for Microsoft 365 and Copilot platform.  
+[Barnum Bora] : [(00:00:27.920, 00:00:28.120)] :  But without further ado, before I come back and do more things,  
+[Barnum Bora] : [(00:00:31.980, 00:00:36.160)] :  I&#39;m going to hand off to my good friend Jeremy Thake, and he&#39;s going to walk you through the first half of this session. Thanks, Barno. I appreciate it. And thank you for coming to Build.  
+[Jeremy Thake] : [(00:00:37.960, 00:00:40.280)] :  So I&#39;m Jeremy Thake. I&#39;m a  
+[Jeremy Thake] : [(00:00:40.280, 00:00:44.100)] :  principal program manager in the Copilot developer experience team. And a slight  
+</code></pre><h2 id="next-steps">Next steps</h2>
+<p>From here there is still room for improvement. The information extracted from the video contains only what was heard and none of what was seen. For example, one could further improve the pipeline by cutting the video into screen shots at transitions and enhance the content with both images as well as descriptions from a vision model. Often the names of the speakers is displayed as text in the video and looking for names in both places would presumably yield correct spellings for the speaker’s names.<br><br>Teams Copilot is exciting to people because it unlocks information and answers questions, but it is locked into Teams. You don’t have to settle for that.<br><br>Thanks for reading!<br>--Doug Ware<br>June 17, 2024  </p>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

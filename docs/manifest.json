@@ -29,11 +29,11 @@
       "output": {
         ".html": {
           "relative_path": "FeaturedContent/toc.html",
-          "hash": "pJ9veJgxfsJThf5RAD50dfFzzJe5kkdP/MEnuOvafgo="
+          "hash": "mc5/MI2PwS5EwS8CtWMxJB3m4r0SFzzeeqMN7K1YpLI="
         },
         ".json": {
           "relative_path": "FeaturedContent/toc.json",
-          "hash": "LQ/ezoKheSWNAfpnwjP1GaYmhfRy/L1WkRrgGzRSECA="
+          "hash": "mhB0MEtEw4quaycqz0uuPIHB0pUYK9gKfVlULjFB1ao="
         }
       },
       "is_incremental": false,
@@ -1075,6 +1075,50 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "Images/TranscriptionAndDiarization/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/TranscriptionAndDiarization/image1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/TranscriptionAndDiarization/image2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/TranscriptionAndDiarization/image2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/TranscriptionAndDiarization/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/TranscriptionAndDiarization/image3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/TranscriptionAndDiarization/image4.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/TranscriptionAndDiarization/image4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "Images/UsingGitHubPages/image8.png",
       "output": {
         "resource": {
@@ -1468,6 +1512,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Journal/TranscriptionAndDiarization.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/TranscriptionAndDiarization.html",
+          "hash": "LERKCtDPKaJNtn/BzFkCfMkOfD1dos4XUh8IKGYtm1U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "Journal/WritingByTalking.md",
       "output": {
@@ -1485,7 +1544,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/index.html",
-          "hash": "0HETsmF8w0J4j/kNNzhIKw+vf+b6ruZFb7VeAs8Cbq4="
+          "hash": "Iy+B7uA03cxkE14lxvqPulYUjD7MwxFBS/9Rp8JVr0Y="
         }
       },
       "is_incremental": false,
@@ -1497,11 +1556,11 @@
       "output": {
         ".html": {
           "relative_path": "Journal/toc.html",
-          "hash": "NwqVqz71/HRFadpSb2VNj9g37KFK4UnfK2siUimn574="
+          "hash": "hCrt8r5XCcf1+C3pedjPqtuiM4Oe2XeAnwe5tZa0LDA="
         },
         ".json": {
           "relative_path": "Journal/toc.json",
-          "hash": "RwQhUgSqJnaJGMaOVeRbozp9m8tGTVaVayPPOk9cJak="
+          "hash": "rAlZuNpiiRqt0bOFAJNZop8kdFVP6qnLFaBmRlgbKRk="
         }
       },
       "is_incremental": false,
@@ -1575,6 +1634,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Projects/TranscriptionAndDiarization.md",
+      "output": {
+        ".html": {
+          "relative_path": "Projects/TranscriptionAndDiarization.html",
+          "hash": "M/WHpLXw+S2FSt+/0zxlNgP3nT0S5Pq2aQFth+02OyQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Projects/WeightRandoms.md",
       "output": {
         ".html": {
@@ -1591,7 +1662,7 @@
       "output": {
         ".html": {
           "relative_path": "Projects/index.html",
-          "hash": "Exxg6WcBdD6E3mjnmD74tKgmcUurlkAsNZx4s6dmrso="
+          "hash": "itQax6YO3E6+3bIrwVl9VEGpPtu1QIijWRZw2nX/yys="
         }
       },
       "is_incremental": false,
@@ -1603,11 +1674,11 @@
       "output": {
         ".html": {
           "relative_path": "Projects/toc.html",
-          "hash": "n/hq7AyvMPFzE8bJZ5rIYiFp4yQviOiogmxknENA2v4="
+          "hash": "vfKM7gJsPdaHhybMofs39VH6C4V9VGix+hekVDjQNgQ="
         },
         ".json": {
           "relative_path": "Projects/toc.json",
-          "hash": "rUVh4jxrInAYiru3ehpLMzMeMiN7IPs0o6mTUiaOXfg="
+          "hash": "UsE81BLGq9OiJcLwHaRKomoawmg6iWVdGQwFq3PHlDA="
         }
       },
       "is_incremental": false,
@@ -1630,11 +1701,11 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "MdLByhkl4wCoBzcRQFY7flbgB9A+YKJfFfDJ+RQmB4E="
+          "hash": "mVzJTlPmyn8kMqxDtwHuqN59ey0xZSD2cY1I8N67MeQ="
         },
         ".json": {
           "relative_path": "toc.json",
-          "hash": "oRNkTTRPN8R/+5l6YVlos6o8q0ZBVj6srN29CRIvsrc="
+          "hash": "cEzeOxJq+Em3Li6baclOJXXxxSt5hqeAhLsA0PaqHTQ="
         }
       },
       "is_incremental": false,
@@ -1655,7 +1726,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 28,
+          "total_file_count": 30,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
