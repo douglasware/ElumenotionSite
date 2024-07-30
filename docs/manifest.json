@@ -1520,7 +1520,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/TranscriptionAndDiarization.html",
-          "hash": "O0gPPGCTy4eCeLnL5wC6bRYPHEfrT+YxlpVp7I0TyQM="
+          "hash": "1h7VGE95kwwbn5BlRhWNkxoCNkE2w0BmSW769jjdtDs="
         }
       },
       "is_incremental": false,
@@ -1561,6 +1561,18 @@
         ".json": {
           "relative_path": "Journal/toc.json",
           "hash": "rAlZuNpiiRqt0bOFAJNZop8kdFVP6qnLFaBmRlgbKRk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Projects/AntArmyPreview.md",
+      "output": {
+        ".html": {
+          "relative_path": "Projects/AntArmyPreview.html",
+          "hash": "Y7VHQuBunSW1waq7+WXkOS3TtP+yTVyBATDtfZZ9NBk="
         }
       },
       "is_incremental": false,
@@ -1674,11 +1686,11 @@
       "output": {
         ".html": {
           "relative_path": "Projects/toc.html",
-          "hash": "vfKM7gJsPdaHhybMofs39VH6C4V9VGix+hekVDjQNgQ="
+          "hash": "ck8DojIOFT4xXb0tXUgtH6OEgFJ+LE9BUB7nDuTOpnY="
         },
         ".json": {
           "relative_path": "Projects/toc.json",
-          "hash": "UsE81BLGq9OiJcLwHaRKomoawmg6iWVdGQwFq3PHlDA="
+          "hash": "oA1pNT9cPi5V6nre/TnxhtWd8HlNNvpUpAB9TWfYAJ8="
         }
       },
       "is_incremental": false,
@@ -1701,11 +1713,22 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "mVzJTlPmyn8kMqxDtwHuqN59ey0xZSD2cY1I8N67MeQ="
+          "hash": "HoM52h7f9q2v5hsSYi+FX2sZZP0qiGgC7/5A8nWCzGE="
         },
         ".json": {
           "relative_path": "toc.json",
-          "hash": "cEzeOxJq+Em3Li6baclOJXXxxSt5hqeAhLsA0PaqHTQ="
+          "hash": "+Y+//BuqVvQKGzAAAlWvjGLjvr0CPErPgfZ4xa54yTo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "video/AntArmyIntro.mp4",
+      "output": {
+        "resource": {
+          "relative_path": "video/AntArmyIntro.mp4"
         }
       },
       "is_incremental": false,
@@ -1726,7 +1749,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 30,
+          "total_file_count": 31,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
