@@ -1572,7 +1572,22 @@
       "output": {
         ".html": {
           "relative_path": "Projects/AntArmyPreview.html",
-          "hash": "Y7VHQuBunSW1waq7+WXkOS3TtP+yTVyBATDtfZZ9NBk="
+          "hash": "ENGe2VP2dpr3EDCitXvcsZlZHKVa3pErqn/oCNlhKy4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Projects/AntRunnerTools.md",
+      "output": {
+        ".html": {
+          "relative_path": "Projects/AntRunnerTools.html",
+          "hash": "LMUL3TOQ3etqE2kpUAs4YLlzbA4HjOBvYMuCUJGY4yQ="
         }
       },
       "is_incremental": false,
@@ -1686,11 +1701,11 @@
       "output": {
         ".html": {
           "relative_path": "Projects/toc.html",
-          "hash": "ck8DojIOFT4xXb0tXUgtH6OEgFJ+LE9BUB7nDuTOpnY="
+          "hash": "brZ8GCOJ1Z1JEHdO4yYd2cQCjRnGeVlHTQUz+Eq64fg="
         },
         ".json": {
           "relative_path": "Projects/toc.json",
-          "hash": "oA1pNT9cPi5V6nre/TnxhtWd8HlNNvpUpAB9TWfYAJ8="
+          "hash": "a8KXNobGr2iLaDW/ExpUqoepYq8Lq29hgwEOaS6P9GU="
         }
       },
       "is_incremental": false,
@@ -1713,11 +1728,11 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "HoM52h7f9q2v5hsSYi+FX2sZZP0qiGgC7/5A8nWCzGE="
+          "hash": "n3G596cOhibOJoFDwklPIxOtF/2hMyPZ02hiSkiYafE="
         },
         ".json": {
           "relative_path": "toc.json",
-          "hash": "+Y+//BuqVvQKGzAAAlWvjGLjvr0CPErPgfZ4xa54yTo="
+          "hash": "csoXhcKItTc4ZCw6YP2byI8NaWvgmMPpsmvAxXGhAlw="
         }
       },
       "is_incremental": false,
@@ -1729,6 +1744,17 @@
       "output": {
         "resource": {
           "relative_path": "video/AntArmyIntro.mp4"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "video/TechConDC.pptx",
+      "output": {
+        "resource": {
+          "relative_path": "video/TechConDC.pptx"
         }
       },
       "is_incremental": false,
@@ -1749,7 +1775,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 31,
+          "total_file_count": 32,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
