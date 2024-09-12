@@ -1,2 +1,1435 @@
-
-{"items":[{"name":"DougWare.StringExtensionMethods","href":"DougWare.StringExtensionMethods.html","topicHref":"DougWare.StringExtensionMethods.html","topicUid":"DougWare.StringExtensionMethods","items":[{"name":"StringExtensionMethods","href":"DougWare.StringExtensionMethods.StringExtensionMethods.html","topicHref":"DougWare.StringExtensionMethods.StringExtensionMethods.html","topicUid":"DougWare.StringExtensionMethods.StringExtensionMethods"}]},{"name":"OobaboogaAPIHelper","href":"OobaboogaAPIHelper.html","topicHref":"OobaboogaAPIHelper.html","topicUid":"OobaboogaAPIHelper","items":[{"name":"ApiHelper","href":"OobaboogaAPIHelper.ApiHelper.html","topicHref":"OobaboogaAPIHelper.ApiHelper.html","topicUid":"OobaboogaAPIHelper.ApiHelper"},{"name":"ApiHelper.GenerateRequestBody","href":"OobaboogaAPIHelper.ApiHelper.GenerateRequestBody.html","topicHref":"OobaboogaAPIHelper.ApiHelper.GenerateRequestBody.html","topicUid":"OobaboogaAPIHelper.ApiHelper.GenerateRequestBody"},{"name":"ApiHelper.TokenCountResult","href":"OobaboogaAPIHelper.ApiHelper.TokenCountResult.html","topicHref":"OobaboogaAPIHelper.ApiHelper.TokenCountResult.html","topicUid":"OobaboogaAPIHelper.ApiHelper.TokenCountResult"},{"name":"Config","href":"OobaboogaAPIHelper.Config.html","topicHref":"OobaboogaAPIHelper.Config.html","topicUid":"OobaboogaAPIHelper.Config"},{"name":"Conversation","href":"OobaboogaAPIHelper.Conversation.html","topicHref":"OobaboogaAPIHelper.Conversation.html","topicUid":"OobaboogaAPIHelper.Conversation"},{"name":"Dolly_v2PromptTemplate","href":"OobaboogaAPIHelper.Dolly_v2PromptTemplate.html","topicHref":"OobaboogaAPIHelper.Dolly_v2PromptTemplate.html","topicUid":"OobaboogaAPIHelper.Dolly_v2PromptTemplate"},{"name":"ModelParameters","href":"OobaboogaAPIHelper.ModelParameters.html","topicHref":"OobaboogaAPIHelper.ModelParameters.html","topicUid":"OobaboogaAPIHelper.ModelParameters"},{"name":"Presets","href":"OobaboogaAPIHelper.Presets.html","topicHref":"OobaboogaAPIHelper.Presets.html","topicUid":"OobaboogaAPIHelper.Presets"},{"name":"PromptTemplate","href":"OobaboogaAPIHelper.PromptTemplate.html","topicHref":"OobaboogaAPIHelper.PromptTemplate.html","topicUid":"OobaboogaAPIHelper.PromptTemplate"},{"name":"Turn","href":"OobaboogaAPIHelper.Turn.html","topicHref":"OobaboogaAPIHelper.Turn.html","topicUid":"OobaboogaAPIHelper.Turn"},{"name":"Vicuna_v0PromptTemplate","href":"OobaboogaAPIHelper.Vicuna_v0PromptTemplate.html","topicHref":"OobaboogaAPIHelper.Vicuna_v0PromptTemplate.html","topicUid":"OobaboogaAPIHelper.Vicuna_v0PromptTemplate"},{"name":"Vicuna_v1PromptTemplate","href":"OobaboogaAPIHelper.Vicuna_v1PromptTemplate.html","topicHref":"OobaboogaAPIHelper.Vicuna_v1PromptTemplate.html","topicUid":"OobaboogaAPIHelper.Vicuna_v1PromptTemplate"}]},{"name":"Utilty","href":"Utilty.html","topicHref":"Utilty.html","topicUid":"Utilty","items":[{"name":"EmbeddedResourceUtility","href":"Utilty.EmbeddedResourceUtility.html","topicHref":"Utilty.EmbeddedResourceUtility.html","topicUid":"Utilty.EmbeddedResourceUtility"},{"name":"JsonExtractor","href":"Utilty.JsonExtractor.html","topicHref":"Utilty.JsonExtractor.html","topicUid":"Utilty.JsonExtractor"}]},{"name":"WeightedRandoms","href":"WeightedRandoms.html","topicHref":"WeightedRandoms.html","topicUid":"WeightedRandoms","items":[{"name":"WeightedRandomSelection","href":"WeightedRandoms.WeightedRandomSelection.html","topicHref":"WeightedRandoms.WeightedRandomSelection.html","topicUid":"WeightedRandoms.WeightedRandomSelection"}]}],"memberLayout":"SamePage"}
+{
+  "items": [
+    {
+      "name": "AntRunnerLib",
+      "href": "AntRunnerLib.html",
+      "topicHref": "AntRunnerLib.html",
+      "topicUid": "AntRunnerLib",
+      "items": [
+        {
+          "name": "AntLoader",
+          "href": "AntRunnerLib.AntLoader.html",
+          "topicHref": "AntRunnerLib.AntLoader.html",
+          "topicUid": "AntRunnerLib.AntLoader"
+        },
+        {
+          "name": "AssistantRunner",
+          "href": "AntRunnerLib.AssistantRunner.html",
+          "topicHref": "AntRunnerLib.AssistantRunner.html",
+          "topicUid": "AntRunnerLib.AssistantRunner"
+        },
+        {
+          "name": "AssistantRunnerState",
+          "href": "AntRunnerLib.AssistantRunnerState.html",
+          "topicHref": "AntRunnerLib.AssistantRunnerState.html",
+          "topicUid": "AntRunnerLib.AssistantRunnerState"
+        },
+        {
+          "name": "AssistantRunOptions",
+          "href": "AntRunnerLib.AssistantRunOptions.html",
+          "topicHref": "AntRunnerLib.AssistantRunOptions.html",
+          "topicUid": "AntRunnerLib.AssistantRunOptions"
+        },
+        {
+          "name": "AssistantUtility",
+          "href": "AntRunnerLib.AssistantUtility.html",
+          "topicHref": "AntRunnerLib.AssistantUtility.html",
+          "topicUid": "AntRunnerLib.AssistantUtility"
+        },
+        {
+          "name": "AzureOpenAIConfig",
+          "href": "AntRunnerLib.AzureOpenAIConfig.html",
+          "topicHref": "AntRunnerLib.AzureOpenAIConfig.html",
+          "topicUid": "AntRunnerLib.AzureOpenAIConfig"
+        },
+        {
+          "name": "AzureOpenAIConfigFactory",
+          "href": "AntRunnerLib.AzureOpenAIConfigFactory.html",
+          "topicHref": "AntRunnerLib.AzureOpenAIConfigFactory.html",
+          "topicUid": "AntRunnerLib.AzureOpenAIConfigFactory"
+        },
+        {
+          "name": "ClientUtility",
+          "href": "AntRunnerLib.ClientUtility.html",
+          "topicHref": "AntRunnerLib.ClientUtility.html",
+          "topicUid": "AntRunnerLib.ClientUtility"
+        },
+        {
+          "name": "CodeInterpreterFiles",
+          "href": "AntRunnerLib.CodeInterpreterFiles.html",
+          "topicHref": "AntRunnerLib.CodeInterpreterFiles.html",
+          "topicUid": "AntRunnerLib.CodeInterpreterFiles"
+        },
+        {
+          "name": "EnvironmentSettings",
+          "href": "AntRunnerLib.EnvironmentSettings.html",
+          "topicHref": "AntRunnerLib.EnvironmentSettings.html",
+          "topicUid": "AntRunnerLib.EnvironmentSettings"
+        },
+        {
+          "name": "ResourceFile",
+          "href": "AntRunnerLib.ResourceFile.html",
+          "topicHref": "AntRunnerLib.ResourceFile.html",
+          "topicUid": "AntRunnerLib.ResourceFile"
+        },
+        {
+          "name": "ResourceType",
+          "href": "AntRunnerLib.ResourceType.html",
+          "topicHref": "AntRunnerLib.ResourceType.html",
+          "topicUid": "AntRunnerLib.ResourceType"
+        },
+        {
+          "name": "ThreadConversationMessage",
+          "href": "AntRunnerLib.ThreadConversationMessage.html",
+          "topicHref": "AntRunnerLib.ThreadConversationMessage.html",
+          "topicUid": "AntRunnerLib.ThreadConversationMessage"
+        },
+        {
+          "name": "ThreadConversationMessageType",
+          "href": "AntRunnerLib.ThreadConversationMessageType.html",
+          "topicHref": "AntRunnerLib.ThreadConversationMessageType.html",
+          "topicUid": "AntRunnerLib.ThreadConversationMessageType"
+        },
+        {
+          "name": "ThreadRun",
+          "href": "AntRunnerLib.ThreadRun.html",
+          "topicHref": "AntRunnerLib.ThreadRun.html",
+          "topicUid": "AntRunnerLib.ThreadRun"
+        },
+        {
+          "name": "ThreadRunOutput",
+          "href": "AntRunnerLib.ThreadRunOutput.html",
+          "topicHref": "AntRunnerLib.ThreadRunOutput.html",
+          "topicUid": "AntRunnerLib.ThreadRunOutput"
+        },
+        {
+          "name": "ThreadUtility",
+          "href": "AntRunnerLib.ThreadUtility.html",
+          "topicHref": "AntRunnerLib.ThreadUtility.html",
+          "topicUid": "AntRunnerLib.ThreadUtility"
+        },
+        {
+          "name": "VectorStore",
+          "href": "AntRunnerLib.VectorStore.html",
+          "topicHref": "AntRunnerLib.VectorStore.html",
+          "topicUid": "AntRunnerLib.VectorStore"
+        }
+      ]
+    },
+    {
+      "name": "AntRunnerLib.AssistantDefinitions",
+      "href": "AntRunnerLib.AssistantDefinitions.html",
+      "topicHref": "AntRunnerLib.AssistantDefinitions.html",
+      "topicUid": "AntRunnerLib.AssistantDefinitions",
+      "items": [
+        {
+          "name": "AssistantDefinitionFiles",
+          "href": "AntRunnerLib.AssistantDefinitions.AssistantDefinitionFiles.html",
+          "topicHref": "AntRunnerLib.AssistantDefinitions.AssistantDefinitionFiles.html",
+          "topicUid": "AntRunnerLib.AssistantDefinitions.AssistantDefinitionFiles"
+        }
+      ]
+    },
+    {
+      "name": "AntRunnerLib.Functions",
+      "href": "AntRunnerLib.Functions.html",
+      "topicHref": "AntRunnerLib.Functions.html",
+      "topicUid": "AntRunnerLib.Functions",
+      "items": [
+        {
+          "name": "ActionAuthConfig",
+          "href": "AntRunnerLib.Functions.ActionAuthConfig.html",
+          "topicHref": "AntRunnerLib.Functions.ActionAuthConfig.html",
+          "topicUid": "AntRunnerLib.Functions.ActionAuthConfig"
+        },
+        {
+          "name": "AuthType",
+          "href": "AntRunnerLib.Functions.AuthType.html",
+          "topicHref": "AntRunnerLib.Functions.AuthType.html",
+          "topicUid": "AntRunnerLib.Functions.AuthType"
+        },
+        {
+          "name": "DomainAuth",
+          "href": "AntRunnerLib.Functions.DomainAuth.html",
+          "topicHref": "AntRunnerLib.Functions.DomainAuth.html",
+          "topicUid": "AntRunnerLib.Functions.DomainAuth"
+        }
+      ]
+    },
+    {
+      "name": "AntRunnerLib.Identity",
+      "href": "AntRunnerLib.Identity.html",
+      "topicHref": "AntRunnerLib.Identity.html",
+      "topicUid": "AntRunnerLib.Identity",
+      "items": [
+        {
+          "name": "OAuthHelper",
+          "href": "AntRunnerLib.Identity.OAuthHelper.html",
+          "topicHref": "AntRunnerLib.Identity.OAuthHelper.html",
+          "topicUid": "AntRunnerLib.Identity.OAuthHelper"
+        }
+      ]
+    },
+    {
+      "name": "FunctionCalling",
+      "href": "FunctionCalling.html",
+      "topicHref": "FunctionCalling.html",
+      "topicUid": "FunctionCalling",
+      "items": [
+        {
+          "name": "ActionRequestBuilder",
+          "href": "FunctionCalling.ActionRequestBuilder.html",
+          "topicHref": "FunctionCalling.ActionRequestBuilder.html",
+          "topicUid": "FunctionCalling.ActionRequestBuilder"
+        },
+        {
+          "name": "ActionType",
+          "href": "FunctionCalling.ActionType.html",
+          "topicHref": "FunctionCalling.ActionType.html",
+          "topicUid": "FunctionCalling.ActionType"
+        },
+        {
+          "name": "OpenApiHelper",
+          "href": "FunctionCalling.OpenApiHelper.html",
+          "topicHref": "FunctionCalling.OpenApiHelper.html",
+          "topicUid": "FunctionCalling.OpenApiHelper"
+        },
+        {
+          "name": "ValidationResult",
+          "href": "FunctionCalling.ValidationResult.html",
+          "topicHref": "FunctionCalling.ValidationResult.html",
+          "topicUid": "FunctionCalling.ValidationResult"
+        }
+      ]
+    },
+    {
+      "name": "OpenAI",
+      "href": "OpenAI.html",
+      "topicHref": "OpenAI.html",
+      "topicUid": "OpenAI",
+      "items": [
+        {
+          "name": "OpenAiOptions",
+          "href": "OpenAI.OpenAiOptions.html",
+          "topicHref": "OpenAI.OpenAiOptions.html",
+          "topicUid": "OpenAI.OpenAiOptions"
+        },
+        {
+          "name": "ProviderType",
+          "href": "OpenAI.ProviderType.html",
+          "topicHref": "OpenAI.ProviderType.html",
+          "topicUid": "OpenAI.ProviderType"
+        }
+      ]
+    },
+    {
+      "name": "OpenAI.Builders",
+      "href": "OpenAI.Builders.html",
+      "topicHref": "OpenAI.Builders.html",
+      "topicUid": "OpenAI.Builders",
+      "items": [
+        {
+          "name": "FunctionDefinitionBuilder",
+          "href": "OpenAI.Builders.FunctionDefinitionBuilder.html",
+          "topicHref": "OpenAI.Builders.FunctionDefinitionBuilder.html",
+          "topicUid": "OpenAI.Builders.FunctionDefinitionBuilder"
+        }
+      ]
+    },
+    {
+      "name": "OpenAI.Extensions",
+      "href": "OpenAI.Extensions.html",
+      "topicHref": "OpenAI.Extensions.html",
+      "topicUid": "OpenAI.Extensions",
+      "items": [
+        {
+          "name": "JsonToObjectRouterExtension",
+          "href": "OpenAI.Extensions.JsonToObjectRouterExtension.html",
+          "topicHref": "OpenAI.Extensions.JsonToObjectRouterExtension.html",
+          "topicUid": "OpenAI.Extensions.JsonToObjectRouterExtension"
+        },
+        {
+          "name": "ModelExtension",
+          "href": "OpenAI.Extensions.ModelExtension.html",
+          "topicHref": "OpenAI.Extensions.ModelExtension.html",
+          "topicUid": "OpenAI.Extensions.ModelExtension"
+        },
+        {
+          "name": "OpenAIServiceCollectionExtensions",
+          "href": "OpenAI.Extensions.OpenAIServiceCollectionExtensions.html",
+          "topicHref": "OpenAI.Extensions.OpenAIServiceCollectionExtensions.html",
+          "topicUid": "OpenAI.Extensions.OpenAIServiceCollectionExtensions"
+        },
+        {
+          "name": "StringExtensions",
+          "href": "OpenAI.Extensions.StringExtensions.html",
+          "topicHref": "OpenAI.Extensions.StringExtensions.html",
+          "topicUid": "OpenAI.Extensions.StringExtensions"
+        }
+      ]
+    },
+    {
+      "name": "OpenAI.Interfaces",
+      "href": "OpenAI.Interfaces.html",
+      "topicHref": "OpenAI.Interfaces.html",
+      "topicUid": "OpenAI.Interfaces",
+      "items": [
+        {
+          "name": "IAssistantService",
+          "href": "OpenAI.Interfaces.IAssistantService.html",
+          "topicHref": "OpenAI.Interfaces.IAssistantService.html",
+          "topicUid": "OpenAI.Interfaces.IAssistantService"
+        },
+        {
+          "name": "IBetaService",
+          "href": "OpenAI.Interfaces.IBetaService.html",
+          "topicHref": "OpenAI.Interfaces.IBetaService.html",
+          "topicUid": "OpenAI.Interfaces.IBetaService"
+        },
+        {
+          "name": "IFileService",
+          "href": "OpenAI.Interfaces.IFileService.html",
+          "topicHref": "OpenAI.Interfaces.IFileService.html",
+          "topicUid": "OpenAI.Interfaces.IFileService"
+        },
+        {
+          "name": "IFileServiceExtension",
+          "href": "OpenAI.Interfaces.IFileServiceExtension.html",
+          "topicHref": "OpenAI.Interfaces.IFileServiceExtension.html",
+          "topicUid": "OpenAI.Interfaces.IFileServiceExtension"
+        },
+        {
+          "name": "IMessageService",
+          "href": "OpenAI.Interfaces.IMessageService.html",
+          "topicHref": "OpenAI.Interfaces.IMessageService.html",
+          "topicUid": "OpenAI.Interfaces.IMessageService"
+        },
+        {
+          "name": "IModelValidate",
+          "href": "OpenAI.Interfaces.IModelValidate.html",
+          "topicHref": "OpenAI.Interfaces.IModelValidate.html",
+          "topicUid": "OpenAI.Interfaces.IModelValidate"
+        },
+        {
+          "name": "IOpenAIService",
+          "href": "OpenAI.Interfaces.IOpenAIService.html",
+          "topicHref": "OpenAI.Interfaces.IOpenAIService.html",
+          "topicUid": "OpenAI.Interfaces.IOpenAIService"
+        },
+        {
+          "name": "IRunService",
+          "href": "OpenAI.Interfaces.IRunService.html",
+          "topicHref": "OpenAI.Interfaces.IRunService.html",
+          "topicUid": "OpenAI.Interfaces.IRunService"
+        },
+        {
+          "name": "IRunStepService",
+          "href": "OpenAI.Interfaces.IRunStepService.html",
+          "topicHref": "OpenAI.Interfaces.IRunStepService.html",
+          "topicUid": "OpenAI.Interfaces.IRunStepService"
+        },
+        {
+          "name": "IThreadService",
+          "href": "OpenAI.Interfaces.IThreadService.html",
+          "topicHref": "OpenAI.Interfaces.IThreadService.html",
+          "topicUid": "OpenAI.Interfaces.IThreadService"
+        },
+        {
+          "name": "IVectorStoreFiles",
+          "href": "OpenAI.Interfaces.IVectorStoreFiles.html",
+          "topicHref": "OpenAI.Interfaces.IVectorStoreFiles.html",
+          "topicUid": "OpenAI.Interfaces.IVectorStoreFiles"
+        },
+        {
+          "name": "IVectorStores",
+          "href": "OpenAI.Interfaces.IVectorStores.html",
+          "topicHref": "OpenAI.Interfaces.IVectorStores.html",
+          "topicUid": "OpenAI.Interfaces.IVectorStores"
+        }
+      ]
+    },
+    {
+      "name": "OpenAI.Managers",
+      "href": "OpenAI.Managers.html",
+      "topicHref": "OpenAI.Managers.html",
+      "topicUid": "OpenAI.Managers",
+      "items": [
+        {
+          "name": "OpenAIService",
+          "href": "OpenAI.Managers.OpenAIService.html",
+          "topicHref": "OpenAI.Managers.OpenAIService.html",
+          "topicUid": "OpenAI.Managers.OpenAIService"
+        }
+      ]
+    },
+    {
+      "name": "OpenAI.ObjectModels",
+      "href": "OpenAI.ObjectModels.html",
+      "topicHref": "OpenAI.ObjectModels.html",
+      "topicUid": "OpenAI.ObjectModels",
+      "items": [
+        {
+          "name": "AssistantsApiToolChoiceConverter",
+          "href": "OpenAI.ObjectModels.AssistantsApiToolChoiceConverter.html",
+          "topicHref": "OpenAI.ObjectModels.AssistantsApiToolChoiceConverter.html",
+          "topicUid": "OpenAI.ObjectModels.AssistantsApiToolChoiceConverter"
+        },
+        {
+          "name": "MessageContentConverter",
+          "href": "OpenAI.ObjectModels.MessageContentConverter.html",
+          "topicHref": "OpenAI.ObjectModels.MessageContentConverter.html",
+          "topicUid": "OpenAI.ObjectModels.MessageContentConverter"
+        },
+        {
+          "name": "MessageContentOneOfType",
+          "href": "OpenAI.ObjectModels.MessageContentOneOfType.html",
+          "topicHref": "OpenAI.ObjectModels.MessageContentOneOfType.html",
+          "topicUid": "OpenAI.ObjectModels.MessageContentOneOfType"
+        },
+        {
+          "name": "Models",
+          "href": "OpenAI.ObjectModels.Models.html",
+          "topicHref": "OpenAI.ObjectModels.Models.html",
+          "topicUid": "OpenAI.ObjectModels.Models"
+        },
+        {
+          "name": "Models.BaseModel",
+          "href": "OpenAI.ObjectModels.Models.BaseModel.html",
+          "topicHref": "OpenAI.ObjectModels.Models.BaseModel.html",
+          "topicUid": "OpenAI.ObjectModels.Models.BaseModel"
+        },
+        {
+          "name": "Models.Model",
+          "href": "OpenAI.ObjectModels.Models.Model.html",
+          "topicHref": "OpenAI.ObjectModels.Models.Model.html",
+          "topicUid": "OpenAI.ObjectModels.Models.Model"
+        },
+        {
+          "name": "Models.Subject",
+          "href": "OpenAI.ObjectModels.Models.Subject.html",
+          "topicHref": "OpenAI.ObjectModels.Models.Subject.html",
+          "topicUid": "OpenAI.ObjectModels.Models.Subject"
+        },
+        {
+          "name": "ResponseFormatOptionConverter",
+          "href": "OpenAI.ObjectModels.ResponseFormatOptionConverter.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseFormatOptionConverter.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseFormatOptionConverter"
+        },
+        {
+          "name": "StaticValues",
+          "href": "OpenAI.ObjectModels.StaticValues.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues"
+        },
+        {
+          "name": "StaticValues.AssistantsStatics",
+          "href": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.AssistantsStatics"
+        },
+        {
+          "name": "StaticValues.AssistantsStatics.MessageStatics",
+          "href": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.MessageStatics.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.MessageStatics.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.MessageStatics"
+        },
+        {
+          "name": "StaticValues.AssistantsStatics.MessageStatics.Content",
+          "href": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.MessageStatics.Content.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.MessageStatics.Content.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.MessageStatics.Content"
+        },
+        {
+          "name": "StaticValues.AssistantsStatics.MessageStatics.Content.Annotations",
+          "href": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.MessageStatics.Content.Annotations.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.MessageStatics.Content.Annotations.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.MessageStatics.Content.Annotations"
+        },
+        {
+          "name": "StaticValues.AssistantsStatics.MessageStatics.Roles",
+          "href": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.MessageStatics.Roles.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.MessageStatics.Roles.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.MessageStatics.Roles"
+        },
+        {
+          "name": "StaticValues.AssistantsStatics.RequiredActionTypes",
+          "href": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.RequiredActionTypes.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.RequiredActionTypes.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.RequiredActionTypes"
+        },
+        {
+          "name": "StaticValues.AssistantsStatics.RunStatus",
+          "href": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.RunStatus.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.RunStatus.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.RunStatus"
+        },
+        {
+          "name": "StaticValues.AssistantsStatics.ToolCallTypes",
+          "href": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.ToolCallTypes.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.ToolCallTypes.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.AssistantsStatics.ToolCallTypes"
+        },
+        {
+          "name": "StaticValues.AudioStatics",
+          "href": "OpenAI.ObjectModels.StaticValues.AudioStatics.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.AudioStatics.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.AudioStatics"
+        },
+        {
+          "name": "StaticValues.AudioStatics.CreateSpeechResponseFormat",
+          "href": "OpenAI.ObjectModels.StaticValues.AudioStatics.CreateSpeechResponseFormat.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.AudioStatics.CreateSpeechResponseFormat.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.AudioStatics.CreateSpeechResponseFormat"
+        },
+        {
+          "name": "StaticValues.AudioStatics.ResponseFormat",
+          "href": "OpenAI.ObjectModels.StaticValues.AudioStatics.ResponseFormat.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.AudioStatics.ResponseFormat.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.AudioStatics.ResponseFormat"
+        },
+        {
+          "name": "StaticValues.AudioStatics.TimestampGranularity",
+          "href": "OpenAI.ObjectModels.StaticValues.AudioStatics.TimestampGranularity.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.AudioStatics.TimestampGranularity.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.AudioStatics.TimestampGranularity"
+        },
+        {
+          "name": "StaticValues.AudioStatics.Voice",
+          "href": "OpenAI.ObjectModels.StaticValues.AudioStatics.Voice.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.AudioStatics.Voice.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.AudioStatics.Voice"
+        },
+        {
+          "name": "StaticValues.ChatMessageRoles",
+          "href": "OpenAI.ObjectModels.StaticValues.ChatMessageRoles.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.ChatMessageRoles.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.ChatMessageRoles"
+        },
+        {
+          "name": "StaticValues.CompletionStatics",
+          "href": "OpenAI.ObjectModels.StaticValues.CompletionStatics.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.CompletionStatics.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.CompletionStatics"
+        },
+        {
+          "name": "StaticValues.CompletionStatics.ResponseFormat",
+          "href": "OpenAI.ObjectModels.StaticValues.CompletionStatics.ResponseFormat.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.CompletionStatics.ResponseFormat.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.CompletionStatics.ResponseFormat"
+        },
+        {
+          "name": "StaticValues.CompletionStatics.ToolChoiceType",
+          "href": "OpenAI.ObjectModels.StaticValues.CompletionStatics.ToolChoiceType.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.CompletionStatics.ToolChoiceType.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.CompletionStatics.ToolChoiceType"
+        },
+        {
+          "name": "StaticValues.CompletionStatics.ToolType",
+          "href": "OpenAI.ObjectModels.StaticValues.CompletionStatics.ToolType.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.CompletionStatics.ToolType.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.CompletionStatics.ToolType"
+        },
+        {
+          "name": "StaticValues.ImageStatics",
+          "href": "OpenAI.ObjectModels.StaticValues.ImageStatics.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.ImageStatics.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.ImageStatics"
+        },
+        {
+          "name": "StaticValues.ImageStatics.ImageDetailTypes",
+          "href": "OpenAI.ObjectModels.StaticValues.ImageStatics.ImageDetailTypes.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.ImageStatics.ImageDetailTypes.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.ImageStatics.ImageDetailTypes"
+        },
+        {
+          "name": "StaticValues.ImageStatics.ImageFileTypes",
+          "href": "OpenAI.ObjectModels.StaticValues.ImageStatics.ImageFileTypes.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.ImageStatics.ImageFileTypes.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.ImageStatics.ImageFileTypes"
+        },
+        {
+          "name": "StaticValues.ImageStatics.Quality",
+          "href": "OpenAI.ObjectModels.StaticValues.ImageStatics.Quality.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.ImageStatics.Quality.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.ImageStatics.Quality"
+        },
+        {
+          "name": "StaticValues.ImageStatics.ResponseFormat",
+          "href": "OpenAI.ObjectModels.StaticValues.ImageStatics.ResponseFormat.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.ImageStatics.ResponseFormat.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.ImageStatics.ResponseFormat"
+        },
+        {
+          "name": "StaticValues.ImageStatics.Size",
+          "href": "OpenAI.ObjectModels.StaticValues.ImageStatics.Size.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.ImageStatics.Size.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.ImageStatics.Size"
+        },
+        {
+          "name": "StaticValues.ImageStatics.Style",
+          "href": "OpenAI.ObjectModels.StaticValues.ImageStatics.Style.html",
+          "topicHref": "OpenAI.ObjectModels.StaticValues.ImageStatics.Style.html",
+          "topicUid": "OpenAI.ObjectModels.StaticValues.ImageStatics.Style"
+        },
+        {
+          "name": "UploadFilePurposes",
+          "href": "OpenAI.ObjectModels.UploadFilePurposes.html",
+          "topicHref": "OpenAI.ObjectModels.UploadFilePurposes.html",
+          "topicUid": "OpenAI.ObjectModels.UploadFilePurposes"
+        },
+        {
+          "name": "UploadFilePurposes.UploadFilePurpose",
+          "href": "OpenAI.ObjectModels.UploadFilePurposes.UploadFilePurpose.html",
+          "topicHref": "OpenAI.ObjectModels.UploadFilePurposes.UploadFilePurpose.html",
+          "topicUid": "OpenAI.ObjectModels.UploadFilePurposes.UploadFilePurpose"
+        }
+      ]
+    },
+    {
+      "name": "OpenAI.ObjectModels.RequestModels",
+      "href": "OpenAI.ObjectModels.RequestModels.html",
+      "topicHref": "OpenAI.ObjectModels.RequestModels.html",
+      "topicUid": "OpenAI.ObjectModels.RequestModels",
+      "items": [
+        {
+          "name": "AssistantCreateRequest",
+          "href": "OpenAI.ObjectModels.RequestModels.AssistantCreateRequest.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.AssistantCreateRequest.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.AssistantCreateRequest"
+        },
+        {
+          "name": "AssistantFileCreateRequest",
+          "href": "OpenAI.ObjectModels.RequestModels.AssistantFileCreateRequest.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.AssistantFileCreateRequest.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.AssistantFileCreateRequest"
+        },
+        {
+          "name": "AssistantModifyRequest",
+          "href": "OpenAI.ObjectModels.RequestModels.AssistantModifyRequest.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.AssistantModifyRequest.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.AssistantModifyRequest"
+        },
+        {
+          "name": "AssistantsApiToolChoiceOneOfType",
+          "href": "OpenAI.ObjectModels.RequestModels.AssistantsApiToolChoiceOneOfType.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.AssistantsApiToolChoiceOneOfType.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.AssistantsApiToolChoiceOneOfType"
+        },
+        {
+          "name": "AssistantsApiToolFunctionConverter",
+          "href": "OpenAI.ObjectModels.RequestModels.AssistantsApiToolFunctionConverter.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.AssistantsApiToolFunctionConverter.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.AssistantsApiToolFunctionConverter"
+        },
+        {
+          "name": "AssistantsApiToolFunctionOneOfType",
+          "href": "OpenAI.ObjectModels.RequestModels.AssistantsApiToolFunctionOneOfType.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.AssistantsApiToolFunctionOneOfType.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.AssistantsApiToolFunctionOneOfType"
+        },
+        {
+          "name": "Attachment",
+          "href": "OpenAI.ObjectModels.RequestModels.Attachment.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.Attachment.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.Attachment"
+        },
+        {
+          "name": "ChatMessage",
+          "href": "OpenAI.ObjectModels.RequestModels.ChatMessage.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.ChatMessage.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.ChatMessage"
+        },
+        {
+          "name": "CodeInterpreter",
+          "href": "OpenAI.ObjectModels.RequestModels.CodeInterpreter.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.CodeInterpreter.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.CodeInterpreter"
+        },
+        {
+          "name": "CreateThreadAndRunRequest",
+          "href": "OpenAI.ObjectModels.RequestModels.CreateThreadAndRunRequest.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.CreateThreadAndRunRequest.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.CreateThreadAndRunRequest"
+        },
+        {
+          "name": "CreateVectorStoreFileBatchRequest",
+          "href": "OpenAI.ObjectModels.RequestModels.CreateVectorStoreFileBatchRequest.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.CreateVectorStoreFileBatchRequest.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.CreateVectorStoreFileBatchRequest"
+        },
+        {
+          "name": "CreateVectorStoreFileRequest",
+          "href": "OpenAI.ObjectModels.RequestModels.CreateVectorStoreFileRequest.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.CreateVectorStoreFileRequest.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.CreateVectorStoreFileRequest"
+        },
+        {
+          "name": "CreateVectorStoreRequest",
+          "href": "OpenAI.ObjectModels.RequestModels.CreateVectorStoreRequest.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.CreateVectorStoreRequest.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.CreateVectorStoreRequest"
+        },
+        {
+          "name": "FileSearch",
+          "href": "OpenAI.ObjectModels.RequestModels.FileSearch.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.FileSearch.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.FileSearch"
+        },
+        {
+          "name": "Function",
+          "href": "OpenAI.ObjectModels.RequestModels.Function.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.Function.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.Function"
+        },
+        {
+          "name": "FunctionCall",
+          "href": "OpenAI.ObjectModels.RequestModels.FunctionCall.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.FunctionCall.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.FunctionCall"
+        },
+        {
+          "name": "FunctionDefinition",
+          "href": "OpenAI.ObjectModels.RequestModels.FunctionDefinition.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.FunctionDefinition.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.FunctionDefinition"
+        },
+        {
+          "name": "MessageContent",
+          "href": "OpenAI.ObjectModels.RequestModels.MessageContent.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.MessageContent.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.MessageContent"
+        },
+        {
+          "name": "MessageCreateRequest",
+          "href": "OpenAI.ObjectModels.RequestModels.MessageCreateRequest.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.MessageCreateRequest.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.MessageCreateRequest"
+        },
+        {
+          "name": "ModifyMessageRequest",
+          "href": "OpenAI.ObjectModels.RequestModels.ModifyMessageRequest.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.ModifyMessageRequest.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.ModifyMessageRequest"
+        },
+        {
+          "name": "ModifyThreadRequest",
+          "href": "OpenAI.ObjectModels.RequestModels.ModifyThreadRequest.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.ModifyThreadRequest.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.ModifyThreadRequest"
+        },
+        {
+          "name": "PaginationRequest",
+          "href": "OpenAI.ObjectModels.RequestModels.PaginationRequest.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.PaginationRequest.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.PaginationRequest"
+        },
+        {
+          "name": "ResponseFormat",
+          "href": "OpenAI.ObjectModels.RequestModels.ResponseFormat.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.ResponseFormat.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.ResponseFormat"
+        },
+        {
+          "name": "ResponseFormatOneOfType",
+          "href": "OpenAI.ObjectModels.RequestModels.ResponseFormatOneOfType.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.ResponseFormatOneOfType.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.ResponseFormatOneOfType"
+        },
+        {
+          "name": "RunCreateRequest",
+          "href": "OpenAI.ObjectModels.RequestModels.RunCreateRequest.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.RunCreateRequest.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.RunCreateRequest"
+        },
+        {
+          "name": "RunModifyRequest",
+          "href": "OpenAI.ObjectModels.RequestModels.RunModifyRequest.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.RunModifyRequest.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.RunModifyRequest"
+        },
+        {
+          "name": "SubmitToolOutputsToRunRequest",
+          "href": "OpenAI.ObjectModels.RequestModels.SubmitToolOutputsToRunRequest.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.SubmitToolOutputsToRunRequest.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.SubmitToolOutputsToRunRequest"
+        },
+        {
+          "name": "ThreadCreateRequest",
+          "href": "OpenAI.ObjectModels.RequestModels.ThreadCreateRequest.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.ThreadCreateRequest.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.ThreadCreateRequest"
+        },
+        {
+          "name": "ToolCall",
+          "href": "OpenAI.ObjectModels.RequestModels.ToolCall.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.ToolCall.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.ToolCall"
+        },
+        {
+          "name": "ToolChoice",
+          "href": "OpenAI.ObjectModels.RequestModels.ToolChoice.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.ToolChoice.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.ToolChoice"
+        },
+        {
+          "name": "ToolChoice.FunctionTool",
+          "href": "OpenAI.ObjectModels.RequestModels.ToolChoice.FunctionTool.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.ToolChoice.FunctionTool.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.ToolChoice.FunctionTool"
+        },
+        {
+          "name": "ToolChoiceOneOfType",
+          "href": "OpenAI.ObjectModels.RequestModels.ToolChoiceOneOfType.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.ToolChoiceOneOfType.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.ToolChoiceOneOfType"
+        },
+        {
+          "name": "ToolChoiceOneOfType.ToolChoiceOneOfTypeConverter",
+          "href": "OpenAI.ObjectModels.RequestModels.ToolChoiceOneOfType.ToolChoiceOneOfTypeConverter.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.ToolChoiceOneOfType.ToolChoiceOneOfTypeConverter.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.ToolChoiceOneOfType.ToolChoiceOneOfTypeConverter"
+        },
+        {
+          "name": "ToolDefinition",
+          "href": "OpenAI.ObjectModels.RequestModels.ToolDefinition.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.ToolDefinition.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.ToolDefinition"
+        },
+        {
+          "name": "ToolOutput",
+          "href": "OpenAI.ObjectModels.RequestModels.ToolOutput.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.ToolOutput.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.ToolOutput"
+        },
+        {
+          "name": "ToolResources",
+          "href": "OpenAI.ObjectModels.RequestModels.ToolResources.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.ToolResources.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.ToolResources"
+        },
+        {
+          "name": "ToolsItem",
+          "href": "OpenAI.ObjectModels.RequestModels.ToolsItem.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.ToolsItem.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.ToolsItem"
+        },
+        {
+          "name": "UpdateVectorStoreRequest",
+          "href": "OpenAI.ObjectModels.RequestModels.UpdateVectorStoreRequest.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.UpdateVectorStoreRequest.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.UpdateVectorStoreRequest"
+        },
+        {
+          "name": "VectorStoreFileListRequest",
+          "href": "OpenAI.ObjectModels.RequestModels.VectorStoreFileListRequest.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.VectorStoreFileListRequest.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.VectorStoreFileListRequest"
+        },
+        {
+          "name": "VectorStores",
+          "href": "OpenAI.ObjectModels.RequestModels.VectorStores.html",
+          "topicHref": "OpenAI.ObjectModels.RequestModels.VectorStores.html",
+          "topicUid": "OpenAI.ObjectModels.RequestModels.VectorStores"
+        }
+      ]
+    },
+    {
+      "name": "OpenAI.ObjectModels.ResponseModels",
+      "href": "OpenAI.ObjectModels.ResponseModels.html",
+      "topicHref": "OpenAI.ObjectModels.ResponseModels.html",
+      "topicUid": "OpenAI.ObjectModels.ResponseModels",
+      "items": [
+        {
+          "name": "AssistantFileListResponse",
+          "href": "OpenAI.ObjectModels.ResponseModels.AssistantFileListResponse.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.AssistantFileListResponse.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.AssistantFileListResponse"
+        },
+        {
+          "name": "AssistantListResponse",
+          "href": "OpenAI.ObjectModels.ResponseModels.AssistantListResponse.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.AssistantListResponse.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.AssistantListResponse"
+        },
+        {
+          "name": "BaseResponse",
+          "href": "OpenAI.ObjectModels.ResponseModels.BaseResponse.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.BaseResponse.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.BaseResponse"
+        },
+        {
+          "name": "DataBaseResponse<T>",
+          "href": "OpenAI.ObjectModels.ResponseModels.DataBaseResponse-1.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.DataBaseResponse-1.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.DataBaseResponse`1",
+          "name.vb": "DataBaseResponse(Of T)"
+        },
+        {
+          "name": "DataWithPagingBaseResponse<T>",
+          "href": "OpenAI.ObjectModels.ResponseModels.DataWithPagingBaseResponse-1.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.DataWithPagingBaseResponse-1.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.DataWithPagingBaseResponse`1",
+          "name.vb": "DataWithPagingBaseResponse(Of T)"
+        },
+        {
+          "name": "Error",
+          "href": "OpenAI.ObjectModels.ResponseModels.Error.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.Error.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.Error"
+        },
+        {
+          "name": "Error.MessageConverter",
+          "href": "OpenAI.ObjectModels.ResponseModels.Error.MessageConverter.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.Error.MessageConverter.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.Error.MessageConverter"
+        },
+        {
+          "name": "ErrorList",
+          "href": "OpenAI.ObjectModels.ResponseModels.ErrorList.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.ErrorList.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.ErrorList"
+        },
+        {
+          "name": "IToolCall",
+          "href": "OpenAI.ObjectModels.ResponseModels.IToolCall.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.IToolCall.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.IToolCall"
+        },
+        {
+          "name": "MessageListResponse",
+          "href": "OpenAI.ObjectModels.ResponseModels.MessageListResponse.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.MessageListResponse.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.MessageListResponse"
+        },
+        {
+          "name": "ObjectBaseResponse",
+          "href": "OpenAI.ObjectModels.ResponseModels.ObjectBaseResponse.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.ObjectBaseResponse.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.ObjectBaseResponse"
+        },
+        {
+          "name": "OpenAIInfo",
+          "href": "OpenAI.ObjectModels.ResponseModels.OpenAIInfo.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.OpenAIInfo.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.OpenAIInfo"
+        },
+        {
+          "name": "RateLimitInfo",
+          "href": "OpenAI.ObjectModels.ResponseModels.RateLimitInfo.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.RateLimitInfo.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.RateLimitInfo"
+        },
+        {
+          "name": "ResponseHeaderValues",
+          "href": "OpenAI.ObjectModels.ResponseModels.ResponseHeaderValues.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.ResponseHeaderValues.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.ResponseHeaderValues"
+        },
+        {
+          "name": "RunStepDetails",
+          "href": "OpenAI.ObjectModels.ResponseModels.RunStepDetails.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.RunStepDetails.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.RunStepDetails"
+        },
+        {
+          "name": "RunStepDetails.RunStepMessageCreation",
+          "href": "OpenAI.ObjectModels.ResponseModels.RunStepDetails.RunStepMessageCreation.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.RunStepDetails.RunStepMessageCreation.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.RunStepDetails.RunStepMessageCreation"
+        },
+        {
+          "name": "RunStepDetailsToolCallsCodeObject",
+          "href": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject"
+        },
+        {
+          "name": "RunStepDetailsToolCallsCodeObject.CodeInterpreter",
+          "href": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.CodeInterpreter.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.CodeInterpreter.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.CodeInterpreter"
+        },
+        {
+          "name": "RunStepDetailsToolCallsCodeObject.CodeOutputImage",
+          "href": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.CodeOutputImage.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.CodeOutputImage.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.CodeOutputImage"
+        },
+        {
+          "name": "RunStepDetailsToolCallsCodeObject.CodeOutputImage.ImageDetails",
+          "href": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.CodeOutputImage.ImageDetails.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.CodeOutputImage.ImageDetails.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.CodeOutputImage.ImageDetails"
+        },
+        {
+          "name": "RunStepDetailsToolCallsCodeObject.CodeOutputLogs",
+          "href": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.CodeOutputLogs.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.CodeOutputLogs.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.CodeOutputLogs"
+        },
+        {
+          "name": "RunStepDetailsToolCallsFileSearchObject",
+          "href": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsFileSearchObject.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsFileSearchObject.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsFileSearchObject"
+        },
+        {
+          "name": "RunStepDetailsToolCallsFunctionObject",
+          "href": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsFunctionObject.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsFunctionObject.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsFunctionObject"
+        },
+        {
+          "name": "RunStepDetailsToolCallsFunctionObject.FunctionDetails",
+          "href": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsFunctionObject.FunctionDetails.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsFunctionObject.FunctionDetails.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsFunctionObject.FunctionDetails"
+        },
+        {
+          "name": "RunStepListResponse",
+          "href": "OpenAI.ObjectModels.ResponseModels.RunStepListResponse.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.RunStepListResponse.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.RunStepListResponse"
+        },
+        {
+          "name": "RunStepResponse",
+          "href": "OpenAI.ObjectModels.ResponseModels.RunStepResponse.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.RunStepResponse.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.RunStepResponse"
+        },
+        {
+          "name": "ToolCallsConverter",
+          "href": "OpenAI.ObjectModels.ResponseModels.ToolCallsConverter.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.ToolCallsConverter.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.ToolCallsConverter"
+        },
+        {
+          "name": "UsageResponse",
+          "href": "OpenAI.ObjectModels.ResponseModels.UsageResponse.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.UsageResponse.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.UsageResponse"
+        }
+      ]
+    },
+    {
+      "name": "OpenAI.ObjectModels.ResponseModels.FileResponseModels",
+      "href": "OpenAI.ObjectModels.ResponseModels.FileResponseModels.html",
+      "topicHref": "OpenAI.ObjectModels.ResponseModels.FileResponseModels.html",
+      "topicUid": "OpenAI.ObjectModels.ResponseModels.FileResponseModels",
+      "items": [
+        {
+          "name": "FileContentResponse<T>",
+          "href": "OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileContentResponse-1.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileContentResponse-1.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileContentResponse`1",
+          "name.vb": "FileContentResponse(Of T)"
+        },
+        {
+          "name": "FileDeleteResponse",
+          "href": "OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileDeleteResponse.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileDeleteResponse.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileDeleteResponse"
+        },
+        {
+          "name": "FileListResponse",
+          "href": "OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileListResponse.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileListResponse.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileListResponse"
+        },
+        {
+          "name": "FileUploadResponse",
+          "href": "OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileUploadResponse.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileUploadResponse.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileUploadResponse"
+        }
+      ]
+    },
+    {
+      "name": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels",
+      "href": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.html",
+      "topicHref": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.html",
+      "topicUid": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels",
+      "items": [
+        {
+          "name": "ExpiresAfter",
+          "href": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.ExpiresAfter.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.ExpiresAfter.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.ExpiresAfter"
+        },
+        {
+          "name": "FileCounts",
+          "href": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.FileCounts.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.FileCounts.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.FileCounts"
+        },
+        {
+          "name": "VectorStoreFileBatchListObjectResponse",
+          "href": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileBatchListObjectResponse.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileBatchListObjectResponse.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileBatchListObjectResponse"
+        },
+        {
+          "name": "VectorStoreFileBatchObject",
+          "href": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileBatchObject.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileBatchObject.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileBatchObject"
+        },
+        {
+          "name": "VectorStoreFileListObject",
+          "href": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileListObject.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileListObject.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileListObject"
+        },
+        {
+          "name": "VectorStoreFileObject",
+          "href": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileObject.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileObject.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileObject"
+        },
+        {
+          "name": "VectorStoreListObjectResponse",
+          "href": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreListObjectResponse.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreListObjectResponse.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreListObjectResponse"
+        },
+        {
+          "name": "VectorStoreObjectResponse",
+          "href": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreObjectResponse.html",
+          "topicHref": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreObjectResponse.html",
+          "topicUid": "OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreObjectResponse"
+        }
+      ]
+    },
+    {
+      "name": "OpenAI.ObjectModels.SharedModels",
+      "href": "OpenAI.ObjectModels.SharedModels.html",
+      "topicHref": "OpenAI.ObjectModels.SharedModels.html",
+      "topicUid": "OpenAI.ObjectModels.SharedModels",
+      "items": [
+        {
+          "name": "AssistantFileResponse",
+          "href": "OpenAI.ObjectModels.SharedModels.AssistantFileResponse.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.AssistantFileResponse.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.AssistantFileResponse"
+        },
+        {
+          "name": "AssistantResponse",
+          "href": "OpenAI.ObjectModels.SharedModels.AssistantResponse.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.AssistantResponse.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.AssistantResponse"
+        },
+        {
+          "name": "DeletionStatusResponse",
+          "href": "OpenAI.ObjectModels.SharedModels.DeletionStatusResponse.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.DeletionStatusResponse.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.DeletionStatusResponse"
+        },
+        {
+          "name": "FileCitation",
+          "href": "OpenAI.ObjectModels.SharedModels.FileCitation.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.FileCitation.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.FileCitation"
+        },
+        {
+          "name": "FilePathAnnotation",
+          "href": "OpenAI.ObjectModels.SharedModels.FilePathAnnotation.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.FilePathAnnotation.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.FilePathAnnotation"
+        },
+        {
+          "name": "FileResponse",
+          "href": "OpenAI.ObjectModels.SharedModels.FileResponse.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.FileResponse.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.FileResponse"
+        },
+        {
+          "name": "IncompleteDetails",
+          "href": "OpenAI.ObjectModels.SharedModels.IncompleteDetails.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.IncompleteDetails.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.IncompleteDetails"
+        },
+        {
+          "name": "IOpenAiModels",
+          "href": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.IOpenAiModels"
+        },
+        {
+          "name": "IOpenAiModels.IAssistantId",
+          "href": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.IAssistantId.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.IAssistantId.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.IAssistantId"
+        },
+        {
+          "name": "IOpenAiModels.ICreatedAt",
+          "href": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.ICreatedAt.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.ICreatedAt.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.ICreatedAt"
+        },
+        {
+          "name": "IOpenAiModels.IFileIds",
+          "href": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.IFileIds.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.IFileIds.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.IFileIds"
+        },
+        {
+          "name": "IOpenAiModels.IId",
+          "href": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.IId.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.IId.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.IId"
+        },
+        {
+          "name": "IOpenAiModels.IMetaData",
+          "href": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.IMetaData.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.IMetaData.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.IMetaData"
+        },
+        {
+          "name": "IOpenAiModels.IModel",
+          "href": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.IModel.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.IModel.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.IModel"
+        },
+        {
+          "name": "IOpenAiModels.ITemperature",
+          "href": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.ITemperature.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.ITemperature.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.ITemperature"
+        },
+        {
+          "name": "IOpenAiModels.ITools",
+          "href": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.ITools.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.ITools.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.IOpenAiModels.ITools"
+        },
+        {
+          "name": "MessageAnnotation",
+          "href": "OpenAI.ObjectModels.SharedModels.MessageAnnotation.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.MessageAnnotation.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.MessageAnnotation"
+        },
+        {
+          "name": "MessageResponse",
+          "href": "OpenAI.ObjectModels.SharedModels.MessageResponse.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.MessageResponse.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.MessageResponse"
+        },
+        {
+          "name": "MessageResponse.MessageContentResponse",
+          "href": "OpenAI.ObjectModels.SharedModels.MessageResponse.MessageContentResponse.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.MessageResponse.MessageContentResponse.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.MessageResponse.MessageContentResponse"
+        },
+        {
+          "name": "MessageText",
+          "href": "OpenAI.ObjectModels.SharedModels.MessageText.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.MessageText.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.MessageText"
+        },
+        {
+          "name": "ParametersDefinition",
+          "href": "OpenAI.ObjectModels.SharedModels.ParametersDefinition.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.ParametersDefinition.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.ParametersDefinition"
+        },
+        {
+          "name": "PropertyDefinition",
+          "href": "OpenAI.ObjectModels.SharedModels.PropertyDefinition.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.PropertyDefinition.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.PropertyDefinition"
+        },
+        {
+          "name": "PropertyDefinition.FunctionObjectTypes",
+          "href": "OpenAI.ObjectModels.SharedModels.PropertyDefinition.FunctionObjectTypes.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.PropertyDefinition.FunctionObjectTypes.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.PropertyDefinition.FunctionObjectTypes"
+        },
+        {
+          "name": "RequiredAction",
+          "href": "OpenAI.ObjectModels.SharedModels.RequiredAction.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.RequiredAction.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.RequiredAction"
+        },
+        {
+          "name": "RunListResponse",
+          "href": "OpenAI.ObjectModels.SharedModels.RunListResponse.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.RunListResponse.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.RunListResponse"
+        },
+        {
+          "name": "RunResponse",
+          "href": "OpenAI.ObjectModels.SharedModels.RunResponse.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.RunResponse.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.RunResponse"
+        },
+        {
+          "name": "SharedImageRequestBaseModel",
+          "href": "OpenAI.ObjectModels.SharedModels.SharedImageRequestBaseModel.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.SharedImageRequestBaseModel.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.SharedImageRequestBaseModel"
+        },
+        {
+          "name": "SubmitToolOutputs",
+          "href": "OpenAI.ObjectModels.SharedModels.SubmitToolOutputs.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.SubmitToolOutputs.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.SubmitToolOutputs"
+        },
+        {
+          "name": "ThreadResponse",
+          "href": "OpenAI.ObjectModels.SharedModels.ThreadResponse.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.ThreadResponse.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.ThreadResponse"
+        },
+        {
+          "name": "TruncationStrategy",
+          "href": "OpenAI.ObjectModels.SharedModels.TruncationStrategy.html",
+          "topicHref": "OpenAI.ObjectModels.SharedModels.TruncationStrategy.html",
+          "topicUid": "OpenAI.ObjectModels.SharedModels.TruncationStrategy"
+        }
+      ]
+    },
+    {
+      "name": "OpenAI.Tokenizer.GPT3",
+      "href": "OpenAI.Tokenizer.GPT3.html",
+      "topicHref": "OpenAI.Tokenizer.GPT3.html",
+      "topicUid": "OpenAI.Tokenizer.GPT3",
+      "items": [
+        {
+          "name": "TokenizerGpt3",
+          "href": "OpenAI.Tokenizer.GPT3.TokenizerGpt3.html",
+          "topicHref": "OpenAI.Tokenizer.GPT3.TokenizerGpt3.html",
+          "topicUid": "OpenAI.Tokenizer.GPT3.TokenizerGpt3"
+        }
+      ]
+    },
+    {
+      "name": "DougWare.StringExtensionMethods",
+      "href": "DougWare.StringExtensionMethods.html",
+      "topicHref": "DougWare.StringExtensionMethods.html",
+      "topicUid": "DougWare.StringExtensionMethods",
+      "items": [
+        {
+          "name": "StringExtensionMethods",
+          "href": "DougWare.StringExtensionMethods.StringExtensionMethods.html",
+          "topicHref": "DougWare.StringExtensionMethods.StringExtensionMethods.html",
+          "topicUid": "DougWare.StringExtensionMethods.StringExtensionMethods"
+        }
+      ]
+    },
+    {
+      "name": "OobaboogaAPIHelper",
+      "href": "OobaboogaAPIHelper.html",
+      "topicHref": "OobaboogaAPIHelper.html",
+      "topicUid": "OobaboogaAPIHelper",
+      "items": [
+        {
+          "name": "ApiHelper",
+          "href": "OobaboogaAPIHelper.ApiHelper.html",
+          "topicHref": "OobaboogaAPIHelper.ApiHelper.html",
+          "topicUid": "OobaboogaAPIHelper.ApiHelper"
+        },
+        {
+          "name": "ApiHelper.GenerateRequestBody",
+          "href": "OobaboogaAPIHelper.ApiHelper.GenerateRequestBody.html",
+          "topicHref": "OobaboogaAPIHelper.ApiHelper.GenerateRequestBody.html",
+          "topicUid": "OobaboogaAPIHelper.ApiHelper.GenerateRequestBody"
+        },
+        {
+          "name": "ApiHelper.TokenCountResult",
+          "href": "OobaboogaAPIHelper.ApiHelper.TokenCountResult.html",
+          "topicHref": "OobaboogaAPIHelper.ApiHelper.TokenCountResult.html",
+          "topicUid": "OobaboogaAPIHelper.ApiHelper.TokenCountResult"
+        },
+        {
+          "name": "Config",
+          "href": "OobaboogaAPIHelper.Config.html",
+          "topicHref": "OobaboogaAPIHelper.Config.html",
+          "topicUid": "OobaboogaAPIHelper.Config"
+        },
+        {
+          "name": "Conversation",
+          "href": "OobaboogaAPIHelper.Conversation.html",
+          "topicHref": "OobaboogaAPIHelper.Conversation.html",
+          "topicUid": "OobaboogaAPIHelper.Conversation"
+        },
+        {
+          "name": "Dolly_v2PromptTemplate",
+          "href": "OobaboogaAPIHelper.Dolly_v2PromptTemplate.html",
+          "topicHref": "OobaboogaAPIHelper.Dolly_v2PromptTemplate.html",
+          "topicUid": "OobaboogaAPIHelper.Dolly_v2PromptTemplate"
+        },
+        {
+          "name": "ModelParameters",
+          "href": "OobaboogaAPIHelper.ModelParameters.html",
+          "topicHref": "OobaboogaAPIHelper.ModelParameters.html",
+          "topicUid": "OobaboogaAPIHelper.ModelParameters"
+        },
+        {
+          "name": "Presets",
+          "href": "OobaboogaAPIHelper.Presets.html",
+          "topicHref": "OobaboogaAPIHelper.Presets.html",
+          "topicUid": "OobaboogaAPIHelper.Presets"
+        },
+        {
+          "name": "PromptTemplate",
+          "href": "OobaboogaAPIHelper.PromptTemplate.html",
+          "topicHref": "OobaboogaAPIHelper.PromptTemplate.html",
+          "topicUid": "OobaboogaAPIHelper.PromptTemplate"
+        },
+        {
+          "name": "Turn",
+          "href": "OobaboogaAPIHelper.Turn.html",
+          "topicHref": "OobaboogaAPIHelper.Turn.html",
+          "topicUid": "OobaboogaAPIHelper.Turn"
+        },
+        {
+          "name": "Vicuna_v0PromptTemplate",
+          "href": "OobaboogaAPIHelper.Vicuna_v0PromptTemplate.html",
+          "topicHref": "OobaboogaAPIHelper.Vicuna_v0PromptTemplate.html",
+          "topicUid": "OobaboogaAPIHelper.Vicuna_v0PromptTemplate"
+        },
+        {
+          "name": "Vicuna_v1PromptTemplate",
+          "href": "OobaboogaAPIHelper.Vicuna_v1PromptTemplate.html",
+          "topicHref": "OobaboogaAPIHelper.Vicuna_v1PromptTemplate.html",
+          "topicUid": "OobaboogaAPIHelper.Vicuna_v1PromptTemplate"
+        }
+      ]
+    },
+    {
+      "name": "Utilty",
+      "href": "Utilty.html",
+      "topicHref": "Utilty.html",
+      "topicUid": "Utilty",
+      "items": [
+        {
+          "name": "EmbeddedResourceUtility",
+          "href": "Utilty.EmbeddedResourceUtility.html",
+          "topicHref": "Utilty.EmbeddedResourceUtility.html",
+          "topicUid": "Utilty.EmbeddedResourceUtility"
+        },
+        {
+          "name": "JsonExtractor",
+          "href": "Utilty.JsonExtractor.html",
+          "topicHref": "Utilty.JsonExtractor.html",
+          "topicUid": "Utilty.JsonExtractor"
+        }
+      ]
+    },
+    {
+      "name": "WeightedRandoms",
+      "href": "WeightedRandoms.html",
+      "topicHref": "WeightedRandoms.html",
+      "topicUid": "WeightedRandoms",
+      "items": [
+        {
+          "name": "WeightedRandomSelection",
+          "href": "WeightedRandoms.WeightedRandomSelection.html",
+          "topicHref": "WeightedRandoms.WeightedRandomSelection.html",
+          "topicUid": "WeightedRandoms.WeightedRandomSelection"
+        }
+      ]
+    }
+  ]
+}

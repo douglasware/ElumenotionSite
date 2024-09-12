@@ -1,0 +1,620 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ActionRequestBuilder
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ActionRequestBuilder
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/douglasware/AntRunner/new/main/apiSpec/new?filename=FunctionCalling_ActionRequestBuilder.md&amp;value=---%0Auid%3A%20FunctionCalling.ActionRequestBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FunctionCalling.ActionRequestBuilder">
+
+  
+  
+  <h1 id="FunctionCalling_ActionRequestBuilder" data-uid="FunctionCalling.ActionRequestBuilder" class="text-break">
+    Class ActionRequestBuilder
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/Functions/ActionRequestBuilder.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h1>
+  
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FunctionCalling.html">FunctionCalling</a></dd></dl>
+    <dl><dt>Assembly</dt><dd>AntRunnerLib.dll</dd></dl>
+  </div>
+  
+  <div class="markdown summary"><p>Represents an action request to make HTTP calls.</p>
+</div>
+  <div class="markdown conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ActionRequestBuilder</code></pre>
+  </div>
+  
+  
+  
+  
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">System.Object</span></div>
+      <div><span class="xref">ActionRequestBuilder</span></div>
+    </dd>
+  </dl>
+  
+  
+  
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </dd></dl>
+  
+  
+  
+  
+  
+  
+  <h2 class="section" id="constructors">Constructors
+  </h2>
+  
+  
+  <a id="FunctionCalling_ActionRequestBuilder__ctor_" data-uid="FunctionCalling.ActionRequestBuilder.#ctor*"></a>
+  
+  <h3 id="FunctionCalling_ActionRequestBuilder__ctor_System_String_System_String_System_String_System_String_System_Boolean_System_String_Dictionary_System_String_System_String__System_Boolean_" data-uid="FunctionCalling.ActionRequestBuilder.#ctor(System.String,System.String,System.String,System.String,System.Boolean,System.String,Dictionary{System.String,System.String},System.Boolean)">
+    ActionRequestBuilder(String, String, String, String, Boolean, String, Dictionary&lt;String, String&gt;, Boolean)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/Functions/ActionRequestBuilder.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="FunctionCalling.ActionRequestBuilder.html">ActionRequestBuilder</a> class with specified parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionRequestBuilder(string baseUrl, string path, string method, string operation, bool isConsequential, string contentType, Dictionary&lt;string, string&gt; authHeaders, bool oAuth = false)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>baseUrl</code> <span class="xref">System.String</span></dt>
+    <dd><p>The baseUrl of the request.</p>
+</dd>
+    <dt><code>path</code> <span class="xref">System.String</span></dt>
+    <dd><p>The path of the request.</p>
+</dd>
+    <dt><code>method</code> <span class="xref">System.String</span></dt>
+    <dd><p>The HTTP method used in the request.</p>
+</dd>
+    <dt><code>operation</code> <span class="xref">System.String</span></dt>
+    <dd><p>The operation name of the request.</p>
+</dd>
+    <dt><code>isConsequential</code> <span class="xref">System.Boolean</span></dt>
+    <dd><p>Indicates whether the request is consequential.</p>
+</dd>
+    <dt><code>contentType</code> <span class="xref">System.String</span></dt>
+    <dd><p>The content type of the request.</p>
+</dd>
+    <dt><code>authHeaders</code> <span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</dt>
+    <dd><p>The authentication headers for the request.</p>
+</dd>
+    <dt><code>oAuth</code> <span class="xref">System.Boolean</span></dt>
+    <dd><p>Indicates whether the request uses OAuth for authentication.</p>
+</dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h2 class="section" id="properties">Properties
+  </h2>
+  
+  
+  <a id="FunctionCalling_ActionRequestBuilder_ActionType_" data-uid="FunctionCalling.ActionRequestBuilder.ActionType*"></a>
+  
+  <h3 id="FunctionCalling_ActionRequestBuilder_ActionType" data-uid="FunctionCalling.ActionRequestBuilder.ActionType">
+    ActionType
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/Functions/ActionRequestBuilder.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Gets the type of action to perform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionType ActionType { get; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="FunctionCalling.ActionType.html">ActionType</a></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="FunctionCalling_ActionRequestBuilder_AuthHeaders_" data-uid="FunctionCalling.ActionRequestBuilder.AuthHeaders*"></a>
+  
+  <h3 id="FunctionCalling_ActionRequestBuilder_AuthHeaders" data-uid="FunctionCalling.ActionRequestBuilder.AuthHeaders">
+    AuthHeaders
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/Functions/ActionRequestBuilder.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Gets the authentication headers for the request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, string&gt; AuthHeaders { get; set; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="FunctionCalling_ActionRequestBuilder_BaseUrl_" data-uid="FunctionCalling.ActionRequestBuilder.BaseUrl*"></a>
+  
+  <h3 id="FunctionCalling_ActionRequestBuilder_BaseUrl" data-uid="FunctionCalling.ActionRequestBuilder.BaseUrl">
+    BaseUrl
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/Functions/ActionRequestBuilder.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Gets or sets the baseUrl of the request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string BaseUrl { get; set; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">System.String</span></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="FunctionCalling_ActionRequestBuilder_ContentType_" data-uid="FunctionCalling.ActionRequestBuilder.ContentType*"></a>
+  
+  <h3 id="FunctionCalling_ActionRequestBuilder_ContentType" data-uid="FunctionCalling.ActionRequestBuilder.ContentType">
+    ContentType
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/Functions/ActionRequestBuilder.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Gets or sets the content type of the request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ContentType { get; set; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">System.String</span></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="FunctionCalling_ActionRequestBuilder_IsConsequential_" data-uid="FunctionCalling.ActionRequestBuilder.IsConsequential*"></a>
+  
+  <h3 id="FunctionCalling_ActionRequestBuilder_IsConsequential" data-uid="FunctionCalling.ActionRequestBuilder.IsConsequential">
+    IsConsequential
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/Functions/ActionRequestBuilder.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the request is consequential.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsConsequential { get; set; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">System.Boolean</span></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="FunctionCalling_ActionRequestBuilder_Method_" data-uid="FunctionCalling.ActionRequestBuilder.Method*"></a>
+  
+  <h3 id="FunctionCalling_ActionRequestBuilder_Method" data-uid="FunctionCalling.ActionRequestBuilder.Method">
+    Method
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/Functions/ActionRequestBuilder.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Gets or sets the HTTP method used in the request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Method { get; set; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">System.String</span></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="FunctionCalling_ActionRequestBuilder_oAuth_" data-uid="FunctionCalling.ActionRequestBuilder.oAuth*"></a>
+  
+  <h3 id="FunctionCalling_ActionRequestBuilder_oAuth" data-uid="FunctionCalling.ActionRequestBuilder.oAuth">
+    oAuth
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/Functions/ActionRequestBuilder.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the request uses OAuth for authentication.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool oAuth { get; set; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">System.Boolean</span></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="FunctionCalling_ActionRequestBuilder_Operation_" data-uid="FunctionCalling.ActionRequestBuilder.Operation*"></a>
+  
+  <h3 id="FunctionCalling_ActionRequestBuilder_Operation" data-uid="FunctionCalling.ActionRequestBuilder.Operation">
+    Operation
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/Functions/ActionRequestBuilder.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Gets or sets the operation name of the request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Operation { get; set; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">System.String</span></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="FunctionCalling_ActionRequestBuilder_Params_" data-uid="FunctionCalling.ActionRequestBuilder.Params*"></a>
+  
+  <h3 id="FunctionCalling_ActionRequestBuilder_Params" data-uid="FunctionCalling.ActionRequestBuilder.Params">
+    Params
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/Functions/ActionRequestBuilder.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Gets or sets the additional parameters for the request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, object&gt;? Params { get; set; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">System.Nullable</span>&lt;<span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="FunctionCalling_ActionRequestBuilder_Path_" data-uid="FunctionCalling.ActionRequestBuilder.Path*"></a>
+  
+  <h3 id="FunctionCalling_ActionRequestBuilder_Path" data-uid="FunctionCalling.ActionRequestBuilder.Path">
+    Path
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/Functions/ActionRequestBuilder.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Gets or sets the path of the request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Path { get; set; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">System.String</span></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <h2 class="section" id="methods">Methods
+  </h2>
+  
+  
+  <a id="FunctionCalling_ActionRequestBuilder_ExecuteLocalFunctionAsync_" data-uid="FunctionCalling.ActionRequestBuilder.ExecuteLocalFunctionAsync*"></a>
+  
+  <h3 id="FunctionCalling_ActionRequestBuilder_ExecuteLocalFunctionAsync" data-uid="FunctionCalling.ActionRequestBuilder.ExecuteLocalFunctionAsync">
+    ExecuteLocalFunctionAsync()
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/Functions/ActionRequestBuilder.cs/#L201"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Executes the local function asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;object&gt; ExecuteLocalFunctionAsync()</code></pre>
+  </div>
+  
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<span class="xref">System.Object</span>&gt;</dt>
+    <dd><p>The result of the local function execution.</p>
+</dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="FunctionCalling_ActionRequestBuilder_ExecuteWebApiAsync_" data-uid="FunctionCalling.ActionRequestBuilder.ExecuteWebApiAsync*"></a>
+  
+  <h3 id="FunctionCalling_ActionRequestBuilder_ExecuteWebApiAsync_System_String_" data-uid="FunctionCalling.ActionRequestBuilder.ExecuteWebApiAsync(System.String)">
+    ExecuteWebApiAsync(String)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/Functions/ActionRequestBuilder.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Executes the action request asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;HttpResponseMessage&gt; ExecuteWebApiAsync(string oAuthUserAccessToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>oAuthUserAccessToken</code> <span class="xref">System.String</span></dt>
+    <dd><p>Optional OAuth user access token for authentication.</p>
+</dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<span class="xref">HttpResponseMessage</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/douglasware/AntRunner/new/main/apiSpec/new?filename=FunctionCalling_ActionRequestBuilder.md&amp;value=---%0Auid%3A%20FunctionCalling.ActionRequestBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="edit-link">Edit this page</a>
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

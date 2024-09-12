@@ -1,95 +1,796 @@
 ﻿
 <div id="sidetoggle">
-  <div>
-    <div class="sidefilter">
-      <form class="toc-filter">
-        <span class="glyphicon glyphicon-filter filter-icon"></span>
-        <span class="glyphicon glyphicon-remove clear-icon" id="toc_filter_clear"></span>
-        <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
-      </form>
+    <div>
+        <div class="sidefilter">
+            <form class="toc-filter">
+                <span class="glyphicon glyphicon-filter filter-icon"></span>
+                <span class="glyphicon glyphicon-remove clear-icon" id="toc_filter_clear"></span>
+                <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+            </form>
+        </div>
+        <div class="sidetoc">
+            <div class="toc" id="toc">
+
+                <ul class="nav level1">
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="AntRunnerLib.html" name="" title="AntRunnerLib">AntRunnerLib</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="AntRunnerLib.AntLoader.html" name="" title="AntLoader">AntLoader</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.AssistantRunner.html" name="" title="AssistantRunner">AssistantRunner</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.AssistantRunnerState.html" name="" title="AssistantRunnerState">AssistantRunnerState</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.AssistantRunOptions.html" name="" title="AssistantRunOptions">AssistantRunOptions</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.AssistantUtility.html" name="" title="AssistantUtility">AssistantUtility</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.AzureOpenAIConfig.html" name="" title="AzureOpenAIConfig">AzureOpenAIConfig</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.AzureOpenAIConfigFactory.html" name="" title="AzureOpenAIConfigFactory">AzureOpenAIConfigFactory</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.ClientUtility.html" name="" title="ClientUtility">ClientUtility</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.CodeInterpreterFiles.html" name="" title="CodeInterpreterFiles">CodeInterpreterFiles</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.EnvironmentSettings.html" name="" title="EnvironmentSettings">EnvironmentSettings</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.ResourceFile.html" name="" title="ResourceFile">ResourceFile</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.ResourceType.html" name="" title="ResourceType">ResourceType</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.ThreadConversationMessage.html" name="" title="ThreadConversationMessage">ThreadConversationMessage</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.ThreadConversationMessageType.html" name="" title="ThreadConversationMessageType">ThreadConversationMessageType</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.ThreadRun.html" name="" title="ThreadRun">ThreadRun</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.ThreadRunOutput.html" name="" title="ThreadRunOutput">ThreadRunOutput</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.ThreadUtility.html" name="" title="ThreadUtility">ThreadUtility</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.VectorStore.html" name="" title="VectorStore">VectorStore</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="AntRunnerLib.AssistantDefinitions.html" name="" title="AntRunnerLib.AssistantDefinitions">AntRunnerLib.AssistantDefinitions</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="AntRunnerLib.AssistantDefinitions.AssistantDefinitionFiles.html" name="" title="AssistantDefinitionFiles">AssistantDefinitionFiles</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="AntRunnerLib.Functions.html" name="" title="AntRunnerLib.Functions">AntRunnerLib.Functions</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="AntRunnerLib.Functions.ActionAuthConfig.html" name="" title="ActionAuthConfig">ActionAuthConfig</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.Functions.AuthType.html" name="" title="AuthType">AuthType</a>
+                            </li>
+                            <li>
+                                <a href="AntRunnerLib.Functions.DomainAuth.html" name="" title="DomainAuth">DomainAuth</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="AntRunnerLib.Identity.html" name="" title="AntRunnerLib.Identity">AntRunnerLib.Identity</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="AntRunnerLib.Identity.OAuthHelper.html" name="" title="OAuthHelper">OAuthHelper</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="FunctionCalling.html" name="" title="FunctionCalling">FunctionCalling</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="FunctionCalling.ActionRequestBuilder.html" name="" title="ActionRequestBuilder">ActionRequestBuilder</a>
+                            </li>
+                            <li>
+                                <a href="FunctionCalling.ActionType.html" name="" title="ActionType">ActionType</a>
+                            </li>
+                            <li>
+                                <a href="FunctionCalling.OpenApiHelper.html" name="" title="OpenApiHelper">OpenApiHelper</a>
+                            </li>
+                            <li>
+                                <a href="FunctionCalling.ValidationResult.html" name="" title="ValidationResult">ValidationResult</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="OpenAI.html" name="" title="OpenAI">OpenAI</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="OpenAI.OpenAiOptions.html" name="" title="OpenAiOptions">OpenAiOptions</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ProviderType.html" name="" title="ProviderType">ProviderType</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="OpenAI.Builders.html" name="" title="OpenAI.Builders">OpenAI.Builders</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="OpenAI.Builders.FunctionDefinitionBuilder.html" name="" title="FunctionDefinitionBuilder">FunctionDefinitionBuilder</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="OpenAI.Extensions.html" name="" title="OpenAI.Extensions">OpenAI.Extensions</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="OpenAI.Extensions.JsonToObjectRouterExtension.html" name="" title="JsonToObjectRouterExtension">JsonToObjectRouterExtension</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.Extensions.ModelExtension.html" name="" title="ModelExtension">ModelExtension</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.Extensions.OpenAIServiceCollectionExtensions.html" name="" title="OpenAIServiceCollectionExtensions">OpenAIServiceCollectionExtensions</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.Extensions.StringExtensions.html" name="" title="StringExtensions">StringExtensions</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="OpenAI.Interfaces.html" name="" title="OpenAI.Interfaces">OpenAI.Interfaces</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="OpenAI.Interfaces.IAssistantService.html" name="" title="IAssistantService">IAssistantService</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.Interfaces.IBetaService.html" name="" title="IBetaService">IBetaService</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.Interfaces.IFileService.html" name="" title="IFileService">IFileService</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.Interfaces.IFileServiceExtension.html" name="" title="IFileServiceExtension">IFileServiceExtension</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.Interfaces.IMessageService.html" name="" title="IMessageService">IMessageService</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.Interfaces.IModelValidate.html" name="" title="IModelValidate">IModelValidate</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.Interfaces.IOpenAIService.html" name="" title="IOpenAIService">IOpenAIService</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.Interfaces.IRunService.html" name="" title="IRunService">IRunService</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.Interfaces.IRunStepService.html" name="" title="IRunStepService">IRunStepService</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.Interfaces.IThreadService.html" name="" title="IThreadService">IThreadService</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.Interfaces.IVectorStoreFiles.html" name="" title="IVectorStoreFiles">IVectorStoreFiles</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.Interfaces.IVectorStores.html" name="" title="IVectorStores">IVectorStores</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="OpenAI.Managers.html" name="" title="OpenAI.Managers">OpenAI.Managers</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="OpenAI.Managers.OpenAIService.html" name="" title="OpenAIService">OpenAIService</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="OpenAI.ObjectModels.html" name="" title="OpenAI.ObjectModels">OpenAI.ObjectModels</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="OpenAI.ObjectModels.AssistantsApiToolChoiceConverter.html" name="" title="AssistantsApiToolChoiceConverter">AssistantsApiToolChoiceConverter</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.MessageContentConverter.html" name="" title="MessageContentConverter">MessageContentConverter</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.MessageContentOneOfType.html" name="" title="MessageContentOneOfType">MessageContentOneOfType</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.Models.html" name="" title="Models">Models</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.Models.BaseModel.html" name="" title="Models.BaseModel">Models.BaseModel</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.Models.Model.html" name="" title="Models.Model">Models.Model</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.Models.Subject.html" name="" title="Models.Subject">Models.Subject</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseFormatOptionConverter.html" name="" title="ResponseFormatOptionConverter">ResponseFormatOptionConverter</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.html" name="" title="StaticValues">StaticValues</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.AssistantsStatics.html" name="" title="StaticValues.AssistantsStatics">StaticValues.AssistantsStatics</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.AssistantsStatics.MessageStatics.html" name="" title="StaticValues.AssistantsStatics.MessageStatics">StaticValues.AssistantsStatics.MessageStatics</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.AssistantsStatics.MessageStatics.Content.html" name="" title="StaticValues.AssistantsStatics.MessageStatics.Content">StaticValues.AssistantsStatics.MessageStatics.Content</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.AssistantsStatics.MessageStatics.Content.Annotations.html" name="" title="StaticValues.AssistantsStatics.MessageStatics.Content.Annotations">StaticValues.AssistantsStatics.MessageStatics.Content.Annotations</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.AssistantsStatics.MessageStatics.Roles.html" name="" title="StaticValues.AssistantsStatics.MessageStatics.Roles">StaticValues.AssistantsStatics.MessageStatics.Roles</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.AssistantsStatics.RequiredActionTypes.html" name="" title="StaticValues.AssistantsStatics.RequiredActionTypes">StaticValues.AssistantsStatics.RequiredActionTypes</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.AssistantsStatics.RunStatus.html" name="" title="StaticValues.AssistantsStatics.RunStatus">StaticValues.AssistantsStatics.RunStatus</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.AssistantsStatics.ToolCallTypes.html" name="" title="StaticValues.AssistantsStatics.ToolCallTypes">StaticValues.AssistantsStatics.ToolCallTypes</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.AudioStatics.html" name="" title="StaticValues.AudioStatics">StaticValues.AudioStatics</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.AudioStatics.CreateSpeechResponseFormat.html" name="" title="StaticValues.AudioStatics.CreateSpeechResponseFormat">StaticValues.AudioStatics.CreateSpeechResponseFormat</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.AudioStatics.ResponseFormat.html" name="" title="StaticValues.AudioStatics.ResponseFormat">StaticValues.AudioStatics.ResponseFormat</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.AudioStatics.TimestampGranularity.html" name="" title="StaticValues.AudioStatics.TimestampGranularity">StaticValues.AudioStatics.TimestampGranularity</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.AudioStatics.Voice.html" name="" title="StaticValues.AudioStatics.Voice">StaticValues.AudioStatics.Voice</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.ChatMessageRoles.html" name="" title="StaticValues.ChatMessageRoles">StaticValues.ChatMessageRoles</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.CompletionStatics.html" name="" title="StaticValues.CompletionStatics">StaticValues.CompletionStatics</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.CompletionStatics.ResponseFormat.html" name="" title="StaticValues.CompletionStatics.ResponseFormat">StaticValues.CompletionStatics.ResponseFormat</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.CompletionStatics.ToolChoiceType.html" name="" title="StaticValues.CompletionStatics.ToolChoiceType">StaticValues.CompletionStatics.ToolChoiceType</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.CompletionStatics.ToolType.html" name="" title="StaticValues.CompletionStatics.ToolType">StaticValues.CompletionStatics.ToolType</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.ImageStatics.html" name="" title="StaticValues.ImageStatics">StaticValues.ImageStatics</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.ImageStatics.ImageDetailTypes.html" name="" title="StaticValues.ImageStatics.ImageDetailTypes">StaticValues.ImageStatics.ImageDetailTypes</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.ImageStatics.ImageFileTypes.html" name="" title="StaticValues.ImageStatics.ImageFileTypes">StaticValues.ImageStatics.ImageFileTypes</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.ImageStatics.Quality.html" name="" title="StaticValues.ImageStatics.Quality">StaticValues.ImageStatics.Quality</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.ImageStatics.ResponseFormat.html" name="" title="StaticValues.ImageStatics.ResponseFormat">StaticValues.ImageStatics.ResponseFormat</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.ImageStatics.Size.html" name="" title="StaticValues.ImageStatics.Size">StaticValues.ImageStatics.Size</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.StaticValues.ImageStatics.Style.html" name="" title="StaticValues.ImageStatics.Style">StaticValues.ImageStatics.Style</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.UploadFilePurposes.html" name="" title="UploadFilePurposes">UploadFilePurposes</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.UploadFilePurposes.UploadFilePurpose.html" name="" title="UploadFilePurposes.UploadFilePurpose">UploadFilePurposes.UploadFilePurpose</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="OpenAI.ObjectModels.RequestModels.html" name="" title="OpenAI.ObjectModels.RequestModels">OpenAI.ObjectModels.RequestModels</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.AssistantCreateRequest.html" name="" title="AssistantCreateRequest">AssistantCreateRequest</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.AssistantFileCreateRequest.html" name="" title="AssistantFileCreateRequest">AssistantFileCreateRequest</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.AssistantModifyRequest.html" name="" title="AssistantModifyRequest">AssistantModifyRequest</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.AssistantsApiToolChoiceOneOfType.html" name="" title="AssistantsApiToolChoiceOneOfType">AssistantsApiToolChoiceOneOfType</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.AssistantsApiToolFunctionConverter.html" name="" title="AssistantsApiToolFunctionConverter">AssistantsApiToolFunctionConverter</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.AssistantsApiToolFunctionOneOfType.html" name="" title="AssistantsApiToolFunctionOneOfType">AssistantsApiToolFunctionOneOfType</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.Attachment.html" name="" title="Attachment">Attachment</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.ChatMessage.html" name="" title="ChatMessage">ChatMessage</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.CodeInterpreter.html" name="" title="CodeInterpreter">CodeInterpreter</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.CreateThreadAndRunRequest.html" name="" title="CreateThreadAndRunRequest">CreateThreadAndRunRequest</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.CreateVectorStoreFileBatchRequest.html" name="" title="CreateVectorStoreFileBatchRequest">CreateVectorStoreFileBatchRequest</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.CreateVectorStoreFileRequest.html" name="" title="CreateVectorStoreFileRequest">CreateVectorStoreFileRequest</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.CreateVectorStoreRequest.html" name="" title="CreateVectorStoreRequest">CreateVectorStoreRequest</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.FileSearch.html" name="" title="FileSearch">FileSearch</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.Function.html" name="" title="Function">Function</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.FunctionCall.html" name="" title="FunctionCall">FunctionCall</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.FunctionDefinition.html" name="" title="FunctionDefinition">FunctionDefinition</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.MessageContent.html" name="" title="MessageContent">MessageContent</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.MessageCreateRequest.html" name="" title="MessageCreateRequest">MessageCreateRequest</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.ModifyMessageRequest.html" name="" title="ModifyMessageRequest">ModifyMessageRequest</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.ModifyThreadRequest.html" name="" title="ModifyThreadRequest">ModifyThreadRequest</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.PaginationRequest.html" name="" title="PaginationRequest">PaginationRequest</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.ResponseFormat.html" name="" title="ResponseFormat">ResponseFormat</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.ResponseFormatOneOfType.html" name="" title="ResponseFormatOneOfType">ResponseFormatOneOfType</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.RunCreateRequest.html" name="" title="RunCreateRequest">RunCreateRequest</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.RunModifyRequest.html" name="" title="RunModifyRequest">RunModifyRequest</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.SubmitToolOutputsToRunRequest.html" name="" title="SubmitToolOutputsToRunRequest">SubmitToolOutputsToRunRequest</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.ThreadCreateRequest.html" name="" title="ThreadCreateRequest">ThreadCreateRequest</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.ToolCall.html" name="" title="ToolCall">ToolCall</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.ToolChoice.html" name="" title="ToolChoice">ToolChoice</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.ToolChoice.FunctionTool.html" name="" title="ToolChoice.FunctionTool">ToolChoice.FunctionTool</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.ToolChoiceOneOfType.html" name="" title="ToolChoiceOneOfType">ToolChoiceOneOfType</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.ToolChoiceOneOfType.ToolChoiceOneOfTypeConverter.html" name="" title="ToolChoiceOneOfType.ToolChoiceOneOfTypeConverter">ToolChoiceOneOfType.ToolChoiceOneOfTypeConverter</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.ToolDefinition.html" name="" title="ToolDefinition">ToolDefinition</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.ToolOutput.html" name="" title="ToolOutput">ToolOutput</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.ToolResources.html" name="" title="ToolResources">ToolResources</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.ToolsItem.html" name="" title="ToolsItem">ToolsItem</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.UpdateVectorStoreRequest.html" name="" title="UpdateVectorStoreRequest">UpdateVectorStoreRequest</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.VectorStoreFileListRequest.html" name="" title="VectorStoreFileListRequest">VectorStoreFileListRequest</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.RequestModels.VectorStores.html" name="" title="VectorStores">VectorStores</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="OpenAI.ObjectModels.ResponseModels.html" name="" title="OpenAI.ObjectModels.ResponseModels">OpenAI.ObjectModels.ResponseModels</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.AssistantFileListResponse.html" name="" title="AssistantFileListResponse">AssistantFileListResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.AssistantListResponse.html" name="" title="AssistantListResponse">AssistantListResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.BaseResponse.html" name="" title="BaseResponse">BaseResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.DataBaseResponse-1.html" name="" title="DataBaseResponse&lt;T&gt;">DataBaseResponse&lt;T&gt;</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.DataWithPagingBaseResponse-1.html" name="" title="DataWithPagingBaseResponse&lt;T&gt;">DataWithPagingBaseResponse&lt;T&gt;</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.Error.html" name="" title="Error">Error</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.Error.MessageConverter.html" name="" title="Error.MessageConverter">Error.MessageConverter</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.ErrorList.html" name="" title="ErrorList">ErrorList</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.IToolCall.html" name="" title="IToolCall">IToolCall</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.MessageListResponse.html" name="" title="MessageListResponse">MessageListResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.ObjectBaseResponse.html" name="" title="ObjectBaseResponse">ObjectBaseResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.OpenAIInfo.html" name="" title="OpenAIInfo">OpenAIInfo</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.RateLimitInfo.html" name="" title="RateLimitInfo">RateLimitInfo</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.ResponseHeaderValues.html" name="" title="ResponseHeaderValues">ResponseHeaderValues</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.RunStepDetails.html" name="" title="RunStepDetails">RunStepDetails</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.RunStepDetails.RunStepMessageCreation.html" name="" title="RunStepDetails.RunStepMessageCreation">RunStepDetails.RunStepMessageCreation</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.html" name="" title="RunStepDetailsToolCallsCodeObject">RunStepDetailsToolCallsCodeObject</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.CodeInterpreter.html" name="" title="RunStepDetailsToolCallsCodeObject.CodeInterpreter">RunStepDetailsToolCallsCodeObject.CodeInterpreter</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.CodeOutputImage.html" name="" title="RunStepDetailsToolCallsCodeObject.CodeOutputImage">RunStepDetailsToolCallsCodeObject.CodeOutputImage</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.CodeOutputImage.ImageDetails.html" name="" title="RunStepDetailsToolCallsCodeObject.CodeOutputImage.ImageDetails">RunStepDetailsToolCallsCodeObject.CodeOutputImage.ImageDetails</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsCodeObject.CodeOutputLogs.html" name="" title="RunStepDetailsToolCallsCodeObject.CodeOutputLogs">RunStepDetailsToolCallsCodeObject.CodeOutputLogs</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsFileSearchObject.html" name="" title="RunStepDetailsToolCallsFileSearchObject">RunStepDetailsToolCallsFileSearchObject</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsFunctionObject.html" name="" title="RunStepDetailsToolCallsFunctionObject">RunStepDetailsToolCallsFunctionObject</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.RunStepDetailsToolCallsFunctionObject.FunctionDetails.html" name="" title="RunStepDetailsToolCallsFunctionObject.FunctionDetails">RunStepDetailsToolCallsFunctionObject.FunctionDetails</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.RunStepListResponse.html" name="" title="RunStepListResponse">RunStepListResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.RunStepResponse.html" name="" title="RunStepResponse">RunStepResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.ToolCallsConverter.html" name="" title="ToolCallsConverter">ToolCallsConverter</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.UsageResponse.html" name="" title="UsageResponse">UsageResponse</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="OpenAI.ObjectModels.ResponseModels.FileResponseModels.html" name="" title="OpenAI.ObjectModels.ResponseModels.FileResponseModels">OpenAI.ObjectModels.ResponseModels.FileResponseModels</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileContentResponse-1.html" name="" title="FileContentResponse&lt;T&gt;">FileContentResponse&lt;T&gt;</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileDeleteResponse.html" name="" title="FileDeleteResponse">FileDeleteResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileListResponse.html" name="" title="FileListResponse">FileListResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileUploadResponse.html" name="" title="FileUploadResponse">FileUploadResponse</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.html" name="" title="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels">OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.ExpiresAfter.html" name="" title="ExpiresAfter">ExpiresAfter</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.FileCounts.html" name="" title="FileCounts">FileCounts</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileBatchListObjectResponse.html" name="" title="VectorStoreFileBatchListObjectResponse">VectorStoreFileBatchListObjectResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileBatchObject.html" name="" title="VectorStoreFileBatchObject">VectorStoreFileBatchObject</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileListObject.html" name="" title="VectorStoreFileListObject">VectorStoreFileListObject</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileObject.html" name="" title="VectorStoreFileObject">VectorStoreFileObject</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreListObjectResponse.html" name="" title="VectorStoreListObjectResponse">VectorStoreListObjectResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreObjectResponse.html" name="" title="VectorStoreObjectResponse">VectorStoreObjectResponse</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="OpenAI.ObjectModels.SharedModels.html" name="" title="OpenAI.ObjectModels.SharedModels">OpenAI.ObjectModels.SharedModels</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.AssistantFileResponse.html" name="" title="AssistantFileResponse">AssistantFileResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.AssistantResponse.html" name="" title="AssistantResponse">AssistantResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.DeletionStatusResponse.html" name="" title="DeletionStatusResponse">DeletionStatusResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.FileCitation.html" name="" title="FileCitation">FileCitation</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.FilePathAnnotation.html" name="" title="FilePathAnnotation">FilePathAnnotation</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.FileResponse.html" name="" title="FileResponse">FileResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.IncompleteDetails.html" name="" title="IncompleteDetails">IncompleteDetails</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.IOpenAiModels.html" name="" title="IOpenAiModels">IOpenAiModels</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.IOpenAiModels.IAssistantId.html" name="" title="IOpenAiModels.IAssistantId">IOpenAiModels.IAssistantId</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.IOpenAiModels.ICreatedAt.html" name="" title="IOpenAiModels.ICreatedAt">IOpenAiModels.ICreatedAt</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.IOpenAiModels.IFileIds.html" name="" title="IOpenAiModels.IFileIds">IOpenAiModels.IFileIds</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.IOpenAiModels.IId.html" name="" title="IOpenAiModels.IId">IOpenAiModels.IId</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.IOpenAiModels.IMetaData.html" name="" title="IOpenAiModels.IMetaData">IOpenAiModels.IMetaData</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.IOpenAiModels.IModel.html" name="" title="IOpenAiModels.IModel">IOpenAiModels.IModel</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.IOpenAiModels.ITemperature.html" name="" title="IOpenAiModels.ITemperature">IOpenAiModels.ITemperature</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.IOpenAiModels.ITools.html" name="" title="IOpenAiModels.ITools">IOpenAiModels.ITools</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.MessageAnnotation.html" name="" title="MessageAnnotation">MessageAnnotation</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.MessageResponse.html" name="" title="MessageResponse">MessageResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.MessageResponse.MessageContentResponse.html" name="" title="MessageResponse.MessageContentResponse">MessageResponse.MessageContentResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.MessageText.html" name="" title="MessageText">MessageText</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.ParametersDefinition.html" name="" title="ParametersDefinition">ParametersDefinition</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.PropertyDefinition.html" name="" title="PropertyDefinition">PropertyDefinition</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.PropertyDefinition.FunctionObjectTypes.html" name="" title="PropertyDefinition.FunctionObjectTypes">PropertyDefinition.FunctionObjectTypes</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.RequiredAction.html" name="" title="RequiredAction">RequiredAction</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.RunListResponse.html" name="" title="RunListResponse">RunListResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.RunResponse.html" name="" title="RunResponse">RunResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.SharedImageRequestBaseModel.html" name="" title="SharedImageRequestBaseModel">SharedImageRequestBaseModel</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.SubmitToolOutputs.html" name="" title="SubmitToolOutputs">SubmitToolOutputs</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.ThreadResponse.html" name="" title="ThreadResponse">ThreadResponse</a>
+                            </li>
+                            <li>
+                                <a href="OpenAI.ObjectModels.SharedModels.TruncationStrategy.html" name="" title="TruncationStrategy">TruncationStrategy</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="OpenAI.Tokenizer.GPT3.html" name="" title="OpenAI.Tokenizer.GPT3">OpenAI.Tokenizer.GPT3</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="OpenAI.Tokenizer.GPT3.TokenizerGpt3.html" name="" title="TokenizerGpt3">TokenizerGpt3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="DougWare.StringExtensionMethods.html" name="" title="DougWare.StringExtensionMethods">DougWare.StringExtensionMethods</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="DougWare.StringExtensionMethods.StringExtensionMethods.html" name="" title="StringExtensionMethods">StringExtensionMethods</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="OobaboogaAPIHelper.html" name="" title="OobaboogaAPIHelper">OobaboogaAPIHelper</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="OobaboogaAPIHelper.ApiHelper.html" name="" title="ApiHelper">ApiHelper</a>
+                            </li>
+                            <li>
+                                <a href="OobaboogaAPIHelper.ApiHelper.GenerateRequestBody.html" name="" title="ApiHelper.GenerateRequestBody">ApiHelper.GenerateRequestBody</a>
+                            </li>
+                            <li>
+                                <a href="OobaboogaAPIHelper.ApiHelper.TokenCountResult.html" name="" title="ApiHelper.TokenCountResult">ApiHelper.TokenCountResult</a>
+                            </li>
+                            <li>
+                                <a href="OobaboogaAPIHelper.Config.html" name="" title="Config">Config</a>
+                            </li>
+                            <li>
+                                <a href="OobaboogaAPIHelper.Conversation.html" name="" title="Conversation">Conversation</a>
+                            </li>
+                            <li>
+                                <a href="OobaboogaAPIHelper.Dolly_v2PromptTemplate.html" name="" title="Dolly_v2PromptTemplate">Dolly_v2PromptTemplate</a>
+                            </li>
+                            <li>
+                                <a href="OobaboogaAPIHelper.ModelParameters.html" name="" title="ModelParameters">ModelParameters</a>
+                            </li>
+                            <li>
+                                <a href="OobaboogaAPIHelper.Presets.html" name="" title="Presets">Presets</a>
+                            </li>
+                            <li>
+                                <a href="OobaboogaAPIHelper.PromptTemplate.html" name="" title="PromptTemplate">PromptTemplate</a>
+                            </li>
+                            <li>
+                                <a href="OobaboogaAPIHelper.Turn.html" name="" title="Turn">Turn</a>
+                            </li>
+                            <li>
+                                <a href="OobaboogaAPIHelper.Vicuna_v0PromptTemplate.html" name="" title="Vicuna_v0PromptTemplate">Vicuna_v0PromptTemplate</a>
+                            </li>
+                            <li>
+                                <a href="OobaboogaAPIHelper.Vicuna_v1PromptTemplate.html" name="" title="Vicuna_v1PromptTemplate">Vicuna_v1PromptTemplate</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="Utilty.html" name="" title="Utilty">Utilty</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="Utilty.EmbeddedResourceUtility.html" name="" title="EmbeddedResourceUtility">EmbeddedResourceUtility</a>
+                            </li>
+                            <li>
+                                <a href="Utilty.JsonExtractor.html" name="" title="JsonExtractor">JsonExtractor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="expand-stub"></span>
+                        <a href="WeightedRandoms.html" name="" title="WeightedRandoms">WeightedRandoms</a>
+
+                        <ul class="nav level2">
+                            <li>
+                                <a href="WeightedRandoms.WeightedRandomSelection.html" name="" title="WeightedRandomSelection">WeightedRandomSelection</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="sidetoc">
-      <div class="toc" id="toc">
-
-          <ul class="nav level1">
-                <li>
-                    <span class="expand-stub"></span>
-                    <a href="DougWare.StringExtensionMethods.html" name="" title="DougWare.StringExtensionMethods">DougWare.StringExtensionMethods</a>
-
-                    <ul class="nav level2">
-                          <li>
-                              <a href="DougWare.StringExtensionMethods.StringExtensionMethods.html" name="" title="StringExtensionMethods">StringExtensionMethods</a>
-                          </li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="expand-stub"></span>
-                    <a href="OobaboogaAPIHelper.html" name="" title="OobaboogaAPIHelper">OobaboogaAPIHelper</a>
-
-                    <ul class="nav level2">
-                          <li>
-                              <a href="OobaboogaAPIHelper.ApiHelper.html" name="" title="ApiHelper">ApiHelper</a>
-                          </li>
-                          <li>
-                              <a href="OobaboogaAPIHelper.ApiHelper.GenerateRequestBody.html" name="" title="ApiHelper.GenerateRequestBody">ApiHelper.GenerateRequestBody</a>
-                          </li>
-                          <li>
-                              <a href="OobaboogaAPIHelper.ApiHelper.TokenCountResult.html" name="" title="ApiHelper.TokenCountResult">ApiHelper.TokenCountResult</a>
-                          </li>
-                          <li>
-                              <a href="OobaboogaAPIHelper.Config.html" name="" title="Config">Config</a>
-                          </li>
-                          <li>
-                              <a href="OobaboogaAPIHelper.Conversation.html" name="" title="Conversation">Conversation</a>
-                          </li>
-                          <li>
-                              <a href="OobaboogaAPIHelper.Dolly_v2PromptTemplate.html" name="" title="Dolly_v2PromptTemplate">Dolly_v2PromptTemplate</a>
-                          </li>
-                          <li>
-                              <a href="OobaboogaAPIHelper.ModelParameters.html" name="" title="ModelParameters">ModelParameters</a>
-                          </li>
-                          <li>
-                              <a href="OobaboogaAPIHelper.Presets.html" name="" title="Presets">Presets</a>
-                          </li>
-                          <li>
-                              <a href="OobaboogaAPIHelper.PromptTemplate.html" name="" title="PromptTemplate">PromptTemplate</a>
-                          </li>
-                          <li>
-                              <a href="OobaboogaAPIHelper.Turn.html" name="" title="Turn">Turn</a>
-                          </li>
-                          <li>
-                              <a href="OobaboogaAPIHelper.Vicuna_v0PromptTemplate.html" name="" title="Vicuna_v0PromptTemplate">Vicuna_v0PromptTemplate</a>
-                          </li>
-                          <li>
-                              <a href="OobaboogaAPIHelper.Vicuna_v1PromptTemplate.html" name="" title="Vicuna_v1PromptTemplate">Vicuna_v1PromptTemplate</a>
-                          </li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="expand-stub"></span>
-                    <a href="Utilty.html" name="" title="Utilty">Utilty</a>
-
-                    <ul class="nav level2">
-                          <li>
-                              <a href="Utilty.EmbeddedResourceUtility.html" name="" title="EmbeddedResourceUtility">EmbeddedResourceUtility</a>
-                          </li>
-                          <li>
-                              <a href="Utilty.JsonExtractor.html" name="" title="JsonExtractor">JsonExtractor</a>
-                          </li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="expand-stub"></span>
-                    <a href="WeightedRandoms.html" name="" title="WeightedRandoms">WeightedRandoms</a>
-
-                    <ul class="nav level2">
-                          <li>
-                              <a href="WeightedRandoms.WeightedRandomSelection.html" name="" title="WeightedRandomSelection">WeightedRandomSelection</a>
-                          </li>
-                    </ul>
-                </li>
-          </ul>
-      </div>
-    </div>
-  </div>
 </div>

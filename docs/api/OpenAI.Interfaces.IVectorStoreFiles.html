@@ -1,0 +1,467 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IVectorStoreFiles
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IVectorStoreFiles
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/douglasware/AntRunner/new/main/apiSpec/new?filename=OpenAI_Interfaces_IVectorStoreFiles.md&amp;value=---%0Auid%3A%20OpenAI.Interfaces.IVectorStoreFiles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OpenAI.Interfaces.IVectorStoreFiles">
+
+  
+  
+  <h1 id="OpenAI_Interfaces_IVectorStoreFiles" data-uid="OpenAI.Interfaces.IVectorStoreFiles" class="text-break">
+    Interface IVectorStoreFiles
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Interfaces/IVectorStoreFiles.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  </h1>
+  
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OpenAI.Interfaces.html">OpenAI.Interfaces</a></dd></dl>
+    <dl><dt>Assembly</dt><dd>AntRunnerLib.dll</dd></dl>
+  </div>
+  
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IVectorStoreFiles</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h2 class="section" id="methods">Methods
+  </h2>
+  
+  
+  <a id="OpenAI_Interfaces_IVectorStoreFiles_CancelVectorStoreFileBatch_" data-uid="OpenAI.Interfaces.IVectorStoreFiles.CancelVectorStoreFileBatch*"></a>
+  
+  <h3 id="OpenAI_Interfaces_IVectorStoreFiles_CancelVectorStoreFileBatch_System_String_System_String_CancellationToken_" data-uid="OpenAI.Interfaces.IVectorStoreFiles.CancelVectorStoreFileBatch(System.String,System.String,CancellationToken)">
+    CancelVectorStoreFileBatch(String, String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Interfaces/IVectorStoreFiles.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Cancel a vector store file batch. This attempts to cancel the processing of files in this batch as soon as
+possible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;VectorStoreFileBatchObject&gt; CancelVectorStoreFileBatch(string vectorStoreId, string batchId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>batchId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileBatchObject.html">VectorStoreFileBatchObject</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Interfaces_IVectorStoreFiles_CreateVectorStoreFile_" data-uid="OpenAI.Interfaces.IVectorStoreFiles.CreateVectorStoreFile*"></a>
+  
+  <h3 id="OpenAI_Interfaces_IVectorStoreFiles_CreateVectorStoreFile_System_String_OpenAI_ObjectModels_RequestModels_CreateVectorStoreFileRequest_CancellationToken_" data-uid="OpenAI.Interfaces.IVectorStoreFiles.CreateVectorStoreFile(System.String,OpenAI.ObjectModels.RequestModels.CreateVectorStoreFileRequest,CancellationToken)">
+    CreateVectorStoreFile(String, CreateVectorStoreFileRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Interfaces/IVectorStoreFiles.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Create a vector store file by attaching a <a href="/docs/api-reference/files">File</a> to a <a href="/docs/api-reference/vector-stores/object">vector
+store</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;VectorStoreFileObject&gt; CreateVectorStoreFile(string vectorStoreId, CreateVectorStoreFileRequest requestBody, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>requestBody</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.CreateVectorStoreFileRequest.html">CreateVectorStoreFileRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileObject.html">VectorStoreFileObject</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Interfaces_IVectorStoreFiles_CreateVectorStoreFileBatch_" data-uid="OpenAI.Interfaces.IVectorStoreFiles.CreateVectorStoreFileBatch*"></a>
+  
+  <h3 id="OpenAI_Interfaces_IVectorStoreFiles_CreateVectorStoreFileBatch_System_String_OpenAI_ObjectModels_RequestModels_CreateVectorStoreFileBatchRequest_CancellationToken_" data-uid="OpenAI.Interfaces.IVectorStoreFiles.CreateVectorStoreFileBatch(System.String,OpenAI.ObjectModels.RequestModels.CreateVectorStoreFileBatchRequest,CancellationToken)">
+    CreateVectorStoreFileBatch(String, CreateVectorStoreFileBatchRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Interfaces/IVectorStoreFiles.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Create a vector store file batch.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;VectorStoreFileBatchObject&gt; CreateVectorStoreFileBatch(string vectorStoreId, CreateVectorStoreFileBatchRequest requestBody, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>requestBody</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.CreateVectorStoreFileBatchRequest.html">CreateVectorStoreFileBatchRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileBatchObject.html">VectorStoreFileBatchObject</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Interfaces_IVectorStoreFiles_DeleteVectorStoreFile_" data-uid="OpenAI.Interfaces.IVectorStoreFiles.DeleteVectorStoreFile*"></a>
+  
+  <h3 id="OpenAI_Interfaces_IVectorStoreFiles_DeleteVectorStoreFile_System_String_System_String_CancellationToken_" data-uid="OpenAI.Interfaces.IVectorStoreFiles.DeleteVectorStoreFile(System.String,System.String,CancellationToken)">
+    DeleteVectorStoreFile(String, String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Interfaces/IVectorStoreFiles.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Delete a vector store file. This will remove the file from the vector store but the file itself will not be
+deleted. To delete the file, use the <a href="/docs/api-reference/files/delete">delete file</a> endpoint.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;DeletionStatusResponse&gt; DeleteVectorStoreFile(string vectorStoreId, string fileId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>fileId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.DeletionStatusResponse.html">DeletionStatusResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Interfaces_IVectorStoreFiles_GetVectorStoreFile_" data-uid="OpenAI.Interfaces.IVectorStoreFiles.GetVectorStoreFile*"></a>
+  
+  <h3 id="OpenAI_Interfaces_IVectorStoreFiles_GetVectorStoreFile_System_String_System_String_CancellationToken_" data-uid="OpenAI.Interfaces.IVectorStoreFiles.GetVectorStoreFile(System.String,System.String,CancellationToken)">
+    GetVectorStoreFile(String, String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Interfaces/IVectorStoreFiles.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Retrieves a vector store file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;VectorStoreFileObject&gt; GetVectorStoreFile(string vectorStoreId, string fileId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>fileId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileObject.html">VectorStoreFileObject</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Interfaces_IVectorStoreFiles_GetVectorStoreFileBatch_" data-uid="OpenAI.Interfaces.IVectorStoreFiles.GetVectorStoreFileBatch*"></a>
+  
+  <h3 id="OpenAI_Interfaces_IVectorStoreFiles_GetVectorStoreFileBatch_System_String_System_String_CancellationToken_" data-uid="OpenAI.Interfaces.IVectorStoreFiles.GetVectorStoreFileBatch(System.String,System.String,CancellationToken)">
+    GetVectorStoreFileBatch(String, String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Interfaces/IVectorStoreFiles.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Retrieves a vector store file batch.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;VectorStoreFileBatchObject&gt; GetVectorStoreFileBatch(string vectorStoreId, string batchId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>batchId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileBatchObject.html">VectorStoreFileBatchObject</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Interfaces_IVectorStoreFiles_ListFilesInVectorStoreBatch_" data-uid="OpenAI.Interfaces.IVectorStoreFiles.ListFilesInVectorStoreBatch*"></a>
+  
+  <h3 id="OpenAI_Interfaces_IVectorStoreFiles_ListFilesInVectorStoreBatch_System_String_System_String_OpenAI_ObjectModels_RequestModels_PaginationRequest_CancellationToken_" data-uid="OpenAI.Interfaces.IVectorStoreFiles.ListFilesInVectorStoreBatch(System.String,System.String,OpenAI.ObjectModels.RequestModels.PaginationRequest,CancellationToken)">
+    ListFilesInVectorStoreBatch(String, String, PaginationRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Interfaces/IVectorStoreFiles.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Returns a list of vector store files in a batch.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;VectorStoreFileBatchListObjectResponse&gt; ListFilesInVectorStoreBatch(string vectorStoreId, string batchId, PaginationRequest baseListRequest, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>batchId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>baseListRequest</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.PaginationRequest.html">PaginationRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileBatchListObjectResponse.html">VectorStoreFileBatchListObjectResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Interfaces_IVectorStoreFiles_ListVectorStoreFiles_" data-uid="OpenAI.Interfaces.IVectorStoreFiles.ListVectorStoreFiles*"></a>
+  
+  <h3 id="OpenAI_Interfaces_IVectorStoreFiles_ListVectorStoreFiles_System_String_OpenAI_ObjectModels_RequestModels_VectorStoreFileListRequest_CancellationToken_" data-uid="OpenAI.Interfaces.IVectorStoreFiles.ListVectorStoreFiles(System.String,OpenAI.ObjectModels.RequestModels.VectorStoreFileListRequest,CancellationToken)">
+    ListVectorStoreFiles(String, VectorStoreFileListRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Interfaces/IVectorStoreFiles.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Returns a list of vector store files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;VectorStoreFileListObject&gt; ListVectorStoreFiles(string vectorStoreId, VectorStoreFileListRequest baseListRequest, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>baseListRequest</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.VectorStoreFileListRequest.html">VectorStoreFileListRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileListObject.html">VectorStoreFileListObject</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/douglasware/AntRunner/new/main/apiSpec/new?filename=OpenAI_Interfaces_IVectorStoreFiles.md&amp;value=---%0Auid%3A%20OpenAI.Interfaces.IVectorStoreFiles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="edit-link">Edit this page</a>
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

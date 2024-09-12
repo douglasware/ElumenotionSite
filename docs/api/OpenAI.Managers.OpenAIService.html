@@ -1,0 +1,2318 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class OpenAIService
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class OpenAIService
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/douglasware/AntRunner/new/main/apiSpec/new?filename=OpenAI_Managers_OpenAIService.md&amp;value=---%0Auid%3A%20OpenAI.Managers.OpenAIService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="OpenAI.Managers.OpenAIService">
+
+  
+  
+  <h1 id="OpenAI_Managers_OpenAIService" data-uid="OpenAI.Managers.OpenAIService" class="text-break">
+    Class OpenAIService
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIVectorStoreService.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h1>
+  
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="OpenAI.Managers.html">OpenAI.Managers</a></dd></dl>
+    <dl><dt>Assembly</dt><dd>AntRunnerLib.dll</dd></dl>
+  </div>
+  
+  <div class="markdown summary"><p>Beta service for OpenAI.</p>
+</div>
+  <div class="markdown conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class OpenAIService : IAssistantService, IBetaService, IFileService, IMessageService, IRunService, IRunStepService, IOpenAIService, IThreadService, IVectorStores, IVectorStoreFiles</code></pre>
+  </div>
+  
+  
+  
+  
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">System.Object</span></div>
+      <div><span class="xref">OpenAIService</span></div>
+    </dd>
+  </dl>
+  
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="OpenAI.Interfaces.IAssistantService.html">IAssistantService</a></div>
+      <div><a class="xref" href="OpenAI.Interfaces.IBetaService.html">IBetaService</a></div>
+      <div><a class="xref" href="OpenAI.Interfaces.IFileService.html">IFileService</a></div>
+      <div><a class="xref" href="OpenAI.Interfaces.IMessageService.html">IMessageService</a></div>
+      <div><a class="xref" href="OpenAI.Interfaces.IRunService.html">IRunService</a></div>
+      <div><a class="xref" href="OpenAI.Interfaces.IRunStepService.html">IRunStepService</a></div>
+      <div><a class="xref" href="OpenAI.Interfaces.IOpenAIService.html">IOpenAIService</a></div>
+      <div><span class="xref">IDisposable</span></div>
+      <div><a class="xref" href="OpenAI.Interfaces.IThreadService.html">IThreadService</a></div>
+      <div><a class="xref" href="OpenAI.Interfaces.IVectorStores.html">IVectorStores</a></div>
+      <div><a class="xref" href="OpenAI.Interfaces.IVectorStoreFiles.html">IVectorStoreFiles</a></div>
+    </dd>
+  </dl>
+  
+  
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </dd></dl>
+  
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="OpenAI.Interfaces.IFileServiceExtension.html#OpenAI_Interfaces_IFileServiceExtension_FileUpload_OpenAI_Interfaces_IFileService_System_String_Stream_System_String_CancellationToken_">IFileServiceExtension.FileUpload(IFileService, String, Stream, String, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="OpenAI.Interfaces.IFileServiceExtension.html#OpenAI_Interfaces_IFileServiceExtension_FileUpload_OpenAI_Interfaces_IFileService_OpenAI_ObjectModels_UploadFilePurposes_UploadFilePurpose_Stream_System_String_CancellationToken_">IFileServiceExtension.FileUpload(IFileService, UploadFilePurposes.UploadFilePurpose, Stream, String, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="OpenAI.Interfaces.IFileServiceExtension.html#OpenAI_Interfaces_IFileServiceExtension_FileUpload_OpenAI_Interfaces_IFileService_OpenAI_ObjectModels_UploadFilePurposes_UploadFilePurpose_System_Byte___System_String_CancellationToken_">IFileServiceExtension.FileUpload(IFileService, UploadFilePurposes.UploadFilePurpose, Byte[], String, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="OpenAI.Interfaces.IFileServiceExtension.html#OpenAI_Interfaces_IFileServiceExtension_RetrieveFileContent_OpenAI_Interfaces_IFileService_System_String_CancellationToken_">IFileServiceExtension.RetrieveFileContent(IFileService, String, CancellationToken)</a>
+  </div>
+  </dd></dl>
+  
+  
+  
+  
+  
+  <h2 class="section" id="constructors">Constructors
+  </h2>
+  
+  
+  <a id="OpenAI_Managers_OpenAIService__ctor_" data-uid="OpenAI.Managers.OpenAIService.#ctor*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService__ctor_Microsoft_Extensions_Options_IOptions_OpenAI_OpenAiOptions__HttpClient_" data-uid="OpenAI.Managers.OpenAIService.#ctor(Microsoft.Extensions.Options.IOptions{OpenAI.OpenAiOptions},HttpClient)">
+    OpenAIService(IOptions&lt;OpenAiOptions&gt;, HttpClient)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIService.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ActivatorUtilitiesConstructor]
+public OpenAIService(IOptions&lt;OpenAiOptions&gt; settings, HttpClient httpClient)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settings</code> <span class="xref">Microsoft.Extensions.Options.IOptions</span>&lt;<a class="xref" href="OpenAI.OpenAiOptions.html">OpenAiOptions</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>httpClient</code> <span class="xref">HttpClient</span></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService__ctor_" data-uid="OpenAI.Managers.OpenAIService.#ctor*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService__ctor_OpenAI_OpenAiOptions_System_Nullable_HttpClient__" data-uid="OpenAI.Managers.OpenAIService.#ctor(OpenAI.OpenAiOptions,System.Nullable{HttpClient})">
+    OpenAIService(OpenAiOptions, Nullable&lt;HttpClient&gt;)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIService.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OpenAIService(OpenAiOptions settings, HttpClient? httpClient = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settings</code> <a class="xref" href="OpenAI.OpenAiOptions.html">OpenAiOptions</a></dt>
+    <dd></dd>
+    <dt><code>httpClient</code> <span class="xref">System.Nullable</span>&lt;<span class="xref">HttpClient</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h2 class="section" id="properties">Properties
+  </h2>
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_Assistants_" data-uid="OpenAI.Managers.OpenAIService.Assistants*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_Assistants" data-uid="OpenAI.Managers.OpenAIService.Assistants">
+    Assistants
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIBetaService.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAssistantService Assistants { get; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OpenAI.Interfaces.IAssistantService.html">IAssistantService</a></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_Beta_" data-uid="OpenAI.Managers.OpenAIService.Beta*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_Beta" data-uid="OpenAI.Managers.OpenAIService.Beta">
+    Beta
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIService.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IBetaService Beta { get; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OpenAI.Interfaces.IBetaService.html">IBetaService</a></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_Files_" data-uid="OpenAI.Managers.OpenAIService.Files*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_Files" data-uid="OpenAI.Managers.OpenAIService.Files">
+    Files
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIService.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IFileService Files { get; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OpenAI.Interfaces.IFileService.html">IFileService</a></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_Messages_" data-uid="OpenAI.Managers.OpenAIService.Messages*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_Messages" data-uid="OpenAI.Managers.OpenAIService.Messages">
+    Messages
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIBetaService.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IMessageService Messages { get; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OpenAI.Interfaces.IMessageService.html">IMessageService</a></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_Runs_" data-uid="OpenAI.Managers.OpenAIService.Runs*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_Runs" data-uid="OpenAI.Managers.OpenAIService.Runs">
+    Runs
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIBetaService.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IRunService Runs { get; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OpenAI.Interfaces.IRunService.html">IRunService</a></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_RunSteps_" data-uid="OpenAI.Managers.OpenAIService.RunSteps*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_RunSteps" data-uid="OpenAI.Managers.OpenAIService.RunSteps">
+    RunSteps
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIBetaService.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IRunStepService RunSteps { get; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OpenAI.Interfaces.IRunStepService.html">IRunStepService</a></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_Threads_" data-uid="OpenAI.Managers.OpenAIService.Threads*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_Threads" data-uid="OpenAI.Managers.OpenAIService.Threads">
+    Threads
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIBetaService.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IThreadService Threads { get; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OpenAI.Interfaces.IThreadService.html">IThreadService</a></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_VectorStoreFiles_" data-uid="OpenAI.Managers.OpenAIService.VectorStoreFiles*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_VectorStoreFiles" data-uid="OpenAI.Managers.OpenAIService.VectorStoreFiles">
+    VectorStoreFiles
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIBetaService.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IVectorStoreFiles VectorStoreFiles { get; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OpenAI.Interfaces.IVectorStoreFiles.html">IVectorStoreFiles</a></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_VectorStores_" data-uid="OpenAI.Managers.OpenAIService.VectorStores*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_VectorStores" data-uid="OpenAI.Managers.OpenAIService.VectorStores">
+    VectorStores
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIBetaService.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IVectorStores VectorStores { get; }</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="OpenAI.Interfaces.IVectorStores.html">IVectorStores</a></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  <h2 class="section" id="methods">Methods
+  </h2>
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_AssistantCreate_" data-uid="OpenAI.Managers.OpenAIService.AssistantCreate*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_AssistantCreate_OpenAI_ObjectModels_RequestModels_AssistantCreateRequest_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.AssistantCreate(OpenAI.ObjectModels.RequestModels.AssistantCreateRequest,System.String,CancellationToken)">
+    AssistantCreate(AssistantCreateRequest, String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIAssistantService.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;AssistantResponse&gt; AssistantCreate(AssistantCreateRequest request, string modelId = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.AssistantCreateRequest.html">AssistantCreateRequest</a></dt>
+    <dd></dd>
+    <dt><code>modelId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.AssistantResponse.html">AssistantResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_AssistantDelete_" data-uid="OpenAI.Managers.OpenAIService.AssistantDelete*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_AssistantDelete_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.AssistantDelete(System.String,CancellationToken)">
+    AssistantDelete(String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIAssistantService.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;DeletionStatusResponse&gt; AssistantDelete(string assistantId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assistantId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.DeletionStatusResponse.html">DeletionStatusResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_AssistantList_" data-uid="OpenAI.Managers.OpenAIService.AssistantList*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_AssistantList_OpenAI_ObjectModels_RequestModels_PaginationRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.AssistantList(OpenAI.ObjectModels.RequestModels.PaginationRequest,CancellationToken)">
+    AssistantList(PaginationRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIAssistantService.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;AssistantListResponse&gt; AssistantList(PaginationRequest request = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.PaginationRequest.html">PaginationRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.AssistantListResponse.html">AssistantListResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_AssistantModify_" data-uid="OpenAI.Managers.OpenAIService.AssistantModify*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_AssistantModify_System_String_OpenAI_ObjectModels_RequestModels_AssistantModifyRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.AssistantModify(System.String,OpenAI.ObjectModels.RequestModels.AssistantModifyRequest,CancellationToken)">
+    AssistantModify(String, AssistantModifyRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIAssistantService.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;AssistantResponse&gt; AssistantModify(string assistantId, AssistantModifyRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assistantId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>request</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.AssistantModifyRequest.html">AssistantModifyRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.AssistantResponse.html">AssistantResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_AssistantRetrieve_" data-uid="OpenAI.Managers.OpenAIService.AssistantRetrieve*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_AssistantRetrieve_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.AssistantRetrieve(System.String,CancellationToken)">
+    AssistantRetrieve(String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIAssistantService.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;AssistantResponse&gt; AssistantRetrieve(string assistantId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assistantId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.AssistantResponse.html">AssistantResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_CancelVectorStoreFileBatch_" data-uid="OpenAI.Managers.OpenAIService.CancelVectorStoreFileBatch*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_CancelVectorStoreFileBatch_System_String_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.CancelVectorStoreFileBatch(System.String,System.String,CancellationToken)">
+    CancelVectorStoreFileBatch(String, String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIVectorStoreService.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;VectorStoreFileBatchObject&gt; CancelVectorStoreFileBatch(string vectorStoreId, string batchId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>batchId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileBatchObject.html">VectorStoreFileBatchObject</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_CreateMessage_" data-uid="OpenAI.Managers.OpenAIService.CreateMessage*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_CreateMessage_System_String_OpenAI_ObjectModels_RequestModels_MessageCreateRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.CreateMessage(System.String,OpenAI.ObjectModels.RequestModels.MessageCreateRequest,CancellationToken)">
+    CreateMessage(String, MessageCreateRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIMessageService.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Create a message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;MessageResponse&gt; CreateMessage(string threadId, MessageCreateRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>request</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.MessageCreateRequest.html">MessageCreateRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.MessageResponse.html">MessageResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_CreateThreadAndRun_" data-uid="OpenAI.Managers.OpenAIService.CreateThreadAndRun*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_CreateThreadAndRun_OpenAI_ObjectModels_RequestModels_CreateThreadAndRunRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.CreateThreadAndRun(OpenAI.ObjectModels.RequestModels.CreateThreadAndRunRequest,CancellationToken)">
+    CreateThreadAndRun(CreateThreadAndRunRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIRunService.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;RunResponse&gt; CreateThreadAndRun(CreateThreadAndRunRequest requestBody, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>requestBody</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.CreateThreadAndRunRequest.html">CreateThreadAndRunRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.RunResponse.html">RunResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_CreateVectorStore_" data-uid="OpenAI.Managers.OpenAIService.CreateVectorStore*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_CreateVectorStore_OpenAI_ObjectModels_RequestModels_CreateVectorStoreRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.CreateVectorStore(OpenAI.ObjectModels.RequestModels.CreateVectorStoreRequest,CancellationToken)">
+    CreateVectorStore(CreateVectorStoreRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIVectorStoreService.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;VectorStoreObjectResponse&gt; CreateVectorStore(CreateVectorStoreRequest requestBody, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>requestBody</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.CreateVectorStoreRequest.html">CreateVectorStoreRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreObjectResponse.html">VectorStoreObjectResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_CreateVectorStoreFile_" data-uid="OpenAI.Managers.OpenAIService.CreateVectorStoreFile*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_CreateVectorStoreFile_System_String_OpenAI_ObjectModels_RequestModels_CreateVectorStoreFileRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.CreateVectorStoreFile(System.String,OpenAI.ObjectModels.RequestModels.CreateVectorStoreFileRequest,CancellationToken)">
+    CreateVectorStoreFile(String, CreateVectorStoreFileRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIVectorStoreService.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;VectorStoreFileObject&gt; CreateVectorStoreFile(string vectorStoreId, CreateVectorStoreFileRequest requestBody, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>requestBody</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.CreateVectorStoreFileRequest.html">CreateVectorStoreFileRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileObject.html">VectorStoreFileObject</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_CreateVectorStoreFileBatch_" data-uid="OpenAI.Managers.OpenAIService.CreateVectorStoreFileBatch*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_CreateVectorStoreFileBatch_System_String_OpenAI_ObjectModels_RequestModels_CreateVectorStoreFileBatchRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.CreateVectorStoreFileBatch(System.String,OpenAI.ObjectModels.RequestModels.CreateVectorStoreFileBatchRequest,CancellationToken)">
+    CreateVectorStoreFileBatch(String, CreateVectorStoreFileBatchRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIVectorStoreService.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;VectorStoreFileBatchObject&gt; CreateVectorStoreFileBatch(string vectorStoreId, CreateVectorStoreFileBatchRequest requestBody, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>requestBody</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.CreateVectorStoreFileBatchRequest.html">CreateVectorStoreFileBatchRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileBatchObject.html">VectorStoreFileBatchObject</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_DeleteFile_" data-uid="OpenAI.Managers.OpenAIService.DeleteFile*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_DeleteFile_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.DeleteFile(System.String,CancellationToken)">
+    DeleteFile(String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIFile.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;FileDeleteResponse&gt; DeleteFile(string fileId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileDeleteResponse.html">FileDeleteResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_DeleteMessage_" data-uid="OpenAI.Managers.OpenAIService.DeleteMessage*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_DeleteMessage_System_String_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.DeleteMessage(System.String,System.String,CancellationToken)">
+    DeleteMessage(String, String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIMessageService.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;DeletionStatusResponse&gt; DeleteMessage(string threadId, string messageId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>messageId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.DeletionStatusResponse.html">DeletionStatusResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_DeleteVectorStore_" data-uid="OpenAI.Managers.OpenAIService.DeleteVectorStore*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_DeleteVectorStore_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.DeleteVectorStore(System.String,CancellationToken)">
+    DeleteVectorStore(String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIVectorStoreService.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;DeletionStatusResponse&gt; DeleteVectorStore(string vectorStoreId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.DeletionStatusResponse.html">DeletionStatusResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_DeleteVectorStoreFile_" data-uid="OpenAI.Managers.OpenAIService.DeleteVectorStoreFile*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_DeleteVectorStoreFile_System_String_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.DeleteVectorStoreFile(System.String,System.String,CancellationToken)">
+    DeleteVectorStoreFile(String, String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIVectorStoreService.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;DeletionStatusResponse&gt; DeleteVectorStoreFile(string vectorStoreId, string fileId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>fileId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.DeletionStatusResponse.html">DeletionStatusResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_Dispose_" data-uid="OpenAI.Managers.OpenAIService.Dispose*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_Dispose" data-uid="OpenAI.Managers.OpenAIService.Dispose">
+    Dispose()
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIService.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Method to dispose the HttpContext if created internally.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_Dispose_" data-uid="OpenAI.Managers.OpenAIService.Dispose*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_Dispose_System_Boolean_" data-uid="OpenAI.Managers.OpenAIService.Dispose(System.Boolean)">
+    Dispose(Boolean)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIService.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <span class="xref">System.Boolean</span></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_GetDefaultModelId_" data-uid="OpenAI.Managers.OpenAIService.GetDefaultModelId*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_GetDefaultModelId" data-uid="OpenAI.Managers.OpenAIService.GetDefaultModelId">
+    GetDefaultModelId()
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIService.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Get default Model Id</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetDefaultModelId()</code></pre>
+  </div>
+  
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">System.String</span></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_GetVectorStoreFile_" data-uid="OpenAI.Managers.OpenAIService.GetVectorStoreFile*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_GetVectorStoreFile_System_String_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.GetVectorStoreFile(System.String,System.String,CancellationToken)">
+    GetVectorStoreFile(String, String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIVectorStoreService.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;VectorStoreFileObject&gt; GetVectorStoreFile(string vectorStoreId, string fileId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>fileId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileObject.html">VectorStoreFileObject</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_GetVectorStoreFileBatch_" data-uid="OpenAI.Managers.OpenAIService.GetVectorStoreFileBatch*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_GetVectorStoreFileBatch_System_String_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.GetVectorStoreFileBatch(System.String,System.String,CancellationToken)">
+    GetVectorStoreFileBatch(String, String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIVectorStoreService.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;VectorStoreFileBatchObject&gt; GetVectorStoreFileBatch(string vectorStoreId, string batchId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>batchId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileBatchObject.html">VectorStoreFileBatchObject</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_ListFile_" data-uid="OpenAI.Managers.OpenAIService.ListFile*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_ListFile_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.ListFile(CancellationToken)">
+    ListFile(CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIFile.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;FileListResponse&gt; ListFile(CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileListResponse.html">FileListResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_ListFilesInVectorStoreBatch_" data-uid="OpenAI.Managers.OpenAIService.ListFilesInVectorStoreBatch*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_ListFilesInVectorStoreBatch_System_String_System_String_OpenAI_ObjectModels_RequestModels_PaginationRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.ListFilesInVectorStoreBatch(System.String,System.String,OpenAI.ObjectModels.RequestModels.PaginationRequest,CancellationToken)">
+    ListFilesInVectorStoreBatch(String, String, PaginationRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIVectorStoreService.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;VectorStoreFileBatchListObjectResponse&gt; ListFilesInVectorStoreBatch(string vectorStoreId, string batchId, PaginationRequest baseListRequest, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>batchId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>baseListRequest</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.PaginationRequest.html">PaginationRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileBatchListObjectResponse.html">VectorStoreFileBatchListObjectResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_ListMessages_" data-uid="OpenAI.Managers.OpenAIService.ListMessages*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_ListMessages_System_String_OpenAI_ObjectModels_RequestModels_PaginationRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.ListMessages(System.String,OpenAI.ObjectModels.RequestModels.PaginationRequest,CancellationToken)">
+    ListMessages(String, PaginationRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIMessageService.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Returns a list of messages for a given thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;MessageListResponse&gt; ListMessages(string threadId, PaginationRequest request = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>request</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.PaginationRequest.html">PaginationRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.MessageListResponse.html">MessageListResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_ListRuns_" data-uid="OpenAI.Managers.OpenAIService.ListRuns*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_ListRuns_System_String_OpenAI_ObjectModels_RequestModels_PaginationRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.ListRuns(System.String,OpenAI.ObjectModels.RequestModels.PaginationRequest,CancellationToken)">
+    ListRuns(String, PaginationRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIRunService.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;RunListResponse&gt; ListRuns(string threadId, PaginationRequest runListRequest, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>runListRequest</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.PaginationRequest.html">PaginationRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.RunListResponse.html">RunListResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_ListVectorStoreFiles_" data-uid="OpenAI.Managers.OpenAIService.ListVectorStoreFiles*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_ListVectorStoreFiles_System_String_OpenAI_ObjectModels_RequestModels_VectorStoreFileListRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.ListVectorStoreFiles(System.String,OpenAI.ObjectModels.RequestModels.VectorStoreFileListRequest,CancellationToken)">
+    ListVectorStoreFiles(String, VectorStoreFileListRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIVectorStoreService.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;VectorStoreFileListObject&gt; ListVectorStoreFiles(string vectorStoreId, VectorStoreFileListRequest vectorStoreFileListRequest, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>vectorStoreFileListRequest</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.VectorStoreFileListRequest.html">VectorStoreFileListRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreFileListObject.html">VectorStoreFileListObject</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_ListVectorStores_" data-uid="OpenAI.Managers.OpenAIService.ListVectorStores*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_ListVectorStores_OpenAI_ObjectModels_RequestModels_PaginationRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.ListVectorStores(OpenAI.ObjectModels.RequestModels.PaginationRequest,CancellationToken)">
+    ListVectorStores(PaginationRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIVectorStoreService.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;VectorStoreListObjectResponse&gt; ListVectorStores(PaginationRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.PaginationRequest.html">PaginationRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreListObjectResponse.html">VectorStoreListObjectResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_ModifyMessage_" data-uid="OpenAI.Managers.OpenAIService.ModifyMessage*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_ModifyMessage_System_String_System_String_OpenAI_ObjectModels_RequestModels_ModifyMessageRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.ModifyMessage(System.String,System.String,OpenAI.ObjectModels.RequestModels.ModifyMessageRequest,CancellationToken)">
+    ModifyMessage(String, String, ModifyMessageRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIMessageService.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;MessageResponse&gt; ModifyMessage(string threadId, string messageId, ModifyMessageRequest requestBody, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>messageId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>requestBody</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.ModifyMessageRequest.html">ModifyMessageRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.MessageResponse.html">MessageResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_ModifyThread_" data-uid="OpenAI.Managers.OpenAIService.ModifyThread*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_ModifyThread_System_String_OpenAI_ObjectModels_RequestModels_ModifyThreadRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.ModifyThread(System.String,OpenAI.ObjectModels.RequestModels.ModifyThreadRequest,CancellationToken)">
+    ModifyThread(String, ModifyThreadRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIThreadService.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;ThreadResponse&gt; ModifyThread(string threadId, ModifyThreadRequest requestBody, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>requestBody</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.ModifyThreadRequest.html">ModifyThreadRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.ThreadResponse.html">ThreadResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_ModifyVectorStore_" data-uid="OpenAI.Managers.OpenAIService.ModifyVectorStore*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_ModifyVectorStore_System_String_OpenAI_ObjectModels_RequestModels_UpdateVectorStoreRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.ModifyVectorStore(System.String,OpenAI.ObjectModels.RequestModels.UpdateVectorStoreRequest,CancellationToken)">
+    ModifyVectorStore(String, UpdateVectorStoreRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIVectorStoreService.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;VectorStoreObjectResponse&gt; ModifyVectorStore(string vectorStoreId, UpdateVectorStoreRequest requestBody, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>requestBody</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.UpdateVectorStoreRequest.html">UpdateVectorStoreRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreObjectResponse.html">VectorStoreObjectResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_RetrieveFile_" data-uid="OpenAI.Managers.OpenAIService.RetrieveFile*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_RetrieveFile_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.RetrieveFile(System.String,CancellationToken)">
+    RetrieveFile(String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIFile.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;FileResponse&gt; RetrieveFile(string fileId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.FileResponse.html">FileResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_RetrieveFileContent_" data-uid="OpenAI.Managers.OpenAIService.RetrieveFileContent*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_RetrieveFileContent__1_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.RetrieveFileContent``1(System.String,CancellationToken)">
+    RetrieveFileContent&lt;T&gt;(String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIFile.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;FileContentResponse&lt;T&gt;&gt; RetrieveFileContent&lt;T&gt;(string fileId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileContentResponse-1.html">FileContentResponse</a>&lt;T&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_RetrieveMessage_" data-uid="OpenAI.Managers.OpenAIService.RetrieveMessage*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_RetrieveMessage_System_String_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.RetrieveMessage(System.String,System.String,CancellationToken)">
+    RetrieveMessage(String, String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIMessageService.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;MessageResponse&gt; RetrieveMessage(string threadId, string messageId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>messageId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.MessageResponse.html">MessageResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_RetrieveVectorStore_" data-uid="OpenAI.Managers.OpenAIService.RetrieveVectorStore*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_RetrieveVectorStore_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.RetrieveVectorStore(System.String,CancellationToken)">
+    RetrieveVectorStore(String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIVectorStoreService.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;VectorStoreObjectResponse&gt; RetrieveVectorStore(string vectorStoreId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vectorStoreId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.VectorStoreResponseModels.VectorStoreObjectResponse.html">VectorStoreObjectResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_RunCancel_" data-uid="OpenAI.Managers.OpenAIService.RunCancel*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_RunCancel_System_String_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.RunCancel(System.String,System.String,CancellationToken)">
+    RunCancel(String, String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIRunService.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Cancels a run that is in_progress.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;RunResponse&gt; RunCancel(string threadId, string runId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>runId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.RunResponse.html">RunResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_RunCreate_" data-uid="OpenAI.Managers.OpenAIService.RunCreate*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_RunCreate_System_String_OpenAI_ObjectModels_RequestModels_RunCreateRequest_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.RunCreate(System.String,OpenAI.ObjectModels.RequestModels.RunCreateRequest,System.String,CancellationToken)">
+    RunCreate(String, RunCreateRequest, String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIRunService.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Create a run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;RunResponse&gt; RunCreate(string threadId, RunCreateRequest request, string modelId = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>request</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.RunCreateRequest.html">RunCreateRequest</a></dt>
+    <dd></dd>
+    <dt><code>modelId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.RunResponse.html">RunResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_RunModify_" data-uid="OpenAI.Managers.OpenAIService.RunModify*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_RunModify_System_String_System_String_OpenAI_ObjectModels_RequestModels_RunModifyRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.RunModify(System.String,System.String,OpenAI.ObjectModels.RequestModels.RunModifyRequest,CancellationToken)">
+    RunModify(String, String, RunModifyRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIRunService.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;RunResponse&gt; RunModify(string threadId, string runId, RunModifyRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>runId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>request</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.RunModifyRequest.html">RunModifyRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.RunResponse.html">RunResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_RunRetrieve_" data-uid="OpenAI.Managers.OpenAIService.RunRetrieve*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_RunRetrieve_System_String_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.RunRetrieve(System.String,System.String,CancellationToken)">
+    RunRetrieve(String, String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIRunService.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Retrieves a run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;RunResponse&gt; RunRetrieve(string threadId, string runId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>runId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.RunResponse.html">RunResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_RunStepRetrieve_" data-uid="OpenAI.Managers.OpenAIService.RunStepRetrieve*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_RunStepRetrieve_System_String_System_String_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.RunStepRetrieve(System.String,System.String,System.String,CancellationToken)">
+    RunStepRetrieve(String, String, String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIRunStepService.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;RunStepResponse&gt; RunStepRetrieve(string threadId, string runId, string stepId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>runId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>stepId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.RunStepResponse.html">RunStepResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_RunStepsList_" data-uid="OpenAI.Managers.OpenAIService.RunStepsList*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_RunStepsList_System_String_System_String_OpenAI_ObjectModels_RequestModels_PaginationRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.RunStepsList(System.String,System.String,OpenAI.ObjectModels.RequestModels.PaginationRequest,CancellationToken)">
+    RunStepsList(String, String, PaginationRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIRunStepService.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;RunStepListResponse&gt; RunStepsList(string threadId, string runId, PaginationRequest request = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>runId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>request</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.PaginationRequest.html">PaginationRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.RunStepListResponse.html">RunStepListResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_RunSubmitToolOutputs_" data-uid="OpenAI.Managers.OpenAIService.RunSubmitToolOutputs*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_RunSubmitToolOutputs_System_String_System_String_OpenAI_ObjectModels_RequestModels_SubmitToolOutputsToRunRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.RunSubmitToolOutputs(System.String,System.String,OpenAI.ObjectModels.RequestModels.SubmitToolOutputsToRunRequest,CancellationToken)">
+    RunSubmitToolOutputs(String, String, SubmitToolOutputsToRunRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIRunService.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Submit tool outputs to run
+<p>
+    When a run has the status: &quot;requires_action&quot; and required_action.type is submit_tool_outputs,
+    this endpoint can be used to submit the outputs from the tool calls once they&apos;re all completed.
+    All outputs must be submitted in a single request.
+</p></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;RunResponse&gt; RunSubmitToolOutputs(string threadId, string runId, SubmitToolOutputsToRunRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>runId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>request</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.SubmitToolOutputsToRunRequest.html">SubmitToolOutputsToRunRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.RunResponse.html">RunResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_SetDefaultModelId_" data-uid="OpenAI.Managers.OpenAIService.SetDefaultModelId*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_SetDefaultModelId_System_String_" data-uid="OpenAI.Managers.OpenAIService.SetDefaultModelId(System.String)">
+    SetDefaultModelId(String)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIService.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Sets default Model Id</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDefaultModelId(string modelId)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>modelId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_ThreadCreate_" data-uid="OpenAI.Managers.OpenAIService.ThreadCreate*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_ThreadCreate_OpenAI_ObjectModels_RequestModels_ThreadCreateRequest_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.ThreadCreate(OpenAI.ObjectModels.RequestModels.ThreadCreateRequest,CancellationToken)">
+    ThreadCreate(ThreadCreateRequest, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIThreadService.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Create a thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;ThreadResponse&gt; ThreadCreate(ThreadCreateRequest request = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="OpenAI.ObjectModels.RequestModels.ThreadCreateRequest.html">ThreadCreateRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.ThreadResponse.html">ThreadResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_ThreadDelete_" data-uid="OpenAI.Managers.OpenAIService.ThreadDelete*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_ThreadDelete_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.ThreadDelete(System.String,CancellationToken)">
+    ThreadDelete(String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIThreadService.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Delete a thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;DeletionStatusResponse&gt; ThreadDelete(string threadId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.DeletionStatusResponse.html">DeletionStatusResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_ThreadRetrieve_" data-uid="OpenAI.Managers.OpenAIService.ThreadRetrieve*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_ThreadRetrieve_System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.ThreadRetrieve(System.String,CancellationToken)">
+    ThreadRetrieve(String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIThreadService.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"><p>Retrieves a thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;ThreadResponse&gt; ThreadRetrieve(string threadId, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>threadId</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.SharedModels.ThreadResponse.html">ThreadResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a id="OpenAI_Managers_OpenAIService_UploadFile_" data-uid="OpenAI.Managers.OpenAIService.UploadFile*"></a>
+  
+  <h3 id="OpenAI_Managers_OpenAIService_UploadFile_System_String_System_Byte___System_String_CancellationToken_" data-uid="OpenAI.Managers.OpenAIService.UploadFile(System.String,System.Byte[],System.String,CancellationToken)">
+    UploadFile(String, Byte[], String, CancellationToken)
+    <a class="header-action link-secondary" title="View source" href="https://github.com/douglasware/AntRunner/blob/main/AntRunnerLib/OpenAI/Managers/OpenAIFile.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+  
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;FileUploadResponse&gt; UploadFile(string purpose, byte[] file, string fileName, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>purpose</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>file</code> <span class="xref">System.Byte</span>[]</dt>
+    <dd></dd>
+    <dt><code>fileName</code> <span class="xref">System.String</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <span class="xref">CancellationToken</span></dt>
+    <dd></dd>
+  </dl>
+  
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Task</span>&lt;<a class="xref" href="OpenAI.ObjectModels.ResponseModels.FileResponseModels.FileUploadResponse.html">FileUploadResponse</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/douglasware/AntRunner/new/main/apiSpec/new?filename=OpenAI_Managers_OpenAIService.md&amp;value=---%0Auid%3A%20OpenAI.Managers.OpenAIService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="edit-link">Edit this page</a>
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
