@@ -29,11 +29,22 @@
       "output": {
         ".html": {
           "relative_path": "FeaturedContent/toc.html",
-          "hash": "mc5/MI2PwS5EwS8CtWMxJB3m4r0SFzzeeqMN7K1YpLI="
+          "hash": "sIwjZwFpSFJmsHTn0WG48Nb4WMdTM8+L7QQnKGSn20M="
         },
         ".json": {
           "relative_path": "FeaturedContent/toc.json",
-          "hash": "mhB0MEtEw4quaycqz0uuPIHB0pUYK9gKfVlULjFB1ao="
+          "hash": "9kPgbFxEI6rtqBLrhLInqmmpaUVrmGZbOEP7f4zn7sQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/AboutAnts/antarmy1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/AboutAnts/antarmy1.png"
         }
       },
       "is_incremental": false,
@@ -1273,6 +1284,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Journal/AboutAnts.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/AboutAnts.html",
+          "hash": "uBP2QekEclR+zeNdDydb2HzQxMQQw7QdbJQzDIx8X88="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Journal/April14To162023.md",
       "output": {
         ".html": {
@@ -1544,7 +1567,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/index.html",
-          "hash": "Iy+B7uA03cxkE14lxvqPulYUjD7MwxFBS/9Rp8JVr0Y="
+          "hash": "C2EKuWmBVRhF+2FNbe/H+2JQbwbR+6Ks5Q7WO/gWC9g="
         }
       },
       "is_incremental": false,
@@ -1556,11 +1579,11 @@
       "output": {
         ".html": {
           "relative_path": "Journal/toc.html",
-          "hash": "hCrt8r5XCcf1+C3pedjPqtuiM4Oe2XeAnwe5tZa0LDA="
+          "hash": "xIbehsaULzZGFu3bXh8M9T7HHN60GSFe02b6UVbAjjo="
         },
         ".json": {
           "relative_path": "Journal/toc.json",
-          "hash": "rAlZuNpiiRqt0bOFAJNZop8kdFVP6qnLFaBmRlgbKRk="
+          "hash": "DE08uTX/mkCd99HvldUPXjZPMQwm9zTFWrrE5zNuVzY="
         }
       },
       "is_incremental": false,
@@ -1579,15 +1602,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "Projects/AntRunnerTools.md",
       "output": {
         ".html": {
           "relative_path": "Projects/AntRunnerTools.html",
-          "hash": "LMUL3TOQ3etqE2kpUAs4YLlzbA4HjOBvYMuCUJGY4yQ="
+          "hash": "69Sw9UEdG9OsnhPJjjgDlM+uQ9OzGw5VwxUng5qGfpA="
         }
       },
       "is_incremental": false,
@@ -1728,11 +1748,11 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "n3G596cOhibOJoFDwklPIxOtF/2hMyPZ02hiSkiYafE="
+          "hash": "9XWcqEAM72C1HnzzWq7x4Cc0ItCW33oaB8rJh0WzuDE="
         },
         ".json": {
           "relative_path": "toc.json",
-          "hash": "csoXhcKItTc4ZCw6YP2byI8NaWvgmMPpsmvAxXGhAlw="
+          "hash": "ITBpAlY0n/VIyj+FEQxBO2A0kG58Uv879UwDGe/BpvM="
         }
       },
       "is_incremental": false,
@@ -1775,7 +1795,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 32,
+          "total_file_count": 33,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

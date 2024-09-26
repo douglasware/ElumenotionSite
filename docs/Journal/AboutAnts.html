@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>AntArmy and AntRunner </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="AntArmy and AntRunner ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="antarmy-and-antrunner">AntArmy and AntRunner</h1>
+
+<p>Two weeks ago I started the process of getting AntArmy released to the first group of testers and now the uses table has several new entries! I am grateful for the help and feedback and I am excited to make it to this milestone. If you would like to help test and give feedback, please send me a message!</p>
+<p><img src="../Images/AboutAnts/antarmy1.png" alt="Go AntArmy!"></p>
+<p>I recently released <a href="https://github.com/douglasware/AntRunner"><strong>Antunner</strong></a>, a .NET library, Powershell module and Azure Functions tools we use to make, test, deploy and improve the AI assistants we call <em>Ants</em>. I&#39;ve been busy adding features and fixing bugs. Over the next weeks and months I&#39;ll be using these tools to teach and demonstrate an effective way to build AI apps.</p>
+<p>AntRunner is very much targetted at the .NET community, Microsoft Azue, and M365 communities today. If that sounds useful to you, I hope you&#39;ll ty out the <a href="https://github.com/douglasware/AntRunner/tree/main/Notebooks">demo notebooks</a>.</p>
+<h2 id="ants---more-than-just-a-fun-name">Ants - More than just a fun name</h2>
+<p>A key philosophy of building and using ants is that they are small, specialized, and independent and that they work together. I took this name from notes I took long ago about the Actor Model of computing because ants, conceptually, are actors.</p>
+<p>I created the section that follows using two ants in collaboration. The first ant searched the web and then autonomusly sent messages to five other ants to read the pages identified by search to extract applicable content for the first ant who wrote the final response. <strong><a href="https://github.com/douglasware/AntRunner/blob/main/Notebooks/8-Web-Search-Ant-As-Tool.ipynb">See the 8-Web-Search-Ant-As-Tool notebook for details</a></strong></p>
+<pre><code>Ensuing that you include links to pages supporting key statements are included throught your output, explain how the quote &#39;one ant is no ants&#39; applies to the actor model of computing. Do not simply povide a list of links at the end
+</code></pre><h3 id="start-of-ant-output-images-are-from-the-pages-the-ants-found">Start of Ant Output (images are from the pages the ants found...)</h3>
+<hr>
+
+<p>The phrase &quot;one ant is no ants&quot; is often used to emphasize the collective and collaborative nature of ants in a colony. This concept is directly applicable to the Actor Model of computing, which relies on the interactions and cooperation among multiple actors to achieve concurrent and distributed computations effectively.</p>
+<h3 id="explanation">Explanation:</h3>
+<h4 id="collective-strength">Collective Strength</h4>
+<p>In an ant colony, the strength and effectiveness of the colony arise from the interactions and cooperation among individual ants. An individual ant is limited in what it can achieve alone; however, together as a colony, ants can perform complex tasks and solve problems efficiently. This idea is encapsulated in the saying &quot;one ant is no ant.&quot;</p>
+<p><img src="https://cdn-images-1.medium.com/max/600/1*bIQhhOQilM3iUBgESywYuA.jpeg" alt="Ant Colony">
+<em>Image Source: <a href="https://towardsai.net/p/l/ant-colony-optimization-an-overview">towardsai.net</a></em></p>
+<h4 id="actor-model-collaboration">Actor Model Collaboration</h4>
+<p>Similarly, in the Actor Model of computing, the phrase &quot;one actor is no actor&quot; underscores that the power and effectiveness of the model come from the interactions and collaboration among multiple actors. An individual actor can perform a specific computation or task, but the true strength of the Actor Model is realized when multiple actors work together, exchange messages, and coordinate their actions. This is essential for building scalable and fault-tolerant applications.</p>
+<p>From the <a href="https://www.brianstorti.com/the-actor-model/">Brian Storti&#39;s article</a>:</p>
+<blockquote><p>One ant is no ant. And one actor is no actor. They come in systems. In the actor model everything is an actor and they need to have addresses so one actor can send a message to another.</p>
+</blockquote>
+<p>This highlights the importance of having multiple actors that interact with each other to create a functional concurrent system, much like how ants work together in a colony.
+<img src="https://static.vecteezy.com/system/resources/previews/004/256/124/non_2x/anti-ant-no-ants-sign-for-insecticide-vector.jpg" alt="Actor Model"></p>
+<p>For more details, you can explore the full content <a href="https://rustinaction.dev/actors/2023/introduction-to-actix">here</a>.</p>
+<h3 id="summary">Summary:</h3>
+<p>&quot;One ant is no ant&quot; underscores the collective strength of ants in a colony, while &quot;one actor is no actor&quot; emphasizes the collaborative nature of the Actor Model in concurrent and distributed computing. The power of the Actor Model lies in the interactions among multiple actors, just as the effectiveness of an ant colony lies in the cooperation among individual ants.</p>
+<p>By understanding and applying this analogy, developers can better grasp the necessity of designing systems where multiple actors work together to manage state and perform computations effectively, ensuring scalability and fault-tolerance.</p>
+<p><hr></p>
+<h3 id="end-of-ant-output-the-rest-is-human-including-the-typos">End of Ant output... the rest is human including the typos</h3>
+<p><br>
+<br></p>
+<h2 id="ants-versus-copilots">Ants versus Copilots</h2>
+<p>One of the biggest requirements I used to drive this architecture was that each AI application, i.e. each ant, needs to be self standing and reusable. The AntRunner functions and AntRunner library make it easy to turn ants into web services which in turn supports several flavors of copilot extensibility and anything else that can use a web service. So, your copilot can look to an army of ants to do all sorts of useful things that were not practically possible eighteen months ago!</p>
+<p><br> </p>
+<p>P.S. It is hard to get noticed with all the noise about AI. If you like the project and are the type of person who uses github, contributions are vrey much appreciated.</p>
+<p>--Doug Ware, September 26, 2024  </p>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
