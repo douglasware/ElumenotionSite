@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>'Reasoning Tokens' and swarm-based agent applications </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="'Reasoning Tokens' and swarm-based agent applications ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="reasoning-tokens-and-swarm-based-agent-applications">&#39;Reasoning Tokens&#39; and swarm-based agent applications</h1>
+
+<p>Today is an exciting time to be a product builder and AI applications consultant. Two of the biggest obstacles to building useful systems with generative AI have fallen away in the last month or two: available capacity of state of the art models, and high costs.</p>
+<p>As of today (Sept 30, 2024) the default quotas are documented on the <a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits">Azure OpenAI Service quotas and limits page</a>.</p>
+<h2 id="massive-capacity-increases-of-available-tokens-per-minute-tpm-per-deployment">Massive capacity increases of available Tokens Per Minute (TPM) per deployment</h2>
+<p>Azure OpenAI Service imposes quotas and rate limits to manage resources effectively. These limits are defined in terms of Tokens Per Minute (TPM) and Requests Per Minute (RPM).</p>
+<ul>
+<li><strong>Default TPM Limits</strong>:<ul>
+<li><strong>GPT-4o</strong>: 450,000 TPM (Default), 30 million TPM (Enterprise agreement)</li>
+<li><strong>GPT-4o-mini</strong>: 2 million TPM (Default), 50 million TPM (Enterprise agreement)</li>
+<li><strong>GPT-4 Turbo</strong>: 450,000 TPM (Default), 2 million TPM (Enterprise agreement)</li>
+</ul>
+</li>
+</ul>
+<h2 id="-and-steep-price-declines">... and steep price declines</h2>
+<p><img src="../Images/AntRunnerSwarms/CapacityAndCost.png" alt=""></p>
+<p>In terms of practical architecture and design, going from a quota of 80k per minute to 2000k changes things dramatically.</p>
+<h2 id="reasoning-tokens-swarms-and-high-tpm-requirements">&#39;Reasoning Tokens&#39;, swarms, and high TPM requirements</h2>
+<p>Recently <a href="https://openai.com/index/introducing-openai-o1-preview/">OpenAI released o1-preview</a>. The o1 models prioritize enhanced reasoning and extended thinking time for complex tasks.</p>
+<p>OpenAI hasn&#39;t disclosed how the system works and are reportedly <a href="https://www.yahoo.com/tech/openai-threatening-ban-users-asking-224308494.html#:~:text=As%20Ars%20Technica%20reports,%20OpenAI%20is%20now">banning people who get too nosey</a>. API billing for the model includes <strong>&#39;reasoning tokens&#39;</strong>. Reasoning tokens are a key aspect of the o1 models, representing the model&#39;s internal thought process as it breaks down the prompt, considers various approaches, and formulates a response. These tokens are not visible in the API response but are still billed and counted as output tokens.</p>
+<h3 id="thinking-for-yourself">Thinking for yourself</h3>
+<p>While I don&#39;t know how OpenAI&#39;s chain of thought system works, I can guess that it is based on the same <strong>extension mechanism</strong> used for image generation, file search, code interpreter and plugins which, in the assistants API is <strong><a href="https://platform.openai.com/docs/assistants/overview">called tools</a></strong>.</p>
+<p>Tools allow a language model to know about and &#39;call&#39; other programs. The language model has no ability to talk to other systems (+1 for humanity), the program (such as a chatbot) using the language model has to do the work of invoking the tool (somehow) with the input provided by the language model, get the results (however is appropriate) and continue the generation by including the tool call output in the next generation operation.</p>
+<p>My work with AI ecosystems over the past couple of years has included a mix of python, javascript/typescript, and .NET. A big reason I used c# and .NET for <a href="https://github.com/douglasware/AntRunner">AntRunner</a> instead of one of the others is the strength of .NET for asynchronous operations and parallel tasks. That is to say simply: <strong>it&#39;s easy to do a lot of things at once, instead of one thing at a time</strong>. </p>
+<p>Doing a lot of things at once is really important if you have a lot of work to do that can be done in parallel.</p>
+<p>Over the coming days, weeks, and months I plan to write a lot about building agentic AI applications. I&#39;ll be using <a href="https://github.com/douglasware/AntRunner/tree/main/Notebooks">AntRunner</a> which is an open source library and associated tools for building AI applications. AntRunner allows an ant to use tools which might be other ants. In those cases, a swarm of ants work together in parallel to create the answer.</p>
+<p>This chart shows one such run which took just over 60 seconds. During that time a total of 41 ants search the web, loaded pages and extracted relevant content, but it also shows a massive spike in usage which the quota for the deployments easily permit.</p>
+<p><img src="../Images/AntRunnerSwarms/TokenUsage.png" alt=""></p>
+<h2 id="the-prompt">The prompt</h2>
+<pre><code>Use python to get today&#39;s date and then use it to find things to do in Atlanta for each of the next four weekends with pictures and correct links from FindAnswers.
+
+Don&#39;t forget - include only valid links!
+</code></pre><h2 id="sample-output">Sample output</h2>
+<p><strong><a href="https://www.elumenotion.com/Projects/AntRunnerAgentsSample.html">You can view the output of a sample run here</a></strong></p>
+<p><a href="https://www.elumenotion.com/Projects/AntRunnerAgentsSample.html"><img src="../Images/AntRunnerSwarms/ArticleSnippet.png" alt=""></a></p>
+<h2 id="cost-breakdown">Cost breakdown</h2>
+<p>Using mostly gpt-4o-mini keeps costs down. The single call to gpt-4o cost almost as much as 40 calls to gpt-4o-mini!</p>
+<p><img src="../Images/AntRunnerSwarms/UsageAndCost.png" alt=""></p>
+<p>This same ant swarm with only gpt-4o produces similar, slightly better results but costs around $1.20 instead of 12 cents. I can easily reduce it to 9 cents by replacing code interpreter with a local function.</p>
+<p>--Doug Ware
+September 30, 2024</p>
+<p>P.S. Need to build AI applications but could use a guide? I&#39;d love to hear from you!</p>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
