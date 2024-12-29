@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>It&#8217;s 2025, don&#8217;t start your AI journey in 2022 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="It&#8217;s 2025, don&#8217;t start your AI journey in 2022 ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="its-2025-dont-start-your-ai-journey-in-2022">It’s 2025, don’t start your AI journey in 2022</h1>
+
+<hr>
+<p><img src="../Images/RagIsAnAntipattern/image1.png" alt="">  </p>
+<hr>
+<h2 id="retrieval-augmented-generation-is-an-anti-pattern">Retrieval Augmented Generation is an Anti-pattern</h2>
+<p>It’s hard for me to believe that I started my AI/ML journey in earnest over 2.5 years ago. At the beginning my interest was in computer vision, but ChatGPT came out at the end of 2022 and turned me toward generative AI. Since then, I’ve been working successfully as a consultant and building commercial and open-source products including <a href="https://www.antarmy.ai/">Go AntArmy!</a>, <a href="https://github.com/douglasware/AntRunner">AntRunner</a>, and <a href="mailto://ask@antarmy.ai?subject=Answer%20this%20question">ask@antarmy.ai</a>.<br><br>Educating myself and keeping up with the changes is a lot of work, but building things for my own business and for others helps give me a point of view based on first-hand experience. If you are an experienced AI software builder, you may disagree with what I am about to say. If you are new to the space, I think this is important advice: <strong>The most popular approach to chatbot and agent design, Retrieval Augmented Generation (RAG), is outmoded!</strong><br><br>This article explains why I say this and what I think is a better alternative.  </p>
+<h3 id="conventional-wisdom">Conventional wisdom</h3>
+<p>If you search LinkedIn for <strong>’RAG Patterns’</strong> you will find many posts and articles telling you why it is good and how to use it with numerous variations.  </p>
+<h3 id="conventional-wisdom-1">Conventional wisdom</h3>
+<p><img src="../Images/RagIsAnAntipattern/image2.png" alt="">  </p>
+<p>It is a popular approach for building chatbots and agents. <a href="https://www.antarmy.ai/">Go AntArmy!</a>, <a href="https://github.com/douglasware/AntRunner">AntRunner</a>, does not use this pattern in any of its agents, but the Web Ants do something similar using an alternative pattern. If I ask them <strong>is this correct? &quot;Retrieval Augmented Generation is an Anti-pattern“</strong>, they will tell me something like: <strong><em>The statement &quot;Retrieval Augmented Generation is an Anti-pattern&quot; is not widely supported by current literature or expert consensus. Instead, Retrieval-Augmented Generation (RAG) is generally viewed as a beneficial approach in the field of natural language processing (NLP) and artificial intelligence (AI).</em></strong>  </p>
+<p><img src="../Images/RagIsAnAntipattern/image3.gif" alt="">  </p>
+<p>AntArmy.AI is integrated with M365 and is a private solution for people to run in Azure, and so there is no public demo for it yet, but anyone can use the search ants by sending an email to <a href="mailto://ask@antarmy.ai?subject=Answer%20this%20question">ask@antarmy.ai</a>.<br>  </p>
+<h3 id="what-is-an-anti-pattern">What is an Anti-pattern?</h3>
+<p><a href="https://en.wikipedia.org/wiki/Anti-pattern">Wikipedia</a> says an anti-pattern: <strong><em>in software engineering, project management, and business processes is a common response to a recurring problem that is usually ineffective and risks being highly counterproductive.</em></strong><br><br>To be an anti-pattern then is to be a pattern that seems reasonable and is popular, and where, by implication, there are better alternatives. Sometimes we make patterns to work around challenges that later disappear or are mitigated enough that the pattern no longer fits the real world. Retrieval Augmented Generation is an example.  </p>
+<h3 id="what-is-rag">What is RAG?</h3>
+<p>Retrieval-Augmented Generation (RAG) is an approach in natural language processing that combines a search index(s) with a generative model(s). In RAG, a specialized embeddings model first retrieves relevant documents or pieces of information from an index based on the user&#39;s query. This retrieval process ensures that the generated responses are grounded in factual data, enhancing their relevance and accuracy.<br><br>Once the relevant information is retrieved, a generative model, creates a response using information in the retrieved content. This method allows the application to use information that the model does not contain such as anything that happened after the model was trained.<br><br>RAG is used in applications such as question answering, conversational agents, and content generation, where accurate and contextually relevant information is crucial. By combining retrieval and generation, RAG models try to produce more informed and contextually appropriate responses, and address limitations with models that rely solely on pre-trained knowledge without real-time data access.   </p>
+<p>This diagram shows the basic pattern. I didn’t make it and I don’t know who did – I’ve seen it several times and image search yields more than 20 pages going back to 2023 in different sites including the OpenAI community site!  </p>
+<p><img src="../Images/RagIsAnAntipattern/image4.png" alt="">  </p>
+<p>There are many variations on this pattern (which is a symptom of the problem), but the basic pattern is:  </p>
+<ul>
+<li><strong>Retrieval</strong> happens in steps 2 and 3 using the original user query</li>
+<li><strong>Augmentation</strong> happens in step 4 when the original user query is augmented or rewritten to contain the (hopefully) relevant information that was retrieved</li>
+<li><strong>Generation</strong> of the response happens when the language model responds to the augmented query</li>
+</ul>
+<p>There are some simple cases where this basic pattern works well, and it makes for great demos. In December of 2023 I wrote <a href="https://www.elumenotion.com/Journal/CopilotStudioThoughts.html">Building Good Chatbots Part One, No-Code with Microsoft Copilot Studio and Azure AI Studio</a>. At the end of that article, I teased a following article ‘Castle on a hill’ that was to include a lot of the techniques I and others use extend the pattern, but the more I built this less comfortable I got about recommending the pattern, and by May 2024 felt that there was a better way.<br><br>If you are Monty Python fan, you’ll appreciate it when I say ‘that castle sank into the swamp’.<br>  </p>
+<h2 id="rag-challenges">RAG Challenges</h2>
+<p>In the diagram retrieval is done in the box labeled <strong>Search Relevant Information</strong> with input named <strong>‘Query’</strong> coming from the computer icon which represents a <strong>chat application</strong>.<br>  </p>
+<h3 id="searching-relevant-information">Searching Relevant Information</h3>
+<p>How does this <strong>Search Relevant Information</strong> process know which knowledge sources to use and how to invoke them? In simple systems there is only one, but this might be complicated. Typically, making a decision about which sources to use is simply not made and instead the process will query everything in parallel and use a ranking function to pick the winning information. If a decision is made up-front it is often done by a fast and inexpensive models, not by the LLM used for the final generation.<br><br>Why wouldn’t you use an LLM, perhaps the same one used for the final generation? This part of the pattern is an example of a solution to problems that were solved by time. The first is inference cost. For example, GPT-4o-mini is approximately 200 times cheaper than GPT-4 and prices continue to decrease while quality continues to improve. A second is scarcity. Getting enough capacity to use GPT-4 in a system typically required a commitment to spend tens of thousands of dollars pre month! Today capacity is more abundant with metered rates often with no minimums.<br><br>Backing up a step, how does the <strong>chat application</strong> know that the user asked a question that should be handled by search? In a simple implementation the usual answer is that it just doesn’t worry about it and does a search anyway. If there are no results, the chat application deals with it somehow in the augmentation step.   </p>
+<h3 id="knowledge-sources">Knowledge Sources</h3>
+<p>A popular first project is the chatbot using a set of documents. If you use Copilot Studio or the Azure AI Foundry Chat Playground, you can get started quickly using documents you already have and deploy a new chatbot in minutes.    </p>
+<p><img src="../Images/RagIsAnAntipattern/image5.png" alt="">  </p>
+<p>SharePoint Agents are another of the many options.<br><br>With high quality documents under active content management and a narrow focus, you can create useful chat agents with good quality. In this case RAG is not an anti-pattern because it fits and doesn’t require a lot of extensions. But what if the content is not curated, covers a wide variety of topics, has hand-written text, pictures, or tables, or includes important metadata on a cover page, or as a document property?<br><br>What if people need to ask questions about the overall corpus like, ‘what was the most common complaint customers made?’ <strong>Document search depends on text that is in documents. Unless there is a document with text about</strong> <strong><em>common complaints</em></strong><strong>, a chatbot using search will not be able to answer the question because the answer is not in the text.</strong>   </p>
+<h3 id="multiple-knowledge-sources">Multiple knowledge sources</h3>
+<p>It is very important to note that <strong>you can’t eliminate the need for knowledge sources!</strong> If you want to create an AI agent like the Web Ants or <a href="mailto://ask@antarmy.ai?subject=Answer%20this%20question">ask@antarmy.ai</a>, you have to provide the correct knowledge to the LLM for everything to work. <strong>The question is what patterns you use to build the agent.</strong><br><br>A temptation is to try to create a single knowledge source that works for every scenario, but this is only practical when you have narrow requirements that everyone agrees on with high quality data, so basically never.<br><br><strong><a href="https://www.antarmy.ai/">Go AntArmy!</a></strong> solves this challenge by using many agent ants with specific and narrow definitions, each with their own knowledge sources and tools. The pattern is very different from RAG, but <strong>many of the same pieces are required</strong>. However, they are <strong>organized differently.</strong>      </p>
+<h2 id="augmentation-introduces-fragility">Augmentation introduces fragility</h2>
+<p>Step 4 is the creation of an ‘enhanced prompt’. At this point the chat application takes the original question, adds the knowledge, and in the case of the Azure AI Foundry ‘Add your data’ extensions (among others), adds instructions concerning citations.<br><br>Depending on the implementation, this new prompt might be very different, or even at odds with the user or system prompt. I encountered this when I had a knowledge source that consisted of questions, answers, and links to source documents that contained the official answers. Using the ‘Add your data’ extensions, it proved very difficult to get output that included the specific links from the answers in the Q&amp;A documents instead of citing the Q&amp;A documents themselves.<br><br>We wanted it to use the links in the content, but the creators of that specific RAG implementation assumed that citations to the indexed documents were desirable. The resulting augmented prompt overrode the instructions about the links.<br>  </p>
+<p>A big flaw comes from the fact that the pattern explicitly separates the LLM from the true context and relies on an intermediary which frequently uses less capable or overly specialized models or instructions.  </p>
+<p><img src="../Images/RagIsAnAntipattern/image6.png" alt="">  </p>
+<p>This intermediary is another element that made sense previously due to the constraints imposed by the size of the context window. In 2022, gpt-3.5-turbo had a context window size of 4096 tokens compared to 128,000 tokens with gpt-4o. So, when implementing RAG with gpt-3.5-turbo, managing the size of the context widow was much harder as today we have almost 32 times as much space to work with.<br><br>This means we can:  </p>
+<ul>
+<li>Put more facts in the prompt</li>
+<li>Provide more instructions for dealing with different knowledge sources</li>
+<li>Have longer threads</li>
+<li>Do more ‘thinking’</li>
+</ul>
+<p>Much of the augmentation and context management done by the chat application with RAG can now be managed by the LLM which has a large enough context window to ‘see’ and participate in the entire flow.   </p>
+<h2 id="bigger-picture-rag-pattern">Bigger picture RAG pattern</h2>
+<p>I looked at a lot of articles about RAG as I was putting this article together and I was impressed by the completeness of this one from Hevo Data - <a href="https://hevodata.com/learn/what-is-rag-architecture/">What is RAG Architecture? A Complete Guide | Hevo</a>.   </p>
+<p><img src="../Images/RagIsAnAntipattern/image7.png" alt="">  </p>
+<p>This diagram includes the ingestion pipeline to the vector database which is only one kind of knowledge source. Often there are easier, better, and more direct ways to provide the LLM with knowledge.   </p>
+<h2 id="agents-with-tools-are-easier-to-build-and-can-do-more-things">Agents with tools are easier to build and can do more things</h2>
+<p>Cheaper and better models with large context windows allow us to use the LLM to manage generation and greatly simplify the architecture by giving it the entire context and allowing it to manage retrieval and any other tools it needs to fulfill its purpose. The use of knowledge sources becomes just like any other thing the agent knows how to do.    </p>
+<p><img src="../Images/RagIsAnAntipattern/image8.png" alt="">  </p>
+<h2 id="thanks-for-reading">Thanks for reading</h2>
+<p>This article is the preface for what I expect to be a long series articles about building AI agents with tools like the <a href="https://www.antarmy.ai/">Go AntArmy!</a> ants, using the <a href="https://github.com/douglasware/AntRunner">AntRunner</a> library, <a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/assistant">using the  assistants api and Azure OpenAI</a>. A big focus will be on how to define tools for existing APIs of your own and from vendors using examples like MSGraph and local functions.<br><br>A big focus of the architecture is the ability to use the resulting agents in other products, for examples, as Copilot Declarative Agents, and in fully custom systems or jobs such as <a href="mailto://ask@antarmy.ai?subject=Answer%20this%20question">ask@antarmy.ai</a>.<br><br>Happy New Year!<br>--Doug Ware    </p>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

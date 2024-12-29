@@ -14,7 +14,7 @@
       "output": {
         ".html": {
           "relative_path": "FeaturedContent/AboutMe.html",
-          "hash": "awfUb4AUZRgorZ7c2hmLqUD1urOL3CObPGnozXUesHY="
+          "hash": "v1+BNzrLrut6Bvot5u5daw=="
         }
       },
       "is_incremental": false,
@@ -29,22 +29,11 @@
       "output": {
         ".html": {
           "relative_path": "FeaturedContent/toc.html",
-          "hash": "KbamNbZgYgW356VxFvoJCCgVs8rkd30AvKUs2BcWZlg="
+          "hash": "NLgkPCfWG6Ax498IlZKfAQ=="
         },
         ".json": {
           "relative_path": "FeaturedContent/toc.json",
-          "hash": "PwmHYjop87+KM49q2lQvMf4JAwUXiwuJhbrL26BClDw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Images/AboutAnts/antarmy1.png",
-      "output": {
-        "resource": {
-          "relative_path": "Images/AboutAnts/antarmy1.png"
+          "hash": "zMiWaAUkjNVDkBCn1OcfIQ=="
         }
       },
       "is_incremental": false,
@@ -67,72 +56,6 @@
       "output": {
         "resource": {
           "relative_path": "Images/AboutMe/image2.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Images/AntRunnerSwarms/ArticleSnippet.png",
-      "output": {
-        "resource": {
-          "relative_path": "Images/AntRunnerSwarms/ArticleSnippet.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Images/AntRunnerSwarms/CapacityAndCost.png",
-      "output": {
-        "resource": {
-          "relative_path": "Images/AntRunnerSwarms/CapacityAndCost.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Images/AntRunnerSwarms/ModelCost.png",
-      "output": {
-        "resource": {
-          "relative_path": "Images/AntRunnerSwarms/ModelCost.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Images/AntRunnerSwarms/TokenLimits.png",
-      "output": {
-        "resource": {
-          "relative_path": "Images/AntRunnerSwarms/TokenLimits.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Images/AntRunnerSwarms/TokenUsage.png",
-      "output": {
-        "resource": {
-          "relative_path": "Images/AntRunnerSwarms/TokenUsage.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Images/AntRunnerSwarms/UsageAndCost.png",
-      "output": {
-        "resource": {
-          "relative_path": "Images/AntRunnerSwarms/UsageAndCost.png"
         }
       },
       "is_incremental": false,
@@ -1141,6 +1064,105 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "Images/RagIsAnAntipattern/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/RagIsAnAntipattern/image1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/RagIsAnAntipattern/image2.gif",
+      "output": {
+        "resource": {
+          "relative_path": "Images/RagIsAnAntipattern/image2.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/RagIsAnAntipattern/image2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/RagIsAnAntipattern/image2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/RagIsAnAntipattern/image3.gif",
+      "output": {
+        "resource": {
+          "relative_path": "Images/RagIsAnAntipattern/image3.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/RagIsAnAntipattern/image4.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/RagIsAnAntipattern/image4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/RagIsAnAntipattern/image5.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/RagIsAnAntipattern/image5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/RagIsAnAntipattern/image6.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/RagIsAnAntipattern/image6.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/RagIsAnAntipattern/image7.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/RagIsAnAntipattern/image7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/RagIsAnAntipattern/image8.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/RagIsAnAntipattern/image8.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "Images/TestingLocally/image8.png",
       "output": {
         "resource": {
@@ -1350,35 +1372,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "Journal/AboutAnts.md",
-      "output": {
-        ".html": {
-          "relative_path": "Journal/AboutAnts.html",
-          "hash": "MaVGjfyFnqwwjZfIolUwUCCkCht6s7p2M1IO0i3ZFJI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Journal/AntRunnerSwarms.md",
-      "output": {
-        ".html": {
-          "relative_path": "Journal/AntRunnerSwarms.html",
-          "hash": "FcDYAGAfkK9v6+ZsAAjMXOcqvYRSKs2d+Rsps1R8kHM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "Journal/April14To162023.md",
       "output": {
         ".html": {
           "relative_path": "Journal/April14To162023.html",
-          "hash": "fVGB2k6MqEJroQg63ak881iD6d+4cW/Sdh+BMsXYi/M="
+          "hash": "tF4kOe/9c2yltYceNBt+KQ=="
         }
       },
       "is_incremental": false,
@@ -1390,7 +1388,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/BuildingDomainSpecificLLMBots.html",
-          "hash": "hf5h/mDHw/D9zBvFZbi+ou1wPuV+Ry3xSKNkbZfJyrM="
+          "hash": "7pAQFtiuRDs0LKfHE/FFUw=="
         }
       },
       "is_incremental": false,
@@ -1402,7 +1400,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/ChatGPTCodeInterpreter.html",
-          "hash": "enseVFuM7yO6ddQfHp+YuK46MxsdFsnbEsIDsBT5U/s="
+          "hash": "aCfVbGxUBXMoR+caCKo6HA=="
         }
       },
       "is_incremental": false,
@@ -1414,7 +1412,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/CopilotStudioThoughts.html",
-          "hash": "osydb9PuQ8IiHOMcI+eMYcht9Vs9YB2z3NhIJXJyN+M="
+          "hash": "F0qlNn+w7EqFiNWa6e80rw=="
         }
       },
       "is_incremental": false,
@@ -1426,7 +1424,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/CurrentOpinions.html",
-          "hash": "gvuwetKCn1iZznTxfrz4lgH3vxwYoifILvGUEdY57bs="
+          "hash": "Pb009/bX6So8+GYZ4h0s8w=="
         }
       },
       "is_incremental": false,
@@ -1438,7 +1436,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/DetectingAIGeneratedContent.html",
-          "hash": "EAFcd6fE0YTwjrkSoX5QOYH//VSW5vdl4xrnpeWM5zE="
+          "hash": "NJW3uH9fuuHDt0U0a3AyNw=="
         }
       },
       "is_incremental": false,
@@ -1453,7 +1451,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/IngestingPdfContent.html",
-          "hash": "BXpz9KtVWXLO4vRSilvJ33gCGgVMmU2yhkZ3Vtma69Q="
+          "hash": "6ZsSX/bGyeWvwDmQBBTU4w=="
         }
       },
       "is_incremental": false,
@@ -1465,7 +1463,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/LibreChatBicep.html",
-          "hash": "c5reKkCbpIb7VTwthbyipke9+yXkZGTPErwmEF8P+YU="
+          "hash": "qeI+um/x/JLfciuA+DUzVQ=="
         }
       },
       "is_incremental": false,
@@ -1477,7 +1475,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/OpenSourceVersusOpenAI.html",
-          "hash": "fZ+8GGKCq87VJuCY/zNg93BptT3WXmm6mSrIA2s9CY4="
+          "hash": "pnKvzwb2sHA38VhUEiB4jw=="
         }
       },
       "is_incremental": false,
@@ -1489,7 +1487,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/PDFMarkdown/mtoExtractedText.html",
-          "hash": "CG3QTC5KzdF+1EuBAUxY9aqe9gcvs7hsc3ntn3ex7kc="
+          "hash": "OnWzqkjYgfjqJbVNbyFjeg=="
         }
       },
       "is_incremental": false,
@@ -1504,7 +1502,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/PDFMarkdown/mtoFromDocIntelOnly.html",
-          "hash": "NBmfB1brp8xgYkhnfg0EnqJ1qQuJaygB0rMs2ecJAWI="
+          "hash": "WrRT5IIwLgIHroXmMxr+FA=="
         }
       },
       "is_incremental": false,
@@ -1520,7 +1518,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/PDFMarkdown/mtoGPT4Omni.html",
-          "hash": "jllFozSepEIHxupbaayWEwNWMYkmBGtnXtsbhmXFd+c="
+          "hash": "P27zcvaYRWG3pncdRuXdmQ=="
         }
       },
       "is_incremental": false,
@@ -1535,7 +1533,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/PDFMarkdown/mtoGPT4OmniWithDocIntelOCR.html",
-          "hash": "KVWhqmgOKchHVJ/CQVXf4rG6ZeBm8KEfARwvuUrYm+4="
+          "hash": "6rZOkSvc7HMtadF+T/+/rw=="
         }
       },
       "is_incremental": false,
@@ -1551,7 +1549,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/PDFMarkdown/mtoGPT4Turbo.html",
-          "hash": "3J5G+v3oNHTVv6QmDtIYRMXbtm+v+SrYSbEu+TZYQks="
+          "hash": "LWSQB/ooLcrP0A65+FAC5Q=="
         }
       },
       "is_incremental": false,
@@ -1566,7 +1564,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/PDFMarkdown/mtoGPT4TurboWithDocIntelOCR.html",
-          "hash": "NsvpmCSi8XMvV6fsVScyM56Z2PIK6DmCsBIEkGHx63w="
+          "hash": "12szxiCjvYkBz1ad5wO5Uw=="
         }
       },
       "is_incremental": false,
@@ -1582,7 +1580,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/PDFMarkdown/mtoGPT4VisionPreviewAndAzureComputerVisionOCR.html",
-          "hash": "XK/Z57UmcXUvIzxHyBxAWb3v7jP96CtVBB7/zgL9+SY="
+          "hash": "zYH3ENEKcm1WNlTOAJmR9Q=="
         }
       },
       "is_incremental": false,
@@ -1594,7 +1592,19 @@
       "output": {
         ".html": {
           "relative_path": "Journal/ProjectedUserExperiencesWithAI.html",
-          "hash": "O15w6C7+y9yCrS4NWfsFN0GnzHf6uNkB9CzsQkRZTSA="
+          "hash": "j9aaxdsakxhPo6y6Nw+x+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Journal/RagIsAnAntipattern.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/RagIsAnAntipattern.html",
+          "hash": "nUN7iFgXukORcYog0AYZfw=="
         }
       },
       "is_incremental": false,
@@ -1606,7 +1616,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/SpeechDictation2.html",
-          "hash": "kQgePtu2qjBkgdNJWhbbT8bTRT+v6Vq1S1TZggoK95k="
+          "hash": "JjX2G1ryydjMg//oeObfsQ=="
         }
       },
       "is_incremental": false,
@@ -1621,7 +1631,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/TranscriptionAndDiarization.html",
-          "hash": "1h7VGE95kwwbn5BlRhWNkxoCNkE2w0BmSW769jjdtDs="
+          "hash": "iX7+EABlOJwMz95Qf5e18g=="
         }
       },
       "is_incremental": false,
@@ -1633,7 +1643,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/WritingByTalking.html",
-          "hash": "twyGpuw4vIa+wMVLuAKZJwQwRlfmQmXRN0lgYdvSPSI="
+          "hash": "fqWrydV44S26y3MHiurxzQ=="
         }
       },
       "is_incremental": false,
@@ -1645,7 +1655,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/index.html",
-          "hash": "XZaWqUQG2leosyn4PfivBxNec/5C01KKn1Vi6couDVo="
+          "hash": "p9MZ5jfQI8ng51o145MeSw=="
         }
       },
       "is_incremental": false,
@@ -1657,11 +1667,11 @@
       "output": {
         ".html": {
           "relative_path": "Journal/toc.html",
-          "hash": "pFywdOW4k+NS/2KR4pYhrfnSTsE5NZss3sI+UgYykqs="
+          "hash": "9kXPVXh4s5lNwugBxvL4Cg=="
         },
         ".json": {
           "relative_path": "Journal/toc.json",
-          "hash": "n56rxLX+gRZ45RdIer3pABg4T8ZrvT+hhmet/GDXfOw="
+          "hash": "ZO0Xuyq4ggvfWXwuk8zByQ=="
         }
       },
       "is_incremental": false,
@@ -1673,19 +1683,7 @@
       "output": {
         ".html": {
           "relative_path": "Projects/AntArmyPreview.html",
-          "hash": "ENGe2VP2dpr3EDCitXvcsZlZHKVa3pErqn/oCNlhKy4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Projects/AntRunnerAgentsSample.md",
-      "output": {
-        ".html": {
-          "relative_path": "Projects/AntRunnerAgentsSample.html",
-          "hash": "vTHqpSvZUd2N0CDiT3MkSVuoCOI1868k/u5dVOIGKtc="
+          "hash": "wDB58cwqIBQ6SxJC49jLJQ=="
         }
       },
       "is_incremental": false,
@@ -1697,7 +1695,7 @@
       "output": {
         ".html": {
           "relative_path": "Projects/AntRunnerTools.html",
-          "hash": "69Sw9UEdG9OsnhPJjjgDlM+uQ9OzGw5VwxUng5qGfpA="
+          "hash": "iVGfyrhSuHfaLbZX5G6Jyw=="
         }
       },
       "is_incremental": false,
@@ -1709,7 +1707,7 @@
       "output": {
         ".html": {
           "relative_path": "Projects/DocBuilder.html",
-          "hash": "1T8r7ecL+PvcHQmWpHIXRXnRbWATju8jwB5cwWp5JI4="
+          "hash": "dvHNpinu7W4yvLwGSx/E8A=="
         }
       },
       "is_incremental": false,
@@ -1724,7 +1722,7 @@
       "output": {
         ".html": {
           "relative_path": "Projects/IngestingPdfContent.html",
-          "hash": "cW76Qm0slEF6SXnSqqUX4AstNlIDK74iH0vqodUZlVA="
+          "hash": "VnkFaxF59qTgIjUEUGU05A=="
         }
       },
       "is_incremental": false,
@@ -1736,7 +1734,7 @@
       "output": {
         ".html": {
           "relative_path": "Projects/LibreChatBicep.html",
-          "hash": "fEh3co1qg5HlYHu9cuxOj9gVc+HvvN1CG5OILl68zHM="
+          "hash": "39/1pJTsflKre/xnt9I0Pg=="
         }
       },
       "is_incremental": false,
@@ -1748,7 +1746,7 @@
       "output": {
         ".html": {
           "relative_path": "Projects/OobaboogaAPIHelper.html",
-          "hash": "fnQNlcYrS3AaLMokW4hPQiogtjXWCUMvsBhu3/+kmFw="
+          "hash": "DYNbYmQ989ETF21S5ZACkw=="
         }
       },
       "is_incremental": false,
@@ -1763,7 +1761,7 @@
       "output": {
         ".html": {
           "relative_path": "Projects/StringExtensions.html",
-          "hash": "iN0Jycv77Ce4q5qKIxMQ78WqmsuUADMY6UeFR/6ULsk="
+          "hash": "o/VaulNKotN7mPzn77trHw=="
         }
       },
       "is_incremental": false,
@@ -1775,7 +1773,7 @@
       "output": {
         ".html": {
           "relative_path": "Projects/TranscriptionAndDiarization.html",
-          "hash": "M/WHpLXw+S2FSt+/0zxlNgP3nT0S5Pq2aQFth+02OyQ="
+          "hash": "QNjZBPAsRsW+tjpY07j5Vw=="
         }
       },
       "is_incremental": false,
@@ -1787,7 +1785,7 @@
       "output": {
         ".html": {
           "relative_path": "Projects/WeightRandoms.html",
-          "hash": "vhihP8y0nTktzFlOESMOotAUCy4SypSz2zYR82Lbgl8="
+          "hash": "BY+02g0uF66pTJbLNlIuFA=="
         }
       },
       "is_incremental": false,
@@ -1799,7 +1797,7 @@
       "output": {
         ".html": {
           "relative_path": "Projects/index.html",
-          "hash": "itQax6YO3E6+3bIrwVl9VEGpPtu1QIijWRZw2nX/yys="
+          "hash": "rskxCwgGkCjQ7xek/B4bRA=="
         }
       },
       "is_incremental": false,
@@ -1811,11 +1809,11 @@
       "output": {
         ".html": {
           "relative_path": "Projects/toc.html",
-          "hash": "brZ8GCOJ1Z1JEHdO4yYd2cQCjRnGeVlHTQUz+Eq64fg="
+          "hash": "UD3bIyT4nBgRAyXZfYNGFw=="
         },
         ".json": {
           "relative_path": "Projects/toc.json",
-          "hash": "a8KXNobGr2iLaDW/ExpUqoepYq8Lq29hgwEOaS6P9GU="
+          "hash": "WUwh4bIWH452lmwUKiphng=="
         }
       },
       "is_incremental": false,
@@ -1838,11 +1836,11 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "MIu3yT0EM8niUBMY/XjkUAIRjQ+0o1R0/yZdx5Eb/hg="
+          "hash": "zXMP79wu8DLoJ7OPrnDyLg=="
         },
         ".json": {
           "relative_path": "toc.json",
-          "hash": "ukK96UAJzVNl39iyjpzBCe6bMuOEuXfPdeWTcJ/8VuU="
+          "hash": "lCW9bwTybLRKZvA1kXJOoA=="
         }
       },
       "is_incremental": false,
@@ -1854,17 +1852,6 @@
       "output": {
         "resource": {
           "relative_path": "video/AntArmyIntro.mp4"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "video/TechConDC.pptx",
-      "output": {
-        "resource": {
-          "relative_path": "video/TechConDC.pptx"
         }
       },
       "is_incremental": false,
@@ -1882,10 +1869,11 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 35,
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
@@ -1895,11 +1883,10 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "TocDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 33,
           "skipped_file_count": 0
         }
       }
