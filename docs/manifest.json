@@ -29,11 +29,22 @@
       "output": {
         ".html": {
           "relative_path": "FeaturedContent/toc.html",
-          "hash": "NLgkPCfWG6Ax498IlZKfAQ=="
+          "hash": "K4d6RqJCDZ7wSTrvL5Ed9Q=="
         },
         ".json": {
           "relative_path": "FeaturedContent/toc.json",
-          "hash": "zMiWaAUkjNVDkBCn1OcfIQ=="
+          "hash": "T4Jp64DsVdVQl1bFXZLx8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/AboutAnts/antarmy1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/AboutAnts/antarmy1.png"
         }
       },
       "is_incremental": false,
@@ -56,6 +67,72 @@
       "output": {
         "resource": {
           "relative_path": "Images/AboutMe/image2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/AntRunnerSwarms/ArticleSnippet.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/AntRunnerSwarms/ArticleSnippet.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/AntRunnerSwarms/CapacityAndCost.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/AntRunnerSwarms/CapacityAndCost.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/AntRunnerSwarms/ModelCost.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/AntRunnerSwarms/ModelCost.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/AntRunnerSwarms/TokenLimits.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/AntRunnerSwarms/TokenLimits.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/AntRunnerSwarms/TokenUsage.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/AntRunnerSwarms/TokenUsage.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/AntRunnerSwarms/UsageAndCost.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/AntRunnerSwarms/UsageAndCost.png"
         }
       },
       "is_incremental": false,
@@ -1372,6 +1449,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Journal/AboutAnts.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/AboutAnts.html",
+          "hash": "2prIP8sUXgj1dPquRJbiTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Journal/AntRunnerSwarms.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/AntRunnerSwarms.html",
+          "hash": "3K6uhMWp5TVImk93LTUyKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Journal/April14To162023.md",
       "output": {
         ".html": {
@@ -1655,7 +1756,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/index.html",
-          "hash": "p9MZ5jfQI8ng51o145MeSw=="
+          "hash": "zbpcca26vgrnWNdNHERmpw=="
         }
       },
       "is_incremental": false,
@@ -1667,11 +1768,11 @@
       "output": {
         ".html": {
           "relative_path": "Journal/toc.html",
-          "hash": "9kXPVXh4s5lNwugBxvL4Cg=="
+          "hash": "mDnv8ujVZTDVXlT/fWkhJg=="
         },
         ".json": {
           "relative_path": "Journal/toc.json",
-          "hash": "ZO0Xuyq4ggvfWXwuk8zByQ=="
+          "hash": "RRnFnbcwic6gxLusKRihTw=="
         }
       },
       "is_incremental": false,
@@ -1684,6 +1785,18 @@
         ".html": {
           "relative_path": "Projects/AntArmyPreview.html",
           "hash": "wDB58cwqIBQ6SxJC49jLJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Projects/AntRunnerAgentsSample.md",
+      "output": {
+        ".html": {
+          "relative_path": "Projects/AntRunnerAgentsSample.html",
+          "hash": "FV4/8h9nz+fIak93ABnO8A=="
         }
       },
       "is_incremental": false,
@@ -1856,6 +1969,17 @@
       },
       "is_incremental": false,
       "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "video/TechConDC.pptx",
+      "output": {
+        "resource": {
+          "relative_path": "video/TechConDC.pptx"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
     }
   ],
   "incremental_info": [
@@ -1886,7 +2010,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 33,
+          "total_file_count": 36,
           "skipped_file_count": 0
         }
       }
