@@ -29,11 +29,11 @@
       "output": {
         ".html": {
           "relative_path": "FeaturedContent/toc.html",
-          "hash": "K4d6RqJCDZ7wSTrvL5Ed9Q=="
+          "hash": "fEScXltpeiFyrKqOlUj5gA=="
         },
         ".json": {
           "relative_path": "FeaturedContent/toc.json",
-          "hash": "T4Jp64DsVdVQl1bFXZLx8g=="
+          "hash": "he0o1yGNk/0pcP+ql/YeZw=="
         }
       },
       "is_incremental": false,
@@ -1251,6 +1251,116 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "Images/ToolBasedAgents/image1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ToolBasedAgents/image1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ToolBasedAgents/image10.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ToolBasedAgents/image10.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ToolBasedAgents/image2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ToolBasedAgents/image2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ToolBasedAgents/image3.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ToolBasedAgents/image3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ToolBasedAgents/image4.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ToolBasedAgents/image4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ToolBasedAgents/image5.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ToolBasedAgents/image5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ToolBasedAgents/image6.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ToolBasedAgents/image6.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ToolBasedAgents/image7.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ToolBasedAgents/image7.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ToolBasedAgents/image8.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ToolBasedAgents/image8.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/ToolBasedAgents/image9.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/ToolBasedAgents/image9.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "Images/TranscriptionAndDiarization/image1.png",
       "output": {
         "resource": {
@@ -1705,7 +1815,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/RagIsAnAntipattern.html",
-          "hash": "nUN7iFgXukORcYog0AYZfw=="
+          "hash": "L6gfx4Ky2h4sqD0ZornYOg=="
         }
       },
       "is_incremental": false,
@@ -1718,6 +1828,18 @@
         ".html": {
           "relative_path": "Journal/SpeechDictation2.html",
           "hash": "JjX2G1ryydjMg//oeObfsQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Journal/ToolBasedAgents.md",
+      "output": {
+        ".html": {
+          "relative_path": "Journal/ToolBasedAgents.html",
+          "hash": "jkiCJ8616T9b9fHxC1bpgQ=="
         }
       },
       "is_incremental": false,
@@ -1756,7 +1878,7 @@
       "output": {
         ".html": {
           "relative_path": "Journal/index.html",
-          "hash": "zbpcca26vgrnWNdNHERmpw=="
+          "hash": "xXLU2swdHJpt3Y0gFmrlRw=="
         }
       },
       "is_incremental": false,
@@ -1768,11 +1890,11 @@
       "output": {
         ".html": {
           "relative_path": "Journal/toc.html",
-          "hash": "mDnv8ujVZTDVXlT/fWkhJg=="
+          "hash": "FNkt+Sx8R56Mhi1kHamLvw=="
         },
         ".json": {
           "relative_path": "Journal/toc.json",
-          "hash": "RRnFnbcwic6gxLusKRihTw=="
+          "hash": "x52yu+vIVyC1Nqt7G0i8aQ=="
         }
       },
       "is_incremental": false,
@@ -1949,11 +2071,11 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "zXMP79wu8DLoJ7OPrnDyLg=="
+          "hash": "f0ruh0hcW2o3LlUP8Hfrow=="
         },
         ".json": {
           "relative_path": "toc.json",
-          "hash": "lCW9bwTybLRKZvA1kXJOoA=="
+          "hash": "xQ3Uv7iqzcjsJdyDxrOwJw=="
         }
       },
       "is_incremental": false,
@@ -1965,17 +2087,6 @@
       "output": {
         "resource": {
           "relative_path": "video/AntArmyIntro.mp4"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "video/TechConDC.pptx",
-      "output": {
-        "resource": {
-          "relative_path": "video/TechConDC.pptx"
         }
       },
       "is_incremental": false,
@@ -1993,13 +2104,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -2007,10 +2111,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 36,
+          "total_file_count": 37,
           "skipped_file_count": 0
         }
       }

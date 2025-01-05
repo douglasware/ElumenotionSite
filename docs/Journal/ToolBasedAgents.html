@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Tool-based Agent Pattern </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Tool-based Agent Pattern ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="png" src="../logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="tool-based-agent-pattern">Tool-based Agent Pattern</h1>
+
+<p><img src="../Images/ToolBasedAgents/image1.png" alt="">  </p>
+<p>I ended my last article, <a href="https://www.elumenotion.com/Journal/RagIsAnAntipattern.html">Retrieval Augmented Generation is an Anti-pattern</a> by saying, *”Cheaper and better models with large context windows allow us to use the LLM to manage generation and greatly simplify the architecture by giving it the entire context and allowing it to manage retrieval and any other tools it needs to fulfill its purpose. The use of knowledge sources becomes just like any other thing the agent knows how to do.”  </p>
+<p><img src="../Images/ToolBasedAgents/image2.png" alt="">  </p>
+<p>This article is about the pattern I use which use in <a href="https://www.antarmy.ai/">Go AntArmy!</a>, <a href="https://github.com/douglasware/AntRunner">AntRunner</a>, and <a href="mailto://ask@antarmy.ai?subject=Answer%20this%20question">ask@antarmy.ai</a>. I call it the <strong>Tool-based Agent Pattern</strong>.<br>  </p>
+<h2 id="attribution">Attribution</h2>
+<p>One aspect of calling something a pattern is that it is commonly used. The <a href="https://help.openai.com/en/articles/8550641-assistants-api-v2-faq">OpenAI Assistants API</a> is an example, as is <a href="https://github.com/douglasware/AntRunner">AntRunner</a>. It is documented elsewhere as <a href="https://weaviate.io/blog/what-is-agentic-rag">Agentic RAG</a>, but I maintain that “Agentic RAG” is not in fact a RAG pattern because it is not a given that an agents tools involve retrieval.<br><br>If you disagree, ask yourself if a tool like Code Interpreter (a python sandbox) is a form of retrieval. The agent’s LLM makes all the decisions and writes code and there is no augmentation. There is no ‘R’etrieval and no ‘A’ugmentation, only ‘G’eneration. Furthermore, nothing in the name suggests there are, generically, tools at the center of the pattern.<br><br>If an agent can write notes via a tool, is it not doing retrieval, adding a new tool to the same API that can read notes doesn’t change the architecture pattern, can your design become RAG by including a read operation? <br><br>Thanks to <a href="https://www.linkedin.com/in/mahmoudhamedhassan/">Mahmoud Hassan | LinkedIn</a> for asking about this in a comment on the last article! <br><br>Terminology aside, this is a common approach you should understand because: it works, it is easy to understand, it is versatile, and it is architecturally sound as you can extend it without making fundamental changes to the pattern.  </p>
+<h2 id="software-architecture-methodology">Software Architecture Methodology</h2>
+<p>This article will explain the pattern using a software architecture methodology known as Structured Analysis and Decomposition.   </p>
+<h3 id="structured-analysis-and-decomposition">Structured Analysis and Decomposition</h3>
+<p><strong>Structured Analysis and Decomposition (SA/SD)</strong> is a systematic approach used in software engineering to analyze business requirements and develop specifications for converting these requirements into functional systems. This methodology emerged in the 1970s and is characterized by its focus on breaking down complex systems into smaller, manageable components. The primary goals of SA/SD are to improve clarity, enhance communication among stakeholders, and ensure that the system meets user needs.<br><br>You can read more about <a href="https://en.wikipedia.org/wiki/Structured_analysis">Structured Analysis on Wikipedia</a>.  </p>
+<h3 id="data-flow-diagrams-dfds-in-structured-analysis">Data Flow Diagrams (DFDs) in Structured Analysis</h3>
+<p><strong>Data Flow Diagrams (DFDs)</strong> are a crucial tool in the structured analysis phase of SA/SD. They visually represent the flow of data within a system, highlighting how information is exchanged between processes and external entities. Here’s how DFDs are utilized in structured analysis:  </p>
+<ol>
+<li><strong>Modeling Data Flow</strong>: DFDs depict the movement of data through processes, showing inputs, outputs, and data stores without detailing the timing or sequence of data exchanges.  </li>
+<li><strong>Identifying Processes</strong>: Each process in a DFD represents a specific function that transforms input data into output data, facilitating a clear understanding of system operations.  </li>
+<li><strong>Clarifying Requirements</strong>: By illustrating data flows, DFDs help stakeholders visualize system functionality, ensuring that all necessary processes are included.  </li>
+<li><strong>Facilitating Communication</strong>: DFDs provide a common framework for developers and stakeholders, improving understanding and collaboration throughout the project lifecycle.  </li>
+</ol>
+<h3 id="elements-of-data-flow-diagrams">Elements of Data Flow Diagrams</h3>
+<ul>
+<li><strong>Processes</strong>: Represented by circles or ovals, indicating where data is processed.  </li>
+<li><strong>Data Stores</strong>: Shown as open-ended rectangles, representing where data is stored.  </li>
+<li><strong>External Entities</strong>: Illustrated as squares, indicating outside actors that interact with the system.  </li>
+<li><strong>Data Flows</strong>: Arrows that show the direction of data movement between processes, stores, and entities.   </li>
+</ul>
+<p><strong>The goal is communication.</strong> You don’t need to know a lot of technical details and there is no code.<br>  </p>
+<h3 id="context-diagram">Context diagram</h3>
+<p>Drawing DFD’s is like a game where if you follow the rules honestly, you can be reasonably sure the design is correct and complete.<br><br>You start at the top…  </p>
+<p><img src="../Images/ToolBasedAgents/image3.png" alt="">  </p>
+<p>And work your way down…  </p>
+<p><img src="../Images/ToolBasedAgents/image4.png" alt="">  </p>
+<p>With a few simple rules:  </p>
+<ol>
+<li><strong>Inputs and outputs must match</strong>: In the diagrams above each has the same inputs and outputs such that we can replace the first drawing’s single process with the second drawing  </li>
+<li><strong>No Miracles Allowed</strong>: The data in the flows must have a source. When you are in a decomposition layer and it requires data that isn’t plausibly coming from somewhere, there is a hole in the design or the layers above are structurally deficient  </li>
+<li><strong>No black holes</strong>: The data produced by a process must go somewhere. If not, there is a hole in the requirements or the layers above are structurally deficient  </li>
+<li><strong>No avoidably vague process names</strong>: Processes with names like <em>Process data</em> are a sign that the design is not finished or completely thought through.  </li>
+<li><strong>Iterate until done</strong>: Keep working until you have broken the problem down to sufficient detail, fixing mistakes as they are found.  </li>
+</ol>
+<h2 id="requirements-and-reasons-why">Requirements and Reasons Why</h2>
+<p>Architecture always depends on requirements. Without them, how do you judge anything? In turn, each requirement needs justification.  </p>
+<h3 id="cohesively-functional-stable-and-measurable">Cohesively functional, stable, and measurable</h3>
+<p>First and foremost, what we build needs to work and we need to be able to prove it works. This is not easy with traditional software where operations are generally <a href="https://en.wikipedia.org/wiki/Deterministic_algorithm">deterministic</a> which means that given the same input we will get the same output.<br><br>An agent is inherently <a href="https://en.wikipedia.org/wiki/Nondeterministic_algorithm">nondeterministic</a> which means that we really don’t know what will happen. The natural language processing has randomness built-in and is a giant statistical model. In fact, when the agents work together in a network where one agent can choose to ask other agents, the resulting system is indeterministic. I won’t go off on a tangent, but this is the specific reason why it is helpful to apply the <a href="https://en.wikipedia.org/wiki/Actor_model">actor model of computing</a>. If you don’t get what I mean when I say and agent is actor-like, don’t worry about it but if you are interested in distributed systems designs, I’d encourage you to expand your horizons in this direction.<br><br>We need ways to test and measure the performance of an agent because there is a likelihood that a given operation will yield unexpected, possibly undesirable, results.    </p>
+<h4 id="defining-functional-agents">Defining functional agents</h4>
+<p>The inputs to an agent are practically unbounded, but we can narrow the scope of what the agent can do based on its instructions which include the tools the agent can use. This is necessary because a single agent is limited by the capabilities of today’s models. In an agentic system we will use multiple specialized agents with an array of available tools in each.<br><br>I find it helpful to think of an AI agent in terms of cohesion and modularity. Cohesion and modularity are important concepts in software design and architecture:  </p>
+<ul>
+<li><strong>Cohesion</strong> refers to how closely related and focused the responsibilities of a single module or component are. A module with high cohesion performs a specific task or a set of related tasks, making it easier to understand, maintain, and reuse. High cohesion is desirable as it leads to systems that are easier to manage and less prone to bugs.  </li>
+<li><strong>Modularity</strong> is the degree to which a system&#39;s components can be separated and recombined. A modular system is composed of distinct modules that can be developed, tested, and updated independently. This separation helps in organizing code, improving maintainability, and facilitating collaboration among multiple developers.  </li>
+</ul>
+<p>We want high cohesion within agents and strong modularity across the system.  </p>
+<h4 id="the-importance-of-stability">The importance of stability</h4>
+<p>Depending on the model there is a point where the performance will degrade if the instructions are too complex. Furthermore, we might want to evaluate other models or alter the parameters.<br><br>The instructions with tools, the model, and the model parameters are the <strong>Agent Configuration</strong>. We can measure the performance of the agent using real or synthetic data and iterate and (hopefully) improve by including better instructions, using different models, and altering the model parameters. When we start to build and improve an agent or system, we need to manage the Agent Configuration as a versioned artifact. For now, at the architectural level this means the Agent Configuration is a unit with its own management lifecycle.  </p>
+<h4 id="measurability-requires-cohesion-and-stability">Measurability requires cohesion and stability</h4>
+<p>Measurability requires us to say up front what we are measuring; what the agent does and what its limits are.  The measurement allows us to iterate for better results and gives us a way to consider how the agent fits into a system and is a tool we can use to identify additional requirements to compensate for its deficiencies. Perfection is impossible but we can design working systems with imperfect pieces if we build in ways to compensate for faults.<br><br>Doing this kind of measurement and tuning resulted in the creation of <a href="https://github.com/douglasware/AntRunner">AntRunner</a> which makes it easy to package a assistants in easily version-able forms, deploy them, and run them with test scripts.    </p>
+<h4 id="cohesive-antarmy-ants">Cohesive AntArmy Ants</h4>
+<p><a href="https://www.antarmy.ai/">Go AntArmy!</a> comes with a number of predefined agents.  </p>
+<p><img src="../Images/ToolBasedAgents/image5.png" alt="">  </p>
+<p>Each Ant has a clear purpose, and the tools support the purpose. They work together on a thread directed by the user. We can add new ants without altering the existing, tested, and stable ants.     </p>
+<h3 id="modular-and-reusable">Modular and reusable</h3>
+<p>Agents should be modular and reusable. AntArmy is a chat interface and an interactive UI. AntRunner supports scripts,  applications like jobs, and individual services. These facts are evidence of the pattern’s modularity and support for reuse.  </p>
+<h4 id="pre-defined-orchestrations">Pre-defined orchestrations</h4>
+<p>This diagram shows a job which extracts meaning from transcripts. The steps in this orchestration are explicit. The individual agents use the same pattern as the AntArmy Ants, but there is no UI or human in the loop.  </p>
+<p><img src="../Images/ToolBasedAgents/image6.png" alt="">  </p>
+<ul>
+<li><strong>SpeakerNameIdentifier</strong> has tools to read a transcript from a database given its ID, and write records that identify the speaker names and roles from the context of the transcript  </li>
+<li><strong>SpeakerNameIdentifierEvaluator</strong> has instructions to evaluate the identified speakers and a tool to identify speakers missing in the database  </li>
+<li><strong>SpeakerInsightsExtractor</strong> extracts meaning from passages in the transcript and a tool to insert the results into the database  </li>
+</ul>
+<h4 id="self-directed-orchestrations-aka-agent-swarms">Self-directed orchestrations, aka Agent Swarms</h4>
+<p>Consider that a ‘Tool’ can be anything. The assistants API supports file retrieval, code interpreter, and functions. This means that a tool can be another agent which, in turn, can also use other agents as tools.<br><br><a href="https://github.com/douglasware/AntRunner/blob/main/Notebooks/8-Web-Search-Ant-As-Tool.ipynb">AntRunner</a> contains a sample notebook which illustrates this using a <strong>WebSearchAgentAnt</strong> which has a tool for web search and another tool which is an agent named <strong>WebPageAgentAnt</strong> which reads a web page and returns the content that answers the question, if any. The notebook is a cut-down and faster version of <a href="mailto://ask@antarmy.ai?subject=Answer%20this%20question">ask@antarmy.ai</a> which uses a similar design with more reasoning and quality checks.<br><br>I will write more about these agents in future articles.  </p>
+<h2 id="tool-based-agent-pattern-1">Tool-based Agent Pattern</h2>
+<p>My apologies for the long preamble, the rest of the article is about the actual pattern, starting at the top.<br><br>For clarity, these diagrams show the data elements in the flows, but in truth the bigger system with many agents would show them at a higher-level because the threads and thread runs are shared by all the agents in the system. We can create a thread by using one agent, and then continue it with others.  </p>
+<h3 id="tool-based-agent">Tool-based Agent</h3>
+<p><img src="../Images/ToolBasedAgents/image7.png" alt="">  </p>
+<h4 id="1-assemble-thread-run">1. Assemble Thread Run</h4>
+<p>Agents work against a thread which represents the conversation. Invoking an agent either creates a new thread or continues an existing thread.<br><br>Inference (using the LLM) is inherently stateless and its input contains everything the model needs the produce a response including:  </p>
+<ul>
+<li>The input message  </li>
+<li>Previous messages, i.e. the thread  </li>
+<li>The model parameters, e.g. temperature  </li>
+<li>The agent’s specific instructions  </li>
+<li>Any additional context required, e.g. today’s date, the user’s location  </li>
+<li>Tool definitions  </li>
+</ul>
+<p><img src="../Images/ToolBasedAgents/image8.png" alt="">  </p>
+<h5 id="11-add-instructions--model-parameters">1.1 Add Instructions &amp; Model Parameters</h5>
+<p>At the beginning of the flow, we have the input message and optionally a thread identifier. Given that the input message could be an entire previous conversation, the persisted thread and thread run are optional. Implicit and not shown is the agent’s identity or name. The process begins by combining the input message such as:<br><br><strong>“What is my name”</strong><br><br>With the agent instructions, such as:<br><br><strong>“You use a tool to get the user’s profile”</strong><br><br>And the model parameters such as:  </p>
+<pre><code>top_p = 0.7  
+Temperature = 0.5  
+</code></pre><p>Note that names and number of model parameters depend on the specific model.  </p>
+<h5 id="12-add-context-messages">1.2 Add Context Messages</h5>
+<p>Frequently an agent will need extra information such as the current date and time or a user’s preference. If your agent has a code sandbox, you could use it to get the current date and time, but that uses tokens and time. A better alternative is to add messages with whatever information is required before starting the run.<br><br><a href="https://www.antarmy.ai/">AntArmy Chat</a> includes tools that an agent can use to save preferences such as the current OneNote notebook. The agent instructions specify which are added.  </p>
+<h5 id="13-add-tool-definitions">1.3 Add Tool Definitions</h5>
+<p>Generically, a tool definition is something in the prompt which we can translate to running an operation and getting a result. In the case of the Open AI Assistants API we configure file retrieval and the python sandbox in the assistant definition and can also specify other tools using JSON. The <a href="https://github.com/douglasware/AntRunner/blob/main/Notebooks/1-Basics-Cat-Facts.ipynb">Cat Facts AntRunner sample</a>. Incudes this a tool named <strong>GetCatFacts</strong>.<br>  </p>
+<pre><code class="lang-JSON">{  
+  &quot;name&quot;: &quot;GetCatFacts&quot;,  
+  &quot;description&quot;: &quot;Retrieve and query facts&quot;,  
+  &quot;parameters&quot;: {  
+    &quot;type&quot;: &quot;object&quot;,  
+    &quot;properties&quot;: {},  
+    &quot;required&quot;: []  
+  },  
+  &quot;strict&quot;: false  
+}  
+</code></pre><p>Notice that the JSON doesn’t have any information about how <strong>GetCatFacts</strong> works. The LLM’s instructions do not include information about this because the LLM is only a model – it can’t run code or use the internet. The LLM will ‘call’ the tool by asking for it via generation, in this case GetCatFacts(), the application using the model, in this case the AntRunner library, to give it the result of using the tool <strong><em>somehow</em></strong>. Accordingly, implementations of this pattern can vary widely without altering the pattern.<br><br>We will get into the mechanics of tool calling  later, but for now, note that here we are translating a complete definition of the tool including such information as the server URL and auth, into a simplified subset.  </p>
+<h5 id="14-get-or-create-thread">1.4 Get or Create Thread</h5>
+<p>Finally, a thread is created or retrieved if there is history, and everything is packaged to send to the LLM to run the thread.  </p>
+<h4 id="2-run-thread">2. Run Thread</h4>
+<p>The assembled “thread” already has a few pieces of information: the system’s settings (Agent Config), the latest messages in the thread, and an ID to keep everything organized. First, we create a new “Thread Run.” Think of this as opening a new session dedicated to handling the conversation with an agent. It can be a different agent than those used previously.<br><br>Next the LLM generates an actual response for the conversation. It looks at the conversation’s history, applies the agent’s behavior rules, and then crafts the next output message. If the system decides it needs outside help—like calling a search API or some other external tool—it creates a “tool call” to describe what it wants the external service to do. In the next step, the system handles those tool calls. If the new information from the tools change what needs to be said next, the process loops back to generating output again, this time using the fresh tool results. This cycle continues until the conversation produces a final response or no longer needs outside services.<br><br>The <strong>Thread Run</strong> stores the state and all the messages, tool calls, and tool call results, for the run.  </p>
+<p><img src="../Images/ToolBasedAgents/image9.png" alt="">  </p>
+<h5 id="example-thread-run">Example Thread Run</h5>
+<p>Below is an example of how a Thread Run might unfold when an agent that has two tools (“GetLocation” and “GetWeather”) receives the user’s message: “What is the current weather?”<br><br>Each row represents a step in the overall process (Create Thread Run, Generate Output, Handle Run Step), showing what goes in and what comes out.  </p>
+<table>
+<thead>
+<tr>
+<th>Step #</th>
+<th>Step Name</th>
+<th>Key Inputs</th>
+<th>Process / Action</th>
+<th>Outputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Create Thread Run</td>
+<td>- Agent Config (with tools GetLocation, GetWeather) <br> - Thread Messages (User: “What is the current weather?”) <br> - Thread ID (e.g. 1234)</td>
+<td>- System initializes a new Thread Run context. <br> - Generates a Thread Run ID (e.g. run_001).</td>
+<td>- Thread ID (1234) <br> - Thread Run ID (run_001) <br> - (Agent Config &amp; Thread Messages passed along)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Generate Output</td>
+<td>- Agent Config, Thread Messages (incl. “What is the current weather?”), Thread ID (1234), Thread Run ID (run_001)</td>
+<td>- Agent analyzes the user request. <br> - Determines it needs a location before it can fetch the weather. <br> - Decides to call GetLocation.</td>
+<td>- Output Messages: No new direct message yet. <br> - Tool call: “GetLocation” <br> - Thread Run ID</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Handle Run Step</td>
+<td>- Tool call: “GetLocation” <br> - Thread Run ID (run_001)</td>
+<td>- System invokes the “GetLocation” tool. <br> - GetLocation responds with a location (e.g., “New York, NY”).</td>
+<td>- Tool call result: “New York, NY” <br> - Thread Run ID (run_001)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Generate Output</td>
+<td>- Agent Config, Thread Messages, Thread ID (1234), Thread Run ID (run_001) <br> - Tool call result: “New York, NY”</td>
+<td>- Agent sees the location is “New York, NY.” <br> - Decides it now needs the weather for that city. <br> - Creates a new tool call for “GetWeather(‘New York, NY’).”</td>
+<td>- Output Messages: No new direct message yet. <br> - Tool call: “GetWeather(‘New York, NY’)” <br> - Thread Run ID</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Handle Run Step</td>
+<td>- Tool call: “GetWeather(‘New York, NY’)” <br> - Thread Run ID (run_001)</td>
+<td>- System invokes GetWeather with “New York, NY.” <br> - Tool returns weather data (e.g., “Currently sunny, 25°C”).</td>
+<td>- Tool call result: “Currently sunny, 25°C” <br> - Thread Run ID (run_001)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Generate Output</td>
+<td>- Agent Config, Thread Messages, Thread ID (1234), Thread Run ID (run_001) <br> - Tool call result: “Currently sunny, 25°C”</td>
+<td>- Agent now has location and weather info. <br> - Crafts the final message: “It’s currently sunny and 25°C in New York.”</td>
+<td>- Output Message (to user): “It’s currently sunny and 25°C in New York.” <br> - No further tool calls required.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>End of Thread Run</td>
+<td>- N/A</td>
+<td>- System sees no more steps are needed. <br> - Thread Run concludes.</td>
+<td>- Final output delivered to user. <br> - Thread Run complete.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-use-tool">3. Use Tool</h4>
+<p>Finally, we get to using tools. Remember: <strong>a tool definition is something in the prompt which we can translate to running an operation and getting a result</strong>.   </p>
+<p><img src="../Images/ToolBasedAgents/image10.png" alt="">  </p>
+<p>In the case of the <a href="https://github.com/douglasware/AntRunner/blob/main/Notebooks/1-Basics-Cat-Facts.ipynb">Cat Facts AntRunner sample</a> the LLM’s definition was:  </p>
+<pre><code class="lang-JSON">{  
+  &quot;name&quot;: &quot;GetCatFacts&quot;,  
+  &quot;description&quot;: &quot;Retrieve and query facts&quot;,  
+  &quot;parameters&quot;: {  
+    &quot;type&quot;: &quot;object&quot;,  
+    &quot;properties&quot;: {},  
+    &quot;required&quot;: []  
+  },  
+  &quot;strict&quot;: false  
+}  
+</code></pre><h5 id="31-get-tool-definition">3.1 Get Tool Definition</h5>
+<p>When the LLM asks for a tool call of GetCatFacts, the system must provide the tool call result somehow. Mechanically this could be a web service, a local function, or a step in a low-code solution. In this case AntRunner uses an <a href="https://www.openapis.org/">Open API schema</a> that describes a simple web service. <br>  </p>
+<pre><code>{  
+  &quot;openapi&quot;: &quot;3.0.0&quot;,  
+  &quot;info&quot;: {  
+    &quot;title&quot;: &quot;Cat Facts API&quot;,  
+    &quot;description&quot;: &quot;API to retrieve and manage cat facts.&quot;,  
+    &quot;version&quot;: &quot;1.0.0&quot;,  
+    &quot;contact&quot;: {  
+      &quot;name&quot;: &quot;alexwohlbruck&quot;,  
+      &quot;url&quot;: &quot;https://github.com/alexwohlbruck/cat-facts&quot;  
+    }  
+  },  
+  &quot;servers&quot;: [  
+    {  
+      &quot;url&quot;: &quot;https://cat-fact.herokuapp.com&quot;,  
+      &quot;description&quot;: &quot;Base URL for all endpoints&quot;  
+    }  
+  ],  
+  &quot;paths&quot;: {  
+    &quot;/facts&quot;: {  
+      &quot;get&quot;: {  
+        &quot;operationId&quot;: &quot;GetCatFacts&quot;,  
+        &quot;summary&quot;: &quot;Retrieve and query facts&quot;,  
+        &quot;description&quot;: &quot;Get a list of animal facts.&quot;  
+      }  
+    }  
+  }  
+}  
+</code></pre><p>AntRunner creates the tool definition that the LLM uses from the full specification and uses the full specification to do call the real tool. In this case a web service, but <a href="https://github.com/douglasware/AntRunner/blob/main/Notebooks/2-Local-Function-Calling.ipynb">local function calling is also supported as shown in this notebook</a>  </p>
+<h2 id="next-up">Next up…</h2>
+<p>A key reason why the Ants work well is because a lot of time went into creating and tuning the instructions and tool descriptions. At the heart of the <a href="https://github.com/douglasware/AntRunner">AntRunner library</a> there is a focus on making the most of tools to enable:  </p>
+<ul>
+<li>Quality output  </li>
+<li>Agent swarms  </li>
+<li>Security authorization  </li>
+<li>Local functions  </li>
+<li>Output filtering to conserve tokens, improve performance, and lower cost  </li>
+<li>More…<br><br>Thanks for reading this very long article!<br>--Doug Ware  </li>
+</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Follow this project on github <a href="https://github.com/douglasware/ElumenotionSite">Elumenotion Site and Samples</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
